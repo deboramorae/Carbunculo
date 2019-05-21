@@ -11,9 +11,9 @@ import GameplayKit
 
 
 class GameScene: SKScene {
-    
     static let spritePixelsToScreenPixels: CGFloat = 1.0
     
+    var entidade: EntidadeCena!
     var entities = [GKEntity]()
     var graphs = [String : GKGraph]()
     
@@ -33,7 +33,7 @@ class GameScene: SKScene {
             
             entityManager.add(player)
         }
-        
+        entidade = EntidadeCena(cena: self)
     }
     
     func pauseScene(){
