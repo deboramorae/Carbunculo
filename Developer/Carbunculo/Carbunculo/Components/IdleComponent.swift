@@ -1,5 +1,5 @@
 //
-//  Player.swift
+//  IdleComponent.swift
 //  Carbunculo
 //
 //  Created by Jefferson de Oliveira Lalor on 21/05/19.
@@ -10,16 +10,18 @@ import Foundation
 import GameplayKit
 
 
-class Player: GKEntity {
+class IdleComponent: GKComponent {
     
-    init(entityManager: EntityManager) {
+    weak var node: PlayerNode!
+    
+    init(player: PlayerNode) {
         super.init()
         
-        let player = PlayerNode()
+        node = player
+    }
+    
+    func idle() {
         
-        addComponent(GKSKNodeComponent(node: player))
-        addComponent(PhysicsBodyComponent(node: player, dimensions: PhysicsBodyDimensions.player))
-        addComponent(JumpingComponent(player: player))
     }
     
     required init?(coder aDecoder: NSCoder) {
