@@ -35,7 +35,9 @@ class GameViewController: UIViewController {
                 // Present the scene
                 if let view = self.view as! SKView? {
                     view.presentScene(sceneNode)
+                    
                     remoteControl = RemoteControl(view: view)
+                    
                     view.ignoresSiblingOrder = true
                     view.showsFPS = Debug.showFPS ?? false
                     view.showsNodeCount = Debug.showNodeCount ?? false
