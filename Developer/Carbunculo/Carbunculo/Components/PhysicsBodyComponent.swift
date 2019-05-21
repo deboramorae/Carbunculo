@@ -56,15 +56,16 @@ class PhysicsBodyComponent: GKComponent {
 
         node.physicsBody = SKPhysicsBody(rectangleOf: sizeScreenPixels, center: CGPoint(x: 0, y: sizeScreenPixels.height / 2))
         
-        node.physicsBody?.isDynamic = false
-        node.physicsBody?.allowsRotation = false
-        node.physicsBody?.linearDamping = 0.0
-        node.physicsBody?.angularDamping = 0.0
-        node.physicsBody?.friction = 0.0
-        node.physicsBody?.restitution = 0.0
+        node.physicsBody?.isDynamic          = true
+        node.physicsBody?.affectedByGravity  = false
+        node.physicsBody?.allowsRotation     = false
+        node.physicsBody?.linearDamping      = 0.0
+        node.physicsBody?.angularDamping     = 0.0
+        node.physicsBody?.friction           = 0.0
+        node.physicsBody?.restitution        = 0.0
         
-        node.physicsBody?.categoryBitMask = 0
-        node.physicsBody?.collisionBitMask = 0
+        node.physicsBody?.categoryBitMask    = 0
+        node.physicsBody?.collisionBitMask   = 0
         node.physicsBody?.contactTestBitMask = 0
         
     }
