@@ -19,8 +19,10 @@ class GameScene: SKScene {
     private var label : SKLabelNode?
     private var spinnyNode : SKShapeNode?
     
+    let playerNode = PlayerNode()
     
     override func sceneDidLoad() {
+        self.addChild(playerNode)
     }
     
     
