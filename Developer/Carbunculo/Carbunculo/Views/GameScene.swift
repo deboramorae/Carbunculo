@@ -16,15 +16,25 @@ class GameScene: SKScene {
     var graphs = [String : GKGraph]()
     
     private var lastUpdateTime : TimeInterval = 0
-    private var label : SKLabelNode?
     private var spinnyNode : SKShapeNode?
-    
-    let playerNode = PlayerNode()
-    
+
+    var entityManager: EntityManager!
+
     override func sceneDidLoad() {
-        self.addChild(playerNode)
+        entityManager = EntityManager(scene: self)
     }
     
+    override func didMove(to view: SKView) {
+        super.didMove(to: view)
+        
+        entityManager = EntityManager(scene: self)
+        
+        do {
+            let player = Player(entityManager: entityManager)
+            
+            entityManager.add(player)
+        }
+    }
     
     func touchDown(atPoint pos : CGPoint) {
     }
