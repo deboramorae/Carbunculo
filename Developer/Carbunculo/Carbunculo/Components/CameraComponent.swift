@@ -1,5 +1,5 @@
 //
-//  Cena.swift
+//  CameraComponent.swift
 //  Carbunculo
 //
 //  Created by Ruy de Ascencão Neto on 21/05/19.
@@ -9,16 +9,19 @@
 import Foundation
 import GameplayKit
 
-
-
-class EntidadeCena:GKEntity{
-    init(cena:GameScene) {
+class CameraComponent:GKComponent{
+    var cena  :GameScene!
+    var camera:SKCameraNode!
+    init(cena:GameScene){
         super.init()
-
+        self.cena = cena
+        mirarNaCamera()
     }
-    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+    func mirarNaCamera(){
+        camera      = SKCameraNode()
+        cena.camera = camera
+    }
 }
