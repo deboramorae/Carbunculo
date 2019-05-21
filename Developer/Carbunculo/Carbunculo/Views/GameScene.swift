@@ -36,6 +36,14 @@ class GameScene: SKScene {
         
     }
     
+    func pauseScene(){
+        self.isPaused = true
+    }
+    
+    func UnpauseScene(){
+        self.isPaused = false
+    }
+    
     func touchDown(atPoint pos : CGPoint) {
  
     }
