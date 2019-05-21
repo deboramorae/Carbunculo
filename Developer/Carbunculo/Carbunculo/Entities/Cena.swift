@@ -14,7 +14,11 @@ import GameplayKit
 class EntidadeCena:GKEntity{
     init(cena:GameScene) {
         super.init()
-
+        addComponentsToEntitie(cena:cena)
+    }
+    
+    func addComponentsToEntitie(cena:GameScene){
+        addComponent(CameraComponent(cena: cena))
     }
     
     required init?(coder aDecoder: NSCoder) {
