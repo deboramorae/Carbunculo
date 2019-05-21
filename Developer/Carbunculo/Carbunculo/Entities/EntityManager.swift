@@ -41,5 +41,11 @@ class EntityManager {
         }
         
     }
-    
+    func jump(){
+        for entitie in entities{
+            if let component = entitie.component(ofType: JumpingComponent.self)  {
+                component.jump()
+            }
+        }
+    }
 }

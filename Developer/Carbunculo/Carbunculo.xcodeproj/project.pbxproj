@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		66C63BAD2294656700CCEE3A /* MachinePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C63BAC2294656700CCEE3A /* MachinePlayer.swift */; };
+		66C63BB02294681000CCEE3A /* StateIdle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C63BAF2294681000CCEE3A /* StateIdle.swift */; };
+		66C63BB22294693900CCEE3A /* StateRunning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C63BB12294693900CCEE3A /* StateRunning.swift */; };
+		66C63BB42294695D00CCEE3A /* StateJumping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C63BB32294695D00CCEE3A /* StateJumping.swift */; };
+		66C63BB62294698300CCEE3A /* StateFalling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C63BB52294698300CCEE3A /* StateFalling.swift */; };
+		66C63BB8229469B000CCEE3A /* StateLanding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C63BB7229469B000CCEE3A /* StateLanding.swift */; };
+		66C63BBA22946A0A00CCEE3A /* StateUnconscious.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C63BB922946A0A00CCEE3A /* StateUnconscious.swift */; };
+		66C63BBC22946F2100CCEE3A /* JumpingComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C63BBB22946F2100CCEE3A /* JumpingComponent.swift */; };
 		84B058142294350200B7E9A0 /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B058132294350200B7E9A0 /* Debug.swift */; };
 		84B058172294377800B7E9A0 /* PlayerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B058162294377800B7E9A0 /* PlayerNode.swift */; };
 		84B0581D22943F2A00B7E9A0 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B0581C22943F2A00B7E9A0 /* Player.swift */; };
@@ -26,6 +33,13 @@
 
 /* Begin PBXFileReference section */
 		66C63BAC2294656700CCEE3A /* MachinePlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachinePlayer.swift; sourceTree = "<group>"; };
+		66C63BAF2294681000CCEE3A /* StateIdle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateIdle.swift; sourceTree = "<group>"; };
+		66C63BB12294693900CCEE3A /* StateRunning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateRunning.swift; sourceTree = "<group>"; };
+		66C63BB32294695D00CCEE3A /* StateJumping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateJumping.swift; sourceTree = "<group>"; };
+		66C63BB52294698300CCEE3A /* StateFalling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateFalling.swift; sourceTree = "<group>"; };
+		66C63BB7229469B000CCEE3A /* StateLanding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateLanding.swift; sourceTree = "<group>"; };
+		66C63BB922946A0A00CCEE3A /* StateUnconscious.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateUnconscious.swift; sourceTree = "<group>"; };
+		66C63BBB22946F2100CCEE3A /* JumpingComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumpingComponent.swift; sourceTree = "<group>"; };
 		84B058132294350200B7E9A0 /* Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debug.swift; sourceTree = "<group>"; };
 		84B058162294377800B7E9A0 /* PlayerNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerNode.swift; sourceTree = "<group>"; };
 		84B0581C22943F2A00B7E9A0 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
@@ -61,6 +75,19 @@
 				66C63BAC2294656700CCEE3A /* MachinePlayer.swift */,
 			);
 			path = StateMachines;
+			sourceTree = "<group>";
+		};
+		66C63BAE229467FE00CCEE3A /* States */ = {
+			isa = PBXGroup;
+			children = (
+				66C63BAF2294681000CCEE3A /* StateIdle.swift */,
+				66C63BB12294693900CCEE3A /* StateRunning.swift */,
+				66C63BB32294695D00CCEE3A /* StateJumping.swift */,
+				66C63BB52294698300CCEE3A /* StateFalling.swift */,
+				66C63BB7229469B000CCEE3A /* StateLanding.swift */,
+				66C63BB922946A0A00CCEE3A /* StateUnconscious.swift */,
+			);
+			path = States;
 			sourceTree = "<group>";
 		};
 		84B058112294348700B7E9A0 /* Views */ = {
@@ -122,6 +149,7 @@
 			children = (
 				84B058212294460500B7E9A0 /* ComponentsWithNodes.swift */,
 				84B058232294486700B7E9A0 /* GKSKNodeComponent+ComponentsWithNodes.swift */,
+				66C63BBB22946F2100CCEE3A /* JumpingComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -145,6 +173,7 @@
 		84D371312294309700922D4B /* Carbunculo */ = {
 			isa = PBXGroup;
 			children = (
+				66C63BAE229467FE00CCEE3A /* States */,
 				66C63BAB2294654600CCEE3A /* StateMachines */,
 				84B05820229445C000B7E9A0 /* Components */,
 				84B0581B22943F1100B7E9A0 /* Entities */,
@@ -232,15 +261,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				84D371392294309700922D4B /* GameScene.swift in Sources */,
+				66C63BB42294695D00CCEE3A /* StateJumping.swift in Sources */,
 				84B058242294486700B7E9A0 /* GKSKNodeComponent+ComponentsWithNodes.swift in Sources */,
+				66C63BB8229469B000CCEE3A /* StateLanding.swift in Sources */,
+				66C63BB02294681000CCEE3A /* StateIdle.swift in Sources */,
 				84B0581F2294414300B7E9A0 /* EntityManager.swift in Sources */,
 				84B058142294350200B7E9A0 /* Debug.swift in Sources */,
 				84D3713B2294309700922D4B /* GameViewController.swift in Sources */,
 				84D371332294309700922D4B /* AppDelegate.swift in Sources */,
+				66C63BB22294693900CCEE3A /* StateRunning.swift in Sources */,
+				66C63BB62294698300CCEE3A /* StateFalling.swift in Sources */,
+				66C63BBA22946A0A00CCEE3A /* StateUnconscious.swift in Sources */,
 				84B0581D22943F2A00B7E9A0 /* Player.swift in Sources */,
 				84B058172294377800B7E9A0 /* PlayerNode.swift in Sources */,
 				66C63BAD2294656700CCEE3A /* MachinePlayer.swift in Sources */,
 				84B058222294460500B7E9A0 /* ComponentsWithNodes.swift in Sources */,
+				66C63BBC22946F2100CCEE3A /* JumpingComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
