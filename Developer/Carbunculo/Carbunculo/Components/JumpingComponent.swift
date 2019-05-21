@@ -11,18 +11,20 @@ import GameplayKit
 
 class JumpingComponent:GKComponent{
     weak var player:PlayerNode!
+    
     init(player:PlayerNode){
-       self.player = player
+        self.player = player
         super.init()
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     func jump(){
         
         //A partir daqui vai ser a aplicacao da forca.
         player.physicsBody?.applyForce(CGVector(dx: 0, dy: 20))
-        print(player)
     }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
 }

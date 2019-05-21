@@ -20,6 +20,8 @@ class Player: GKEntity {
         addComponent(GKSKNodeComponent(node: player))
         addComponent(PhysicsBodyComponent(node: player, dimensions: PhysicsBodyDimensions.player))
         addComponent(JumpingComponent(player: player))
+        addComponent(IdleComponent(player: player))
+        addComponent(RunComponent(player: player))
     }
     
     required init?(coder aDecoder: NSCoder) {

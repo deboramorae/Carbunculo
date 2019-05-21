@@ -41,6 +41,7 @@ class EntityManager {
         }
         
     }
+    
     func jump(){
         for entitie in entities{
             if let component = entitie.component(ofType: JumpingComponent.self)  {
@@ -48,4 +49,21 @@ class EntityManager {
             }
         }
     }
+    
+    func idle(){
+        for entities in entities {
+            if let component = entities.component(ofType: IdleComponent.self) {
+                component.idle()
+            }
+        }
+    }
+    
+    func run(){
+        for entities in entities {
+            if let component = entities.component(ofType: RunComponent.self) {
+                component.run()
+            }
+        }
+    }
+    
 }
