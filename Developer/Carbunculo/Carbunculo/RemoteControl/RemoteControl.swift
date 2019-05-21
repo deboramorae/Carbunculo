@@ -1,11 +1,3 @@
-//
-//  RemoteControl.swift
-//  Carbunculo
-//
-//  Created by Débora Moraes on 21/05/19.
-//  Copyright © 2019 CarbunculoTeam. All rights reserved.
-//
-
 import Foundation
 import UIKit
 import SpriteKit
@@ -55,3 +47,4 @@ class RemoteControl {
         
     }
 }
+

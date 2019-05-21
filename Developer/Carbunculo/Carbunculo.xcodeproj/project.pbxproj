@@ -33,6 +33,7 @@
 		84D3713E2294309700922D4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D3713C2294309700922D4B /* Main.storyboard */; };
 		84D371402294309700922D4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84D3713F2294309700922D4B /* Assets.xcassets */; };
 		84D371432294309700922D4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D371412294309700922D4B /* LaunchScreen.storyboard */; };
+		EAE05C942294885A00B78846 /* RemoteControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE05C932294885A00B78846 /* RemoteControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,7 +65,7 @@
 		84D3713F2294309700922D4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84D371422294309700922D4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84D371442294309700922D4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EA2F870D2294696B00A4C089 /* RemoteControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteControl.swift; sourceTree = "<group>"; };
+		EAE05C932294885A00B78846 /* RemoteControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,10 +194,10 @@
 		84D371312294309700922D4B /* Carbunculo */ = {
 			isa = PBXGroup;
 			children = (
+				EAE05C922294884600B78846 /* RemoteControl */,
 				66C63BAE229467FE00CCEE3A /* States */,
 				84B058272294670A00B7E9A0 /* Extensions */,
 				66C63BAB2294654600CCEE3A /* StateMachines */,
-				EA2F870C2294688500A4C089 /* Remote Control */,
 				84B05820229445C000B7E9A0 /* Components */,
 				84B0581B22943F1100B7E9A0 /* Entities */,
 				84B058152294374D00B7E9A0 /* Nodes */,
@@ -209,12 +210,12 @@
 			path = Carbunculo;
 			sourceTree = "<group>";
 		};
-		EA2F870C2294688500A4C089 /* Remote Control */ = {
+		EAE05C922294884600B78846 /* RemoteControl */ = {
 			isa = PBXGroup;
 			children = (
-				EA2F870D2294696B00A4C089 /* RemoteControl.swift */,
+				EAE05C932294885A00B78846 /* RemoteControl.swift */,
 			);
-			path = "Remote Control";
+			path = RemoteControl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84D371392294309700922D4B /* GameScene.swift in Sources */,
+				EAE05C942294885A00B78846 /* RemoteControl.swift in Sources */,
 				66C63BB42294695D00CCEE3A /* StateJumping.swift in Sources */,
 				84B058292294673B00B7E9A0 /* CGSize+ops.swift in Sources */,
 				84B058242294486700B7E9A0 /* GKSKNodeComponent+ComponentsWithNodes.swift in Sources */,
@@ -300,7 +302,6 @@
 				84B058142294350200B7E9A0 /* Debug.swift in Sources */,
 				84D3713B2294309700922D4B /* GameViewController.swift in Sources */,
 				84B05826229460E400B7E9A0 /* PhysicsBodyComponent.swift in Sources */,
-
 				84D371332294309700922D4B /* AppDelegate.swift in Sources */,
 				66C63BB22294693900CCEE3A /* StateRunning.swift in Sources */,
 				66C63BB62294698300CCEE3A /* StateFalling.swift in Sources */,
@@ -458,7 +459,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9F5KAYAF75;
+				DEVELOPMENT_TEAM = 6HDRUANT3K;
 				INFOPLIST_FILE = Carbunculo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -476,7 +477,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9F5KAYAF75;
+				DEVELOPMENT_TEAM = 6HDRUANT3K;
 				INFOPLIST_FILE = Carbunculo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
