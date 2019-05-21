@@ -11,13 +11,16 @@ import SpriteKit
 import GameplayKit
 
 class GameViewController: UIViewController {
-
+    
+    private var remoteControl: RemoteControl?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Load 'GameScene.sks' as a GKScene. This provides gameplay related content
         // including entities and graphs.
         if let scene = GKScene(fileNamed: "GameScene") {
+            
             
             // Get the SKScene from the loaded GKScene
             if let sceneNode = scene.rootNode as! GameScene? {
@@ -32,9 +35,8 @@ class GameViewController: UIViewController {
                 // Present the scene
                 if let view = self.view as! SKView? {
                     view.presentScene(sceneNode)
-                    
+                    remoteControl = RemoteControl(view: view)
                     view.ignoresSiblingOrder = true
-                    
                     view.showsFPS = Debug.showFPS ?? false
                     view.showsNodeCount = Debug.showNodeCount ?? false
                     view.showsPhysics = Debug.showPhysics ?? false
@@ -42,6 +44,7 @@ class GameViewController: UIViewController {
             }
         }
     }
+    
 
     override var shouldAutorotate: Bool {
         return true
