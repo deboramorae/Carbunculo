@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+
+struct Debug {
+    
+    static let showFPS: Bool? = true
+    static let showNodeCount: Bool? = true
+    static let showPhysics: Bool? = nil
+    
+}

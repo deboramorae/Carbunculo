@@ -35,8 +35,9 @@ class GameViewController: UIViewController {
                     
                     view.ignoresSiblingOrder = true
                     
-                    view.showsFPS = true
-                    view.showsNodeCount = true
+                    view.showsFPS = Debug.showFPS ?? false
+                    view.showsNodeCount = Debug.showNodeCount ?? false
+                    view.showsPhysics = Debug.showPhysics ?? false
                 }
             }
         }
