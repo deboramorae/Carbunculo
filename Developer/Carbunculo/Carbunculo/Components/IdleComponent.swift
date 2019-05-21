@@ -12,16 +12,15 @@ import GameplayKit
 
 class IdleComponent: GKComponent {
     
-    weak var node: PlayerNode!
+    weak var player: PlayerNode!
     
     init(player: PlayerNode) {
         super.init()
-        
-        node = player
+        self.player = player
     }
     
     func idle() {
-        
+        player.physicsBody?.applyForce(CGVector(dx: 0, dy: 0))
     }
     
     required init?(coder aDecoder: NSCoder) {

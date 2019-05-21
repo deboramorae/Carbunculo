@@ -35,7 +35,6 @@ extension PhysicsBodyDimensions {
 }
 
 class PhysicsBodyComponent: GKComponent {
-    weak var physicsBoundaryNode: SKShapeNode?
     let sizeScreenPixels: CGSize
     let verticalShiftScreenPixels: CGFloat
     
@@ -45,15 +44,7 @@ class PhysicsBodyComponent: GKComponent {
         
         super.init()
         
-        let physicsBoundaryRect = CGRect(x: -sizeScreenPixels.width / 2, y: 0, width: sizeScreenPixels.width, height: sizeScreenPixels.height)
-        let physicsBoundaryNode = SKShapeNode(rect: physicsBoundaryRect)
-        physicsBoundaryNode.strokeColor = .clear
-
-        node.addChild(physicsBoundaryNode)
-        self.physicsBoundaryNode = physicsBoundaryNode
-        
         node.anchorPoint = dimensions.anchorPoint(for: node)
-
         node.physicsBody = SKPhysicsBody(rectangleOf: sizeScreenPixels, center: CGPoint(x: 0, y: sizeScreenPixels.height / 2))
         
         node.physicsBody?.isDynamic          = true
