@@ -35,6 +35,7 @@ class GameScene: SKScene {
     }
     
     func touchDown(atPoint pos : CGPoint) {
+ 
     }
     
     func touchMoved(toPoint pos : CGPoint) {
@@ -44,6 +45,11 @@ class GameScene: SKScene {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+       entityManager.jump()
+        //
+//        let entidade   = entities[0] as! Player
+//        let componente = entidade.component(ofType: JumpingComponent.self)
+//        componente!.jump()
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {

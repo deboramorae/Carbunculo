@@ -18,6 +18,7 @@ class Player: GKEntity {
         let player = PlayerNode()
         
         addComponent(GKSKNodeComponent(node: player))
+        addComponent(JumpingComponent(player: player))
     }
     
     required init?(coder aDecoder: NSCoder) {
