@@ -12,6 +12,8 @@ import GameplayKit
 
 class GameScene: SKScene {
     
+    static let spritePixelsToScreenPixels: CGFloat = 1.0
+    
     var entities = [GKEntity]()
     var graphs = [String : GKGraph]()
     

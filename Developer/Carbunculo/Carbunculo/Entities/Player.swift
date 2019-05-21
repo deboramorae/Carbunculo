@@ -18,6 +18,7 @@ class Player: GKEntity {
         let player = PlayerNode()
         
         addComponent(GKSKNodeComponent(node: player))
+        addComponent(PhysicsBodyComponent(node: player, dimensions: PhysicsBodyDimensions.player))
     }
     
     required init?(coder aDecoder: NSCoder) {
