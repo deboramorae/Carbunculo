@@ -15,13 +15,10 @@ class GameScene: SKScene {
     var entities = [GKEntity]()
     var graphs = [String : GKGraph]()
     
-    private var lastUpdateTime : TimeInterval = 0
-    private var spinnyNode : SKShapeNode?
-
     var entityManager: EntityManager!
 
+    
     override func sceneDidLoad() {
-        entityManager = EntityManager(scene: self)
     }
     
     override func didMove(to view: SKView) {
@@ -34,6 +31,7 @@ class GameScene: SKScene {
             
             entityManager.add(player)
         }
+        
     }
     
     func touchDown(atPoint pos : CGPoint) {
@@ -60,4 +58,5 @@ class GameScene: SKScene {
     
     override func update(_ currentTime: TimeInterval) {
     }
+    
 }

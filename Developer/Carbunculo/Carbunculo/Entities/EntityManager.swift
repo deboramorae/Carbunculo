@@ -23,22 +23,23 @@ class EntityManager {
     
     func add(_ entity: GKEntity) {
         entities.insert(entity)
-//        movingCharacterComponentSystem.addComponent(foundIn: entity)
 
         for component in entity.components {
             if let componentWithNodes = component as? ComponentsWithNodes {
+                
                 for node in componentWithNodes.nodesToAddToScene {
                     if node.parent == nil {
                         scene.addChild(node)
-                    }else{
-                        print("Sem nodes para adicionar na cena")
                     }
                 }
+                
                 for node in componentWithNodes.nodesToAssociateWithComponent {
                     componentsByNode[node] = component
                 }
+                
             }
         }
+        
     }
     
 }
