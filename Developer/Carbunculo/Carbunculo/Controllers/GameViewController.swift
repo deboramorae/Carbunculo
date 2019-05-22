@@ -12,8 +12,6 @@ import GameplayKit
 
 class GameViewController: UIViewController {
     
-    private var remoteControl: RemoteControl?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,7 +34,6 @@ class GameViewController: UIViewController {
                 if let view = self.view as! SKView? {
                     view.presentScene(sceneNode)
                     
-                    remoteControl = RemoteControl(view: view)
                     
                     view.ignoresSiblingOrder = true
                     view.showsFPS = Debug.showFPS ?? false

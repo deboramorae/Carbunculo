@@ -22,6 +22,8 @@ class Player: GKEntity {
         addComponent(JumpingComponent(player: player))
         addComponent(IdleComponent(player: player))
         addComponent(RunComponent(player: player))
+        addComponent(ControlReceiverComponent())
+        addComponent(ControlMovimentComponent())
     }
     
     required init?(coder aDecoder: NSCoder) {

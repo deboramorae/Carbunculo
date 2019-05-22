@@ -16,23 +16,31 @@ class GameScene: SKScene {
     var entities = [GKEntity]()
     var graphs = [String : GKGraph]()
     
+    private var remoteControl: RemoteControl?
+    private var lastUpdateTime : TimeInterval = 0
+    
     var entityManager: EntityManager!
 
     
     override func sceneDidLoad() {
+        self.lastUpdateTime = 0
     }
     
     override func didMove(to view: SKView) {
         super.didMove(to: view)
         
+        remoteControl = RemoteControl(view: view)
+        
         entityManager = EntityManager(scene: self)
         
         do {
-            let entidade = EntidadeCena(cena: self)
+           let entidade = EntidadeCena(cena: self)
             let player   = Player(entityManager: entityManager)
             
             entityManager.add(player)
             entityManager.add(entidade)
+            
+            entities.append(player)
         }
     }
     
@@ -55,7 +63,7 @@ class GameScene: SKScene {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-       entityManager.jump()
+       //entityManager.jump()
         //
 //        let entidade   = entities[0] as! Player
 //        let componente = entidade.component(ofType: JumpingComponent.self)
@@ -73,6 +81,23 @@ class GameScene: SKScene {
     
     
     override func update(_ currentTime: TimeInterval) {
+        if (self.lastUpdateTime == 0) {
+            self.lastUpdateTime = currentTime
+        }
+        
+        // Calculate time since last update
+        let dt = currentTime - self.lastUpdateTime
+        
+        // Update entities
+        for entity in self.entities {
+            if let remoteControl = remoteControl, let component = entity.component(ofType: ControlReceiverComponent.self) {
+                component.updatePressedButtons(remoteControl.pressedButtons)
+            }
+            
+            entity.update(deltaTime: dt)
+        }
+        
+        self.lastUpdateTime = currentTime
     }
     
 }

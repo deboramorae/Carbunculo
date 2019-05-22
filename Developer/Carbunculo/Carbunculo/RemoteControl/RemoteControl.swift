@@ -3,22 +3,34 @@ import UIKit
 import SpriteKit
 
 
-fileprivate class InstantTapGestureRecognizer: UITapGestureRecognizer {
-    override func pressesBegan(_ presses: Set<UIPress>, with event: UIPressesEvent) {
-        super.pressesBegan(presses, with: event)
-        super.pressesEnded(presses, with: event)
-    }
+enum RemoteControlButton {
+    case jump
+    case run
 }
 
-class RemoteControl {
+class RemoteControl : RemoteControls {
     
     private var SwipeGestureRecognizer: UISwipeGestureRecognizer = UISwipeGestureRecognizer()
-    
     private var TapGestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer()
     private var wasPlayerIsTapped = false
     private var wasPlayerSwipe = false
-    
     private weak var view: UIView?
+    
+    var pressedButtons: Set<RemoteControlButton> {
+        var pressedButtons = Set<RemoteControlButton>()
+        
+        if wasPlayerSwipe {
+            wasPlayerSwipe = false
+            pressedButtons.insert(.run)
+        }
+        
+        if wasPlayerIsTapped{
+            wasPlayerIsTapped = false
+            pressedButtons.insert(.jump)
+        }
+        
+        return pressedButtons
+    }
     
     init(view: UIView) {
         self.view = view
@@ -46,5 +58,9 @@ class RemoteControl {
         wasPlayerIsTapped = true
         
     }
+}
+
+protocol RemoteControls: class {
+    var pressedButtons: Set<RemoteControlButton> { get }
 }
 
