@@ -56,7 +56,6 @@ class RemoteControl : RemoteControls {
     }
     @objc func tapGesture(){
         wasPlayerIsTapped = true
-        
     }
 }
 
