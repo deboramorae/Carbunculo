@@ -23,7 +23,7 @@ class GameScene: SKScene {
 
     
     override func sceneDidLoad() {
-        self.lastUpdateTime = 0
+        self.lastUpdateTime = 0        
     }
     
     override func didMove(to view: SKView) {
@@ -34,7 +34,7 @@ class GameScene: SKScene {
         entityManager = EntityManager(scene: self)
         
         do {
-           let entidade = EntidadeCena(cena: self)
+            let entidade = EntidadeCena(entityManager: entityManager, cena: self)
             let player   = Player(entityManager: entityManager)
             
             entityManager.add(player)

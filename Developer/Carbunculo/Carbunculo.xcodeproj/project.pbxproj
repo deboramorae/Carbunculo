@@ -22,6 +22,8 @@
 		66C63BCA22949B4600CCEE3A /* CameraComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C63BC922949B4600CCEE3A /* CameraComponent.swift */; };
 		8410A2F222946FD600F73DC0 /* IdleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8410A2F122946FD600F73DC0 /* IdleComponent.swift */; };
 		8410A2F422947C7A00F73DC0 /* RunComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8410A2F322947C7A00F73DC0 /* RunComponent.swift */; };
+		84AC276C2295BB0D00D3A6C2 /* FloorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC276B2295BB0D00D3A6C2 /* FloorNode.swift */; };
+		84AC27702295C23F00D3A6C2 /* FloorComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC276F2295C23F00D3A6C2 /* FloorComponent.swift */; };
 		84B058142294350200B7E9A0 /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B058132294350200B7E9A0 /* Debug.swift */; };
 		84B058172294377800B7E9A0 /* PlayerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B058162294377800B7E9A0 /* PlayerNode.swift */; };
 		84B0581D22943F2A00B7E9A0 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B0581C22943F2A00B7E9A0 /* Player.swift */; };
@@ -59,6 +61,8 @@
 		66C63BC922949B4600CCEE3A /* CameraComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraComponent.swift; sourceTree = "<group>"; };
 		8410A2F122946FD600F73DC0 /* IdleComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdleComponent.swift; sourceTree = "<group>"; };
 		8410A2F322947C7A00F73DC0 /* RunComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunComponent.swift; sourceTree = "<group>"; };
+		84AC276B2295BB0D00D3A6C2 /* FloorNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorNode.swift; sourceTree = "<group>"; };
+		84AC276F2295C23F00D3A6C2 /* FloorComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorComponent.swift; sourceTree = "<group>"; };
 		84B058132294350200B7E9A0 /* Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debug.swift; sourceTree = "<group>"; };
 		84B058162294377800B7E9A0 /* PlayerNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerNode.swift; sourceTree = "<group>"; };
 		84B0581C22943F2A00B7E9A0 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
@@ -140,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				84B058162294377800B7E9A0 /* PlayerNode.swift */,
+				84AC276B2295BB0D00D3A6C2 /* FloorNode.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -184,6 +189,7 @@
 				66C63BC922949B4600CCEE3A /* CameraComponent.swift */,
 				EA918EFB2294EBBA00684B4F /* ControlReceiverComponent.swift */,
 				EA918EFD2294EBCB00684B4F /* ControlMovimentComponent.swift */,
+				84AC276F2295C23F00D3A6C2 /* FloorComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -314,6 +320,7 @@
 			files = (
 				84D371392294309700922D4B /* GameScene.swift in Sources */,
 				EAE05C942294885A00B78846 /* RemoteControl.swift in Sources */,
+				84AC27702295C23F00D3A6C2 /* FloorComponent.swift in Sources */,
 				66C63BC8229491E900CCEE3A /* Cena.swift in Sources */,
 				66C63BB42294695D00CCEE3A /* StateJumping.swift in Sources */,
 				EA918EFC2294EBBA00684B4F /* ControlReceiverComponent.swift in Sources */,
@@ -334,6 +341,7 @@
 				66C63BBA22946A0A00CCEE3A /* StateUnconscious.swift in Sources */,
 				66C63BC422948CEB00CCEE3A /* StatePaused.swift in Sources */,
 				66C63BC222948C1000CCEE3A /* MachineScene.swift in Sources */,
+				84AC276C2295BB0D00D3A6C2 /* FloorNode.swift in Sources */,
 				8410A2F222946FD600F73DC0 /* IdleComponent.swift in Sources */,
 				84B0581D22943F2A00B7E9A0 /* Player.swift in Sources */,
 				84B058172294377800B7E9A0 /* PlayerNode.swift in Sources */,
