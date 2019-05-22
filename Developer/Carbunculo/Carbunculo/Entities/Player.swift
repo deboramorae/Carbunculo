@@ -24,6 +24,12 @@ class Player: GKEntity {
         addComponent(RunComponent(player: player))
         addComponent(ControlReceiverComponent())
         addComponent(ControlMovimentComponent())
+        
+        do {
+            player.physicsBody?.isDynamic = true
+            player.physicsBody?.affectedByGravity = false
+            player.physicsBody?.categoryBitMask |=  SKPhysicsBody.CategoryBitMask.player
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
