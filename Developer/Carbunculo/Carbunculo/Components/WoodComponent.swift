@@ -1,5 +1,5 @@
 //
-//  PlatformNode.swift
+//  WoodComponent.swift
 //  Carbunculo
 //
 //  Created by Débora Moraes on 22/05/19.
@@ -7,13 +7,14 @@
 //
 
 import Foundation
-import SpriteKit
+import GameplayKit
 
-class PlatformNode : SKSpriteNode{
-    init(scene: SKScene){
-        super.init(texture: nil, color: .brown, size: CGSize(width: 90, height: 50))
-        self.name = "Platform"
-        self.position = CGPoint(x: 50, y: 10)
+class WoodComponent : GKComponent{
+    var wood : WoodNode!
+    
+    init(scene: SKScene) {
+        super.init()
+        self.wood = WoodNode(scene: scene)
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -44,6 +44,9 @@
 		84D371432294309700922D4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D371412294309700922D4B /* LaunchScreen.storyboard */; };
 		EA58B21B2295BB800099C146 /* SKPhysicsBody+maskDefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA58B21A2295BB800099C146 /* SKPhysicsBody+maskDefs.swift */; };
 		EA58B2212295C8860099C146 /* PlatformNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA58B2202295C8860099C146 /* PlatformNode.swift */; };
+		EA58B22F2295E73D0099C146 /* WoodNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA58B22E2295E73D0099C146 /* WoodNode.swift */; };
+		EA58B2312295E7690099C146 /* WoodComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA58B2302295E7690099C146 /* WoodComponent.swift */; };
+		EA58B2332295E7A80099C146 /* PlatformComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA58B2322295E7A80099C146 /* PlatformComponent.swift */; };
 		EA918EFC2294EBBA00684B4F /* ControlReceiverComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA918EFB2294EBBA00684B4F /* ControlReceiverComponent.swift */; };
 		EA918EFE2294EBCB00684B4F /* ControlMovimentComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA918EFD2294EBCB00684B4F /* ControlMovimentComponent.swift */; };
 		EAE05C942294885A00B78846 /* RemoteControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE05C932294885A00B78846 /* RemoteControl.swift */; };
@@ -89,6 +92,9 @@
 		84D371442294309700922D4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA58B21A2295BB800099C146 /* SKPhysicsBody+maskDefs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKPhysicsBody+maskDefs.swift"; sourceTree = "<group>"; };
 		EA58B2202295C8860099C146 /* PlatformNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformNode.swift; sourceTree = "<group>"; };
+		EA58B22E2295E73D0099C146 /* WoodNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoodNode.swift; sourceTree = "<group>"; };
+		EA58B2302295E7690099C146 /* WoodComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoodComponent.swift; sourceTree = "<group>"; };
+		EA58B2322295E7A80099C146 /* PlatformComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformComponent.swift; sourceTree = "<group>"; };
 		EA918EFB2294EBBA00684B4F /* ControlReceiverComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlReceiverComponent.swift; sourceTree = "<group>"; };
 		EA918EFD2294EBCB00684B4F /* ControlMovimentComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlMovimentComponent.swift; sourceTree = "<group>"; };
 		EAE05C932294885A00B78846 /* RemoteControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteControl.swift; sourceTree = "<group>"; };
@@ -164,6 +170,7 @@
 				84B058162294377800B7E9A0 /* PlayerNode.swift */,
 				84AC276B2295BB0D00D3A6C2 /* FloorNode.swift */,
 				EA58B2202295C8860099C146 /* PlatformNode.swift */,
+				EA58B22E2295E73D0099C146 /* WoodNode.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -209,6 +216,8 @@
 				84AC276F2295C23F00D3A6C2 /* FloorComponent.swift */,
 				66C63BCB2295BDE300CCEE3A /* PauseComponent.swift */,
 				66C63BCD2295E35900CCEE3A /* WoodPhysicsBodyComponent.swift */,
+				EA58B2302295E7690099C146 /* WoodComponent.swift */,
+				EA58B2322295E7A80099C146 /* PlatformComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -347,9 +356,12 @@
 				66C63BB42294695D00CCEE3A /* StateJumping.swift in Sources */,
 				EA918EFC2294EBBA00684B4F /* ControlReceiverComponent.swift in Sources */,
 				EA918EFE2294EBCB00684B4F /* ControlMovimentComponent.swift in Sources */,
+				EA58B2312295E7690099C146 /* WoodComponent.swift in Sources */,
 				84B058292294673B00B7E9A0 /* CGSize+ops.swift in Sources */,
 				EA58B21B2295BB800099C146 /* SKPhysicsBody+maskDefs.swift in Sources */,
+				EA58B2332295E7A80099C146 /* PlatformComponent.swift in Sources */,
 				84B058242294486700B7E9A0 /* GKSKNodeComponent+ComponentsWithNodes.swift in Sources */,
+				EA58B22F2295E73D0099C146 /* WoodNode.swift in Sources */,
 				66C63BB8229469B000CCEE3A /* StateLanding.swift in Sources */,
 				66C63BB02294681000CCEE3A /* StateIdle.swift in Sources */,
 				66C63BCA22949B4600CCEE3A /* CameraComponent.swift in Sources */,
