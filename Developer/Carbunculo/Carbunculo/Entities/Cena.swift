@@ -26,6 +26,8 @@ class EntidadeCena: GKEntity {
         addComponent(GKSKNodeComponent(node: floor))
         addComponent(CameraComponent(cena: cena))
         addComponent(FloorComponent(scene: cena))
+        addComponent(PhysicsBodyComponent(node: floor, dimensions: PhysicsBodyDimensions(sizeSpritePixels: CGSize(width: cena.frame.width, height: 50), verticalShiftSpritePixels: CGFloat(0), horizontalShiftSpritePixels: CGFloat(0)))
+)
     }
     
     required init?(coder aDecoder: NSCoder) {

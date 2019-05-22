@@ -23,12 +23,11 @@ class GameScene: SKScene {
 
     
     override func sceneDidLoad() {
-        self.lastUpdateTime = 0        
+        self.lastUpdateTime = 0
     }
     
     override func didMove(to view: SKView) {
         super.didMove(to: view)
-        
         remoteControl = RemoteControl(view: view)
         
         entityManager = EntityManager(scene: self)
