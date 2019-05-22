@@ -65,5 +65,18 @@ class EntityManager {
             }
         }
     }
-    
+    func changePaused(){
+        for entities in entities {
+            if let component = entities.component(ofType: PauseComponent.self) {
+                component.turnPaused()
+            }
+        }
+    }
+    func changeUnPaused(){
+        for entities in entities {
+            if let component = entities.component(ofType: PauseComponent.self) {
+                component.turnUnPaused()
+            }
+        }
+    }
 }
