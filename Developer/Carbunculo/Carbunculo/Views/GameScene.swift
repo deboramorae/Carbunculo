@@ -12,7 +12,7 @@ import GameplayKit
 
 class GameScene: SKScene {
     static let spritePixelsToScreenPixels: CGFloat = 1.0
-    
+    var maquina : MachineScene!
     var entities = [GKEntity]()
     var graphs = [String : GKGraph]()
     
@@ -24,6 +24,11 @@ class GameScene: SKScene {
     
     override func sceneDidLoad() {
         self.lastUpdateTime = 0
+    }
+    
+    func carregarMaquina(){
+        maquina = MachineScene(states: [StatePaused(),StateUnpaused()], scene: self)
+        maquina.enter(StateUnpaused.self)
     }
     
     override func didMove(to view: SKView) {
@@ -41,6 +46,7 @@ class GameScene: SKScene {
             
             entities.append(player)
         }
+        carregarMaquina()
     }
     
     func pauseScene(){
@@ -61,6 +67,20 @@ class GameScene: SKScene {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+
+                //Codigo do pause pronto, nao remova!
+        //        if maquina.currentState is StatePaused{
+//            maquina.enter(StateUnpaused.self)
+//        }else{
+//            maquina.enter(StatePaused.self)
+//        }
+        
+        
+       //entityManager.jump()
+        //
+//        let entidade   = entities[0] as! Player
+//        let componente = entidade.component(ofType: JumpingComponent.self)
+//        componente!.jump()
         entityManager.run()
     }
     
