@@ -20,7 +20,8 @@ class IdleComponent: GKComponent {
     }
     
     func idle() {
-        player.physicsBody?.applyForce(CGVector(dx: 0, dy: 0))
+        player.physicsBody?.isDynamic = false
+        player.physicsBody?.isDynamic = true
     }
     
     required init?(coder aDecoder: NSCoder) {
