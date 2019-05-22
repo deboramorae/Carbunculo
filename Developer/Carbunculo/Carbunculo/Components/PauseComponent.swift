@@ -12,6 +12,7 @@ import GameplayKit
 class PauseComponent:GKComponent{
     var cena  :GameScene!
     var camera:SKCameraNode!
+    var node  : SKShapeNode!
     init(cena:GameScene){
         super.init()
         self.cena = cena
@@ -25,10 +26,18 @@ class PauseComponent:GKComponent{
         camera = cena.camera
     }
     func addNodeInTheCamera(){
-        let node = SKShapeNode(rectOf: CGSize(width: 50, height: 50))
+        node = SKShapeNode(rectOf: CGSize(width: 50, height: 50))
         node.position = CGPoint(x: 300,y: 150)
         node.fillColor = UIColor.white
         camera.addChild(node)
-        
     }
+    
+    func turnPaused(){
+        node.fillColor = UIColor.red
+    }
+    
+    func turnUnPaused(){
+        node.fillColor = UIColor.white
+    }
+    
 }

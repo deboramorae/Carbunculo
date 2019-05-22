@@ -13,4 +13,10 @@ class StatePaused:GKState{
     override func isValidNextState(_ stateClass: AnyClass) -> Bool {
         return (stateClass is StateUnpaused.Type)
     }
+    override func didEnter(from previousState: GKState?) {
+        let maquina = self.stateMachine as! MachineScene
+        let cena    = maquina.scene
+        cena?.pauseScene()
+        cena?.entityManager.changePaused()
+    }
 }
