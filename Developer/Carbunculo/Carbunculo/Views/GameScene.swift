@@ -38,13 +38,13 @@ class GameScene: SKScene {
         entityManager = EntityManager(scene: self)
         
         do {
-            let entidade = EntidadeCena(entityManager: entityManager, cena: self)
-            let player   = Player(entityManager: entityManager)
-            
+            let entidadeCena  = EntidadeCena(entityManager: entityManager, cena: self)
+            let player        = Player(entityManager: entityManager)
+            let entidadeWater = WaterEntity(entityManager: entityManager, cena: self)
             entityManager.add(player)
-            entityManager.add(entidade)
+            entityManager.add(entidadeCena)
             
-            entities.append(player)
+            entities.append(entidadeWater)
         }
         carregarMaquina()
     }
