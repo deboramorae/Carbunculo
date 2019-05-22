@@ -19,6 +19,7 @@ class EntidadeCena:GKEntity{
     
     func addComponentsToEntitie(cena:GameScene){
         addComponent(CameraComponent(cena: cena))
+        addComponent(PauseComponent(cena: cena))
     }
     
     required init?(coder aDecoder: NSCoder) {

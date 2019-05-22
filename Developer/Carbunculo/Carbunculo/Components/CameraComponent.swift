@@ -22,6 +22,8 @@ class CameraComponent:GKComponent{
     }
     func mirarNaCamera(){
         camera      = SKCameraNode()
+        camera.name = "Camera do Cenario"
         cena.camera = camera
+        cena.addChild(camera)
     }
 }
