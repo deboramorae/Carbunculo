@@ -127,6 +127,16 @@
 			path = States;
 			sourceTree = "<group>";
 		};
+		84AC27712295D49600D3A6C2 /* StateComponents */ = {
+			isa = PBXGroup;
+			children = (
+				66C63BBB22946F2100CCEE3A /* JumpingComponent.swift */,
+				8410A2F122946FD600F73DC0 /* IdleComponent.swift */,
+				8410A2F322947C7A00F73DC0 /* RunComponent.swift */,
+			);
+			path = StateComponents;
+			sourceTree = "<group>";
+		};
 		84B058112294348700B7E9A0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,12 +197,10 @@
 		84B05820229445C000B7E9A0 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				84AC27712295D49600D3A6C2 /* StateComponents */,
 				84B058212294460500B7E9A0 /* ComponentsWithNodes.swift */,
 				84B058232294486700B7E9A0 /* GKSKNodeComponent+ComponentsWithNodes.swift */,
-				66C63BBB22946F2100CCEE3A /* JumpingComponent.swift */,
 				84B05825229460E400B7E9A0 /* PhysicsBodyComponent.swift */,
-				8410A2F122946FD600F73DC0 /* IdleComponent.swift */,
-				8410A2F322947C7A00F73DC0 /* RunComponent.swift */,
 				66C63BC922949B4600CCEE3A /* CameraComponent.swift */,
 				EA918EFB2294EBBA00684B4F /* ControlReceiverComponent.swift */,
 				EA918EFD2294EBCB00684B4F /* ControlMovimentComponent.swift */,

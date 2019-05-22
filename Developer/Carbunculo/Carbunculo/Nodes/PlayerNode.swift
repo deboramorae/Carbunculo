@@ -14,7 +14,11 @@ class PlayerNode: SKSpriteNode {
     init() {
         super.init(texture: nil, color: .blue, size: CGSize(width: 50, height: 50))
         self.name = "Player"
-        self.position = CGPoint(x: 0, y: 0)
+        self.initialPosition()
+    }
+
+    private func initialPosition(){
+        self.position = CGPoint(x: -300, y: 0)
     }
     
     required init?(coder aDecoder: NSCoder) {

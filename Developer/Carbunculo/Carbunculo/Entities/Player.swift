@@ -27,8 +27,9 @@ class Player: GKEntity {
         
         do {
             player.physicsBody?.isDynamic = true
-            player.physicsBody?.affectedByGravity = false
+            player.physicsBody?.affectedByGravity = true
             player.physicsBody?.categoryBitMask |=  SKPhysicsBody.CategoryBitMask.player
+            player.physicsBody?.collisionBitMask |= SKPhysicsBody.CategoryBitMask.floorComponent
         }
     }
     
