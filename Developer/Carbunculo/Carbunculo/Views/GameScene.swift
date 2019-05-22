@@ -28,13 +28,12 @@ class GameScene: SKScene {
     
     override func didMove(to view: SKView) {
         super.didMove(to: view)
-        
         remoteControl = RemoteControl(view: view)
         
         entityManager = EntityManager(scene: self)
         
         do {
-           let entidade = EntidadeCena(cena: self)
+            let entidade = EntidadeCena(entityManager: entityManager, cena: self)
             let player   = Player(entityManager: entityManager)
             
             entityManager.add(player)

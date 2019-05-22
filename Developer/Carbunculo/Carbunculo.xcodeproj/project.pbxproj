@@ -23,6 +23,8 @@
 		66C63BCC2295BDE300CCEE3A /* PauseComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C63BCB2295BDE300CCEE3A /* PauseComponent.swift */; };
 		8410A2F222946FD600F73DC0 /* IdleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8410A2F122946FD600F73DC0 /* IdleComponent.swift */; };
 		8410A2F422947C7A00F73DC0 /* RunComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8410A2F322947C7A00F73DC0 /* RunComponent.swift */; };
+		84AC276C2295BB0D00D3A6C2 /* FloorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC276B2295BB0D00D3A6C2 /* FloorNode.swift */; };
+		84AC27702295C23F00D3A6C2 /* FloorComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC276F2295C23F00D3A6C2 /* FloorComponent.swift */; };
 		84B058142294350200B7E9A0 /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B058132294350200B7E9A0 /* Debug.swift */; };
 		84B058172294377800B7E9A0 /* PlayerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B058162294377800B7E9A0 /* PlayerNode.swift */; };
 		84B0581D22943F2A00B7E9A0 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B0581C22943F2A00B7E9A0 /* Player.swift */; };
@@ -39,6 +41,8 @@
 		84D3713E2294309700922D4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D3713C2294309700922D4B /* Main.storyboard */; };
 		84D371402294309700922D4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84D3713F2294309700922D4B /* Assets.xcassets */; };
 		84D371432294309700922D4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D371412294309700922D4B /* LaunchScreen.storyboard */; };
+		EA58B21B2295BB800099C146 /* SKPhysicsBody+maskDefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA58B21A2295BB800099C146 /* SKPhysicsBody+maskDefs.swift */; };
+		EA58B2212295C8860099C146 /* PlatformNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA58B2202295C8860099C146 /* PlatformNode.swift */; };
 		EA918EFC2294EBBA00684B4F /* ControlReceiverComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA918EFB2294EBBA00684B4F /* ControlReceiverComponent.swift */; };
 		EA918EFE2294EBCB00684B4F /* ControlMovimentComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA918EFD2294EBCB00684B4F /* ControlMovimentComponent.swift */; };
 		EAE05C942294885A00B78846 /* RemoteControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE05C932294885A00B78846 /* RemoteControl.swift */; };
@@ -61,6 +65,8 @@
 		66C63BCB2295BDE300CCEE3A /* PauseComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseComponent.swift; sourceTree = "<group>"; };
 		8410A2F122946FD600F73DC0 /* IdleComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdleComponent.swift; sourceTree = "<group>"; };
 		8410A2F322947C7A00F73DC0 /* RunComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunComponent.swift; sourceTree = "<group>"; };
+		84AC276B2295BB0D00D3A6C2 /* FloorNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorNode.swift; sourceTree = "<group>"; };
+		84AC276F2295C23F00D3A6C2 /* FloorComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorComponent.swift; sourceTree = "<group>"; };
 		84B058132294350200B7E9A0 /* Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debug.swift; sourceTree = "<group>"; };
 		84B058162294377800B7E9A0 /* PlayerNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerNode.swift; sourceTree = "<group>"; };
 		84B0581C22943F2A00B7E9A0 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
@@ -79,6 +85,8 @@
 		84D3713F2294309700922D4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84D371422294309700922D4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84D371442294309700922D4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA58B21A2295BB800099C146 /* SKPhysicsBody+maskDefs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKPhysicsBody+maskDefs.swift"; sourceTree = "<group>"; };
+		EA58B2202295C8860099C146 /* PlatformNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformNode.swift; sourceTree = "<group>"; };
 		EA918EFB2294EBBA00684B4F /* ControlReceiverComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlReceiverComponent.swift; sourceTree = "<group>"; };
 		EA918EFD2294EBCB00684B4F /* ControlMovimentComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlMovimentComponent.swift; sourceTree = "<group>"; };
 		EAE05C932294885A00B78846 /* RemoteControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteControl.swift; sourceTree = "<group>"; };
@@ -142,6 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				84B058162294377800B7E9A0 /* PlayerNode.swift */,
+				84AC276B2295BB0D00D3A6C2 /* FloorNode.swift */,
+				EA58B2202295C8860099C146 /* PlatformNode.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -186,6 +196,7 @@
 				66C63BC922949B4600CCEE3A /* CameraComponent.swift */,
 				EA918EFB2294EBBA00684B4F /* ControlReceiverComponent.swift */,
 				EA918EFD2294EBCB00684B4F /* ControlMovimentComponent.swift */,
+				84AC276F2295C23F00D3A6C2 /* FloorComponent.swift */,
 				66C63BCB2295BDE300CCEE3A /* PauseComponent.swift */,
 			);
 			path = Components;
@@ -195,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				84B058282294673B00B7E9A0 /* CGSize+ops.swift */,
+				EA58B21A2295BB800099C146 /* SKPhysicsBody+maskDefs.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -316,13 +328,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				84D371392294309700922D4B /* GameScene.swift in Sources */,
+				EA58B2212295C8860099C146 /* PlatformNode.swift in Sources */,
 				EAE05C942294885A00B78846 /* RemoteControl.swift in Sources */,
+				84AC27702295C23F00D3A6C2 /* FloorComponent.swift in Sources */,
 				66C63BCC2295BDE300CCEE3A /* PauseComponent.swift in Sources */,
 				66C63BC8229491E900CCEE3A /* Cena.swift in Sources */,
 				66C63BB42294695D00CCEE3A /* StateJumping.swift in Sources */,
 				EA918EFC2294EBBA00684B4F /* ControlReceiverComponent.swift in Sources */,
 				EA918EFE2294EBCB00684B4F /* ControlMovimentComponent.swift in Sources */,
 				84B058292294673B00B7E9A0 /* CGSize+ops.swift in Sources */,
+				EA58B21B2295BB800099C146 /* SKPhysicsBody+maskDefs.swift in Sources */,
 				84B058242294486700B7E9A0 /* GKSKNodeComponent+ComponentsWithNodes.swift in Sources */,
 				66C63BB8229469B000CCEE3A /* StateLanding.swift in Sources */,
 				66C63BB02294681000CCEE3A /* StateIdle.swift in Sources */,
@@ -338,6 +353,7 @@
 				66C63BBA22946A0A00CCEE3A /* StateUnconscious.swift in Sources */,
 				66C63BC422948CEB00CCEE3A /* StatePaused.swift in Sources */,
 				66C63BC222948C1000CCEE3A /* MachineScene.swift in Sources */,
+				84AC276C2295BB0D00D3A6C2 /* FloorNode.swift in Sources */,
 				8410A2F222946FD600F73DC0 /* IdleComponent.swift in Sources */,
 				84B0581D22943F2A00B7E9A0 /* Player.swift in Sources */,
 				84B058172294377800B7E9A0 /* PlayerNode.swift in Sources */,
@@ -491,7 +507,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9F5KAYAF75;
+				DEVELOPMENT_TEAM = 6HDRUANT3K;
 				INFOPLIST_FILE = Carbunculo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -509,7 +525,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9F5KAYAF75;
+				DEVELOPMENT_TEAM = 6HDRUANT3K;
 				INFOPLIST_FILE = Carbunculo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

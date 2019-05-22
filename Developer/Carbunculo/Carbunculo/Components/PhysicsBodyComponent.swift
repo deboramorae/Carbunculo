@@ -31,7 +31,7 @@ struct PhysicsBodyDimensions {
 }
 
 extension PhysicsBodyDimensions {
-    static let player = PhysicsBodyDimensions(sizeSpritePixels: CGSize(width: 50, height: 50), verticalShiftSpritePixels: CGFloat(0), horizontalShiftSpritePixels: CGFloat(0))
+    static let player = PhysicsBodyDimensions(sizeSpritePixels: CGSize(width: 50, height: 50), verticalShiftSpritePixels: CGFloat(0), horizontalShiftSpritePixels: CGFloat(0))    
 }
 
 class PhysicsBodyComponent: GKComponent {
