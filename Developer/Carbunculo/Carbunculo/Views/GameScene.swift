@@ -84,9 +84,9 @@ class GameScene: SKScene {
 //        let componente = entidade.component(ofType: JumpingComponent.self)
 //        componente!.jump()
 //        entityManager.jump()
-        print("Tap iniciado")
+        //print("Tap iniciado")
   //      entityManager.alternatePause()
-        entityManager.jump()
+        //entityManager.jump()
         //entityManager.run()
     }
     
@@ -115,6 +115,7 @@ class GameScene: SKScene {
         let swipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: selector)
         swipeGestureRecognizer.direction = direction
         view?.addGestureRecognizer(swipeGestureRecognizer)
+        addTapRecognizer()
     }
     
     @objc func gestureSwipe(_ sender : UIGestureRecognizer){
@@ -122,7 +123,16 @@ class GameScene: SKScene {
         entityManager.run()
         
     }
-    
+    func addTapRecognizer() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTapVez(sender:)))
+        view?.addGestureRecognizer(tap)
+    }
+    @objc func handleTapVez(sender: UITapGestureRecognizer) {
+        if sender.state == UIGestureRecognizer.State.ended {
+           entityManager.jump()
+            print("tap")
+        }
+    }
     override func update(_ currentTime: TimeInterval) {
     
     }
