@@ -12,11 +12,11 @@ import SpriteKit
 
 class WoodNode: SKSpriteNode {
     
-    init(scene: SKScene) {
+    init() {
         
-        super.init(texture: nil, color: .brown, size: CGSize(width: scene.frame.width - scene.frame.width/2, height: 20))
+        super.init(texture: nil, color: .brown, size: CGSize(width: 50 ,height: 20))
         self.name = "Wood"
-        self.position = CGPoint(x: 50, y: -scene.frame.height/2)
+       // self.position = CGPoint(x: 50, y: -scene.frame.height/2)
         self.zPosition = 1
     }
     

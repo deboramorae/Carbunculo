@@ -10,6 +10,7 @@ import Foundation
 import GameplayKit
 
 class WaterEntity:GKEntity{
+    
     init(entityManager: EntityManager, cena:GameScene) {
         super.init()
         addComponentsToEntitie(cena: cena)
