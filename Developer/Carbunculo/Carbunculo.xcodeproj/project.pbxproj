@@ -225,21 +225,16 @@
 		84B05820229445C000B7E9A0 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				EAC385AC229733D500C577E4 /* ObstaclesComponents */,
+				EAC385AB229733AF00C577E4 /* PhysicsBodyComponents */,
 				84AC27712295D49600D3A6C2 /* StateComponents */,
 				84B058212294460500B7E9A0 /* ComponentsWithNodes.swift */,
 				84B058232294486700B7E9A0 /* GKSKNodeComponent+ComponentsWithNodes.swift */,
-				84B05825229460E400B7E9A0 /* PhysicsBodyComponent.swift */,
 				66C63BC922949B4600CCEE3A /* CameraComponent.swift */,
 				EA918EFB2294EBBA00684B4F /* ControlReceiverComponent.swift */,
 				EA918EFD2294EBCB00684B4F /* ControlMovimentComponent.swift */,
 				84AC276F2295C23F00D3A6C2 /* FloorComponent.swift */,
 				66C63BCB2295BDE300CCEE3A /* PauseComponent.swift */,
-				66C63BCD2295E35900CCEE3A /* WoodPhysicsBodyComponent.swift */,
-				EA58B2302295E7690099C146 /* WoodNodeComponent.swift */,
-				EA58B2322295E7A80099C146 /* PlatformNodeComponent.swift */,
-				66C63BD12295EB6A00CCEE3A /* WaterNodeComponent.swift */,
-				66C63BD52295EDE100CCEE3A /* WaterPhysicsBodyComponent.swift */,
-				EA58B23F229629A00099C146 /* PlatformPhysicsBodyComponent.swift */,
 				66C63BD722970F1900CCEE3A /* SceneMachineComponent.swift */,
 			);
 			path = Components;
@@ -307,6 +302,27 @@
 				66C63BD32295ECE100CCEE3A /* WaterNode.swift */,
 			);
 			path = ObstaclesNode;
+			sourceTree = "<group>";
+		};
+		EAC385AB229733AF00C577E4 /* PhysicsBodyComponents */ = {
+			isa = PBXGroup;
+			children = (
+				66C63BCD2295E35900CCEE3A /* WoodPhysicsBodyComponent.swift */,
+				66C63BD52295EDE100CCEE3A /* WaterPhysicsBodyComponent.swift */,
+				EA58B23F229629A00099C146 /* PlatformPhysicsBodyComponent.swift */,
+				84B05825229460E400B7E9A0 /* PhysicsBodyComponent.swift */,
+			);
+			path = PhysicsBodyComponents;
+			sourceTree = "<group>";
+		};
+		EAC385AC229733D500C577E4 /* ObstaclesComponents */ = {
+			isa = PBXGroup;
+			children = (
+				EA58B2302295E7690099C146 /* WoodNodeComponent.swift */,
+				EA58B2322295E7A80099C146 /* PlatformNodeComponent.swift */,
+				66C63BD12295EB6A00CCEE3A /* WaterNodeComponent.swift */,
+			);
+			path = ObstaclesComponents;
 			sourceTree = "<group>";
 		};
 		EAE05C922294884600B78846 /* RemoteControl */ = {
@@ -583,7 +599,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9F5KAYAF75;
+				DEVELOPMENT_TEAM = 6HDRUANT3K;
 				INFOPLIST_FILE = Carbunculo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -601,7 +617,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9F5KAYAF75;
+				DEVELOPMENT_TEAM = 6HDRUANT3K;
 				INFOPLIST_FILE = Carbunculo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
