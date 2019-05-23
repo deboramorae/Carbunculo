@@ -7,3 +7,13 @@
 //
 
 import Foundation
+import SpriteKit
+
+
+extension CGSize {
+    public struct sizeNode {
+        
+        public static let playerNode: CGSize = CGSize(width: 55, height: 125)
+        
+    }
+}
