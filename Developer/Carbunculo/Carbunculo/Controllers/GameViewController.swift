@@ -12,6 +12,12 @@ import GameplayKit
 
 class GameViewController: UIViewController {
     
+    
+    var cena:GameScene!
+    
+    @IBAction func pausar(_ sender: Any) {
+        cena.entityManager.alternatePause()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,7 +28,7 @@ class GameViewController: UIViewController {
             
             // Get the SKScene from the loaded GKScene
             if let sceneNode = scene.rootNode as! GameScene? {
-                
+                cena = sceneNode
                 // Copy gameplay related content over to the scene
                 sceneNode.entities = scene.entities
                 sceneNode.graphs = scene.graphs
