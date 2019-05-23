@@ -18,8 +18,11 @@ class JumpingComponent:GKComponent{
     }
     
     func jump(){
-        //A partir daqui vai ser a aplicacao da forca.
-        player.physicsBody?.applyForce(CGVector(dx: 0, dy: 20))
+        player.physicsBody?.affectedByGravity = true
+        player.physicsBody?.isDynamic = true
+        print("Pulando")
+        player.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 50))
+//        player.physicsBody?.applyForce(CGVector(dx: 0, dy: 20))
     }
 
     required init?(coder aDecoder: NSCoder) {

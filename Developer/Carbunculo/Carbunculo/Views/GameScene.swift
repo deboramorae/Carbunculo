@@ -20,7 +20,8 @@ class GameScene: SKScene {
     private var lastUpdateTime : TimeInterval = 0
     
     var entityManager: EntityManager!
-
+    static let playerJumpHeightFactor: CGFloat = 1.5
+    static let playerJumpWidthFactor: CGFloat = 4
     
     override func sceneDidLoad() {
         self.lastUpdateTime = 0
@@ -81,11 +82,13 @@ class GameScene: SKScene {
 //        let entidade   = entities[0] as! Player
 //        let componente = entidade.component(ofType: JumpingComponent.self)
 //        componente!.jump()
-        entityManager.run()
+//        entityManager.jump()
+        print("Tap iniciado")
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         entityManager.run()
+        print("Swipe iniciado")
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
