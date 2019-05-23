@@ -69,15 +69,12 @@ class GameScene: SKScene {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-
-                //Codigo do pause pronto, nao remova!
-        //        if maquina.currentState is StatePaused{
-//            maquina.enter(StateUnpaused.self)
-//        }else{
-//            maquina.enter(StatePaused.self)
-//        }
         
-        
+        if let touch = touches.first {
+            let location = touch.location(in: view)
+            
+            entityManager.touchedPoint(touch: location)
+        }
        //entityManager.jump()
         //
 //        let entidade   = entities[0] as! Player
