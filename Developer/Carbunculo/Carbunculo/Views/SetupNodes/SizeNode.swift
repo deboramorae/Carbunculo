@@ -14,6 +14,8 @@ extension CGSize {
     public struct sizeNode {
         
         public static let playerNode: CGSize = CGSize(width: 55, height: 125)
+//        public static let floorNode: CGSize = CGSize(width: , height: )
+        public static let woodNode: CGSize = CGSize(width: 50, height: 20)
         
     }
 }

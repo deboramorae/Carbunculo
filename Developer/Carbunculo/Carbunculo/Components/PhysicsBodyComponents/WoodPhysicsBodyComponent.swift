@@ -13,7 +13,7 @@ class WoodPhysicsBodyComponent:GKComponent{
 
     init(node:SKNode){
         super.init()
-        node.physicsBody                    = SKPhysicsBody(rectangleOf: CGSize(width: 50, height: 20))
+        node.physicsBody                    = SKPhysicsBody(rectangleOf: CGSize.sizeNode.woodNode)
         node.physicsBody?.affectedByGravity = false
         node.physicsBody?.isDynamic         = false
         node.physicsBody?.categoryBitMask   |= SKPhysicsBody.CategoryBitMask.scenario
