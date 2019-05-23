@@ -10,7 +10,8 @@ import Foundation
 import SpriteKit
 
 class PlatformNode : SKSpriteNode{
-    init(scene: SKScene){
+    
+    init(){
         super.init(texture: nil, color: .brown, size: CGSize(width: 90, height: 50))
         self.name = "Platform"
         self.position = CGPoint(x: 50, y: 10)
