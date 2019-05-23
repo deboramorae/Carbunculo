@@ -26,6 +26,7 @@
 		66C63BD22295EB6A00CCEE3A /* WaterNodeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C63BD12295EB6A00CCEE3A /* WaterNodeComponent.swift */; };
 		66C63BD42295ECE100CCEE3A /* WaterNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C63BD32295ECE100CCEE3A /* WaterNode.swift */; };
 		66C63BD62295EDE100CCEE3A /* WaterPhysicsBodyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C63BD52295EDE100CCEE3A /* WaterPhysicsBodyComponent.swift */; };
+		66C63BD822970F1900CCEE3A /* SceneMachineComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C63BD722970F1900CCEE3A /* SceneMachineComponent.swift */; };
 		8410A2F222946FD600F73DC0 /* IdleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8410A2F122946FD600F73DC0 /* IdleComponent.swift */; };
 		8410A2F422947C7A00F73DC0 /* RunComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8410A2F322947C7A00F73DC0 /* RunComponent.swift */; };
 		84AC276C2295BB0D00D3A6C2 /* FloorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC276B2295BB0D00D3A6C2 /* FloorNode.swift */; };
@@ -80,6 +81,7 @@
 		66C63BD12295EB6A00CCEE3A /* WaterNodeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterNodeComponent.swift; sourceTree = "<group>"; };
 		66C63BD32295ECE100CCEE3A /* WaterNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterNode.swift; sourceTree = "<group>"; };
 		66C63BD52295EDE100CCEE3A /* WaterPhysicsBodyComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterPhysicsBodyComponent.swift; sourceTree = "<group>"; };
+		66C63BD722970F1900CCEE3A /* SceneMachineComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneMachineComponent.swift; sourceTree = "<group>"; };
 		8410A2F122946FD600F73DC0 /* IdleComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdleComponent.swift; sourceTree = "<group>"; };
 		8410A2F322947C7A00F73DC0 /* RunComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunComponent.swift; sourceTree = "<group>"; };
 		84AC276B2295BB0D00D3A6C2 /* FloorNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorNode.swift; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 				66C63BD12295EB6A00CCEE3A /* WaterNodeComponent.swift */,
 				66C63BD52295EDE100CCEE3A /* WaterPhysicsBodyComponent.swift */,
 				EA58B23F229629A00099C146 /* PlatformPhysicsBodyComponent.swift */,
+				66C63BD722970F1900CCEE3A /* SceneMachineComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 				66C63BCA22949B4600CCEE3A /* CameraComponent.swift in Sources */,
 				84B0581F2294414300B7E9A0 /* EntityManager.swift in Sources */,
 				66C63BD02295E7A100CCEE3A /* WaterEntity.swift in Sources */,
+				66C63BD822970F1900CCEE3A /* SceneMachineComponent.swift in Sources */,
 				84B058142294350200B7E9A0 /* Debug.swift in Sources */,
 				84D3713B2294309700922D4B /* GameViewController.swift in Sources */,
 				84B05826229460E400B7E9A0 /* PhysicsBodyComponent.swift in Sources */,
