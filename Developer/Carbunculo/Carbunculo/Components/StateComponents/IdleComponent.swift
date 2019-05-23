@@ -20,6 +20,7 @@ class IdleComponent: GKComponent {
     }
     
     func idle() {
+        print("IDleando")
         player.physicsBody?.isDynamic = false
         player.physicsBody?.isDynamic = true
     }

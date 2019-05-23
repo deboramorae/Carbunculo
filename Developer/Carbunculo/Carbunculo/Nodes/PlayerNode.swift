@@ -19,6 +19,7 @@ class PlayerNode: SKSpriteNode {
 
     private func initialPosition(){
         self.position = CGPoint(x: -300, y: 0)
+        print(self)
     }
     
     required init?(coder aDecoder: NSCoder) {
