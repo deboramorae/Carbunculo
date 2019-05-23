@@ -16,6 +16,7 @@ class WoodPhysicsBodyComponent:GKComponent{
         node.physicsBody                    = SKPhysicsBody(rectangleOf: CGSize(width: 50, height: 20))
         node.physicsBody?.affectedByGravity = false
         node.physicsBody?.isDynamic         = false
+        node.physicsBody?.categoryBitMask   |= SKPhysicsBody.CategoryBitMask.scenario
     }
     
     required init?(coder aDecoder: NSCoder) {

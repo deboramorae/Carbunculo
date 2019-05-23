@@ -16,9 +16,10 @@ class PlatformPhysicsBodyComponent: GKComponent{
         
         //tamanho a definir
         
-        node.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 120, height: 40))
+        node.physicsBody                    = SKPhysicsBody(rectangleOf: CGSize(width: 120, height: 40))
         node.physicsBody?.affectedByGravity = false
-        node.physicsBody?.isDynamic = false
+        node.physicsBody?.isDynamic         = false
+        node.physicsBody?.categoryBitMask  |= SKPhysicsBody.CategoryBitMask.scenario
     }
     
     required init?(coder aDecoder: NSCoder) {
