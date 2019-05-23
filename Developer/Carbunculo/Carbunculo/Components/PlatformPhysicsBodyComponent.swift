@@ -16,7 +16,7 @@ class PlatformPhysicsBodyComponent: GKComponent{
         
         //tamanho a definir
         
-        node.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 50, height: 20))
+        node.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 120, height: 40))
         node.physicsBody?.affectedByGravity = false
         node.physicsBody?.isDynamic = false
     }
