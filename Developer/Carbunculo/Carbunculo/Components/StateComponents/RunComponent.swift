@@ -20,7 +20,6 @@ class RunComponent: GKComponent {
     }
     
     func run() {
-        print("Correndo")
         player.physicsBody?.applyForce(CGVector(dx: 40, dy: 0))
     }
 

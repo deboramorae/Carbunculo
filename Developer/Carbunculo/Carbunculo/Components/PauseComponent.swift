@@ -17,7 +17,7 @@ class PauseComponent:GKComponent{
         super.init()
         self.cena = cena
         setCamera()
-        addNodeInTheCamera()
+        //addNodeInTheCamera()
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

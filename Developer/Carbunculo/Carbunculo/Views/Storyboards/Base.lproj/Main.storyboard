@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
-    <device id="retina6_1" orientation="landscape">
+    <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,9 +15,24 @@
             <objects>
                 <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="Carbunculo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4X-kW-iZP">
+                                <rect key="frame" x="617.5" y="16" width="33.5" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Q4X-kW-iZP" secondAttribute="height" multiplier="23:15" id="8OX-Lh-4OW"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="pausar:" destination="BV1-FR-VrT" eventType="touchUpInside" id="mK2-ka-dkL"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="trailing" secondItem="Q4X-kW-iZP" secondAttribute="trailing" constant="16" id="QhO-rC-5oh"/>
+                            <constraint firstItem="Q4X-kW-iZP" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" constant="16" id="ez5-xR-nM9"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
                     </view>
                 </viewController>

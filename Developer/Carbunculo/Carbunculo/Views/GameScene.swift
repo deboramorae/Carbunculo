@@ -73,11 +73,11 @@ class GameScene: SKScene {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-        if let touch = touches.first {
-            let location = touch.location(in: view)
-            
-            entityManager.touchedPoint(touch: location)
-        }
+//        if let touch = touches.first {
+//            let location = touch.location(in: view)
+//            
+//            entityManager.touchedPoint(touch: location)
+//        }
        //entityManager.jump()
         //
 //        let entidade   = entities[0] as! Player

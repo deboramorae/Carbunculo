@@ -18,6 +18,6 @@ class StateUnpaused:GKState{
         let maquina = self.stateMachine as! MachineScene
         let cena    = maquina.scene
         cena?.UnpauseScene()
-        cena?.entityManager.changeUnPaused()
+       // cena?.entityManager.changeUnPaused()
     }
 }
