@@ -41,8 +41,13 @@ class GameScene: SKScene {
             let entidadeCena  = EntidadeCena(entityManager: entityManager, cena: self)
             let player        = Player(entityManager: entityManager)
             let entidadeWater = WaterEntity(entityManager: entityManager, cena: self)
+            let entityWood    = WoodEntity(entityManager: entityManager, scene: self)
+            let entityPlatform = PlatformEntity(entityManager: entityManager, scene: self)
+            
             entityManager.add(player)
             entityManager.add(entidadeCena)
+            entityManager.add(entityWood)
+            entityManager.add(entityPlatform)
             
             entities.append(entidadeWater)
         }
