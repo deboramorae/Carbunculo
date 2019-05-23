@@ -15,6 +15,8 @@ class GameScene: SKScene {
     var entities = [GKEntity]()
     var graphs = [String : GKGraph]()
     
+    private var swipe : Bool = false
+    
     private var remoteControl: RemoteControl?
     private var lastUpdateTime : TimeInterval = 0
     
@@ -29,7 +31,8 @@ class GameScene: SKScene {
     
     override func didMove(to view: SKView) {
         super.didMove(to: view)
-        remoteControl = RemoteControl(view: view)
+        
+        addSwipesGestures()
         
         entityManager = EntityManager(scene: self)
         
@@ -83,43 +86,44 @@ class GameScene: SKScene {
 //        entityManager.jump()
         print("Tap iniciado")
   //      entityManager.alternatePause()
-    //    entityManager.run()
+        entityManager.jump()
+        //entityManager.run()
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        entityManager.run()
-        print("Swipe iniciado")
+       // entityManager.run()
+       // print("Swipe iniciado")
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        entityManager.idle()
-        print("Swipe foi encerrado")
+        //entityManager.idle()
+       // print("Swipe foi encerrado")
     }
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-        entityManager.idle()
-        print("Tap foi encerrado")
+        //entityManager.idle()
+        //print("Tap foi encerrado")
     }
     
+    func addSwipesGestures(){
+        addSwipeGestureRecognizer(direction: .right,
+                                  selector: #selector(GameScene.gestureSwipe))
+    }
+    
+    func addSwipeGestureRecognizer(direction : UISwipeGestureRecognizer.Direction, selector : Selector) {
+        
+        let swipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: selector)
+        swipeGestureRecognizer.direction = direction
+        view?.addGestureRecognizer(swipeGestureRecognizer)
+    }
+    
+    @objc func gestureSwipe(_ sender : UIGestureRecognizer){
+        swipe = true
+        entityManager.run()
+        
+    }
     
     override func update(_ currentTime: TimeInterval) {
-        if (self.lastUpdateTime == 0) {
-            self.lastUpdateTime = currentTime
-        }
-        
-        // Calculate time since last update
-        let dt = currentTime - self.lastUpdateTime
-        
-        // Update entities
-        for entity in self.entities {
-            if let remoteControl = remoteControl, let component = entity.component(ofType: ControlReceiverComponent.self) {
-                component.updatePressedButtons(remoteControl.pressedButtons)
-            }
-            
-            entity.update(deltaTime: dt)
-        }
-        
-        self.lastUpdateTime = currentTime
-    }
     
+    }
 }
