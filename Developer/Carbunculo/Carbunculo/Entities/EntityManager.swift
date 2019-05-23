@@ -79,4 +79,16 @@ class EntityManager {
             }
         }
     }
+    
+    func alternatePause(){
+        for entities in entities {
+            if let component = entities.component(ofType: SceneMachineComponent.self) {
+                if component.maquina.currentState is StatePaused{
+                    component.maquina.enter(StateUnpaused.self)
+                }else{
+                    component.maquina.enter(StatePaused.self)
+                }
+            }
+        }
+    }
 }

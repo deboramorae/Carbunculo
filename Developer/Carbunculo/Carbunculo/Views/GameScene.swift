@@ -12,7 +12,6 @@ import GameplayKit
 
 class GameScene: SKScene {
     static let spritePixelsToScreenPixels: CGFloat = 1.0
-    var maquina : MachineScene!
     var entities = [GKEntity]()
     var graphs = [String : GKGraph]()
     
@@ -27,10 +26,6 @@ class GameScene: SKScene {
         self.lastUpdateTime = 0
     }
     
-    func carregarMaquina(){
-        maquina = MachineScene(states: [StatePaused(),StateUnpaused()], scene: self)
-        maquina.enter(StateUnpaused.self)
-    }
     
     override func didMove(to view: SKView) {
         super.didMove(to: view)
@@ -39,7 +34,7 @@ class GameScene: SKScene {
         entityManager = EntityManager(scene: self)
         
         do {
-            let entidadeCena  = EntidadeCena(entityManager: entityManager, cena: self)
+            let entidadeCena  = EntidadeCena(cena: self)
             let floor = FloorEntity(entityManager: entityManager, cena: self)
             let player        = Player(entityManager: entityManager)
             let entidadeWater = WaterEntity(entityManager: entityManager, cena: self)
@@ -54,7 +49,6 @@ class GameScene: SKScene {
             
             entities.append(entidadeWater)
         }
-        carregarMaquina()
     }
     
     func pauseScene(){
@@ -91,6 +85,8 @@ class GameScene: SKScene {
 //        componente!.jump()
 //        entityManager.jump()
         print("Tap iniciado")
+  //      entityManager.alternatePause()
+    //    entityManager.run()
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
