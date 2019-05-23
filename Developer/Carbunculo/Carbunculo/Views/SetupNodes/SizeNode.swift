@@ -6,8 +6,7 @@
 //  Copyright © 2019 CarbunculoTeam. All rights reserved.
 //
 
-import Foundation
-import SpriteKit
+import CoreGraphics
 
 
 extension CGSize {
