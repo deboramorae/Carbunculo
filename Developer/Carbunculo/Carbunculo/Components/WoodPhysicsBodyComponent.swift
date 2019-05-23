@@ -13,7 +13,7 @@ class WoodPhysicsBodyComponent:GKComponent{
 
     init(node:SKNode){
         super.init()
-        node.physicsBody                    = SKPhysicsBody(circleOfRadius: 15.0)
+        node.physicsBody                    = SKPhysicsBody(rectangleOf: CGSize(width: 50, height: 20))
         node.physicsBody?.affectedByGravity = false
         node.physicsBody?.isDynamic         = false
     }

@@ -20,7 +20,7 @@ class RunComponent: GKComponent {
     }
     
     func run() {
-        player.physicsBody?.applyForce(CGVector(dx: 40, dy: 0))
+        player.physicsBody?.applyForce(CGVector(dx: 60, dy: 0))
     }
 
     required init?(coder aDecoder: NSCoder) {
