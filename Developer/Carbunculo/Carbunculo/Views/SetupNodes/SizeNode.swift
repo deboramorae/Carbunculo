@@ -17,6 +17,7 @@ extension CGSize {
         public static let floorNode: CGSize = CGSize(width: 800, height: 50)
         public static let woodNode: CGSize = CGSize(width: 50, height: 20)
 //        public static let waterNode: CGSize = CGSize(width: , height: )
+        public static let platformNode: CGSize = CGSize(width: 120, height: 40)
         
     }
 }
