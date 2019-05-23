@@ -12,21 +12,16 @@ import GameplayKit
 
 class EntidadeCena: GKEntity {
     
-//    var floor: FloorNode!
-    
     init(entityManager: EntityManager, cena:GameScene) {
         super.init()
         
-//        floor = FloorNode(scene: cena)
         addComponentsToEntitie(cena: cena)
     }
     
     func addComponentsToEntitie(cena:GameScene){
-//        addComponent(GKSKNodeComponent(node: floor))
         addComponent(CameraComponent(cena: cena))
         addComponent(PauseComponent(cena: cena))
         addComponent(FloorComponent(scene: cena))
-//        addComponent(PhysicsBodyComponent(node: floor, dimensions: PhysicsBodyDimensions(sizeSpritePixels: CGSize(width: cena.frame.width, height: 50), verticalShiftSpritePixels: CGFloat(0), horizontalShiftSpritePixels: CGFloat(0))))
     }
     
     required init?(coder aDecoder: NSCoder) {

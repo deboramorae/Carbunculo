@@ -79,4 +79,8 @@ class EntityManager {
             }
         }
     }
+    
+    func touchedPoint(touch: CGPoint){
+        
+    }
 }

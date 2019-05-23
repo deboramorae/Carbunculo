@@ -27,7 +27,7 @@ class PauseComponent:GKComponent{
     }
     func addNodeInTheCamera(){
         node = SKShapeNode(rectOf: CGSize(width: 50, height: 50))
-        node.position = CGPoint(x: 300,y: 150)
+        node.position = CGPoint(x: cena.frame.width/2 - 50,y: cena.frame.height/2 - 50)
         node.fillColor = UIColor.white
         camera.addChild(node)
     }
