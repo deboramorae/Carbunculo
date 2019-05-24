@@ -190,7 +190,6 @@
 			isa = PBXGroup;
 			children = (
 				84D371382294309700922D4B /* GameScene.swift */,
-				84AC279C2297408800D3A6C2 /* SetupNodes */,
 				84B0581922943AD900B7E9A0 /* Sks */,
 				84B0581822943ACE00B7E9A0 /* Storyboards */,
 			);
@@ -270,6 +269,7 @@
 		84B058272294670A00B7E9A0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				84AC279C2297408800D3A6C2 /* SetupNodes */,
 				84B058282294673B00B7E9A0 /* CGSize+ops.swift */,
 				EA58B21A2295BB800099C146 /* SKPhysicsBody+maskDefs.swift */,
 			);
