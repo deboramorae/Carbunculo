@@ -44,6 +44,7 @@ class GameScene: SKScene {
             let entityWood    = WoodEntity(entityManager: entityManager, scene: self)
             let entityPlatform = PlatformEntity(entityManager: entityManager, scene: self)
             
+            
             entityManager.add(entidadeCena)
             entityManager.add(floor)
             entityManager.add(player)
@@ -72,22 +73,6 @@ class GameScene: SKScene {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-//        if let touch = touches.first {
-//            let location = touch.location(in: view)
-//            
-//            entityManager.touchedPoint(touch: location)
-//        }
-       //entityManager.jump()
-        //
-//        let entidade   = entities[0] as! Player
-//        let componente = entidade.component(ofType: JumpingComponent.self)
-//        componente!.jump()
-//        entityManager.jump()
-        //print("Tap iniciado")
-  //      entityManager.alternatePause()
-        //entityManager.jump()
-        //entityManager.run()
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {

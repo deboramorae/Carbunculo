@@ -20,7 +20,7 @@ class JumpingComponent:GKComponent{
     func jump(){
         player.physicsBody?.affectedByGravity = true
         player.physicsBody?.isDynamic = true
-        player.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 50))
+        player.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 110))
     }
 
     required init?(coder aDecoder: NSCoder) {
