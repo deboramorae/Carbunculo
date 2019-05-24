@@ -17,7 +17,7 @@ class WoodEntity:GKEntity{
     
     func addComponentsToEntitie(scene: GameScene){
         let node = WoodNode()
-        
+        node.physicsBody?.friction = 10
         addComponent(WoodNodeComponent(node: node, scene: scene))
         addComponent(WoodPhysicsBodyComponent(node: node))
         

@@ -33,6 +33,8 @@
 		84AC276C2295BB0D00D3A6C2 /* FloorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC276B2295BB0D00D3A6C2 /* FloorNode.swift */; };
 		84AC27702295C23F00D3A6C2 /* FloorComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC276F2295C23F00D3A6C2 /* FloorComponent.swift */; };
 		84AC27732296F43F00D3A6C2 /* FloorEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC27722296F43F00D3A6C2 /* FloorEntity.swift */; };
+		84AC27992297406A00D3A6C2 /* SizeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC27982297406A00D3A6C2 /* SizeNode.swift */; };
+		84AC279B2297408500D3A6C2 /* InitialPositionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC279A2297408500D3A6C2 /* InitialPositionNode.swift */; };
 		84B058142294350200B7E9A0 /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B058132294350200B7E9A0 /* Debug.swift */; };
 		84B058172294377800B7E9A0 /* PlayerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B058162294377800B7E9A0 /* PlayerNode.swift */; };
 		84B0581D22943F2A00B7E9A0 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B0581C22943F2A00B7E9A0 /* Player.swift */; };
@@ -57,6 +59,7 @@
 		EA58B23C229626EF0099C146 /* WoodEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA58B23B229626EF0099C146 /* WoodEntity.swift */; };
 		EA58B23E229629080099C146 /* PlatformEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA58B23D229629080099C146 /* PlatformEntity.swift */; };
 		EA58B240229629A00099C146 /* PlatformPhysicsBodyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA58B23F229629A00099C146 /* PlatformPhysicsBodyComponent.swift */; };
+		EA5FE590229743040027D77F /* FloorPhysicsBodyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5FE58F229743040027D77F /* FloorPhysicsBodyComponent.swift */; };
 		EA918EFC2294EBBA00684B4F /* ControlReceiverComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA918EFB2294EBBA00684B4F /* ControlReceiverComponent.swift */; };
 		EA918EFE2294EBCB00684B4F /* ControlMovimentComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA918EFD2294EBCB00684B4F /* ControlMovimentComponent.swift */; };
 		EAE05C942294885A00B78846 /* RemoteControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE05C932294885A00B78846 /* RemoteControl.swift */; };
@@ -89,6 +92,8 @@
 		84AC276B2295BB0D00D3A6C2 /* FloorNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorNode.swift; sourceTree = "<group>"; };
 		84AC276F2295C23F00D3A6C2 /* FloorComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorComponent.swift; sourceTree = "<group>"; };
 		84AC27722296F43F00D3A6C2 /* FloorEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorEntity.swift; sourceTree = "<group>"; };
+		84AC27982297406A00D3A6C2 /* SizeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeNode.swift; sourceTree = "<group>"; };
+		84AC279A2297408500D3A6C2 /* InitialPositionNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialPositionNode.swift; sourceTree = "<group>"; };
 		84B058132294350200B7E9A0 /* Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debug.swift; sourceTree = "<group>"; };
 		84B058162294377800B7E9A0 /* PlayerNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerNode.swift; sourceTree = "<group>"; };
 		84B0581C22943F2A00B7E9A0 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
@@ -115,6 +120,7 @@
 		EA58B23B229626EF0099C146 /* WoodEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoodEntity.swift; sourceTree = "<group>"; };
 		EA58B23D229629080099C146 /* PlatformEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformEntity.swift; sourceTree = "<group>"; };
 		EA58B23F229629A00099C146 /* PlatformPhysicsBodyComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformPhysicsBodyComponent.swift; sourceTree = "<group>"; };
+		EA5FE58F229743040027D77F /* FloorPhysicsBodyComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorPhysicsBodyComponent.swift; sourceTree = "<group>"; };
 		EA918EFB2294EBBA00684B4F /* ControlReceiverComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlReceiverComponent.swift; sourceTree = "<group>"; };
 		EA918EFD2294EBCB00684B4F /* ControlMovimentComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlMovimentComponent.swift; sourceTree = "<group>"; };
 		EAE05C932294885A00B78846 /* RemoteControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteControl.swift; sourceTree = "<group>"; };
@@ -165,10 +171,20 @@
 			path = StateComponents;
 			sourceTree = "<group>";
 		};
+		84AC279C2297408800D3A6C2 /* SetupNodes */ = {
+			isa = PBXGroup;
+			children = (
+				84AC27982297406A00D3A6C2 /* SizeNode.swift */,
+				84AC279A2297408500D3A6C2 /* InitialPositionNode.swift */,
+			);
+			path = SetupNodes;
+			sourceTree = "<group>";
+		};
 		84B058112294348700B7E9A0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				84D371382294309700922D4B /* GameScene.swift */,
+				84AC279C2297408800D3A6C2 /* SetupNodes */,
 				84B0581922943AD900B7E9A0 /* Sks */,
 				84B0581822943ACE00B7E9A0 /* Storyboards */,
 			);
@@ -227,21 +243,16 @@
 		84B05820229445C000B7E9A0 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				EAC385AC229733D500C577E4 /* ObstaclesComponents */,
+				EAC385AB229733AF00C577E4 /* PhysicsBodyComponents */,
 				84AC27712295D49600D3A6C2 /* StateComponents */,
 				84B058212294460500B7E9A0 /* ComponentsWithNodes.swift */,
 				84B058232294486700B7E9A0 /* GKSKNodeComponent+ComponentsWithNodes.swift */,
-				84B05825229460E400B7E9A0 /* PhysicsBodyComponent.swift */,
 				66C63BC922949B4600CCEE3A /* CameraComponent.swift */,
 				EA918EFB2294EBBA00684B4F /* ControlReceiverComponent.swift */,
 				EA918EFD2294EBCB00684B4F /* ControlMovimentComponent.swift */,
 				84AC276F2295C23F00D3A6C2 /* FloorComponent.swift */,
 				66C63BCB2295BDE300CCEE3A /* PauseComponent.swift */,
-				66C63BCD2295E35900CCEE3A /* WoodPhysicsBodyComponent.swift */,
-				EA58B2302295E7690099C146 /* WoodNodeComponent.swift */,
-				EA58B2322295E7A80099C146 /* PlatformNodeComponent.swift */,
-				66C63BD12295EB6A00CCEE3A /* WaterNodeComponent.swift */,
-				66C63BD52295EDE100CCEE3A /* WaterPhysicsBodyComponent.swift */,
-				EA58B23F229629A00099C146 /* PlatformPhysicsBodyComponent.swift */,
 				66C63BD722970F1900CCEE3A /* SceneMachineComponent.swift */,
 				66C63BD9229731EA00CCEE3A /* PlayerStateMachineComponent.swift */,
 			);
@@ -310,6 +321,28 @@
 				66C63BD32295ECE100CCEE3A /* WaterNode.swift */,
 			);
 			path = ObstaclesNode;
+			sourceTree = "<group>";
+		};
+		EAC385AB229733AF00C577E4 /* PhysicsBodyComponents */ = {
+			isa = PBXGroup;
+			children = (
+				66C63BCD2295E35900CCEE3A /* WoodPhysicsBodyComponent.swift */,
+				66C63BD52295EDE100CCEE3A /* WaterPhysicsBodyComponent.swift */,
+				EA58B23F229629A00099C146 /* PlatformPhysicsBodyComponent.swift */,
+				EA5FE58F229743040027D77F /* FloorPhysicsBodyComponent.swift */,
+				84B05825229460E400B7E9A0 /* PhysicsBodyComponent.swift */,
+			);
+			path = PhysicsBodyComponents;
+			sourceTree = "<group>";
+		};
+		EAC385AC229733D500C577E4 /* ObstaclesComponents */ = {
+			isa = PBXGroup;
+			children = (
+				EA58B2302295E7690099C146 /* WoodNodeComponent.swift */,
+				EA58B2322295E7A80099C146 /* PlatformNodeComponent.swift */,
+				66C63BD12295EB6A00CCEE3A /* WaterNodeComponent.swift */,
+			);
+			path = ObstaclesComponents;
 			sourceTree = "<group>";
 		};
 		EAE05C922294884600B78846 /* RemoteControl */ = {
@@ -420,12 +453,15 @@
 				84D3713B2294309700922D4B /* GameViewController.swift in Sources */,
 				84B05826229460E400B7E9A0 /* PhysicsBodyComponent.swift in Sources */,
 				84AC27732296F43F00D3A6C2 /* FloorEntity.swift in Sources */,
+				84AC27992297406A00D3A6C2 /* SizeNode.swift in Sources */,
 				84D371332294309700922D4B /* AppDelegate.swift in Sources */,
 				66C63BB22294693900CCEE3A /* StateRunning.swift in Sources */,
 				66C63BC622948D1900CCEE3A /* StateUnPaused.swift in Sources */,
 				66C63BD42295ECE100CCEE3A /* WaterNode.swift in Sources */,
 				66C63BB62294698300CCEE3A /* StateFalling.swift in Sources */,
 				66C63BBA22946A0A00CCEE3A /* StateUnconscious.swift in Sources */,
+				EA5FE590229743040027D77F /* FloorPhysicsBodyComponent.swift in Sources */,
+				84AC279B2297408500D3A6C2 /* InitialPositionNode.swift in Sources */,
 				EA58B240229629A00099C146 /* PlatformPhysicsBodyComponent.swift in Sources */,
 				66C63BC422948CEB00CCEE3A /* StatePaused.swift in Sources */,
 				66C63BC222948C1000CCEE3A /* MachineScene.swift in Sources */,
