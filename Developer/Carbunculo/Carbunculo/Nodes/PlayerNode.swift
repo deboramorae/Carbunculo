@@ -12,13 +12,13 @@ import SpriteKit
 
 class PlayerNode: SKSpriteNode {
     init() {
-        super.init(texture: SKTexture(imageNamed: "akin"), color: .blue, size: CGSize(width: 55, height: 125))
+        super.init(texture: SKTexture(imageNamed: "akin"), color: .blue, size: CGSize.sizeNode.playerNode)
         self.name = "Player"
         self.initialPosition()
     }
 
     private func initialPosition(){
-        self.position = CGPoint(x: -300, y: 0)
+        self.position = CGPoint.initialPositionNode.playerNode
     }
     
     required init?(coder aDecoder: NSCoder) {

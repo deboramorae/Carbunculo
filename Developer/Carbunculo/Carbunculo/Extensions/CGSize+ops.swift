@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import SpriteKit
 import CoreGraphics
 
 
@@ -22,16 +21,5 @@ extension CGSize {
     
     public static func /(lhs: CGSize, rhs: CGFloat) -> CGSize {
         return CGSize(width: lhs.width / rhs, height: lhs.height / rhs)
-    }
-}
-
-
-extension SKNode {
-    var positionInScene:CGPoint? {
-        if let scene = scene, let parent = parent?.parent {
-            return parent.convert(position, to:scene)
-        } else {
-            return nil
-        }
     }
 }
