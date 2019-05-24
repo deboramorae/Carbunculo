@@ -16,7 +16,7 @@ class WoodNode: SKSpriteNode {
         
         super.init(texture: nil, color: .brown, size: CGSize.sizeNode.woodNode)
         self.name = "Wood"
-        self.position = CGPoint(x: 50, y: -150)
+        self.position = CGPoint.initialPositionNode.woodNode
     }
     
     required init?(coder aDecoder: NSCoder) {
