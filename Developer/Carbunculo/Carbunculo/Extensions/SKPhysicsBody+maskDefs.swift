@@ -12,10 +12,9 @@ import SpriteKit
 extension SKPhysicsBody{
     public struct CategoryBitMask {
         // move 0 bits para a esquerda
-        public static let player: UInt32 = 1 << 0
-        //move 1 bit para a esquerda
+        public static let player         : UInt32 = 1 << 0
         public static let floorComponent : UInt32 = 1 << 1
-        public static let scenario : UInt32 = 1 << 2
+        public static let scenario       : UInt32 = 1 << 2
+        public static let choices        : UInt32 = 1 << 3
     }
 }
-

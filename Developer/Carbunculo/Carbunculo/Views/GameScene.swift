@@ -14,7 +14,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     static let spritePixelsToScreenPixels: CGFloat = 1.0
     var entities = [GKEntity]()
     var graphs = [String : GKGraph]()
-    
     private var swipe : Bool = false
     
     private var remoteControl: RemoteControl?
@@ -44,6 +43,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let entidadeWater = WaterEntity(entityManager: entityManager, cena: self)
             let entityWood    = WoodEntity(entityManager: entityManager, scene: self)
             let entityPlatform = PlatformEntity(entityManager: entityManager, scene: self)
+            
             
             entityManager.add(entidadeCena)
             entityManager.add(floor)
