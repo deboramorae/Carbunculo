@@ -109,14 +109,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     @objc func handleTapVez(sender: UITapGestureRecognizer) {
         if sender.state == UIGestureRecognizer.State.ended {
            entityManager.jump()
-            print("tap")
+           // print("tap")
         }
     }
     override func update(_ currentTime: TimeInterval) {
-    
+        entityManager.update(deltaTime: currentTime)
     }
     
      func didBegin(_ contact: SKPhysicsContact) {
-        print(contact)
+        if(contact.bodyA.node!.name == "player" || contact.bodyB.node!.name == "player"){
+            if(contact.bodyA.node!.name == "floor" || contact.bodyB.node!.name == "floor"){
+                entityManager.playerLanding()
+            }
+        }
     }
 }

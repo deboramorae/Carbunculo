@@ -13,4 +13,7 @@ class StateRunning:GKState{
     override func isValidNextState(_ stateClass: AnyClass) -> Bool {
         return (stateClass is StateIdle.Type) || (stateClass is StateJumping.Type)
     }
+    override func didEnter(from previousState: GKState?) {
+        print("Running entrou")
+    }
 }

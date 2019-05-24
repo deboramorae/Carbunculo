@@ -17,6 +17,7 @@ class FloorComponent: GKComponent {
     init(scene: SKScene) {
         super.init()
         self.floor = FloorNode(scene: scene)
+        self.floor.name = "floor"
     }
     
     required init?(coder aDecoder: NSCoder) {

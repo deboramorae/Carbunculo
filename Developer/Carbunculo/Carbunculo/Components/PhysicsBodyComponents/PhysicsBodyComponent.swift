@@ -14,7 +14,6 @@ struct PhysicsBodyDimensions {
     let horizontalShiftSpritePixels: CGFloat
     let sizeSpritePixels: CGSize
     let verticalShiftSpritePixels: CGFloat
-    
     init(sizeSpritePixels: CGSize, verticalShiftSpritePixels: CGFloat = 0, horizontalShiftSpritePixels: CGFloat = 0) {
         self.horizontalShiftSpritePixels = horizontalShiftSpritePixels
         self.sizeSpritePixels = sizeSpritePixels
@@ -37,7 +36,7 @@ extension PhysicsBodyDimensions {
 class PhysicsBodyComponent: GKComponent {
     let sizeScreenPixels: CGSize
     let verticalShiftScreenPixels: CGFloat
-    
+    var corpofisico: SKPhysicsBody?
     init(node: SKSpriteNode, dimensions: PhysicsBodyDimensions) {
         self.sizeScreenPixels = dimensions.sizeSpritePixels * GameScene.spritePixelsToScreenPixels
         self.verticalShiftScreenPixels = dimensions.verticalShiftSpritePixels * GameScene.spritePixelsToScreenPixels
@@ -55,10 +54,11 @@ class PhysicsBodyComponent: GKComponent {
         node.physicsBody?.friction           = 0.0
         node.physicsBody?.restitution        = 0.0
         
-        node.physicsBody?.categoryBitMask    = SKPhysicsBody.CategoryBitMask.player
+        node.physicsBody?.categoryBitMask    = 1 /*SKPhysicsBody.CategoryBitMask.player*/
         node.physicsBody?.collisionBitMask   = SKPhysicsBody.CategoryBitMask.floorComponent
-        node.physicsBody?.contactTestBitMask = 0
-                
+        node.physicsBody?.contactTestBitMask = 1
+        
+        corpofisico = node.physicsBody
     }
     
     required init?(coder aDecoder: NSCoder) {

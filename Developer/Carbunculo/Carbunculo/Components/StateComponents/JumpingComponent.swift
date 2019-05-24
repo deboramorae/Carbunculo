@@ -22,7 +22,7 @@ class JumpingComponent:GKComponent{
             if component.maquina.enter(StateJumping.self){
                 player.physicsBody?.affectedByGravity = true
                 player.physicsBody?.isDynamic = true
-                player.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 50))
+                player.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 150))
             }
         }
     }

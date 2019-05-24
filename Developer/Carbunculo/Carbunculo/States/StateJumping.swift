@@ -11,6 +11,9 @@ import GameplayKit
 
 class StateJumping:GKState{
     override func isValidNextState(_ stateClass: AnyClass) -> Bool {
-        return (stateClass is StateIdle.Type)
+        return (stateClass is StateIdle.Type) || (stateClass is StateFalling.Type)
+    }
+    override func didEnter(from previousState: GKState?) {
+        print("Jumping Entrou")
     }
 }

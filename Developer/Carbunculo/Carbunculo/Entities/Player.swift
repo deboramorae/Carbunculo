@@ -15,10 +15,11 @@ class Player: GKEntity {
     init(entityManager: EntityManager) {
         super.init()
         
-        let player = PlayerNode()
+        let player  = PlayerNode()
+        player.name = "player"
         
         addComponent(GKSKNodeComponent(node: player))
-        addComponent(PlayerPhysicsBodyComponent(node: player, dimensions: PhysicsBodyDimensions.player))
+        addComponent(PhysicsBodyComponent(node: player, dimensions: PhysicsBodyDimensions.player))
         addComponent(JumpingComponent(player: player))
         addComponent(IdleComponent(player: player))
         addComponent(RunComponent(player: player))

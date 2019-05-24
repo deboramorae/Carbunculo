@@ -14,6 +14,7 @@ class FloorPhysicsBodyComponent : GKComponent {
     init(node : SKNode, scene : SKScene) {
         super.init()
         
+        node.name                           = "floor"
         node.physicsBody                    = SKPhysicsBody(rectangleOf: CGSize(width: scene.frame.width, height: 50))
         node.physicsBody?.affectedByGravity = false
         node.physicsBody?.isDynamic         = false
