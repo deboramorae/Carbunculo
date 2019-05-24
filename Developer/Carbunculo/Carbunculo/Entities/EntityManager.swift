@@ -91,4 +91,23 @@ class EntityManager {
             }
         }
     }
+    func update(deltaTime sec: TimeInterval) {
+        for entity in entities{
+            if let componenteCorpoFisico = entity.component(ofType: PhysicsBodyComponent.self),let componenteMaquina = entity.component(ofType: PlayerStateMachineComponent.self){
+                if let velocidade = componenteCorpoFisico.corpofisico?.velocity{
+                    
+                    if(Float(velocidade.dy)<0){
+                        componenteMaquina.maquina.enter(StateFalling.self)
+                    }
+                }
+            }
+        }
+    }
+    func playerLanding(){
+        for entity in entities{
+            if let componenteMaquina = entity.component(ofType: PlayerStateMachineComponent.self){
+                componenteMaquina.maquina.enter(StateIdle.self)
+            }
+        }
+    }
 }

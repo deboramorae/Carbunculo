@@ -20,7 +20,12 @@ class RunComponent: GKComponent {
     }
     
     func run() {
-        player.physicsBody?.applyForce(CGVector(dx: 100, dy: 0))
+        if let component = entity!.component(ofType: PlayerStateMachineComponent.self) {
+            
+            if component.maquina.enter(StateRunning.self){
+                player.physicsBody?.applyForce(CGVector(dx: 1000, dy: 0))
+            }
+        }
     }
 
     required init?(coder aDecoder: NSCoder) {

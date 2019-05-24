@@ -13,4 +13,7 @@ class StateUnconscious:GKState{
     override func isValidNextState(_ stateClass: AnyClass) -> Bool {
         return (stateClass is StateIdle.Type)
     }
+    override func didEnter(from previousState: GKState?) {
+        print("Unconscious Entrou")
+    }
 }

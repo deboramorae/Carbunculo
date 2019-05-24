@@ -13,6 +13,7 @@ class WoodPhysicsBodyComponent:GKComponent{
 
     init(node:SKNode){
         super.init()
+        node.name = "floor"
         node.physicsBody                    = SKPhysicsBody(rectangleOf: CGSize.sizeNode.woodNode)
         node.physicsBody?.affectedByGravity = false
         node.physicsBody?.isDynamic         = false

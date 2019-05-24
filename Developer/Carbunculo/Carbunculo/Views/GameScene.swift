@@ -10,11 +10,10 @@ import SpriteKit
 import GameplayKit
 
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
     static let spritePixelsToScreenPixels: CGFloat = 1.0
     var entities = [GKEntity]()
     var graphs = [String : GKGraph]()
-    
     private var swipe : Bool = false
     
     private var remoteControl: RemoteControl?
@@ -26,6 +25,7 @@ class GameScene: SKScene {
     
     override func sceneDidLoad() {
         self.lastUpdateTime = 0
+        physicsWorld.contactDelegate = self
     }
     
     
@@ -76,18 +76,12 @@ class GameScene: SKScene {
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-       // entityManager.run()
-       // print("Swipe iniciado")
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        //entityManager.idle()
-       // print("Swipe foi encerrado")
     }
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-        //entityManager.idle()
-        //print("Tap foi encerrado")
     }
     
     func addSwipesGestures(){
@@ -115,10 +109,18 @@ class GameScene: SKScene {
     @objc func handleTapVez(sender: UITapGestureRecognizer) {
         if sender.state == UIGestureRecognizer.State.ended {
            entityManager.jump()
-            print("tap")
+           // print("tap")
         }
     }
     override func update(_ currentTime: TimeInterval) {
+        entityManager.update(deltaTime: currentTime)
+    }
     
+     func didBegin(_ contact: SKPhysicsContact) {
+        if(contact.bodyA.node!.name == "player" || contact.bodyB.node!.name == "player"){
+            if(contact.bodyA.node!.name == "floor" || contact.bodyB.node!.name == "floor"){
+                entityManager.playerLanding()
+            }
+        }
     }
 }

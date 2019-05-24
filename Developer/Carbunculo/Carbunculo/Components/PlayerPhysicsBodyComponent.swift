@@ -14,6 +14,7 @@ struct PhysicsBodyDimensions {
     let horizontalShiftSpritePixels: CGFloat
     let sizeSpritePixels: CGSize
     let verticalShiftSpritePixels: CGFloat
+    
     init(sizeSpritePixels: CGSize, verticalShiftSpritePixels: CGFloat = 0, horizontalShiftSpritePixels: CGFloat = 0) {
         self.horizontalShiftSpritePixels = horizontalShiftSpritePixels
         self.sizeSpritePixels = sizeSpritePixels
@@ -30,13 +31,13 @@ struct PhysicsBodyDimensions {
 }
 
 extension PhysicsBodyDimensions {
-    static let player = PhysicsBodyDimensions(sizeSpritePixels: CGSize.sizeNode.playerNode, verticalShiftSpritePixels: CGFloat(0), horizontalShiftSpritePixels: CGFloat(0))    
+    static let player = PhysicsBodyDimensions(sizeSpritePixels: CGSize(width: 50, height: 50), verticalShiftSpritePixels: CGFloat(0), horizontalShiftSpritePixels: CGFloat(0))    
 }
 
-class PhysicsBodyComponent: GKComponent {
+class PlayerPhysicsBodyComponent: GKComponent {
     let sizeScreenPixels: CGSize
     let verticalShiftScreenPixels: CGFloat
-    var corpofisico: SKPhysicsBody?
+    
     init(node: SKSpriteNode, dimensions: PhysicsBodyDimensions) {
         self.sizeScreenPixels = dimensions.sizeSpritePixels * GameScene.spritePixelsToScreenPixels
         self.verticalShiftScreenPixels = dimensions.verticalShiftSpritePixels * GameScene.spritePixelsToScreenPixels
@@ -47,18 +48,19 @@ class PhysicsBodyComponent: GKComponent {
         node.physicsBody = SKPhysicsBody(rectangleOf: sizeScreenPixels, center: CGPoint(x: 0, y: sizeScreenPixels.height / 2))
         
         node.physicsBody?.isDynamic          = true
-        node.physicsBody?.affectedByGravity  = true
+        node.physicsBody?.affectedByGravity  = false
         node.physicsBody?.allowsRotation     = false
         node.physicsBody?.linearDamping      = 0.0
         node.physicsBody?.angularDamping     = 0.0
         node.physicsBody?.friction           = 0.0
         node.physicsBody?.restitution        = 0.0
+        node.physicsBody?.mass               = 0 
         
-        node.physicsBody?.categoryBitMask    = 1 /*SKPhysicsBody.CategoryBitMask.player*/
-        node.physicsBody?.collisionBitMask   = SKPhysicsBody.CategoryBitMask.floorComponent
+        //node.physicsBody?.categoryBitMask    = SKPhysicsBody.CategoryBitMask.floorComponent
+        node.physicsBody?.categoryBitMask    = 1
+        node.physicsBody?.collisionBitMask   = 1
         node.physicsBody?.contactTestBitMask = 1
         
-        corpofisico = node.physicsBody
     }
     
     required init?(coder aDecoder: NSCoder) {
