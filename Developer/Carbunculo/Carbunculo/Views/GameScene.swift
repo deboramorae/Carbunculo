@@ -10,7 +10,7 @@ import SpriteKit
 import GameplayKit
 
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
     static let spritePixelsToScreenPixels: CGFloat = 1.0
     var entities = [GKEntity]()
     var graphs = [String : GKGraph]()
@@ -26,6 +26,7 @@ class GameScene: SKScene {
     
     override func sceneDidLoad() {
         self.lastUpdateTime = 0
+        physicsWorld.contactDelegate = self
     }
     
     
@@ -72,37 +73,15 @@ class GameScene: SKScene {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-//        if let touch = touches.first {
-//            let location = touch.location(in: view)
-//            
-//            entityManager.touchedPoint(touch: location)
-//        }
-       //entityManager.jump()
-        //
-//        let entidade   = entities[0] as! Player
-//        let componente = entidade.component(ofType: JumpingComponent.self)
-//        componente!.jump()
-//        entityManager.jump()
-        //print("Tap iniciado")
-  //      entityManager.alternatePause()
-        //entityManager.jump()
-        //entityManager.run()
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-       // entityManager.run()
-       // print("Swipe iniciado")
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        //entityManager.idle()
-       // print("Swipe foi encerrado")
     }
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-        //entityManager.idle()
-        //print("Tap foi encerrado")
     }
     
     func addSwipesGestures(){
@@ -135,5 +114,9 @@ class GameScene: SKScene {
     }
     override func update(_ currentTime: TimeInterval) {
     
+    }
+    
+     func didBegin(_ contact: SKPhysicsContact) {
+        print(contact)
     }
 }

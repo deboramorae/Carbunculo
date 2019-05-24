@@ -11,6 +11,6 @@ import GameplayKit
 
 class StateJumping:GKState{
     override func isValidNextState(_ stateClass: AnyClass) -> Bool {
-        return (stateClass is StateFalling.Type)
+        return (stateClass is StateIdle.Type)
     }
 }

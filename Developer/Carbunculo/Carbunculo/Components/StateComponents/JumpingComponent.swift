@@ -18,9 +18,13 @@ class JumpingComponent:GKComponent{
     }
     
     func jump(){
-        player.physicsBody?.affectedByGravity = true
-        player.physicsBody?.isDynamic = true
-        player.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 50))
+        if let component = entity!.component(ofType: PlayerStateMachineComponent.self) {
+            if component.maquina.enter(StateJumping.self){
+                player.physicsBody?.affectedByGravity = true
+                player.physicsBody?.isDynamic = true
+                player.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 50))
+            }
+        }
     }
 
     required init?(coder aDecoder: NSCoder) {
