@@ -18,7 +18,7 @@ class Player: GKEntity {
         let player = PlayerNode()
         
         addComponent(GKSKNodeComponent(node: player))
-        addComponent(PhysicsBodyComponent(node: player, dimensions: PhysicsBodyDimensions.player))
+        addComponent(PlayerPhysicsBodyComponent(node: player, dimensions: PhysicsBodyDimensions.player))
         addComponent(JumpingComponent(player: player))
         addComponent(IdleComponent(player: player))
         addComponent(RunComponent(player: player))

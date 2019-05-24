@@ -34,7 +34,7 @@ extension PhysicsBodyDimensions {
     static let player = PhysicsBodyDimensions(sizeSpritePixels: CGSize(width: 50, height: 50), verticalShiftSpritePixels: CGFloat(0), horizontalShiftSpritePixels: CGFloat(0))    
 }
 
-class PhysicsBodyComponent: GKComponent {
+class PlayerPhysicsBodyComponent: GKComponent {
     let sizeScreenPixels: CGSize
     let verticalShiftScreenPixels: CGFloat
     
@@ -54,6 +54,7 @@ class PhysicsBodyComponent: GKComponent {
         node.physicsBody?.angularDamping     = 0.0
         node.physicsBody?.friction           = 0.0
         node.physicsBody?.restitution        = 0.0
+        node.physicsBody?.mass               = 0 
         
         //node.physicsBody?.categoryBitMask    = SKPhysicsBody.CategoryBitMask.floorComponent
         node.physicsBody?.categoryBitMask    = 1
