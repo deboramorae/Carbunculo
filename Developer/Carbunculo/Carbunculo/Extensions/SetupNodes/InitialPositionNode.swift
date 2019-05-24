@@ -17,7 +17,7 @@ extension CGPoint {
         public static let playerNode: CGPoint = CGPoint(x: (-SKViewSizeRect.width / 2) + 100, y: 0)
         
         public static let woodNode: CGPoint = CGPoint(x: 50, y: -(SKViewSizeRect.height/2) + (CGSize.sizeNode.woodNode.height) )
-//        public static let waterNode: CGPoint = CGPoint(x: 0, y: 0)
+//        public static let waterNode: CGPoint = CGPoint(x: (-SKViewSizeRect.width / 2) + 100, y: 0)
         public static let platformNode: CGPoint = CGPoint(x: 280, y: 10)
         
     }
