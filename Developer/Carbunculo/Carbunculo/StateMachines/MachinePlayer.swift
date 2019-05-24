@@ -15,4 +15,6 @@ class MachinePlayer:GKStateMachine{
         node = player
         super.init(states: states)
     }
+    override func update(deltaTime sec: TimeInterval) {
+    }
 }

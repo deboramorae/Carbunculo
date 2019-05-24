@@ -15,7 +15,8 @@ class Player: GKEntity {
     init(entityManager: EntityManager) {
         super.init()
         
-        let player = PlayerNode()
+        let player  = PlayerNode()
+        player.name = "player"
         
         addComponent(GKSKNodeComponent(node: player))
         addComponent(PhysicsBodyComponent(node: player, dimensions: PhysicsBodyDimensions.player))
@@ -24,12 +25,14 @@ class Player: GKEntity {
         addComponent(RunComponent(player: player))
         addComponent(ControlReceiverComponent())
         addComponent(ControlMovimentComponent())
+        addComponent(PlayerStateMachineComponent(playerNode: player))
         
         do {
             player.physicsBody?.isDynamic = true
             player.physicsBody?.affectedByGravity = true
             player.physicsBody?.categoryBitMask |=  SKPhysicsBody.CategoryBitMask.player
             player.physicsBody?.collisionBitMask |= SKPhysicsBody.CategoryBitMask.floorComponent
+            
         }
     }
     
