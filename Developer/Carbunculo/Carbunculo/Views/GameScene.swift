@@ -14,7 +14,6 @@ class GameScene: SKScene {
     static let spritePixelsToScreenPixels: CGFloat = 1.0
     var entities = [GKEntity]()
     var graphs = [String : GKGraph]()
-    
     private var swipe : Bool = false
     
     private var remoteControl: RemoteControl?

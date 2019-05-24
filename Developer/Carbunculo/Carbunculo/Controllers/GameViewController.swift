@@ -10,10 +10,13 @@ import UIKit
 import SpriteKit
 import GameplayKit
 
+var SKViewSizeRect: CGRect!
+
+
 class GameViewController: UIViewController {
     
     
-    var cena:GameScene!
+    var cena: GameScene!
     
     @IBAction func pausar(_ sender: Any) {
         cena.entityManager.alternatePause()
@@ -29,12 +32,13 @@ class GameViewController: UIViewController {
             // Get the SKScene from the loaded GKScene
             if let sceneNode = scene.rootNode as! GameScene? {
                 cena = sceneNode
+                SKViewSizeRect = view.bounds
                 // Copy gameplay related content over to the scene
                 sceneNode.entities = scene.entities
                 sceneNode.graphs = scene.graphs
                 
                 // Set the scale mode to scale to fit the window
-                sceneNode.scaleMode = .aspectFill
+                sceneNode.scaleMode = .resizeFill
                 
                 // Present the scene
                 if let view = self.view as! SKView? {

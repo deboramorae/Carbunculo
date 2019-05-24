@@ -15,7 +15,7 @@ class FloorNode: SKSpriteNode {
     init(scene: SKScene) {
         super.init(texture: nil, color: .green, size: CGSize.sizeNode.floorNode)
         self.name = "Floor"
-        self.position = CGPoint(x: 0, y: -scene.frame.height/2)
+        self.position = CGPoint.initialPositionNode.floorNode
     }
     
     required init?(coder aDecoder: NSCoder) {
