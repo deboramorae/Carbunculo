@@ -48,17 +48,17 @@ class PhysicsBodyComponent: GKComponent {
         node.physicsBody = SKPhysicsBody(rectangleOf: sizeScreenPixels, center: CGPoint(x: 0, y: sizeScreenPixels.height / 2))
         
         node.physicsBody?.isDynamic          = true
-        node.physicsBody?.affectedByGravity  = false
+        node.physicsBody?.affectedByGravity  = true
         node.physicsBody?.allowsRotation     = false
         node.physicsBody?.linearDamping      = 0.0
         node.physicsBody?.angularDamping     = 0.0
         node.physicsBody?.friction           = 0.0
         node.physicsBody?.restitution        = 0.0
         
-        node.physicsBody?.categoryBitMask    = SKPhysicsBody.CategoryBitMask.floorComponent
-        node.physicsBody?.collisionBitMask   = 0
+        node.physicsBody?.categoryBitMask    = SKPhysicsBody.CategoryBitMask.player
+        node.physicsBody?.collisionBitMask   = SKPhysicsBody.CategoryBitMask.floorComponent
         node.physicsBody?.contactTestBitMask = 0
-        
+                
     }
     
     required init?(coder aDecoder: NSCoder) {
