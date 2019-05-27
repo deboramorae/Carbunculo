@@ -38,6 +38,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         do {
             let entidadeCena  = EntidadeCena(cena: self)
+            let background = BackgroundEntity(entityManager: entityManager)
             let floor = FloorEntity(entityManager: entityManager, cena: self)
             let player        = Player(entityManager: entityManager)
             let entidadeWater = WaterEntity(entityManager: entityManager, cena: self)
@@ -46,6 +47,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             
             entityManager.add(entidadeCena)
+            entityManager.add(background)
             entityManager.add(floor)
             entityManager.add(player)
             entityManager.add(entityWood)

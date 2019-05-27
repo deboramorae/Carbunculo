@@ -13,7 +13,7 @@ import SpriteKit
 class FloorNode: SKSpriteNode {
     
     init(scene: SKScene) {
-        super.init(texture: nil, color: .green, size: CGSize.sizeNode.floorNode)
+        super.init(texture: SKTexture(imageNamed: "chao_1"), color: .green, size: CGSize.sizeNode.floorNode)
         self.name = "Floor"
         self.position = CGPoint.initialPositionNode.floorNode
     }
