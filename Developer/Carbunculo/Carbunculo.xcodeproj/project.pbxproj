@@ -67,6 +67,7 @@
 		EA5FE590229743040027D77F /* FloorPhysicsBodyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5FE58F229743040027D77F /* FloorPhysicsBodyComponent.swift */; };
 		EA918EFC2294EBBA00684B4F /* ControlReceiverComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA918EFB2294EBBA00684B4F /* ControlReceiverComponent.swift */; };
 		EA918EFE2294EBCB00684B4F /* ControlMovimentComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA918EFD2294EBCB00684B4F /* ControlMovimentComponent.swift */; };
+		EAB872C3229C79C800A7FE9E /* WindNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB872C2229C79C800A7FE9E /* WindNode.swift */; };
 		EAE05C942294885A00B78846 /* RemoteControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE05C932294885A00B78846 /* RemoteControl.swift */; };
 /* End PBXBuildFile section */
 
@@ -133,6 +134,7 @@
 		EA5FE58F229743040027D77F /* FloorPhysicsBodyComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorPhysicsBodyComponent.swift; sourceTree = "<group>"; };
 		EA918EFB2294EBBA00684B4F /* ControlReceiverComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlReceiverComponent.swift; sourceTree = "<group>"; };
 		EA918EFD2294EBCB00684B4F /* ControlMovimentComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlMovimentComponent.swift; sourceTree = "<group>"; };
+		EAB872C2229C79C800A7FE9E /* WindNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindNode.swift; sourceTree = "<group>"; };
 		EAE05C932294885A00B78846 /* RemoteControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -215,6 +217,7 @@
 				EA58B24222962AA90099C146 /* ObstaclesNode */,
 				84B058162294377800B7E9A0 /* PlayerNode.swift */,
 				84AC276B2295BB0D00D3A6C2 /* FloorNode.swift */,
+				EAB872C2229C79C800A7FE9E /* WindNode.swift */,
 				EA2CE900229876AE00084E25 /* ChoicesNode.swift */,
 			);
 			path = Nodes;
@@ -494,6 +497,7 @@
 				66C63BAD2294656700CCEE3A /* MachinePlayer.swift in Sources */,
 				84B058222294460500B7E9A0 /* ComponentsWithNodes.swift in Sources */,
 				66C63BBC22946F2100CCEE3A /* JumpingComponent.swift in Sources */,
+				EAB872C3229C79C800A7FE9E /* WindNode.swift in Sources */,
 				EA58B23E229629080099C146 /* PlatformEntity.swift in Sources */,
 				8410A2F422947C7A00F73DC0 /* RunComponent.swift in Sources */,
 				66C63BCE2295E35900CCEE3A /* WoodPhysicsBodyComponent.swift in Sources */,
