@@ -20,6 +20,7 @@ extension CGPoint {
 //        public static let waterNode: CGPoint = CGPoint(x: (-SKViewSizeRect.width / 2) + 100, y: 0)
         public static let platformNode: CGPoint = CGPoint(x: 280, y: 10)
         public static let windNode: CGPoint = CGPoint(x: 500, y: 10)
+        public static let waterNode: CGPoint = CGPoint(x: 300, y: -10)
         
     }
 }
