@@ -118,9 +118,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
      func didBegin(_ contact: SKPhysicsContact) {
+        var node: SKPhysicsBody!
         if(contact.bodyA.node!.name == "player" || contact.bodyB.node!.name == "player"){
             if(contact.bodyA.node!.name == "floor" || contact.bodyB.node!.name == "floor"){
-                entityManager.playerLanding()
+                if(contact.bodyA.node!.name == "floor"){
+                    node = contact.bodyA.node!.physicsBody
+                }else{
+                    node = contact.bodyB.node!.physicsBody
+                }
+                
+                if(node.velocity.dy==0){
+                    entityManager.playerLanding()
+                }
             }
         }
     }
