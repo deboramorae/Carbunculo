@@ -70,6 +70,8 @@
 		EA918EFC2294EBBA00684B4F /* ControlReceiverComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA918EFB2294EBBA00684B4F /* ControlReceiverComponent.swift */; };
 		EA918EFE2294EBCB00684B4F /* ControlMovimentComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA918EFD2294EBCB00684B4F /* ControlMovimentComponent.swift */; };
 		EAB872C3229C79C800A7FE9E /* WindNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB872C2229C79C800A7FE9E /* WindNode.swift */; };
+		EAB872C9229C7D5300A7FE9E /* WindNodeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB872C8229C7D5300A7FE9E /* WindNodeComponent.swift */; };
+		EAB872CB229C7DE200A7FE9E /* WindEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB872CA229C7DE200A7FE9E /* WindEntity.swift */; };
 		EAE05C942294885A00B78846 /* RemoteControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE05C932294885A00B78846 /* RemoteControl.swift */; };
 /* End PBXBuildFile section */
 
@@ -139,6 +141,8 @@
 		EA918EFB2294EBBA00684B4F /* ControlReceiverComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlReceiverComponent.swift; sourceTree = "<group>"; };
 		EA918EFD2294EBCB00684B4F /* ControlMovimentComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlMovimentComponent.swift; sourceTree = "<group>"; };
 		EAB872C2229C79C800A7FE9E /* WindNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindNode.swift; sourceTree = "<group>"; };
+		EAB872C8229C7D5300A7FE9E /* WindNodeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindNodeComponent.swift; sourceTree = "<group>"; };
+		EAB872CA229C7DE200A7FE9E /* WindEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindEntity.swift; sourceTree = "<group>"; };
 		EAE05C932294885A00B78846 /* RemoteControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -340,6 +344,7 @@
 				66C63BCF2295E7A100CCEE3A /* WaterEntity.swift */,
 				EA58B23B229626EF0099C146 /* WoodEntity.swift */,
 				EA58B23D229629080099C146 /* PlatformEntity.swift */,
+				EAB872CA229C7DE200A7FE9E /* WindEntity.swift */,
 			);
 			path = ObstaclesEntity;
 			sourceTree = "<group>";
@@ -371,6 +376,7 @@
 			isa = PBXGroup;
 			children = (
 				EA58B2302295E7690099C146 /* WoodNodeComponent.swift */,
+				EAB872C8229C7D5300A7FE9E /* WindNodeComponent.swift */,
 				EA58B2322295E7A80099C146 /* PlatformNodeComponent.swift */,
 				66C63BD12295EB6A00CCEE3A /* WaterNodeComponent.swift */,
 			);
@@ -483,6 +489,7 @@
 				66C63BCA22949B4600CCEE3A /* CameraComponent.swift in Sources */,
 				84B0581F2294414300B7E9A0 /* EntityManager.swift in Sources */,
 				66C63BD02295E7A100CCEE3A /* WaterEntity.swift in Sources */,
+				EAB872CB229C7DE200A7FE9E /* WindEntity.swift in Sources */,
 				66C63BD822970F1900CCEE3A /* SceneMachineComponent.swift in Sources */,
 				84B058142294350200B7E9A0 /* Debug.swift in Sources */,
 				84D3713B2294309700922D4B /* GameViewController.swift in Sources */,
@@ -498,6 +505,7 @@
 				66C63BBA22946A0A00CCEE3A /* StateUnconscious.swift in Sources */,
 				666BA975229C7DF0000B27C8 /* AnimationsTextures.swift in Sources */,
 				EA2CE9052298779500084E25 /* ChoicesPhysicsBodyComponent.swift in Sources */,
+				EAB872C9229C7D5300A7FE9E /* WindNodeComponent.swift in Sources */,
 				EA5FE590229743040027D77F /* FloorPhysicsBodyComponent.swift in Sources */,
 				84AC279B2297408500D3A6C2 /* InitialPositionNode.swift in Sources */,
 				EA58B240229629A00099C146 /* PlatformPhysicsBodyComponent.swift in Sources */,
