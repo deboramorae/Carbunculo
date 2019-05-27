@@ -70,6 +70,7 @@
 		EA58B240229629A00099C146 /* PlatformPhysicsBodyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA58B23F229629A00099C146 /* PlatformPhysicsBodyComponent.swift */; };
 		EA5FE590229743040027D77F /* FloorPhysicsBodyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5FE58F229743040027D77F /* FloorPhysicsBodyComponent.swift */; };
 		EA8846A9229C864D003BF8F7 /* AnimalEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8846A8229C864D003BF8F7 /* AnimalEntity.swift */; };
+		EA8846AB229C891D003BF8F7 /* QuicksandNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8846AA229C891D003BF8F7 /* QuicksandNode.swift */; };
 		EA918EFC2294EBBA00684B4F /* ControlReceiverComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA918EFB2294EBBA00684B4F /* ControlReceiverComponent.swift */; };
 		EA918EFE2294EBCB00684B4F /* ControlMovimentComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA918EFD2294EBCB00684B4F /* ControlMovimentComponent.swift */; };
 		EAB872C3229C79C800A7FE9E /* WindNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB872C2229C79C800A7FE9E /* WindNode.swift */; };
@@ -146,6 +147,7 @@
 		EA58B23F229629A00099C146 /* PlatformPhysicsBodyComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformPhysicsBodyComponent.swift; sourceTree = "<group>"; };
 		EA5FE58F229743040027D77F /* FloorPhysicsBodyComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorPhysicsBodyComponent.swift; sourceTree = "<group>"; };
 		EA8846A8229C864D003BF8F7 /* AnimalEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalEntity.swift; sourceTree = "<group>"; };
+		EA8846AA229C891D003BF8F7 /* QuicksandNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuicksandNode.swift; sourceTree = "<group>"; };
 		EA918EFB2294EBBA00684B4F /* ControlReceiverComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlReceiverComponent.swift; sourceTree = "<group>"; };
 		EA918EFD2294EBCB00684B4F /* ControlMovimentComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlMovimentComponent.swift; sourceTree = "<group>"; };
 		EAB872C2229C79C800A7FE9E /* WindNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindNode.swift; sourceTree = "<group>"; };
@@ -370,6 +372,7 @@
 				EA58B2202295C8860099C146 /* PlatformNode.swift */,
 				EA58B22E2295E73D0099C146 /* WoodNode.swift */,
 				66C63BD32295ECE100CCEE3A /* WaterNode.swift */,
+				EA8846AA229C891D003BF8F7 /* QuicksandNode.swift */,
 			);
 			path = ObstaclesNode;
 			sourceTree = "<group>";
@@ -512,6 +515,7 @@
 				84D3713B2294309700922D4B /* GameViewController.swift in Sources */,
 				84B05826229460E400B7E9A0 /* PhysicsBodyComponent.swift in Sources */,
 				84AC27732296F43F00D3A6C2 /* FloorEntity.swift in Sources */,
+				EA8846AB229C891D003BF8F7 /* QuicksandNode.swift in Sources */,
 				84AC27992297406A00D3A6C2 /* SizeNode.swift in Sources */,
 				84D371332294309700922D4B /* AppDelegate.swift in Sources */,
 				66C63BB22294693900CCEE3A /* StateRunning.swift in Sources */,
