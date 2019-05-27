@@ -69,6 +69,7 @@
 		EA58B23E229629080099C146 /* PlatformEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA58B23D229629080099C146 /* PlatformEntity.swift */; };
 		EA58B240229629A00099C146 /* PlatformPhysicsBodyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA58B23F229629A00099C146 /* PlatformPhysicsBodyComponent.swift */; };
 		EA5FE590229743040027D77F /* FloorPhysicsBodyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5FE58F229743040027D77F /* FloorPhysicsBodyComponent.swift */; };
+		EA8846A9229C864D003BF8F7 /* AnimalEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8846A8229C864D003BF8F7 /* AnimalEntity.swift */; };
 		EA918EFC2294EBBA00684B4F /* ControlReceiverComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA918EFB2294EBBA00684B4F /* ControlReceiverComponent.swift */; };
 		EA918EFE2294EBCB00684B4F /* ControlMovimentComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA918EFD2294EBCB00684B4F /* ControlMovimentComponent.swift */; };
 		EAB872C3229C79C800A7FE9E /* WindNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB872C2229C79C800A7FE9E /* WindNode.swift */; };
@@ -144,6 +145,7 @@
 		EA58B23D229629080099C146 /* PlatformEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformEntity.swift; sourceTree = "<group>"; };
 		EA58B23F229629A00099C146 /* PlatformPhysicsBodyComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformPhysicsBodyComponent.swift; sourceTree = "<group>"; };
 		EA5FE58F229743040027D77F /* FloorPhysicsBodyComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorPhysicsBodyComponent.swift; sourceTree = "<group>"; };
+		EA8846A8229C864D003BF8F7 /* AnimalEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalEntity.swift; sourceTree = "<group>"; };
 		EA918EFB2294EBBA00684B4F /* ControlReceiverComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlReceiverComponent.swift; sourceTree = "<group>"; };
 		EA918EFD2294EBCB00684B4F /* ControlMovimentComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlMovimentComponent.swift; sourceTree = "<group>"; };
 		EAB872C2229C79C800A7FE9E /* WindNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindNode.swift; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 				84AC27722296F43F00D3A6C2 /* FloorEntity.swift */,
 				EA2CE9062298788A00084E25 /* ChoicesEntity.swift */,
 				846A9332229C5FBC00A31D1F /* BackgroundEntity.swift */,
+				EA8846A8229C864D003BF8F7 /* AnimalEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -492,6 +495,7 @@
 				84B058292294673B00B7E9A0 /* CGSize+ops.swift in Sources */,
 				EA58B21B2295BB800099C146 /* SKPhysicsBody+maskDefs.swift in Sources */,
 				EA58B2332295E7A80099C146 /* PlatformNodeComponent.swift in Sources */,
+				EA8846A9229C864D003BF8F7 /* AnimalEntity.swift in Sources */,
 				EA2CE901229876AE00084E25 /* ChoicesNode.swift in Sources */,
 				84B058242294486700B7E9A0 /* GKSKNodeComponent+ComponentsWithNodes.swift in Sources */,
 				EA58B22F2295E73D0099C146 /* WoodNode.swift in Sources */,
