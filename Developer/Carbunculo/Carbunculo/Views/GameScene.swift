@@ -37,11 +37,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         entityManager = EntityManager(scene: self)
         
         do {
-            let entidadeCena  = EntidadeCena(cena: self)
-            let floor = FloorEntity(entityManager: entityManager, cena: self)
-            let player        = Player(entityManager: entityManager)
-            let entidadeWater = WaterEntity(entityManager: entityManager, cena: self)
-            let entityWood    = WoodEntity(entityManager: entityManager, scene: self)
+            let entidadeCena   = EntidadeCena(cena: self)
+            let floor          = FloorEntity(entityManager: entityManager, cena: self)
+            let player         = Player(entityManager: entityManager)
+            let entidadeWater  = WaterEntity(entityManager: entityManager, cena: self)
+            let entityWood     = WoodEntity(entityManager: entityManager, scene: self)
             let entityPlatform = PlatformEntity(entityManager: entityManager, scene: self)
             
             
@@ -113,6 +113,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     override func update(_ currentTime: TimeInterval) {
+        entityManager.updateCameraPosition()
         entityManager.update(deltaTime: currentTime)
     }
     

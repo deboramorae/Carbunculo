@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		666BA970229C5CC2000B27C8 /* PlayerNodeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666BA96F229C5CC2000B27C8 /* PlayerNodeComponent.swift */; };
 		66C63BAD2294656700CCEE3A /* MachinePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C63BAC2294656700CCEE3A /* MachinePlayer.swift */; };
 		66C63BB02294681000CCEE3A /* StateIdle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C63BAF2294681000CCEE3A /* StateIdle.swift */; };
 		66C63BB22294693900CCEE3A /* StateRunning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C63BB12294693900CCEE3A /* StateRunning.swift */; };
@@ -70,6 +71,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		666BA96F229C5CC2000B27C8 /* PlayerNodeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerNodeComponent.swift; sourceTree = "<group>"; };
 		66C63BAC2294656700CCEE3A /* MachinePlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachinePlayer.swift; sourceTree = "<group>"; };
 		66C63BAF2294681000CCEE3A /* StateIdle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateIdle.swift; sourceTree = "<group>"; };
 		66C63BB12294693900CCEE3A /* StateRunning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateRunning.swift; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 				66C63BD722970F1900CCEE3A /* SceneMachineComponent.swift */,
 				66C63BD9229731EA00CCEE3A /* PlayerStateMachineComponent.swift */,
 				EA2CE9022298772D00084E25 /* ChoicesNodeComponent.swift */,
+				666BA96F229C5CC2000B27C8 /* PlayerNodeComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -472,6 +475,7 @@
 				84D371332294309700922D4B /* AppDelegate.swift in Sources */,
 				66C63BB22294693900CCEE3A /* StateRunning.swift in Sources */,
 				66C63BC622948D1900CCEE3A /* StateUnPaused.swift in Sources */,
+				666BA970229C5CC2000B27C8 /* PlayerNodeComponent.swift in Sources */,
 				66C63BD42295ECE100CCEE3A /* WaterNode.swift in Sources */,
 				66C63BB62294698300CCEE3A /* StateFalling.swift in Sources */,
 				66C63BBA22946A0A00CCEE3A /* StateUnconscious.swift in Sources */,

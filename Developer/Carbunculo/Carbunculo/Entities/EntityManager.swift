@@ -110,4 +110,19 @@ class EntityManager {
             }
         }
     }
+    func updateCameraPosition(){
+        var camera     : SKCameraNode!
+        var playernode : SKNode!
+        for entity in entities{
+            if let componenteCamera = entity.component(ofType: CameraComponent.self){
+                camera = componenteCamera.camera
+            }
+        }
+        for entity in entities{
+            if let nodeCamera = entity.component(ofType: PlayerNodeComponent.self){
+                playernode = nodeCamera.node
+                camera.position.x = playernode.position.x+100
+            }
+        }
+    }
 }
