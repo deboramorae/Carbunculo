@@ -24,6 +24,7 @@ extension CGPoint {
         public static let waterNode: CGPoint = CGPoint(x: 300, y: -10)
         
         public static let animalNode: CGPoint = CGPoint(x: 600, y: -10)
+        public static let quicksandNode : CGPoint = CGPoint(x: 600, y: -10)
         
     }
 }
