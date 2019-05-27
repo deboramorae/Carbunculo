@@ -13,6 +13,7 @@ import SpriteKit
 extension CGPoint {
     public struct initialPositionNode {
 
+        public static let backgroundNode: CGPoint = CGPoint(x: (SKViewSizeRect.width/2), y: 0)
         public static let floorNode: CGPoint = CGPoint(x: 0, y: -SKViewSizeRect.height/2)
         public static let playerNode: CGPoint = CGPoint(x: (-SKViewSizeRect.width / 2) + 100, y: 0)
         

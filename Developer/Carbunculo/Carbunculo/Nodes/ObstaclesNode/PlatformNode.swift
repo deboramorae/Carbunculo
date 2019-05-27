@@ -12,7 +12,7 @@ import SpriteKit
 class PlatformNode : SKSpriteNode{
     
     init(){
-        super.init(texture: nil, color: .brown, size: CGSize.sizeNode.platformNode)
+        super.init(texture: SKTexture(imageNamed: "plataforma_1"), color: .brown, size: CGSize.sizeNode.platformNode)
         self.name = "Platform"
         self.position = CGPoint.initialPositionNode.platformNode
     }
