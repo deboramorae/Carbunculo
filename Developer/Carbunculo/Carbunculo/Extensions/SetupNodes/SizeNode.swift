@@ -17,6 +17,8 @@ extension CGSize {
         public static let woodNode: CGSize = CGSize(width: 136, height: 43)
 //        public static let waterNode: CGSize = CGSize(width: 405, height: 23)
         public static let platformNode: CGSize = CGSize(width: 252, height: 44)
+        //pegar o tamanho do vento real depois
+        public static let windNode: CGSize = CGSize(width: 200, height: 50)
         
     }
 }
