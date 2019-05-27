@@ -9,6 +9,14 @@
 import Foundation
 import GameplayKit
 
-class WaterNode:SKNode{
-
+class WaterNode : SKSpriteNode{
+    init(){
+        super.init(texture: nil, color: .blue, size: CGSize.sizeNode.waterNode)
+        self.name = "water"
+        self.position = CGPoint.initialPositionNode.waterNode
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }
