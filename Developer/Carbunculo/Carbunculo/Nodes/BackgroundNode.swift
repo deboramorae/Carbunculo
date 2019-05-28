@@ -17,6 +17,7 @@ class BackgroundNode: SKSpriteNode {
         self.name = "backgroundNode"
         self.position = CGPoint.initialPositionNode.backgroundNode
         self.zPosition = -1
+        self.anchorPoint = CGPoint.anchorPointNode.backgroundNode
     }
     
     required init?(coder aDecoder: NSCoder) {

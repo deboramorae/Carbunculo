@@ -56,6 +56,7 @@
 		84D3713E2294309700922D4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D3713C2294309700922D4B /* Main.storyboard */; };
 		84D371402294309700922D4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84D3713F2294309700922D4B /* Assets.xcassets */; };
 		84D371432294309700922D4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D371412294309700922D4B /* LaunchScreen.storyboard */; };
+		84F5C694229CC69D00CB749B /* AnchorPointNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5C693229CC69D00CB749B /* AnchorPointNode.swift */; };
 		EA2CE901229876AE00084E25 /* ChoicesNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2CE900229876AE00084E25 /* ChoicesNode.swift */; };
 		EA2CE9032298772D00084E25 /* ChoicesNodeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2CE9022298772D00084E25 /* ChoicesNodeComponent.swift */; };
 		EA2CE9052298779500084E25 /* ChoicesPhysicsBodyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2CE9042298779500084E25 /* ChoicesPhysicsBodyComponent.swift */; };
@@ -131,6 +132,7 @@
 		84D3713F2294309700922D4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84D371422294309700922D4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84D371442294309700922D4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84F5C693229CC69D00CB749B /* AnchorPointNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorPointNode.swift; sourceTree = "<group>"; };
 		EA2CE900229876AE00084E25 /* ChoicesNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicesNode.swift; sourceTree = "<group>"; };
 		EA2CE9022298772D00084E25 /* ChoicesNodeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicesNodeComponent.swift; sourceTree = "<group>"; };
 		EA2CE9042298779500084E25 /* ChoicesPhysicsBodyComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicesPhysicsBodyComponent.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 			children = (
 				84AC27982297406A00D3A6C2 /* SizeNode.swift */,
 				84AC279A2297408500D3A6C2 /* InitialPositionNode.swift */,
+				84F5C693229CC69D00CB749B /* AnchorPointNode.swift */,
 			);
 			path = SetupNodes;
 			sourceTree = "<group>";
@@ -485,6 +488,7 @@
 				66C63BCC2295BDE300CCEE3A /* PauseComponent.swift in Sources */,
 				66C63BDA229731EA00CCEE3A /* PlayerStateMachineComponent.swift in Sources */,
 				66C63BC8229491E900CCEE3A /* Cena.swift in Sources */,
+				84F5C694229CC69D00CB749B /* AnchorPointNode.swift in Sources */,
 				66C63BB42294695D00CCEE3A /* StateJumping.swift in Sources */,
 				EA918EFC2294EBBA00684B4F /* ControlReceiverComponent.swift in Sources */,
 				EA918EFE2294EBCB00684B4F /* ControlMovimentComponent.swift in Sources */,

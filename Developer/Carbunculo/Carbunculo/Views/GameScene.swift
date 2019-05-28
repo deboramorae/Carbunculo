@@ -54,6 +54,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             entityManager.add(entityPlatform)
             
             entities.append(entidadeWater)
+            
         }
     }
     

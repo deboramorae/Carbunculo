@@ -16,6 +16,7 @@ class FloorNode: SKSpriteNode {
         super.init(texture: SKTexture(imageNamed: "chao_1"), color: .green, size: CGSize.sizeNode.floorNode)
         self.name = "Floor"
         self.position = CGPoint.initialPositionNode.floorNode
+        self.anchorPoint = CGPoint.anchorPointNode.floorNode
     }
     
     required init?(coder aDecoder: NSCoder) {
