@@ -12,7 +12,7 @@ import CoreGraphics
 extension CGSize {
     public struct sizeNode {
         
-        public static let backgroundNode: CGSize = CGSize(width: 1480, height: 375 + 40)
+        public static let backgroundNode: CGSize = CGSize(width: (1480 * SKViewSizeRect.width) / 667, height: (375 * SKViewSizeRect.height) / 375 )
         public static let playerNode: CGSize = CGSize(width: (55 * SKViewSizeRect.width) / 667, height: (125 * SKViewSizeRect.height) / 375 )
 //        public static let playerNode: CGSize = CGSize(width: (SKViewSizeRect.width * 8.25)/100, height: (SKViewSizeRect.height * 33.34)/100)
 
