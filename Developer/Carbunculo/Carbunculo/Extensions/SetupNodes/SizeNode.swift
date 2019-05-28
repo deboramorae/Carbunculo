@@ -24,6 +24,7 @@ extension CGSize {
         public static let windNode    : CGSize  = CGSize.sizeProportinalWithFrame(size: CGSize(width: 200, height: 50))
         public static let waterNode   : CGSize  = CGSize.sizeProportinalWithFrame(size: CGSize(width: 134, height: 46))
         public static let animalNode  : CGSize  = CGSize.sizeProportinalWithFrame(size: CGSize(width: 125, height: 55))
+        public static let quicksandNode : CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 223, height: 45))
 
     }
     
@@ -32,9 +33,5 @@ extension CGSize {
         let newSize: CGSize = CGSize(width: (size.width * SKViewSizeRect.width) / 667, height: (size.height * SKViewSizeRect.height) / 375 )
         
         return newSize
-        public static let animalNode    : CGSize  = CGSize(width: 125, height: 55)
-        public static let quicksandNode : CGSize = CGSize(width: 223, height: 45)
-        
-        
     }
 }
