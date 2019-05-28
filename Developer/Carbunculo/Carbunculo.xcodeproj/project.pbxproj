@@ -10,6 +10,8 @@
 		666BA970229C5CC2000B27C8 /* PlayerNodeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666BA96F229C5CC2000B27C8 /* PlayerNodeComponent.swift */; };
 		666BA973229C7C8D000B27C8 /* AnimationsStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666BA972229C7C8D000B27C8 /* AnimationsStructs.swift */; };
 		666BA975229C7DF0000B27C8 /* AnimationsTextures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666BA974229C7DF0000B27C8 /* AnimationsTextures.swift */; };
+		666BA977229C8185000B27C8 /* MaracujaEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666BA976229C8185000B27C8 /* MaracujaEntity.swift */; };
+		666BA97A229C82C5000B27C8 /* MaracujaPhysicsBodyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666BA979229C82C5000B27C8 /* MaracujaPhysicsBodyComponent.swift */; };
 		66C63BAD2294656700CCEE3A /* MachinePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C63BAC2294656700CCEE3A /* MachinePlayer.swift */; };
 		66C63BB02294681000CCEE3A /* StateIdle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C63BAF2294681000CCEE3A /* StateIdle.swift */; };
 		66C63BB22294693900CCEE3A /* StateRunning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C63BB12294693900CCEE3A /* StateRunning.swift */; };
@@ -86,6 +88,8 @@
 		666BA96F229C5CC2000B27C8 /* PlayerNodeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerNodeComponent.swift; sourceTree = "<group>"; };
 		666BA972229C7C8D000B27C8 /* AnimationsStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsStructs.swift; sourceTree = "<group>"; };
 		666BA974229C7DF0000B27C8 /* AnimationsTextures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsTextures.swift; sourceTree = "<group>"; };
+		666BA976229C8185000B27C8 /* MaracujaEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaracujaEntity.swift; sourceTree = "<group>"; };
+		666BA979229C82C5000B27C8 /* MaracujaPhysicsBodyComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaracujaPhysicsBodyComponent.swift; sourceTree = "<group>"; };
 		66C63BAC2294656700CCEE3A /* MachinePlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachinePlayer.swift; sourceTree = "<group>"; };
 		66C63BAF2294681000CCEE3A /* StateIdle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateIdle.swift; sourceTree = "<group>"; };
 		66C63BB12294693900CCEE3A /* StateRunning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateRunning.swift; sourceTree = "<group>"; };
@@ -178,6 +182,14 @@
 				666BA974229C7DF0000B27C8 /* AnimationsTextures.swift */,
 			);
 			path = Animation;
+			sourceTree = "<group>";
+		};
+		666BA978229C8240000B27C8 /* MaracujaComponents */ = {
+			isa = PBXGroup;
+			children = (
+				666BA979229C82C5000B27C8 /* MaracujaPhysicsBodyComponent.swift */,
+			);
+			path = MaracujaComponents;
 			sourceTree = "<group>";
 		};
 		66C63BAB2294654600CCEE3A /* StateMachines */ = {
@@ -285,6 +297,7 @@
 				EA2CE9062298788A00084E25 /* ChoicesEntity.swift */,
 				846A9332229C5FBC00A31D1F /* BackgroundEntity.swift */,
 				EA8846A8229C864D003BF8F7 /* AnimalEntity.swift */,
+				666BA976229C8185000B27C8 /* MaracujaEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -292,6 +305,7 @@
 		84B05820229445C000B7E9A0 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				666BA978229C8240000B27C8 /* MaracujaComponents */,
 				EAC385AC229733D500C577E4 /* ObstaclesComponents */,
 				EAC385AB229733AF00C577E4 /* PhysicsBodyComponents */,
 				84AC27712295D49600D3A6C2 /* StateComponents */,
@@ -486,6 +500,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84D371392294309700922D4B /* GameScene.swift in Sources */,
+				666BA97A229C82C5000B27C8 /* MaracujaPhysicsBodyComponent.swift in Sources */,
 				EA58B2212295C8860099C146 /* PlatformNode.swift in Sources */,
 				66C63BD62295EDE100CCEE3A /* WaterPhysicsBodyComponent.swift in Sources */,
 				EAE05C942294885A00B78846 /* RemoteControl.swift in Sources */,
@@ -551,6 +566,7 @@
 				EAB872C3229C79C800A7FE9E /* WindNode.swift in Sources */,
 				EA58B23E229629080099C146 /* PlatformEntity.swift in Sources */,
 				8410A2F422947C7A00F73DC0 /* RunComponent.swift in Sources */,
+				666BA977229C8185000B27C8 /* MaracujaEntity.swift in Sources */,
 				66C63BCE2295E35900CCEE3A /* WoodPhysicsBodyComponent.swift in Sources */,
 				846A9333229C5FBC00A31D1F /* BackgroundEntity.swift in Sources */,
 			);
