@@ -12,8 +12,8 @@ import SpriteKit
 extension CGPoint {
     public struct anchorPointNode {
         
-        public static let backgroundNode: CGPoint = CGPoint(x: 0.15, y: 0.5)
-        public static let floorNode: CGPoint = CGPoint(x: 0.53, y: 0.5)
+        public static let backgroundNode: CGPoint = CGPoint(x: 0.2, y: 0.5)
+        public static let floorNode: CGPoint = CGPoint(x: 0.6, y: 0.3)
         
     }
 }
