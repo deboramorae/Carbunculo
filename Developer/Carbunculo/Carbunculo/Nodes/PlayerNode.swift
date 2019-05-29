@@ -15,6 +15,7 @@ class PlayerNode: SKSpriteNode {
         super.init(texture: SKTexture(imageNamed: "akin-1"), color: .blue, size: CGSize.sizeNode.playerNode)
         self.name = "Player"
         self.initialPosition()
+        self.zPosition = 50
     }
 
     private func initialPosition(){
