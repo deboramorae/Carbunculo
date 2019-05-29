@@ -10,7 +10,9 @@ import Foundation
 import GameplayKit
 
 class MaracujaPhysicsBodyComponent:GKComponent{
+    
     var corpofisico:SKPhysicsBody!
+    
     init(node:SKNode){
         super.init()
         corpofisico      = SKPhysicsBody(circleOfRadius: 30)
