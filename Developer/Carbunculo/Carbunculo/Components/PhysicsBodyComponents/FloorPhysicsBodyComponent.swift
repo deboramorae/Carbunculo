@@ -21,6 +21,8 @@ class FloorPhysicsBodyComponent : GKComponent {
         node.physicsBody?.affectedByGravity = false
         node.physicsBody?.isDynamic         = false
         node.physicsBody?.categoryBitMask   |= SKPhysicsBody.CategoryBitMask.scenario
+        node.physicsBody?.friction           = 0.0
+        node.physicsBody?.restitution        = 0.0
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -28,7 +28,7 @@ class RunComponent: GKComponent {
             }
             else{
                 if component.maquina.enter(StateRunning.self){
-                  player.physicsBody?.applyForce(proportionalForceFrame(force: CGVector(dx: 1000, dy: 0)))
+                    player.physicsBody?.applyForce(proportionalForceFrame(force: CGVector(dx: 1000, dy: 0)))
                 }
             }
         }

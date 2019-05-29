@@ -124,10 +124,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
      func didBegin(_ contact: SKPhysicsContact) {
         var conjunto  = Set<String>()
-        for nome in ["floor","wood"]{
+        for nome in ["floor","wood","platform"]{
                  conjunto.insert(nome)
         }
-        print(conjunto)
         var nodePlayer: SKNode!
         if(contact.bodyA.node!.name == "player" || contact.bodyB.node!.name == "player"){
             if(conjunto.contains(contact.bodyA.node!.name!)  || conjunto.contains(contact.bodyB.node!.name!)){
@@ -136,7 +135,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 }else{
                     nodePlayer = contact.bodyB.node!
                 }
-                
+                print(nodePlayer.physicsBody!.velocity.dy)
                 if(nodePlayer.physicsBody!.velocity.dy==0){
                     entityManager.playerLanding()
                 }

@@ -19,6 +19,8 @@ class WoodPhysicsBodyComponent:GKComponent{
         node.physicsBody?.categoryBitMask    = 3
         node.physicsBody?.collisionBitMask   = SKPhysicsBody.CategoryBitMask.floorComponent
         node.physicsBody?.contactTestBitMask = 3
+        node.physicsBody?.friction           = 0.0
+        node.physicsBody?.restitution        = 0.0
     }
     
     required init?(coder aDecoder: NSCoder) {
