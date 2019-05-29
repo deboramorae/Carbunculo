@@ -18,7 +18,7 @@ class WoodNode: SKSpriteNode {
         self.name = "Wood"
         self.position = CGPoint.initialPositionNode.woodNode
         self.zPosition = 2
-        self.zRotation = 0.03
+//        self.zRotation = 0.03
     }
     
     required init?(coder aDecoder: NSCoder) {
