@@ -12,10 +12,12 @@ import SpriteKit
 
 extension CGPoint {
     public struct initialPositionNode {
+        //Em relacao ao eixo Y, está ok
+        //Em relacao ao eixo X, está tendo uma diferenca de pixels, verificar
 
         public static let backgroundNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: (-SKViewSizeRect.width/2), y: 0))
-        
-        public static let floorNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 0, y: (-SKViewSizeRect.height/2) ))
+
+        public static let floorNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: -90, y: -334/2 ))
         
         public static let playerNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: (-SKViewSizeRect.width / 2), y: 220))
         
