@@ -12,7 +12,7 @@ import GameplayKit
 class MaracujaEntity:GKEntity{
     override init() {
         super.init()
-        let node = SKNode()
+//        let node = SKNode()
     }
     
     required init?(coder aDecoder: NSCoder) {
