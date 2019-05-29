@@ -9,12 +9,12 @@
 import Foundation
 import GameplayKit
 
-class ChoicesNode : SKSpriteNode{
+class ChoicesHUDNode : SKSpriteNode{
     init() {
         
-        super.init(texture: nil, color: .orange, size: CGSize.sizeNode.choiseNode)
-        self.name = "Choices"
-        self.position = CGPoint.initialPositionNode.choiseNode
+        super.init(texture: nil, color: .orange, size: CGSize.sizeNode.choiseHUDNode)
+        self.name = "Choices HUD"
+        self.position = CGPoint.initialPositionNode.choiseHUDNode
         self.zPosition = 100
         
         let choiseButton1 = ChoiseButtonNode()

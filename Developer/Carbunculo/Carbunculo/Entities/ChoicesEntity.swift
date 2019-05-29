@@ -17,7 +17,7 @@ class ChoicesEntity: GKEntity{
     
     
     func addComponentsToEntities(scene : GameScene){
-        let node = ChoicesNode()
+        let node = ChoicesHUDNode()
         
         addComponent(ChoicesNodeComponent(node: node, scene: scene))
 //        addComponent(ChoicesPhysicsBodyComponent(node: node))
