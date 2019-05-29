@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		666BA970229C5CC2000B27C8 /* PlayerNodeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666BA96F229C5CC2000B27C8 /* PlayerNodeComponent.swift */; };
+		666BA973229C7C8D000B27C8 /* AnimationsStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666BA972229C7C8D000B27C8 /* AnimationsStructs.swift */; };
+		666BA975229C7DF0000B27C8 /* AnimationsTextures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666BA974229C7DF0000B27C8 /* AnimationsTextures.swift */; };
+		666BA977229C8185000B27C8 /* MaracujaEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666BA976229C8185000B27C8 /* MaracujaEntity.swift */; };
+		666BA97A229C82C5000B27C8 /* MaracujaPhysicsBodyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666BA979229C82C5000B27C8 /* MaracujaPhysicsBodyComponent.swift */; };
+		666BA97C229E1C33000B27C8 /* ObstacleComeBackComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666BA97B229E1C33000B27C8 /* ObstacleComeBackComponent.swift */; };
 		66C63BAD2294656700CCEE3A /* MachinePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C63BAC2294656700CCEE3A /* MachinePlayer.swift */; };
 		66C63BB02294681000CCEE3A /* StateIdle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C63BAF2294681000CCEE3A /* StateIdle.swift */; };
 		66C63BB22294693900CCEE3A /* StateRunning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C63BB12294693900CCEE3A /* StateRunning.swift */; };
@@ -30,6 +36,8 @@
 		66C63BDA229731EA00CCEE3A /* PlayerStateMachineComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C63BD9229731EA00CCEE3A /* PlayerStateMachineComponent.swift */; };
 		8410A2F222946FD600F73DC0 /* IdleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8410A2F122946FD600F73DC0 /* IdleComponent.swift */; };
 		8410A2F422947C7A00F73DC0 /* RunComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8410A2F322947C7A00F73DC0 /* RunComponent.swift */; };
+		846A9331229C5DB400A31D1F /* BackgroundNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A9330229C5DB400A31D1F /* BackgroundNode.swift */; };
+		846A9333229C5FBC00A31D1F /* BackgroundEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A9332229C5FBC00A31D1F /* BackgroundEntity.swift */; };
 		84AC276C2295BB0D00D3A6C2 /* FloorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC276B2295BB0D00D3A6C2 /* FloorNode.swift */; };
 		84AC27702295C23F00D3A6C2 /* FloorComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC276F2295C23F00D3A6C2 /* FloorComponent.swift */; };
 		84AC27732296F43F00D3A6C2 /* FloorEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC27722296F43F00D3A6C2 /* FloorEntity.swift */; };
@@ -51,6 +59,7 @@
 		84D3713E2294309700922D4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D3713C2294309700922D4B /* Main.storyboard */; };
 		84D371402294309700922D4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84D3713F2294309700922D4B /* Assets.xcassets */; };
 		84D371432294309700922D4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D371412294309700922D4B /* LaunchScreen.storyboard */; };
+		84F5C694229CC69D00CB749B /* AnchorPointNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5C693229CC69D00CB749B /* AnchorPointNode.swift */; };
 		EA2CE901229876AE00084E25 /* ChoicesNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2CE900229876AE00084E25 /* ChoicesNode.swift */; };
 		EA2CE9032298772D00084E25 /* ChoicesNodeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2CE9022298772D00084E25 /* ChoicesNodeComponent.swift */; };
 		EA2CE9052298779500084E25 /* ChoicesPhysicsBodyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2CE9042298779500084E25 /* ChoicesPhysicsBodyComponent.swift */; };
@@ -64,12 +73,28 @@
 		EA58B23E229629080099C146 /* PlatformEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA58B23D229629080099C146 /* PlatformEntity.swift */; };
 		EA58B240229629A00099C146 /* PlatformPhysicsBodyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA58B23F229629A00099C146 /* PlatformPhysicsBodyComponent.swift */; };
 		EA5FE590229743040027D77F /* FloorPhysicsBodyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5FE58F229743040027D77F /* FloorPhysicsBodyComponent.swift */; };
+		EA8846A9229C864D003BF8F7 /* AnimalEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8846A8229C864D003BF8F7 /* AnimalEntity.swift */; };
+		EA8846AB229C891D003BF8F7 /* QuicksandNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8846AA229C891D003BF8F7 /* QuicksandNode.swift */; };
+		EA8846AD229CC615003BF8F7 /* QuicksandNodeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8846AC229CC615003BF8F7 /* QuicksandNodeComponent.swift */; };
+		EA8846C2229E0AD5003BF8F7 /* BalaoExclamacaoNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8846C1229E0AD5003BF8F7 /* BalaoExclamacaoNode.swift */; };
+		EA8846C4229E0DA3003BF8F7 /* BalaoExclamacaoNodeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8846C3229E0DA3003BF8F7 /* BalaoExclamacaoNodeComponent.swift */; };
 		EA918EFC2294EBBA00684B4F /* ControlReceiverComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA918EFB2294EBBA00684B4F /* ControlReceiverComponent.swift */; };
 		EA918EFE2294EBCB00684B4F /* ControlMovimentComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA918EFD2294EBCB00684B4F /* ControlMovimentComponent.swift */; };
+		EAB872C3229C79C800A7FE9E /* WindNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB872C2229C79C800A7FE9E /* WindNode.swift */; };
+		EAB872C9229C7D5300A7FE9E /* WindNodeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB872C8229C7D5300A7FE9E /* WindNodeComponent.swift */; };
+		EAB872CB229C7DE200A7FE9E /* WindEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB872CA229C7DE200A7FE9E /* WindEntity.swift */; };
+		EAB872CD229C827E00A7FE9E /* AnimalNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB872CC229C827E00A7FE9E /* AnimalNode.swift */; };
+		EAB872CF229C83DB00A7FE9E /* AnimalNodeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB872CE229C83DB00A7FE9E /* AnimalNodeComponent.swift */; };
 		EAE05C942294885A00B78846 /* RemoteControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE05C932294885A00B78846 /* RemoteControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		666BA96F229C5CC2000B27C8 /* PlayerNodeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerNodeComponent.swift; sourceTree = "<group>"; };
+		666BA972229C7C8D000B27C8 /* AnimationsStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsStructs.swift; sourceTree = "<group>"; };
+		666BA974229C7DF0000B27C8 /* AnimationsTextures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsTextures.swift; sourceTree = "<group>"; };
+		666BA976229C8185000B27C8 /* MaracujaEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaracujaEntity.swift; sourceTree = "<group>"; };
+		666BA979229C82C5000B27C8 /* MaracujaPhysicsBodyComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaracujaPhysicsBodyComponent.swift; sourceTree = "<group>"; };
+		666BA97B229E1C33000B27C8 /* ObstacleComeBackComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObstacleComeBackComponent.swift; sourceTree = "<group>"; };
 		66C63BAC2294656700CCEE3A /* MachinePlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachinePlayer.swift; sourceTree = "<group>"; };
 		66C63BAF2294681000CCEE3A /* StateIdle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateIdle.swift; sourceTree = "<group>"; };
 		66C63BB12294693900CCEE3A /* StateRunning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateRunning.swift; sourceTree = "<group>"; };
@@ -93,6 +118,8 @@
 		66C63BD9229731EA00CCEE3A /* PlayerStateMachineComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStateMachineComponent.swift; sourceTree = "<group>"; };
 		8410A2F122946FD600F73DC0 /* IdleComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdleComponent.swift; sourceTree = "<group>"; };
 		8410A2F322947C7A00F73DC0 /* RunComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunComponent.swift; sourceTree = "<group>"; };
+		846A9330229C5DB400A31D1F /* BackgroundNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundNode.swift; sourceTree = "<group>"; };
+		846A9332229C5FBC00A31D1F /* BackgroundEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundEntity.swift; sourceTree = "<group>"; };
 		84AC276B2295BB0D00D3A6C2 /* FloorNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorNode.swift; sourceTree = "<group>"; };
 		84AC276F2295C23F00D3A6C2 /* FloorComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorComponent.swift; sourceTree = "<group>"; };
 		84AC27722296F43F00D3A6C2 /* FloorEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorEntity.swift; sourceTree = "<group>"; };
@@ -116,6 +143,7 @@
 		84D3713F2294309700922D4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84D371422294309700922D4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84D371442294309700922D4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84F5C693229CC69D00CB749B /* AnchorPointNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorPointNode.swift; sourceTree = "<group>"; };
 		EA2CE900229876AE00084E25 /* ChoicesNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicesNode.swift; sourceTree = "<group>"; };
 		EA2CE9022298772D00084E25 /* ChoicesNodeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicesNodeComponent.swift; sourceTree = "<group>"; };
 		EA2CE9042298779500084E25 /* ChoicesPhysicsBodyComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicesPhysicsBodyComponent.swift; sourceTree = "<group>"; };
@@ -129,8 +157,18 @@
 		EA58B23D229629080099C146 /* PlatformEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformEntity.swift; sourceTree = "<group>"; };
 		EA58B23F229629A00099C146 /* PlatformPhysicsBodyComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformPhysicsBodyComponent.swift; sourceTree = "<group>"; };
 		EA5FE58F229743040027D77F /* FloorPhysicsBodyComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorPhysicsBodyComponent.swift; sourceTree = "<group>"; };
+		EA8846A8229C864D003BF8F7 /* AnimalEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalEntity.swift; sourceTree = "<group>"; };
+		EA8846AA229C891D003BF8F7 /* QuicksandNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuicksandNode.swift; sourceTree = "<group>"; };
+		EA8846AC229CC615003BF8F7 /* QuicksandNodeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuicksandNodeComponent.swift; sourceTree = "<group>"; };
+		EA8846C1229E0AD5003BF8F7 /* BalaoExclamacaoNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalaoExclamacaoNode.swift; sourceTree = "<group>"; };
+		EA8846C3229E0DA3003BF8F7 /* BalaoExclamacaoNodeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalaoExclamacaoNodeComponent.swift; sourceTree = "<group>"; };
 		EA918EFB2294EBBA00684B4F /* ControlReceiverComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlReceiverComponent.swift; sourceTree = "<group>"; };
 		EA918EFD2294EBCB00684B4F /* ControlMovimentComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlMovimentComponent.swift; sourceTree = "<group>"; };
+		EAB872C2229C79C800A7FE9E /* WindNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindNode.swift; sourceTree = "<group>"; };
+		EAB872C8229C7D5300A7FE9E /* WindNodeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindNodeComponent.swift; sourceTree = "<group>"; };
+		EAB872CA229C7DE200A7FE9E /* WindEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindEntity.swift; sourceTree = "<group>"; };
+		EAB872CC229C827E00A7FE9E /* AnimalNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalNode.swift; sourceTree = "<group>"; };
+		EAB872CE229C83DB00A7FE9E /* AnimalNodeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalNodeComponent.swift; sourceTree = "<group>"; };
 		EAE05C932294885A00B78846 /* RemoteControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,6 +183,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		666BA971229C7C78000B27C8 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				666BA972229C7C8D000B27C8 /* AnimationsStructs.swift */,
+				666BA974229C7DF0000B27C8 /* AnimationsTextures.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		666BA978229C8240000B27C8 /* MaracujaComponents */ = {
+			isa = PBXGroup;
+			children = (
+				666BA979229C82C5000B27C8 /* MaracujaPhysicsBodyComponent.swift */,
+			);
+			path = MaracujaComponents;
+			sourceTree = "<group>";
+		};
 		66C63BAB2294654600CCEE3A /* StateMachines */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +239,7 @@
 			children = (
 				84AC27982297406A00D3A6C2 /* SizeNode.swift */,
 				84AC279A2297408500D3A6C2 /* InitialPositionNode.swift */,
+				84F5C693229CC69D00CB749B /* AnchorPointNode.swift */,
 			);
 			path = SetupNodes;
 			sourceTree = "<group>";
@@ -210,10 +266,14 @@
 		84B058152294374D00B7E9A0 /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
+				EA8846C0229E08CF003BF8F7 /* ScenarioNode */,
 				EA58B24222962AA90099C146 /* ObstaclesNode */,
 				84B058162294377800B7E9A0 /* PlayerNode.swift */,
 				84AC276B2295BB0D00D3A6C2 /* FloorNode.swift */,
+				EAB872C2229C79C800A7FE9E /* WindNode.swift */,
 				EA2CE900229876AE00084E25 /* ChoicesNode.swift */,
+				846A9330229C5DB400A31D1F /* BackgroundNode.swift */,
+				EAB872CC229C827E00A7FE9E /* AnimalNode.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -245,6 +305,9 @@
 				66C63BC7229491E900CCEE3A /* Cena.swift */,
 				84AC27722296F43F00D3A6C2 /* FloorEntity.swift */,
 				EA2CE9062298788A00084E25 /* ChoicesEntity.swift */,
+				846A9332229C5FBC00A31D1F /* BackgroundEntity.swift */,
+				EA8846A8229C864D003BF8F7 /* AnimalEntity.swift */,
+				666BA976229C8185000B27C8 /* MaracujaEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -252,6 +315,7 @@
 		84B05820229445C000B7E9A0 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				666BA978229C8240000B27C8 /* MaracujaComponents */,
 				EAC385AC229733D500C577E4 /* ObstaclesComponents */,
 				EAC385AB229733AF00C577E4 /* PhysicsBodyComponents */,
 				84AC27712295D49600D3A6C2 /* StateComponents */,
@@ -265,6 +329,10 @@
 				66C63BD722970F1900CCEE3A /* SceneMachineComponent.swift */,
 				66C63BD9229731EA00CCEE3A /* PlayerStateMachineComponent.swift */,
 				EA2CE9022298772D00084E25 /* ChoicesNodeComponent.swift */,
+				666BA96F229C5CC2000B27C8 /* PlayerNodeComponent.swift */,
+				EAB872CE229C83DB00A7FE9E /* AnimalNodeComponent.swift */,
+				EA8846C3229E0DA3003BF8F7 /* BalaoExclamacaoNodeComponent.swift */,
+				666BA97B229E1C33000B27C8 /* ObstacleComeBackComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -298,6 +366,7 @@
 		84D371312294309700922D4B /* Carbunculo */ = {
 			isa = PBXGroup;
 			children = (
+				666BA971229C7C78000B27C8 /* Animation */,
 				EAE05C922294884600B78846 /* RemoteControl */,
 				66C63BAE229467FE00CCEE3A /* States */,
 				84B058272294670A00B7E9A0 /* Extensions */,
@@ -320,6 +389,7 @@
 				66C63BCF2295E7A100CCEE3A /* WaterEntity.swift */,
 				EA58B23B229626EF0099C146 /* WoodEntity.swift */,
 				EA58B23D229629080099C146 /* PlatformEntity.swift */,
+				EAB872CA229C7DE200A7FE9E /* WindEntity.swift */,
 			);
 			path = ObstaclesEntity;
 			sourceTree = "<group>";
@@ -330,8 +400,17 @@
 				EA58B2202295C8860099C146 /* PlatformNode.swift */,
 				EA58B22E2295E73D0099C146 /* WoodNode.swift */,
 				66C63BD32295ECE100CCEE3A /* WaterNode.swift */,
+				EA8846AA229C891D003BF8F7 /* QuicksandNode.swift */,
 			);
 			path = ObstaclesNode;
+			sourceTree = "<group>";
+		};
+		EA8846C0229E08CF003BF8F7 /* ScenarioNode */ = {
+			isa = PBXGroup;
+			children = (
+				EA8846C1229E0AD5003BF8F7 /* BalaoExclamacaoNode.swift */,
+			);
+			path = ScenarioNode;
 			sourceTree = "<group>";
 		};
 		EAC385AB229733AF00C577E4 /* PhysicsBodyComponents */ = {
@@ -351,6 +430,8 @@
 			isa = PBXGroup;
 			children = (
 				EA58B2302295E7690099C146 /* WoodNodeComponent.swift */,
+				EAB872C8229C7D5300A7FE9E /* WindNodeComponent.swift */,
+				EA8846AC229CC615003BF8F7 /* QuicksandNodeComponent.swift */,
 				EA58B2322295E7A80099C146 /* PlatformNodeComponent.swift */,
 				66C63BD12295EB6A00CCEE3A /* WaterNodeComponent.swift */,
 			);
@@ -439,6 +520,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84D371392294309700922D4B /* GameScene.swift in Sources */,
+				666BA97A229C82C5000B27C8 /* MaracujaPhysicsBodyComponent.swift in Sources */,
 				EA58B2212295C8860099C146 /* PlatformNode.swift in Sources */,
 				66C63BD62295EDE100CCEE3A /* WaterPhysicsBodyComponent.swift in Sources */,
 				EAE05C942294885A00B78846 /* RemoteControl.swift in Sources */,
@@ -447,6 +529,7 @@
 				66C63BCC2295BDE300CCEE3A /* PauseComponent.swift in Sources */,
 				66C63BDA229731EA00CCEE3A /* PlayerStateMachineComponent.swift in Sources */,
 				66C63BC8229491E900CCEE3A /* Cena.swift in Sources */,
+				84F5C694229CC69D00CB749B /* AnchorPointNode.swift in Sources */,
 				66C63BB42294695D00CCEE3A /* StateJumping.swift in Sources */,
 				EA918EFC2294EBBA00684B4F /* ControlReceiverComponent.swift in Sources */,
 				EA918EFE2294EBCB00684B4F /* ControlMovimentComponent.swift in Sources */,
@@ -454,6 +537,7 @@
 				84B058292294673B00B7E9A0 /* CGSize+ops.swift in Sources */,
 				EA58B21B2295BB800099C146 /* SKPhysicsBody+maskDefs.swift in Sources */,
 				EA58B2332295E7A80099C146 /* PlatformNodeComponent.swift in Sources */,
+				EA8846A9229C864D003BF8F7 /* AnimalEntity.swift in Sources */,
 				EA2CE901229876AE00084E25 /* ChoicesNode.swift in Sources */,
 				84B058242294486700B7E9A0 /* GKSKNodeComponent+ComponentsWithNodes.swift in Sources */,
 				EA58B22F2295E73D0099C146 /* WoodNode.swift in Sources */,
@@ -463,19 +547,28 @@
 				66C63BCA22949B4600CCEE3A /* CameraComponent.swift in Sources */,
 				84B0581F2294414300B7E9A0 /* EntityManager.swift in Sources */,
 				66C63BD02295E7A100CCEE3A /* WaterEntity.swift in Sources */,
+				EAB872CB229C7DE200A7FE9E /* WindEntity.swift in Sources */,
+				666BA97C229E1C33000B27C8 /* ObstacleComeBackComponent.swift in Sources */,
 				66C63BD822970F1900CCEE3A /* SceneMachineComponent.swift in Sources */,
 				84B058142294350200B7E9A0 /* Debug.swift in Sources */,
+				EAB872CF229C83DB00A7FE9E /* AnimalNodeComponent.swift in Sources */,
 				84D3713B2294309700922D4B /* GameViewController.swift in Sources */,
 				84B05826229460E400B7E9A0 /* PhysicsBodyComponent.swift in Sources */,
 				84AC27732296F43F00D3A6C2 /* FloorEntity.swift in Sources */,
+				EA8846AB229C891D003BF8F7 /* QuicksandNode.swift in Sources */,
 				84AC27992297406A00D3A6C2 /* SizeNode.swift in Sources */,
 				84D371332294309700922D4B /* AppDelegate.swift in Sources */,
 				66C63BB22294693900CCEE3A /* StateRunning.swift in Sources */,
+				EA8846C2229E0AD5003BF8F7 /* BalaoExclamacaoNode.swift in Sources */,
 				66C63BC622948D1900CCEE3A /* StateUnPaused.swift in Sources */,
+				666BA970229C5CC2000B27C8 /* PlayerNodeComponent.swift in Sources */,
 				66C63BD42295ECE100CCEE3A /* WaterNode.swift in Sources */,
 				66C63BB62294698300CCEE3A /* StateFalling.swift in Sources */,
 				66C63BBA22946A0A00CCEE3A /* StateUnconscious.swift in Sources */,
+				EAB872CD229C827E00A7FE9E /* AnimalNode.swift in Sources */,
+				666BA975229C7DF0000B27C8 /* AnimationsTextures.swift in Sources */,
 				EA2CE9052298779500084E25 /* ChoicesPhysicsBodyComponent.swift in Sources */,
+				EAB872C9229C7D5300A7FE9E /* WindNodeComponent.swift in Sources */,
 				EA5FE590229743040027D77F /* FloorPhysicsBodyComponent.swift in Sources */,
 				84AC279B2297408500D3A6C2 /* InitialPositionNode.swift in Sources */,
 				EA58B240229629A00099C146 /* PlatformPhysicsBodyComponent.swift in Sources */,
@@ -483,16 +576,23 @@
 				66C63BC222948C1000CCEE3A /* MachineScene.swift in Sources */,
 				84AC276C2295BB0D00D3A6C2 /* FloorNode.swift in Sources */,
 				8410A2F222946FD600F73DC0 /* IdleComponent.swift in Sources */,
+				846A9331229C5DB400A31D1F /* BackgroundNode.swift in Sources */,
 				84B0581D22943F2A00B7E9A0 /* Player.swift in Sources */,
 				66C63BD22295EB6A00CCEE3A /* WaterNodeComponent.swift in Sources */,
 				EA58B23C229626EF0099C146 /* WoodEntity.swift in Sources */,
 				84B058172294377800B7E9A0 /* PlayerNode.swift in Sources */,
 				66C63BAD2294656700CCEE3A /* MachinePlayer.swift in Sources */,
+				EA8846AD229CC615003BF8F7 /* QuicksandNodeComponent.swift in Sources */,
 				84B058222294460500B7E9A0 /* ComponentsWithNodes.swift in Sources */,
+				666BA973229C7C8D000B27C8 /* AnimationsStructs.swift in Sources */,
 				66C63BBC22946F2100CCEE3A /* JumpingComponent.swift in Sources */,
+				EAB872C3229C79C800A7FE9E /* WindNode.swift in Sources */,
 				EA58B23E229629080099C146 /* PlatformEntity.swift in Sources */,
 				8410A2F422947C7A00F73DC0 /* RunComponent.swift in Sources */,
+				666BA977229C8185000B27C8 /* MaracujaEntity.swift in Sources */,
+				EA8846C4229E0DA3003BF8F7 /* BalaoExclamacaoNodeComponent.swift in Sources */,
 				66C63BCE2295E35900CCEE3A /* WoodPhysicsBodyComponent.swift in Sources */,
+				846A9333229C5FBC00A31D1F /* BackgroundEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -648,7 +748,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.carbunculoTeam.Carbunculo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -666,7 +766,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.carbunculoTeam.Carbunculo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -12,9 +12,10 @@ import SpriteKit
 
 class PlayerNode: SKSpriteNode {
     init() {
-        super.init(texture: SKTexture(imageNamed: "akin"), color: .blue, size: CGSize.sizeNode.playerNode)
+        super.init(texture: SKTexture(imageNamed: "akin-1"), color: .blue, size: CGSize.sizeNode.playerNode)
         self.name = "Player"
         self.initialPosition()
+        self.zPosition = 50
     }
 
     private func initialPosition(){

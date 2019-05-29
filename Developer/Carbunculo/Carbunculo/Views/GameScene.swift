@@ -38,6 +38,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         do {
             let entidadeCena  = EntidadeCena(cena: self)
+            let background = BackgroundEntity(entityManager: entityManager)
             let floor = FloorEntity(entityManager: entityManager, cena: self)
             let player        = Player(entityManager: entityManager)
             let entidadeWater = WaterEntity(entityManager: entityManager, cena: self)
@@ -46,12 +47,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             
             entityManager.add(entidadeCena)
+            entityManager.add(background)
             entityManager.add(floor)
             entityManager.add(player)
             entityManager.add(entityWood)
             entityManager.add(entityPlatform)
             
             entities.append(entidadeWater)
+            
         }
     }
     
@@ -109,18 +112,43 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     @objc func handleTapVez(sender: UITapGestureRecognizer) {
         if sender.state == UIGestureRecognizer.State.ended {
            entityManager.jump()
-           // print("tap")
         }
     }
     override func update(_ currentTime: TimeInterval) {
+        entityManager.updateCameraPosition()
         entityManager.update(deltaTime: currentTime)
     }
     
      func didBegin(_ contact: SKPhysicsContact) {
+//        print(contact.bodyA.node?.name)
+//        print(contact.bodyB.node?.name)
+        var nodePlayer: SKNode!
+        var nodeObstaculo: SKNode!
         if(contact.bodyA.node!.name == "player" || contact.bodyB.node!.name == "player"){
             if(contact.bodyA.node!.name == "floor" || contact.bodyB.node!.name == "floor"){
-                entityManager.playerLanding()
+                if(contact.bodyA.node!.name == "floor"){
+                    nodePlayer = contact.bodyA.node!
+                }else{
+                    nodePlayer = contact.bodyB.node!
+                }
+                
+                if(nodePlayer.physicsBody!.velocity.dy==0){
+                    entityManager.playerLanding()
+                }
             }
+            if(contact.bodyA.node!.name == "wood" || contact.bodyB.node!.name == "wood"){
+                if(contact.bodyA.node!.name == "wood"){
+                    nodeObstaculo    = contact.bodyA.node!
+                    nodePlayer       = contact.bodyB.node!
+                }else{
+                    nodePlayer       = contact.bodyA.node!
+                    nodeObstaculo    = contact.bodyB.node!
+                }
+                
+                self.entityManager.playerLanding()
+                nodePlayer.run(SKAction.moveBy(x: nodeObstaculo.position.x-100.0, y: nodeObstaculo.position.y, duration: 1))
+            }
+
         }
     }
 }

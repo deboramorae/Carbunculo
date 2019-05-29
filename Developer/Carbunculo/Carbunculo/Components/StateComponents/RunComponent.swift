@@ -23,9 +23,16 @@ class RunComponent: GKComponent {
         if let component = entity!.component(ofType: PlayerStateMachineComponent.self) {
             
             if component.maquina.enter(StateRunning.self){
-                player.physicsBody?.applyForce(CGVector(dx: 1000, dy: 0))
+                player.physicsBody?.applyForce(proportionalForceFrame(force: CGVector(dx: 1000, dy: 0)))
             }
         }
+    }
+    
+    private func proportionalForceFrame( force: CGVector ) -> CGVector {
+        
+        let newForce = CGVector(dx: (force.dx * SKViewSizeRect.width) / 667, dy: (force.dy * SKViewSizeRect.height) / 375)
+        
+        return newForce
     }
 
     required init?(coder aDecoder: NSCoder) {
