@@ -23,6 +23,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     static let playerJumpHeightFactor: CGFloat = 1.5
     static let playerJumpWidthFactor: CGFloat = 4
     
+
     override func sceneDidLoad() {
         self.lastUpdateTime = 0
         physicsWorld.contactDelegate = self
