@@ -36,6 +36,7 @@
 		66C63BDA229731EA00CCEE3A /* PlayerStateMachineComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C63BD9229731EA00CCEE3A /* PlayerStateMachineComponent.swift */; };
 		8410A2F222946FD600F73DC0 /* IdleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8410A2F122946FD600F73DC0 /* IdleComponent.swift */; };
 		8410A2F422947C7A00F73DC0 /* RunComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8410A2F322947C7A00F73DC0 /* RunComponent.swift */; };
+		84124730229F05A000052953 /* ChoiseButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412472F229F05A000052953 /* ChoiseButtonNode.swift */; };
 		846A9331229C5DB400A31D1F /* BackgroundNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A9330229C5DB400A31D1F /* BackgroundNode.swift */; };
 		846A9333229C5FBC00A31D1F /* BackgroundEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A9332229C5FBC00A31D1F /* BackgroundEntity.swift */; };
 		84AC276C2295BB0D00D3A6C2 /* FloorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC276B2295BB0D00D3A6C2 /* FloorNode.swift */; };
@@ -118,6 +119,7 @@
 		66C63BD9229731EA00CCEE3A /* PlayerStateMachineComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStateMachineComponent.swift; sourceTree = "<group>"; };
 		8410A2F122946FD600F73DC0 /* IdleComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdleComponent.swift; sourceTree = "<group>"; };
 		8410A2F322947C7A00F73DC0 /* RunComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunComponent.swift; sourceTree = "<group>"; };
+		8412472F229F05A000052953 /* ChoiseButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiseButtonNode.swift; sourceTree = "<group>"; };
 		846A9330229C5DB400A31D1F /* BackgroundNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundNode.swift; sourceTree = "<group>"; };
 		846A9332229C5FBC00A31D1F /* BackgroundEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundEntity.swift; sourceTree = "<group>"; };
 		84AC276B2295BB0D00D3A6C2 /* FloorNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorNode.swift; sourceTree = "<group>"; };
@@ -224,6 +226,15 @@
 			path = States;
 			sourceTree = "<group>";
 		};
+		8412472E229F058500052953 /* ChoiseNodes */ = {
+			isa = PBXGroup;
+			children = (
+				EA2CE900229876AE00084E25 /* ChoicesNode.swift */,
+				8412472F229F05A000052953 /* ChoiseButtonNode.swift */,
+			);
+			path = ChoiseNodes;
+			sourceTree = "<group>";
+		};
 		84AC27712295D49600D3A6C2 /* StateComponents */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,12 +277,12 @@
 		84B058152294374D00B7E9A0 /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
+				8412472E229F058500052953 /* ChoiseNodes */,
 				EA8846C0229E08CF003BF8F7 /* ScenarioNode */,
 				EA58B24222962AA90099C146 /* ObstaclesNode */,
 				84B058162294377800B7E9A0 /* PlayerNode.swift */,
 				84AC276B2295BB0D00D3A6C2 /* FloorNode.swift */,
 				EAB872C2229C79C800A7FE9E /* WindNode.swift */,
-				EA2CE900229876AE00084E25 /* ChoicesNode.swift */,
 				846A9330229C5DB400A31D1F /* BackgroundNode.swift */,
 				EAB872CC229C827E00A7FE9E /* AnimalNode.swift */,
 			);
@@ -590,6 +601,7 @@
 				EA58B23E229629080099C146 /* PlatformEntity.swift in Sources */,
 				8410A2F422947C7A00F73DC0 /* RunComponent.swift in Sources */,
 				666BA977229C8185000B27C8 /* MaracujaEntity.swift in Sources */,
+				84124730229F05A000052953 /* ChoiseButtonNode.swift in Sources */,
 				EA8846C4229E0DA3003BF8F7 /* BalaoExclamacaoNodeComponent.swift in Sources */,
 				66C63BCE2295E35900CCEE3A /* WoodPhysicsBodyComponent.swift in Sources */,
 				846A9333229C5FBC00A31D1F /* BackgroundEntity.swift in Sources */,
