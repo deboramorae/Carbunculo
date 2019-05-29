@@ -44,7 +44,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let entidadeWater = WaterEntity(entityManager: entityManager, cena: self)
             let entityWood    = WoodEntity(entityManager: entityManager, scene: self)
             let entityPlatform = PlatformEntity(entityManager: entityManager, scene: self)
-            
+//            let choise = ChoicesEntity(entityManager: entityManager, scene: self)
             
             entityManager.add(entidadeCena)
             entityManager.add(background)
@@ -52,8 +52,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             entityManager.add(player)
             entityManager.add(entityWood)
             entityManager.add(entityPlatform)
+            entityManager.add(entidadeWater)
+//            entityManager.add(choise)
             
-            entities.append(entidadeWater)
+            //entities.append(entidadeWater)
             
         }
     }

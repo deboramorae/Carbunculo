@@ -19,14 +19,20 @@ extension CGSize {
         public static let platformNode : CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 252, height: 44))
 
         
-        //pegar o tamanho do vento/agua real depois
-
+         public static let waterNode   : CGSize  = CGSize.sizeProportinalWithFrame(size: CGSize(width: 405, height: 23))
+        
+        public static let quicksandNode : CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 882, height: 28))
+        
+        public static let animalNode  : CGSize  = CGSize.sizeProportinalWithFrame(size: CGSize(width: 63, height: 63))
+        
+        //pegar o tamanho real desses depois depois
+        
         public static let windNode    : CGSize  = CGSize.sizeProportinalWithFrame(size: CGSize(width: 200, height: 50))
-        public static let waterNode   : CGSize  = CGSize.sizeProportinalWithFrame(size: CGSize(width: 134, height: 46))
-        public static let animalNode  : CGSize  = CGSize.sizeProportinalWithFrame(size: CGSize(width: 125, height: 55))
-        public static let quicksandNode : CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 223, height: 45))
+       
         public static let balaoNode    :  CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 100, height: 100))
-
+        public static let choiseNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 530, height: 300))
+        public static let choiseButtonNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 350, height: 50))
+        
     }
     
     public static func sizeProportinalWithFrame( size: CGSize ) -> CGSize {

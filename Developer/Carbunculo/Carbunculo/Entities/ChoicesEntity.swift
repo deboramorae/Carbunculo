@@ -9,8 +9,8 @@
 import Foundation
 import GameplayKit
 
-class ChoicesEntity : GKEntity{
-    init(entityManager : EntityManager , scene: GameScene){
+class ChoicesEntity: GKEntity{
+    init(entityManager: EntityManager , scene: GameScene){
         super.init()
         addComponentsToEntities(scene: scene)
     }
@@ -20,7 +20,7 @@ class ChoicesEntity : GKEntity{
         let node = ChoicesNode()
         
         addComponent(ChoicesNodeComponent(node: node, scene: scene))
-        addComponent(ChoicesPhysicsBodyComponent(node: node))
+//        addComponent(ChoicesPhysicsBodyComponent(node: node))
     }
     
     required init?(coder aDecoder: NSCoder) {

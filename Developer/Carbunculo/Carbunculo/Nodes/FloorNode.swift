@@ -17,6 +17,7 @@ class FloorNode: SKSpriteNode {
         self.name = "Floor"
         self.position = CGPoint.initialPositionNode.floorNode
         self.anchorPoint = CGPoint.anchorPointNode.floorNode
+        self.zPosition = 1
     }
     
     required init?(coder aDecoder: NSCoder) {
