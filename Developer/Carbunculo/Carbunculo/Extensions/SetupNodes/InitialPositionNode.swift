@@ -36,13 +36,12 @@ extension CGPoint {
 
         public static let quicksandNode : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 600, y: -10))
 
+        public static let balaoNode     : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 500, y: -10))
+        
     }
     
     public static func positionProportionalWithFrame( position: CGPoint ) -> CGPoint {
-        public static let animalNode: CGPoint = CGPoint(x: 600, y: -10)
-        public static let quicksandNode : CGPoint = CGPoint(x: 600, y: -10)
-        public static let balaoNode     : CGPoint = CGPoint(x: 500, y: -10)
-        
+
         let newPosition: CGPoint = CGPoint(x: (position.x * SKViewSizeRect.width) / 667, y: (position.y * SKViewSizeRect.height) / 375)
         
         return newPosition
