@@ -12,10 +12,13 @@ import GameplayKit
 
 class FloorEntity: GKEntity {
     
-    init(entityManager: EntityManager, cena: GameScene) {
+    init(entityManager: EntityManager, cena: GameScene, positionNode : CGPoint, texture: SKTexture) {
         super.init()
         
         let floor = FloorNode(scene: cena)
+        floor.position = positionNode
+        floor.texture = texture
+        
         self.addComponentsToEntitie(cena: cena, node: floor)
     }
     
