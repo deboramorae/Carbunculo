@@ -13,11 +13,12 @@ class WoodPhysicsBodyComponent:GKComponent{
 
     init(node:SKNode){
         super.init()
-        node.name = "floor"
         node.physicsBody                    = SKPhysicsBody(rectangleOf: CGSize.sizeNode.woodNode)
         node.physicsBody?.affectedByGravity = false
         node.physicsBody?.isDynamic         = false
-        node.physicsBody?.categoryBitMask   |= SKPhysicsBody.CategoryBitMask.scenario
+        node.physicsBody?.categoryBitMask    = 3
+        node.physicsBody?.collisionBitMask   = SKPhysicsBody.CategoryBitMask.floorComponent
+        node.physicsBody?.contactTestBitMask = 3
     }
     
     required init?(coder aDecoder: NSCoder) {
