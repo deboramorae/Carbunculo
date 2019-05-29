@@ -124,10 +124,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         for nome in ["floor","wood"]{
                  conjunto.insert(nome)
         }
-
+        print(conjunto)
         var nodePlayer: SKNode!
         if(contact.bodyA.node!.name == "player" || contact.bodyB.node!.name == "player"){
-            if(contact.bodyA.node!.name == "floor" || contact.bodyB.node!.name == "floor"){
+            if(conjunto.contains(contact.bodyA.node!.name!)  || conjunto.contains(contact.bodyB.node!.name!)){
                 if(contact.bodyA.node!.name == "player"){
                     nodePlayer = contact.bodyA.node!
                 }else{
