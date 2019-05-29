@@ -22,9 +22,17 @@ class JumpingComponent:GKComponent{
             if component.maquina.enter(StateJumping.self){
                 player.physicsBody?.affectedByGravity = true
                 player.physicsBody?.isDynamic = true
-                player.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 250))
+                
+                player.physicsBody?.applyImpulse(proportionalForceFrame(force: CGVector(dx: 0, dy: CGSize.sizeNode.playerNode.height * 1.3)))
             }
         }
+    }
+    
+    private func proportionalForceFrame( force: CGVector ) -> CGVector {
+        
+        let newForce = CGVector(dx: (force.dx * SKViewSizeRect.width) / 667, dy: (force.dy * SKViewSizeRect.height) / 375)
+        
+        return newForce
     }
 
     required init?(coder aDecoder: NSCoder) {
