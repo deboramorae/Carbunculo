@@ -46,16 +46,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let entityPlatform = PlatformEntity(entityManager: entityManager, scene: self)
 //            let choise = ChoicesEntity(entityManager: entityManager, scene: self)
             
-            
             entityManager.add(entidadeCena)
             entityManager.add(background)
             entityManager.add(floor)
             entityManager.add(player)
             entityManager.add(entityWood)
             entityManager.add(entityPlatform)
+            entityManager.add(entidadeWater)
 //            entityManager.add(choise)
             
-            entities.append(entidadeWater)
+            //entities.append(entidadeWater)
             
         }
     }
