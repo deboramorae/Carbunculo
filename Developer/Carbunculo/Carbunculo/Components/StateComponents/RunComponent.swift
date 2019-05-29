@@ -22,8 +22,14 @@ class RunComponent: GKComponent {
     func run() {
         if let component = entity!.component(ofType: PlayerStateMachineComponent.self) {
             
-            if component.maquina.enter(StateRunning.self){
+            if(component.maquina.currentState.self is StateJumping || component.maquina.currentState.self is StateFalling){
                 player.physicsBody?.applyForce(proportionalForceFrame(force: CGVector(dx: 1000, dy: 0)))
+                
+            }
+            else{
+                if component.maquina.enter(StateRunning.self){
+                  player.physicsBody?.applyForce(proportionalForceFrame(force: CGVector(dx: 1000, dy: 0)))
+                }
             }
         }
     }
