@@ -25,7 +25,7 @@ extension CGPoint {
         
         public static let waterNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 533, y: -352/2))
         
-        public static let platformNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 510, y: 10))
+        public static let platformNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 510, y: -90))
         
 //
 //        public static let woodNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 50, y: -(SKViewSizeRect.height/2) + (CGSize.sizeNode.woodNode.height)))
