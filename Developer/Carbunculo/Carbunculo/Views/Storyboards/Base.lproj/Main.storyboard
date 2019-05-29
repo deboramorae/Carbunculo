@@ -18,11 +18,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4X-kW-iZP">
-                                <rect key="frame" x="617.5" y="16" width="33.5" height="22"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4X-kW-iZP">
+                                <rect key="frame" x="559" y="16" width="92" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Q4X-kW-iZP" secondAttribute="height" multiplier="23:15" id="8OX-Lh-4OW"/>
                                 </constraints>
+                                <state key="normal" image="botaoPause"/>
                                 <connections>
                                     <action selector="pausar:" destination="BV1-FR-VrT" eventType="touchUpInside" id="mK2-ka-dkL"/>
                                 </connections>
@@ -40,4 +41,7 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="botaoPause" width="92" height="45"/>
+    </resources>
 </document>
