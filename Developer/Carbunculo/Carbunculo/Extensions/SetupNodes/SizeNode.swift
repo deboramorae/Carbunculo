@@ -25,12 +25,15 @@ extension CGSize {
         
         public static let animalNode  : CGSize  = CGSize.sizeProportinalWithFrame(size: CGSize(width: 63, height: 63))
         
+        public static let stonesNode : CGSize  = CGSize.sizeProportinalWithFrame(size: CGSize(width: 105, height: 61))
+        
         //pegar o tamanho real desses depois depois
         
         public static let windNode    : CGSize  = CGSize.sizeProportinalWithFrame(size: CGSize(width: 200, height: 50))
        
         public static let balaoNode    :  CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 100, height: 100))
         public static let choiseNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 530, height: 300))
+        
         public static let choiseButtonNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 350, height: 50))
         
     }
