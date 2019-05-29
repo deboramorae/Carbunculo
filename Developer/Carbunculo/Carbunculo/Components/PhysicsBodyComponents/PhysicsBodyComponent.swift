@@ -54,7 +54,7 @@ class PhysicsBodyComponent: GKComponent {
         node.physicsBody?.friction           = 0.0
         node.physicsBody?.restitution        = 0.0
         
-        node.physicsBody?.categoryBitMask    = 1 /*SKPhysicsBody.CategoryBitMask.player*/
+        node.physicsBody?.categoryBitMask    = 1
         node.physicsBody?.collisionBitMask   = SKPhysicsBody.CategoryBitMask.floorComponent
         node.physicsBody?.contactTestBitMask = 1
         
