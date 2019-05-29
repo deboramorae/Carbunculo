@@ -19,7 +19,6 @@ class PlatformEntity:GKEntity{
     func addComponentsToEntitie(scene: GameScene){
         
         let node = PlatformNode()
-        
         addComponent(PlatformNodeComponent(node: node, scene: scene))
         addComponent(PlatformPhysicsBodyComponent(node: node))
         
