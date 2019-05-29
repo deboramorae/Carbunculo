@@ -112,7 +112,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     @objc func handleTapVez(sender: UITapGestureRecognizer) {
         if sender.state == UIGestureRecognizer.State.ended {
            entityManager.jump()
-           // print("tap")
         }
     }
     override func update(_ currentTime: TimeInterval) {
@@ -121,19 +120,35 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
      func didBegin(_ contact: SKPhysicsContact) {
-        var node: SKPhysicsBody!
+        print(contact.bodyA.node?.name)
+        print(contact.bodyB.node?.name)
+        var nodePlayer: SKNode!
+        var nodeObstaculo: SKNode!
         if(contact.bodyA.node!.name == "player" || contact.bodyB.node!.name == "player"){
             if(contact.bodyA.node!.name == "floor" || contact.bodyB.node!.name == "floor"){
                 if(contact.bodyA.node!.name == "floor"){
-                    node = contact.bodyA.node!.physicsBody
+                    nodePlayer = contact.bodyA.node!
                 }else{
-                    node = contact.bodyB.node!.physicsBody
+                    nodePlayer = contact.bodyB.node!
                 }
                 
-                if(node.velocity.dy==0){
+                if(nodePlayer.physicsBody!.velocity.dy==0){
                     entityManager.playerLanding()
                 }
             }
+            if(contact.bodyA.node!.name == "wood" || contact.bodyB.node!.name == "wood"){
+                if(contact.bodyA.node!.name == "wood"){
+                    nodeObstaculo    = contact.bodyA.node!
+                    nodePlayer       = contact.bodyB.node!
+                }else{
+                    nodePlayer       = contact.bodyA.node!
+                    nodeObstaculo    = contact.bodyB.node!
+                }
+                
+                self.entityManager.playerLanding()
+                nodePlayer.run(SKAction.moveBy(x: nodeObstaculo.position.x-100.0, y: nodeObstaculo.position.y, duration: 1))
+            }
+
         }
     }
 }
