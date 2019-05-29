@@ -45,15 +45,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let entityWood    = WoodEntity(entityManager: entityManager, scene: self)
             let entityPlatform = PlatformEntity(entityManager: entityManager, scene: self)
             
-            
             entityManager.add(entidadeCena)
             entityManager.add(background)
             entityManager.add(floor)
             entityManager.add(player)
             entityManager.add(entityWood)
             entityManager.add(entityPlatform)
+            entityManager.add(entidadeWater)
             
-            entities.append(entidadeWater)
+            //entities.append(entidadeWater)
             
         }
     }
