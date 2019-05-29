@@ -9,8 +9,8 @@
 import Foundation
 import GameplayKit
 
-class ChoicesEntity : GKEntity{
-    init(entityManager : EntityManager , scene: GameScene){
+class ChoicesEntity: GKEntity{
+    init(entityManager: EntityManager , scene: GameScene){
         super.init()
         addComponentsToEntities(scene: scene)
     }

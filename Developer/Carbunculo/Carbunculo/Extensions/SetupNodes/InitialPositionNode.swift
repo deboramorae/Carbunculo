@@ -38,6 +38,8 @@ extension CGPoint {
 
         public static let balaoNode     : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 500, y: -10))
         
+        public static let choiseNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 0, y: 0))
+        
     }
     
     public static func positionProportionalWithFrame( position: CGPoint ) -> CGPoint {

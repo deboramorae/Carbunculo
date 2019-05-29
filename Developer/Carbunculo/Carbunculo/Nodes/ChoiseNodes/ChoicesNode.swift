@@ -12,9 +12,9 @@ import GameplayKit
 class ChoicesNode : SKSpriteNode{
     init() {
         
-        super.init(texture: nil, color: .orange, size: CGSize(width: 200, height: 200))
+        super.init(texture: nil, color: .orange, size: CGSize.sizeNode.choiseNode)
         self.name = "Choices"
-        self.position = CGPoint(x: 200, y: 200)
+        self.position = CGPoint.initialPositionNode.choiseNode
     }
     
     required init?(coder aDecoder: NSCoder) {
