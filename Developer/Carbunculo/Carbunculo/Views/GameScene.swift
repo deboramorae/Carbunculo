@@ -120,8 +120,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
      func didBegin(_ contact: SKPhysicsContact) {
-        print(contact.bodyA.node?.name)
-        print(contact.bodyB.node?.name)
+//        print(contact.bodyA.node?.name)
+//        print(contact.bodyB.node?.name)
         var nodePlayer: SKNode!
         var nodeObstaculo: SKNode!
         if(contact.bodyA.node!.name == "player" || contact.bodyB.node!.name == "player"){
