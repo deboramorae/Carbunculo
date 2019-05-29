@@ -120,13 +120,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
      func didBegin(_ contact: SKPhysicsContact) {
-//        print(contact.bodyA.node?.name)
-//        print(contact.bodyB.node?.name)
+        var conjunto  = Set<String>()
+        for nome in ["floor","wood"]{
+                 conjunto.insert(nome)
+        }
+
         var nodePlayer: SKNode!
-        var nodeObstaculo: SKNode!
         if(contact.bodyA.node!.name == "player" || contact.bodyB.node!.name == "player"){
             if(contact.bodyA.node!.name == "floor" || contact.bodyB.node!.name == "floor"){
-                if(contact.bodyA.node!.name == "floor"){
+                if(contact.bodyA.node!.name == "player"){
                     nodePlayer = contact.bodyA.node!
                 }else{
                     nodePlayer = contact.bodyB.node!
@@ -136,19 +138,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     entityManager.playerLanding()
                 }
             }
-            if(contact.bodyA.node!.name == "wood" || contact.bodyB.node!.name == "wood"){
-                if(contact.bodyA.node!.name == "wood"){
-                    nodeObstaculo    = contact.bodyA.node!
-                    nodePlayer       = contact.bodyB.node!
-                }else{
-                    nodePlayer       = contact.bodyA.node!
-                    nodeObstaculo    = contact.bodyB.node!
-                }
-                
-                self.entityManager.playerLanding()
-                nodePlayer.run(SKAction.moveBy(x: nodeObstaculo.position.x-100.0, y: nodeObstaculo.position.y, duration: 1))
-            }
 
         }
     }
+    
 }
+
