@@ -25,6 +25,7 @@ extension CGSize {
         public static let waterNode   : CGSize  = CGSize.sizeProportinalWithFrame(size: CGSize(width: 134, height: 46))
         public static let animalNode  : CGSize  = CGSize.sizeProportinalWithFrame(size: CGSize(width: 125, height: 55))
         public static let quicksandNode : CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 223, height: 45))
+        public static let balaoNode    :  CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 100, height: 100))
 
     }
     
