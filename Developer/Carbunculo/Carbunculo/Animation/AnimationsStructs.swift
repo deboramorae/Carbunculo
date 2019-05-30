@@ -32,4 +32,16 @@ struct Animations{
             }
         }
     }
+    struct Maracuja{
+        static var loop:SKAction{
+            get{
+                let frequencia       = 2
+                let animationDesce   = SKAction.moveBy(x: 0, y: -10, duration: TimeInterval(1/frequencia))
+                let animationSobe    = SKAction.moveBy(x: 0, y: 10, duration: TimeInterval(1/frequencia))
+                let sequencia        = SKAction.sequence([animationDesce,animationSobe])
+                let repeticaoForever = SKAction.repeatForever(sequencia)
+                return repeticaoForever
+            }
+        }
+    }
 }
