@@ -11,15 +11,20 @@ import GameplayKit
 
 class WaterEntity:GKEntity{
     
-    init(entityManager: EntityManager, cena:GameScene) {
+    init(entityManager: EntityManager, cena: GameScene, positionNode : CGPoint, texture: SKTexture, size: CGSize) {
         super.init()
-        addComponentsToEntitie(cena: cena)
+
+        let node = WaterNode()
+        node.position = positionNode
+        node.texture = texture
+        node.size = size
+
+        addComponentsToEntitie(cena: cena, node: node, size: size)
     }
     
-    func addComponentsToEntitie(cena:GameScene){
-        let node = WaterNode()
+    func addComponentsToEntitie(cena: GameScene, node: WaterNode, size: CGSize){
         addComponent(WaterNodeComponent(node: node, scene: cena))
-        addComponent(WaterPhysicsBodyComponent(node: node))
+        addComponent(WaterPhysicsBodyComponent(node: node, size: size))
         
     }
     

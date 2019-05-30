@@ -28,6 +28,7 @@ extension CGPoint {
         public static let woodNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 50, y: (-301.47/2.22) ))
         
         public static let waterNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 533, y: -352/2))
+        public static let water2: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 3500, y: -352/2))
         
         public static let quicksandNode : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 2004, y: -352/2))
         
