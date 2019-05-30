@@ -40,6 +40,8 @@ extension CGSize {
         
         public static let invisibleChoiceNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 30, height: (SKViewSizeRect.height)))
         
+        public static let frutinhaNode : CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 40, height: 40))
+        
     }
     
     public static func sizeProportinalWithFrame( size: CGSize ) -> CGSize {

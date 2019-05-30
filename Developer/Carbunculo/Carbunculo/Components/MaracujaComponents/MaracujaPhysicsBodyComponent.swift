@@ -15,8 +15,9 @@ class MaracujaPhysicsBodyComponent:GKComponent{
     
     init(node:SKNode){
         super.init()
-        corpofisico      = SKPhysicsBody(circleOfRadius: 30)
+        corpofisico      = SKPhysicsBody(circleOfRadius: 15)
         node.physicsBody = corpofisico
+        node.physicsBody?.affectedByGravity = false
     }
     
     required init?(coder aDecoder: NSCoder) {
