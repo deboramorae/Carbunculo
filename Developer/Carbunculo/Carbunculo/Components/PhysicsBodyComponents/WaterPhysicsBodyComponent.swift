@@ -10,9 +10,15 @@ import Foundation
 import GameplayKit
 
 class WaterPhysicsBodyComponent:GKComponent{
-    init(node:SKNode){
+    init(node:SKNode, size: CGSize){
         super.init()
-        node.physicsBody = SKPhysicsBody()
+        node.physicsBody                    = SKPhysicsBody(rectangleOf: size)
+        node.physicsBody?.affectedByGravity = false
+        node.physicsBody?.isDynamic         = false
+        node.physicsBody?.categoryBitMask    = 4
+        node.physicsBody?.collisionBitMask   = SKPhysicsBody.CategoryBitMask.scenario
+        node.physicsBody?.contactTestBitMask = 3
+        
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -9,19 +9,19 @@
 import Foundation
 import GameplayKit
 
-class PlatformEntity:GKEntity{
+class PlatformEntity: GKEntity{
     
-    init(entityManager: EntityManager, scene: GameScene) {
+    init(entityManager: EntityManager, scene: GameScene, texture : SKTexture, position: CGPoint, size: CGSize) {
         super.init()
-        addComponentsToEntitie(scene: scene)
-    }
-    
-    func addComponentsToEntitie(scene: GameScene){
         
         let node = PlatformNode()
         
+        node.texture  = texture
+        node.position = position
+        node.size     = size
+        
         addComponent(PlatformNodeComponent(node: node, scene: scene))
-        addComponent(PlatformPhysicsBodyComponent(node: node))
+        addComponent(PlatformPhysicsBodyComponent(node: node, size: size))
         
     }
     

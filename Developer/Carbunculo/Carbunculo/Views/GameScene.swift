@@ -23,6 +23,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     static let playerJumpHeightFactor: CGFloat = 1.5
     static let playerJumpWidthFactor: CGFloat = 4
     
+
     override func sceneDidLoad() {
         self.lastUpdateTime = 0
         physicsWorld.contactDelegate = self
@@ -38,23 +39,64 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         do {
             let entidadeCena  = EntidadeCena(cena: self)
-            let background = BackgroundEntity(entityManager: entityManager)
-            let floor = FloorEntity(entityManager: entityManager, cena: self)
-            let player        = Player(entityManager: entityManager)
-            let entidadeWater = WaterEntity(entityManager: entityManager, cena: self)
-            let entityWood    = WoodEntity(entityManager: entityManager, scene: self)
-            let entityPlatform = PlatformEntity(entityManager: entityManager, scene: self)
             
+            let background = BackgroundEntity(entityManager: entityManager, texture: SKTexture.imageNamed.background1, position : CGPoint.initialPositionNode.backgroundNode)
+            
+            let background2 = BackgroundEntity(entityManager: entityManager, texture: SKTexture.imageNamed.background2, position: CGPoint.initialPositionNode.background2)
+            
+            let background3 = BackgroundEntity(entityManager: entityManager, texture: SKTexture.imageNamed.background3, position: CGPoint.initialPositionNode.background3)
+            
+            let background4 = BackgroundEntity(entityManager: entityManager, texture: SKTexture.imageNamed.background4, position: CGPoint.initialPositionNode.background4)
+            
+//            let floor = FloorEntity(entityManager: entityManager, cena: self, positionNode: CGPoint.initialPositionNode.floorNode, texture : SKTexture.imageNamed.floor)
+//
+            let floor = FloorEntity(entityManager: entityManager, cena: self, positionNode: CGPoint.initialPositionNode.floorNode, texture : SKTexture.imageNamed.floor, size: CGSize.sizeNode.floorNode)
+            
+            let entityPlatform = PlatformEntity(entityManager: entityManager, scene: self, texture: SKTexture.imageNamed.platform, position: CGPoint.initialPositionNode.platformNode, size: CGSize.sizeNode.platformNode)
+            
+            let platform2 = PlatformEntity(entityManager: entityManager, scene: self, texture: SKTexture.imageNamed.platform2, position: CGPoint.initialPositionNode.platform2, size: CGSize.sizeNode.platform2)
+            
+            let platform3 = PlatformEntity(entityManager: entityManager, scene: self, texture: SKTexture.imageNamed.platform3, position: CGPoint.initialPositionNode.platform3, size: CGSize.sizeNode.platform3)
+            
+            let floor2 = FloorEntity(entityManager: entityManager, cena: self, positionNode: CGPoint.initialPositionNode.floorNode2, texture: SKTexture.imageNamed.floor2, size: CGSize.sizeNode.floorNode)
+            
+            let floor3 = FloorEntity(entityManager: entityManager, cena: self, positionNode: CGPoint.initialPositionNode.floorNode3, texture: SKTexture.imageNamed.floor3, size: CGSize.sizeNode.floor3)
+
+            let player        = Player(entityManager: entityManager)
+            let entidadeWater = WaterEntity(entityManager: entityManager, cena: self, positionNode: CGPoint.initialPositionNode.waterNode, texture: SKTexture.imageNamed.water, size: CGSize.sizeNode.waterNode)
+            let water2 = WaterEntity(entityManager: entityManager, cena: self, positionNode: CGPoint.initialPositionNode.water2, texture: SKTexture.imageNamed.water2, size: CGSize.sizeNode.waterNode2)
+            let entityWood    = WoodEntity(entityManager: entityManager, scene: self)
+            
+            let choise = ChoicesEntity(entityManager: entityManager, scene: self)
+            let entityQuicksand = QuicksandEntity(entityManager: entityManager, scene: self)
+            let entityFrutinha = MaracujaEntity(entityManager: entityManager, scene: self)
+            let entityAnimal   = AnimalEntity(entityManager: entityManager, scene: self)
             
             entityManager.add(entidadeCena)
+            
             entityManager.add(background)
+            entityManager.add(background2)
+            entityManager.add(background3)
+            entityManager.add(background4)
+            
             entityManager.add(floor)
+            entityManager.add(floor2)
+            entityManager.add(floor3)
+            
             entityManager.add(player)
             entityManager.add(entityWood)
+            
             entityManager.add(entityPlatform)
+            entityManager.add(platform2)
+            entityManager.add(platform3)
             
-            entities.append(entidadeWater)
+            entityManager.add(entidadeWater)
+            entityManager.add(water2)
+            entityManager.add(choise)
             
+            entityManager.add(entityFrutinha)
+            entityManager.add(entityQuicksand)
+            entityManager.add(entityAnimal)
         }
     }
     
@@ -120,35 +162,49 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
      func didBegin(_ contact: SKPhysicsContact) {
-//        print(contact.bodyA.node?.name)
-//        print(contact.bodyB.node?.name)
+        //print(contact.bodyA.node?.name)
+        //print(contact.bodyB.node?.name)
+        var conjunto  = Set<String>()
+        for nome in ["floor","wood","platform","invisibleNode"]{
+                 conjunto.insert(nome)
+        }
+        
         var nodePlayer: SKNode!
-        var nodeObstaculo: SKNode!
         if(contact.bodyA.node!.name == "player" || contact.bodyB.node!.name == "player"){
-            if(contact.bodyA.node!.name == "floor" || contact.bodyB.node!.name == "floor"){
-                if(contact.bodyA.node!.name == "floor"){
+            if(conjunto.contains(contact.bodyA.node!.name!)  || conjunto.contains(contact.bodyB.node!.name!)){
+                if(contact.bodyA.node!.name == "player"){
                     nodePlayer = contact.bodyA.node!
                 }else{
                     nodePlayer = contact.bodyB.node!
                 }
-                
+
                 if(nodePlayer.physicsBody!.velocity.dy==0){
                     entityManager.playerLanding()
                 }
-            }
-            if(contact.bodyA.node!.name == "wood" || contact.bodyB.node!.name == "wood"){
-                if(contact.bodyA.node!.name == "wood"){
-                    nodeObstaculo    = contact.bodyA.node!
-                    nodePlayer       = contact.bodyB.node!
-                }else{
-                    nodePlayer       = contact.bodyA.node!
-                    nodeObstaculo    = contact.bodyB.node!
+                
+                if(contact.bodyA.node!.name == "invisibleNode" || contact.bodyB.node!.name == "invisibleNode"){
+                    var invisibleNode: InvisibleChoiceNode!
+                    
+                    if(contact.bodyA.node! == nodePlayer){
+                        invisibleNode = (contact.bodyB.node! as! InvisibleChoiceNode)
+                    }else{
+                        invisibleNode = (contact.bodyA.node! as! InvisibleChoiceNode)
+                    }
+                    
+                    let father = invisibleNode.parent
+                    father?.isHidden = false
                 }
                 
-                self.entityManager.playerLanding()
-                nodePlayer.run(SKAction.moveBy(x: nodeObstaculo.position.x-100.0, y: nodeObstaculo.position.y, duration: 1))
             }
 
         }
+        if(contact.bodyA.node?.name == "water" || contact.bodyB.node?.name == "water" ){
+            entityManager.restartScene()
+        }
+        if(contact.bodyA.node?.name == "frutinha" || contact.bodyB.node?.name == "frutinha" ){
+            print("Pegou a frutinha.")
+        }
     }
+    
 }
+

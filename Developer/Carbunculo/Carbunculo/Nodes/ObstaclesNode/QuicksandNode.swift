@@ -11,7 +11,7 @@ import GameplayKit
 
 class QuicksandNode: SKSpriteNode{
     init(){
-        super.init(texture: nil, color: .brown, size: CGSize.sizeNode.quicksandNode)
+        super.init(texture: SKTexture.imageNamed.quicksand, color: .brown, size: CGSize.sizeNode.quicksandNode)
         self.name = "quicksand"
         self.position = CGPoint.initialPositionNode.quicksandNode
     }

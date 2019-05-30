@@ -13,12 +13,18 @@ class WoodPhysicsBodyComponent:GKComponent{
 
     init(node:SKNode){
         super.init()
-        node.physicsBody                    = SKPhysicsBody(rectangleOf: CGSize.sizeNode.woodNode)
+        
+        let physicsBody = CGSize.sizeProportinalWithFrame(size: CGSize(width: CGSize.sizeNode.woodNode.width - 10, height: CGSize.sizeNode.woodNode.height - 10))
+        
+        node.physicsBody  = SKPhysicsBody(rectangleOf: physicsBody)
+        
         node.physicsBody?.affectedByGravity = false
         node.physicsBody?.isDynamic         = false
         node.physicsBody?.categoryBitMask    = 3
         node.physicsBody?.collisionBitMask   = SKPhysicsBody.CategoryBitMask.floorComponent
         node.physicsBody?.contactTestBitMask = 3
+        node.physicsBody?.friction           = 0.0
+        node.physicsBody?.restitution        = 0.0
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -42,6 +42,23 @@ class EntityManager {
         
     }
     
+    func remove(_ entity: GKEntity) {
+        for component in entity.components {
+            if let componentWithNodes = component as? ComponentsWithNodes {
+                for node in componentWithNodes.nodesToAddToScene {
+                    node.removeFromParent()
+                }
+                
+                for node in componentWithNodes.nodesToAssociateWithComponent {
+                    componentsByNode.removeValue(forKey: node)
+                }
+            }
+        }
+        
+        entities.remove(entity)
+    }
+
+    
     func jump(){
         for entitie in entities{
             if let component = entitie.component(ofType: JumpingComponent.self)  {
@@ -123,6 +140,23 @@ class EntityManager {
                 playernode = nodeCamera.node
                 camera.position.x = playernode.position.x+100
             }
+        }
+    }
+    func restartScene(){
+        if let view = scene.view {
+            // Load the SKScene from 'GameScene.sks'
+            if let scene = SKScene(fileNamed: "GameScene") {
+                // Set the scale mode to scale to fit the window
+                scene.scaleMode = .resizeFill
+                
+                // Present the scene
+                view.presentScene(scene, transition: SKTransition.fade(withDuration: 1))
+            }
+            
+            view.ignoresSiblingOrder = true
+            
+            view.showsFPS = true
+            view.showsNodeCount = true
         }
     }
 }

@@ -13,7 +13,7 @@ import GameplayKit
 class BackgroundNode: SKSpriteNode {
     
     init() {
-        super.init(texture: SKTexture(imageNamed: "background_1"), color: .clear, size: CGSize.sizeNode.backgroundNode)
+        super.init(texture: SKTexture.imageNamed.background1, color: .clear, size: CGSize.sizeNode.backgroundNode)
         self.name = "backgroundNode"
         self.position = CGPoint.initialPositionNode.backgroundNode
         self.zPosition = -1

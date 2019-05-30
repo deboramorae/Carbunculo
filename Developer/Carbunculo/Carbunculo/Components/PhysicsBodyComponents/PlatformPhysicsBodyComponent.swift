@@ -11,15 +11,19 @@ import GameplayKit
 
 class PlatformPhysicsBodyComponent: GKComponent{
     
-    init(node:SKNode){
+    init(node:SKNode, size: CGSize){
         super.init()
         
+        let physicBody = CGSize.sizeProportinalWithFrame(size: CGSize(width: size.width - 25, height: size.height - 14))
+        
         //tamanho a definir
-        node.name = "floor"
-        node.physicsBody                    = SKPhysicsBody(rectangleOf: CGSize.sizeNode.platformNode)
+        node.name = "platform"
+        node.physicsBody                    = SKPhysicsBody(rectangleOf: physicBody)
         node.physicsBody?.affectedByGravity = false
         node.physicsBody?.isDynamic         = false
         node.physicsBody?.categoryBitMask  |= SKPhysicsBody.CategoryBitMask.scenario
+        node.physicsBody?.friction           = 0.0
+        node.physicsBody?.restitution        = 0.0
     }
     
     required init?(coder aDecoder: NSCoder) {
