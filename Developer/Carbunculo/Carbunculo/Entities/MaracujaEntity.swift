@@ -10,9 +10,18 @@ import Foundation
 import GameplayKit
 
 class MaracujaEntity:GKEntity{
-    override init() {
+    
+    init(entityManager : EntityManager, scene: GameScene) {
         super.init()
-//        let node = SKNode()
+        addComponentsToEntity(scene: scene)
+    }
+    
+    func addComponentsToEntity(scene: GameScene){
+        
+        let frutinha = FrutinhaNode()
+        
+        addComponent(MaracujaPhysicsBodyComponent(node: frutinha))
+        addComponent(MaracujaNodeComponent(node: frutinha, scene: scene))
     }
     
     required init?(coder aDecoder: NSCoder) {

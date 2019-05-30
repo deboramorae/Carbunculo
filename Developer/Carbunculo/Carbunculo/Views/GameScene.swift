@@ -53,6 +53,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let entidadeWater = WaterEntity(entityManager: entityManager, cena: self)
             let entityWood    = WoodEntity(entityManager: entityManager, scene: self)
             let entityPlatform = PlatformEntity(entityManager: entityManager, scene: self)
+            
+            let entityFrutinha = MaracujaEntity(entityManager: entityManager, scene: self)
 //            let invisibleNode = InvisibleChoiceEntity(entityManager: entityManager, scene: self)
 //            let choise = ChoicesEntity(entityManager: entityManager, scene: self)
             
@@ -68,6 +70,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             entityManager.add(entityWood)
             entityManager.add(entityPlatform)
             entityManager.add(entidadeWater)
+            
+            entityManager.add(entityFrutinha)
 //            entityManager.add(invisibleNode)
 //            entityManager.add(choise)
             

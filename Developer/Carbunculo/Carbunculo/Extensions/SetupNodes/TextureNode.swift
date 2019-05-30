@@ -27,6 +27,7 @@ extension SKTexture{
         public static let quicksand  : SKTexture = SKTexture(imageNamed: "areia_movedica")
         
         public static let animal     : SKTexture = SKTexture(imageNamed: "MacacoAreia")
+        public static let frutinha   : SKTexture = SKTexture(imageNamed: "frutinha")
         
         
     }
