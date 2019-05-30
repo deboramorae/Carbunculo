@@ -11,10 +11,10 @@ import GameplayKit
 
 class FloorPhysicsBodyComponent : GKComponent {
     
-    init(node : SKNode, scene : SKScene) {
+    init(node : SKNode, scene : SKScene, size: CGSize) {
         super.init()
         
-        let sizePhysicsBody = CGSize.sizeProportinalWithFrame(size: CGSize(width: CGSize.sizeNode.floorNode.width - 55, height: 24))
+        let sizePhysicsBody = CGSize.sizeProportinalWithFrame(size: CGSize(width: size.width - 55, height: 24) )
         
         node.name                           = "floor"
         node.physicsBody                    = SKPhysicsBody(rectangleOf: sizePhysicsBody )
