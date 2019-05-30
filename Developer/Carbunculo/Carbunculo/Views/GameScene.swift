@@ -56,9 +56,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let choise = ChoicesEntity(entityManager: entityManager, scene: self)
             let entityQuicksand = QuicksandEntity(entityManager: entityManager, scene: self)
             let entityFrutinha = MaracujaEntity(entityManager: entityManager, scene: self)
-//            let invisibleNode = InvisibleChoiceEntity(entityManager: entityManager, scene: self)
-//            let choise = ChoicesEntity(entityManager: entityManager, scene: self)
-            
+
             entityManager.add(entidadeCena)
             
             entityManager.add(background)
@@ -75,11 +73,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             entityManager.add(entityFrutinha)
             entityManager.add(entityQuicksand)
-//            entityManager.add(invisibleNode)
-//            entityManager.add(choise)
-            
-            //entities.append(entidadeWater)
-            
+
         }
     }
     
