@@ -92,6 +92,7 @@
 		EA918EFC2294EBBA00684B4F /* ControlReceiverComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA918EFB2294EBBA00684B4F /* ControlReceiverComponent.swift */; };
 		EA918EFE2294EBCB00684B4F /* ControlMovimentComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA918EFD2294EBCB00684B4F /* ControlMovimentComponent.swift */; };
 		EAA7CCF622A04D22005DD0F7 /* MaracujaNodeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA7CCF522A04D22005DD0F7 /* MaracujaNodeComponent.swift */; };
+		EAA7CCF822A05374005DD0F7 /* QuicksandEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA7CCF722A05374005DD0F7 /* QuicksandEntity.swift */; };
 		EAB872C3229C79C800A7FE9E /* WindNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB872C2229C79C800A7FE9E /* WindNode.swift */; };
 		EAB872C9229C7D5300A7FE9E /* WindNodeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB872C8229C7D5300A7FE9E /* WindNodeComponent.swift */; };
 		EAB872CB229C7DE200A7FE9E /* WindEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB872CA229C7DE200A7FE9E /* WindEntity.swift */; };
@@ -188,6 +189,7 @@
 		EA918EFB2294EBBA00684B4F /* ControlReceiverComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlReceiverComponent.swift; sourceTree = "<group>"; };
 		EA918EFD2294EBCB00684B4F /* ControlMovimentComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlMovimentComponent.swift; sourceTree = "<group>"; };
 		EAA7CCF522A04D22005DD0F7 /* MaracujaNodeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaracujaNodeComponent.swift; sourceTree = "<group>"; };
+		EAA7CCF722A05374005DD0F7 /* QuicksandEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuicksandEntity.swift; sourceTree = "<group>"; };
 		EAB872C2229C79C800A7FE9E /* WindNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindNode.swift; sourceTree = "<group>"; };
 		EAB872C8229C7D5300A7FE9E /* WindNodeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindNodeComponent.swift; sourceTree = "<group>"; };
 		EAB872CA229C7DE200A7FE9E /* WindEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindEntity.swift; sourceTree = "<group>"; };
@@ -446,6 +448,7 @@
 				EA58B23B229626EF0099C146 /* WoodEntity.swift */,
 				EA58B23D229629080099C146 /* PlatformEntity.swift */,
 				EAB872CA229C7DE200A7FE9E /* WindEntity.swift */,
+				EAA7CCF722A05374005DD0F7 /* QuicksandEntity.swift */,
 			);
 			path = ObstaclesEntity;
 			sourceTree = "<group>";
@@ -581,6 +584,7 @@
 			files = (
 				84D371392294309700922D4B /* GameScene.swift in Sources */,
 				666BA97A229C82C5000B27C8 /* MaracujaPhysicsBodyComponent.swift in Sources */,
+				EAA7CCF822A05374005DD0F7 /* QuicksandEntity.swift in Sources */,
 				EA58B2212295C8860099C146 /* PlatformNode.swift in Sources */,
 				EA1C5A93229F571F00FC65CB /* TextureNode.swift in Sources */,
 				66C63BD62295EDE100CCEE3A /* WaterPhysicsBodyComponent.swift in Sources */,
