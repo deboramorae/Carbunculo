@@ -25,8 +25,6 @@ extension CGSize {
         
         public static let quicksandNode : CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 882, height: 28))
         
-        public static let animalNode  : CGSize  = CGSize.sizeProportinalWithFrame(size: CGSize(width: 63, height: 63))
-        
         public static let stonesNode : CGSize  = CGSize.sizeProportinalWithFrame(size: CGSize(width: 105, height: 61))
         
         //pegar o tamanho real desses depois depois
@@ -41,6 +39,8 @@ extension CGSize {
         public static let invisibleChoiceNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 30, height: (SKViewSizeRect.height)))
         
         public static let frutinhaNode : CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 40, height: 40))
+        
+        public static let animalNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 183, height: 65))
         
     }
     
