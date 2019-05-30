@@ -157,6 +157,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
 
         }
+        if(contact.bodyA.node?.name == "water" || contact.bodyB.node?.name == "water" ){
+            entityManager.restartScene()
+        }
     }
     
 }

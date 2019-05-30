@@ -35,7 +35,6 @@ struct Animations{
     struct Maracuja{
         static var loop:SKAction{
             get{
-                let frequencia       = 2
                 let animationDesce   = SKAction.moveBy(x: 0, y: -50, duration: TimeInterval(1))
                 let animationSobe    = SKAction.moveBy(x: 0, y: 50, duration: TimeInterval(1))
                 let sequencia        = SKAction.sequence([animationDesce,animationSobe])
