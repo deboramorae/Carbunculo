@@ -19,6 +19,8 @@ class GameViewController: UIViewController {
     var cena: GameScene!
     
     @IBAction func pausar(_ sender: Any) {
+        
+       //restartScene()
         cena.entityManager.alternatePause()
     }
     override func viewDidLoad() {
@@ -55,7 +57,7 @@ class GameViewController: UIViewController {
         }
     }
     
-
+    
     override var shouldAutorotate: Bool {
         return true
     }

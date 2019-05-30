@@ -125,4 +125,21 @@ class EntityManager {
             }
         }
     }
+    func restartScene(){
+        if let view = scene.view {
+            // Load the SKScene from 'GameScene.sks'
+            if let scene = SKScene(fileNamed: "GameScene") {
+                // Set the scale mode to scale to fit the window
+                scene.scaleMode = .resizeFill
+                
+                // Present the scene
+                view.presentScene(scene, transition: SKTransition.fade(withDuration: 1))
+            }
+            
+            view.ignoresSiblingOrder = true
+            
+            view.showsFPS = true
+            view.showsNodeCount = true
+        }
+    }
 }
