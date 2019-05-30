@@ -50,6 +50,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let floor = FloorEntity(entityManager: entityManager, cena: self, positionNode: CGPoint.initialPositionNode.floorNode, texture : SKTexture.imageNamed.floor)
             
             let floor2 = FloorEntity(entityManager: entityManager, cena: self, positionNode: CGPoint.initialPositionNode.floorNode2, texture: SKTexture.imageNamed.floor2)
+            
+            let floor3 = FloorEntity(entityManager: entityManager, cena: self, positionNode: CGPoint.initialPositionNode.floorNode3, texture: SKTexture.imageNamed.floor3)
 
             let player        = Player(entityManager: entityManager)
             let entidadeWater = WaterEntity(entityManager: entityManager, cena: self)
@@ -67,6 +69,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             entityManager.add(floor)
             entityManager.add(floor2)
+            entityManager.add(floor3)
             
             entityManager.add(player)
             entityManager.add(entityWood)
