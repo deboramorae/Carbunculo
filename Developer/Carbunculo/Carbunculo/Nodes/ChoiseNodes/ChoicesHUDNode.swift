@@ -9,19 +9,19 @@
 import Foundation
 import GameplayKit
 
-class ChoicesNode : SKSpriteNode{
+class ChoicesHUDNode : SKSpriteNode{
     init() {
         
-        super.init(texture: nil, color: .orange, size: CGSize.sizeNode.choiseNode)
-        self.name = "Choices"
-        self.position = CGPoint.initialPositionNode.choiseNode
+        super.init(texture: nil, color: .orange, size: CGSize.sizeNode.choiseHUDNode)
+        self.name = "Choices HUD"
+        self.position = CGPoint.initialPositionNode.choiseHUDNode
         self.zPosition = 100
         
-        let choiseButton1 = ChoiseButtonNode()
+        let choiseButton1 = ChoiceButtonNode()
         choiseButton1.position = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 0, y: -30))
         self.addChild(choiseButton1)
         
-        let choiseButton2 = ChoiseButtonNode()
+        let choiseButton2 = ChoiceButtonNode()
         choiseButton2.position = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 0, y: -95))
         self.addChild(choiseButton2)
     }

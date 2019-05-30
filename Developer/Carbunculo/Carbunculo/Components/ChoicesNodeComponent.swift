@@ -13,8 +13,8 @@ class ChoicesNodeComponent : GKSKNodeComponent{
     
     init(node: SKNode, scene: SKScene) {
         super.init(node: node)
-        scene.addChild(node)
         
+        scene.addChild(node)
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

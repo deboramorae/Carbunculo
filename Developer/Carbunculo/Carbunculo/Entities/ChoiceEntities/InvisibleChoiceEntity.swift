@@ -1,15 +1,17 @@
 //
-//  ChoicesEntity.swift
+//  InvisibleChoiceEntity.swift
 //  Carbunculo
 //
-//  Created by Débora Moraes on 24/05/19.
+//  Created by Jefferson de Oliveira Lalor on 29/05/19.
 //  Copyright © 2019 CarbunculoTeam. All rights reserved.
 //
 
 import Foundation
 import GameplayKit
 
-class ChoicesEntity: GKEntity{
+
+class InvisibleChoiceEntity: GKEntity {
+    
     init(entityManager: EntityManager , scene: GameScene){
         super.init()
         addComponentsToEntities(scene: scene)
@@ -17,10 +19,10 @@ class ChoicesEntity: GKEntity{
     
     
     func addComponentsToEntities(scene : GameScene){
-        let node = ChoicesNode()
+        let node = InvisibleChoiceNode()
         
-        addComponent(ChoicesNodeComponent(node: node, scene: scene))
-//        addComponent(ChoicesPhysicsBodyComponent(node: node))
+        addComponent(InvisibleChoiceComponent(node: node, scene: scene))
+        addComponent(InvisibleChoicePhysicsBodyComponent(node: node))
     }
     
     required init?(coder aDecoder: NSCoder) {
