@@ -1,5 +1,5 @@
 //
-//  InvisibleChoiceNode.swift
+//  InvisibleChoiceComponent.swift
 //  Carbunculo
 //
 //  Created by Jefferson de Oliveira Lalor on 29/05/19.
@@ -9,14 +9,13 @@
 import Foundation
 import GameplayKit
 
-
-class InvisibleChoiceNode: SKSpriteNode {
+class InvisibleChoiceComponent : GKSKNodeComponent{
     
-    init() {
-        super.init(texture: nil, color: .clear, size: CGSize.sizeNode.invisibleChoiceNode)
-        self.name = "InvisibleChoiceNode"
+    init(node: SKNode, scene: SKScene) {
+        super.init(node: node)
+        
+        scene.addChild(node)
     }
-    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
