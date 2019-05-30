@@ -10,13 +10,31 @@ import Foundation
 import GameplayKit
 
 
-class ChoiceButtonNode: SKSpriteNode {
-    init() {
-        super.init(texture: nil, color: .blue, size: CGSize.sizeNode.choiseButtonNode)
-        self.name = "Botao de escolha"
+class ChoiceButtonNode: SKNode {
+    
+    var backgroundNode: SKSpriteNode
+    var action: () -> Void
+    
+    init(backgroundNamed: String, action: @escaping  () -> Void = {}) {
+
+        self.backgroundNode = SKSpriteNode(imageNamed: backgroundNamed)
+        self.action = action
+        
+        super.init()
+        
+        self.name = "ChoiceButtonNode"
+        let texture = SKTexture.init(imageNamed: backgroundNamed)
+        self.backgroundNode = SKSpriteNode.init(texture:texture , size: CGSize.sizeNode.choiseButtonNode)
+        self.isUserInteractionEnabled = true
+        self.addChild(self.backgroundNode)
+        self.backgroundNode.zPosition = 3
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    public required init?(coder aDecoder: NSCoder) {
+        fatalError()
+    }
+    
+    public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.action()
     }
 }
