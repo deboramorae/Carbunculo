@@ -37,6 +37,7 @@
 		8405E3C5229F762900DB50A6 /* InvisibleChoiceNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405E3C4229F762900DB50A6 /* InvisibleChoiceNode.swift */; };
 		8405E3CA229F7A8A00DB50A6 /* InvisibleChoiceComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405E3C9229F7A8A00DB50A6 /* InvisibleChoiceComponent.swift */; };
 		8405E3CC229F7AF400DB50A6 /* InvisibleChoicePhysicsBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405E3CB229F7AF400DB50A6 /* InvisibleChoicePhysicsBody.swift */; };
+		8405E3CF22A080DE00DB50A6 /* StoneEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405E3CE22A080DE00DB50A6 /* StoneEntity.swift */; };
 		8410A2F222946FD600F73DC0 /* IdleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8410A2F122946FD600F73DC0 /* IdleComponent.swift */; };
 		8410A2F422947C7A00F73DC0 /* RunComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8410A2F322947C7A00F73DC0 /* RunComponent.swift */; };
 		84124730229F05A000052953 /* ChoiceButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412472F229F05A000052953 /* ChoiceButtonNode.swift */; };
@@ -131,6 +132,7 @@
 		8405E3C4229F762900DB50A6 /* InvisibleChoiceNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvisibleChoiceNode.swift; sourceTree = "<group>"; };
 		8405E3C9229F7A8A00DB50A6 /* InvisibleChoiceComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvisibleChoiceComponent.swift; sourceTree = "<group>"; };
 		8405E3CB229F7AF400DB50A6 /* InvisibleChoicePhysicsBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvisibleChoicePhysicsBody.swift; sourceTree = "<group>"; };
+		8405E3CE22A080DE00DB50A6 /* StoneEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoneEntity.swift; sourceTree = "<group>"; };
 		8410A2F122946FD600F73DC0 /* IdleComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdleComponent.swift; sourceTree = "<group>"; };
 		8410A2F322947C7A00F73DC0 /* RunComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunComponent.swift; sourceTree = "<group>"; };
 		8412472F229F05A000052953 /* ChoiceButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceButtonNode.swift; sourceTree = "<group>"; };
@@ -454,6 +456,7 @@
 				EA58B23D229629080099C146 /* PlatformEntity.swift */,
 				EAB872CA229C7DE200A7FE9E /* WindEntity.swift */,
 				EAA7CCF722A05374005DD0F7 /* QuicksandEntity.swift */,
+				8405E3CE22A080DE00DB50A6 /* StoneEntity.swift */,
 			);
 			path = ObstaclesEntity;
 			sourceTree = "<group>";
@@ -620,6 +623,7 @@
 				66C63BCA22949B4600CCEE3A /* CameraComponent.swift in Sources */,
 				84B0581F2294414300B7E9A0 /* EntityManager.swift in Sources */,
 				66C63BD02295E7A100CCEE3A /* WaterEntity.swift in Sources */,
+				8405E3CF22A080DE00DB50A6 /* StoneEntity.swift in Sources */,
 				EAB872CB229C7DE200A7FE9E /* WindEntity.swift in Sources */,
 				666BA97C229E1C33000B27C8 /* ObstacleComeBackComponent.swift in Sources */,
 				66C63BD822970F1900CCEE3A /* SceneMachineComponent.swift in Sources */,

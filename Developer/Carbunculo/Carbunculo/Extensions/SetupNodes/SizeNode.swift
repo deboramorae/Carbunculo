@@ -34,7 +34,7 @@ extension CGSize {
         
         public static let quicksandNode : CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 882, height: 28))
         
-        public static let stonesNode : CGSize  = CGSize.sizeProportinalWithFrame(size: CGSize(width: 105, height: 61))
+        public static let stonesNode : CGSize  = CGSize.sizeProportinalWithFrame(size: CGSize(width: 79, height: 45))
         
         //pegar o tamanho real desses depois depois
         
