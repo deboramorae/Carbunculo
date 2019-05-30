@@ -11,10 +11,10 @@ import GameplayKit
 
 class InvisibleChoiceComponent : GKSKNodeComponent{
     
-    init(node: SKNode, scene: SKScene) {
+    init(node: SKNode, father: ChoicesHUDNode) {
         super.init(node: node)
         
-        scene.addChild(node)
+        father.addChild(node)
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

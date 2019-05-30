@@ -21,8 +21,8 @@ class InvisibleChoiceEntity: GKEntity {
     func addComponentsToEntities(scene : GameScene){
         let node = InvisibleChoiceNode()
         
-        addComponent(InvisibleChoiceComponent(node: node, scene: scene))
-        addComponent(InvisibleChoicePhysicsBodyComponent(node: node))
+//        addComponent(InvisibleChoiceComponent(node: node, scene: scene))
+//        addComponent(InvisibleChoicePhysicsBodyComponent(node: node))
     }
     
     required init?(coder aDecoder: NSCoder) {
