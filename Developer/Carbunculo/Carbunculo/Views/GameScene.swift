@@ -140,6 +140,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         for nome in ["floor","wood","platform","invisibleNode"]{
                  conjunto.insert(nome)
         }
+        
         var nodePlayer: SKNode!
         if(contact.bodyA.node!.name == "player" || contact.bodyB.node!.name == "player"){
             if(conjunto.contains(contact.bodyA.node!.name!)  || conjunto.contains(contact.bodyB.node!.name!)){
@@ -154,8 +155,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 }
                 
                 if(contact.bodyA.node!.name == "invisibleNode" || contact.bodyB.node!.name == "invisibleNode"){
-                    print("Contato com o node invisivel")
+                    var invisibleNode: InvisibleChoiceNode!
+                    
+                    if(contact.bodyA.node! == nodePlayer){
+                        invisibleNode = (contact.bodyB.node! as! InvisibleChoiceNode)
+                    }else{
+                        invisibleNode = (contact.bodyA.node! as! InvisibleChoiceNode)
+                    }
+                    
+                    let father = invisibleNode.parent
+                    father?.isHidden = false
+                    //funcaoParaConcelar
                 }
+                
             }
 
         }
