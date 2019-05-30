@@ -137,7 +137,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
      func didBegin(_ contact: SKPhysicsContact) {
         var conjunto  = Set<String>()
-        for nome in ["floor","wood","platform"]{
+        for nome in ["floor","wood","platform","invisibleNode"]{
                  conjunto.insert(nome)
         }
         var nodePlayer: SKNode!
@@ -148,9 +148,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 }else{
                     nodePlayer = contact.bodyB.node!
                 }
-                print(nodePlayer.physicsBody!.velocity.dy)
+
                 if(nodePlayer.physicsBody!.velocity.dy==0){
                     entityManager.playerLanding()
+                }
+                
+                if(contact.bodyA.node!.name == "invisibleNode" || contact.bodyB.node!.name == "invisibleNode"){
+                    print("Contato com o node invisivel")
                 }
             }
 
