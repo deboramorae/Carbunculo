@@ -28,7 +28,7 @@ extension SKTexture{
         public static let stones     : SKTexture = SKTexture(imageNamed: "pedrinhas1")
         public static let water      : SKTexture = SKTexture(imageNamed: "rio_1")
         public static let water2     : SKTexture = SKTexture(imageNamed: "rio_2")
-        public static let platform   : SKTexture = SKTexture(imageNamed: "plataforma_1")
+//        public static let platform   : SKTexture = SKTexture(imageNamed: "plataforma_1")
         
         public static let quicksand  : SKTexture = SKTexture(imageNamed: "areia_movedica")
         
