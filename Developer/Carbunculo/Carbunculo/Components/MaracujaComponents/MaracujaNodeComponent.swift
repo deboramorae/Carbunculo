@@ -14,6 +14,8 @@ class MaracujaNodeComponent: GKSKNodeComponent{
         
         super.init(node: node)
         scene.addChild(node)
+        node.run(Animations.Maracuja.loop)
+        node.name = "frutinha"
     }
     
     required init?(coder aDecoder: NSCoder) {
