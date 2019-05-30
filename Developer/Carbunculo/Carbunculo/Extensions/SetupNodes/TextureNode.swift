@@ -14,6 +14,7 @@ extension SKTexture{
         
         public static let background1: SKTexture = SKTexture(imageNamed: "background_1")
         public static let background2: SKTexture = SKTexture(imageNamed: "background_2")
+        public static let background3: SKTexture = SKTexture(imageNamed: "background_3")
         
         public static let floor      : SKTexture = SKTexture(imageNamed: "chao_1")
         public static let floor2     : SKTexture = SKTexture(imageNamed: "chao_2")
