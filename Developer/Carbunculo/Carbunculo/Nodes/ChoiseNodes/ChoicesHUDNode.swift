@@ -20,8 +20,7 @@ class ChoicesHUDNode : SKSpriteNode {
         let choiseButton1 = ChoiceButtonNode(backgroundNamed: "botaoPause") {
             print("Botão 1 pressionado")
             self.removeChoicesHUD()
-            self.chooseWithMorePoints()
-            print(choicesControl.ponctuation)
+            self.addPoints(points: 2)
         }
         choiseButton1.position = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 0, y: -30))
         self.addChild(choiseButton1)
@@ -29,22 +28,18 @@ class ChoicesHUDNode : SKSpriteNode {
         let choiseButton2 = ChoiceButtonNode(backgroundNamed: "botaoPause") {
             print("Botão 2 pressionado")
             self.removeChoicesHUD()
-            self.chooseWithFewerPoints()
-            print(choicesControl.ponctuation)
+            self.addPoints(points: 1)
         }
         choiseButton2.position = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 0, y: -95))
         self.addChild(choiseButton2)
         
     }
     
-    private func chooseWithMorePoints() {
-        choicesControl.ponctuation += 2
+    private func addPoints(points: Int) {
+        choicesControl.ponctuation += points
     }
     
-    private func chooseWithFewerPoints() {
-        choicesControl.ponctuation += 1
-    }
-    
+
     private func removeChoicesHUD() {
         self.removeFromParent()
     }
