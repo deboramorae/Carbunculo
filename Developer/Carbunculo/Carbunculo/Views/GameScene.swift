@@ -44,17 +44,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             let background2 = BackgroundEntity(entityManager: entityManager, texture: SKTexture.imageNamed.background2, position: CGPoint.initialPositionNode.background2)
             
+            let background3 = BackgroundEntity(entityManager: entityManager, texture: SKTexture.imageNamed.background3, position: CGPoint.initialPositionNode.background3)
+            
+            let floor = FloorEntity(entityManager: entityManager, cena: self, positionNode: CGPoint.initialPositionNode.floorNode, texture : SKTexture.imageNamed.floor)
             
             let floor = FloorEntity(entityManager: entityManager, cena: self, positionNode: CGPoint.initialPositionNode.floorNode, texture : SKTexture.imageNamed.floor, size: CGSize.sizeNode.floorNode)
             
-            let floor2 = FloorEntity(entityManager: entityManager, cena: self, positionNode: CGPoint.initialPositionNode.floorNode2, texture: SKTexture.imageNamed.floor2,size : CGSize.sizeNode.floor2)
-            
-            let entityPlatform = PlatformEntity(entityManager: entityManager, scene: self, texture: SKTexture.imageNamed.platform, position: CGPoint.initialPositionNode.platformNode, size: CGSize.sizeNode.platformNode)
             
             let platform2 = PlatformEntity(entityManager: entityManager, scene: self, texture: SKTexture.imageNamed.platform2, position: CGPoint.initialPositionNode.platform2, size: CGSize.sizeNode.platform2)
             
+            let floor2 = FloorEntity(entityManager: entityManager, cena: self, positionNode: CGPoint.initialPositionNode.floorNode2, texture: SKTexture.imageNamed.floor2, size: CGSize.sizeNode.floorNode)
+            
+            let floor3 = FloorEntity(entityManager: entityManager, cena: self, positionNode: CGPoint.initialPositionNode.floorNode3, texture: SKTexture.imageNamed.floor3, size: CGSize.sizeNode.floor3)
+
             let player        = Player(entityManager: entityManager)
-            let entidadeWater = WaterEntity(entityManager: entityManager, cena: self)
+            let entidadeWater = WaterEntity(entityManager: entityManager, cena: self, positionNode: CGPoint.initialPositionNode.waterNode, texture: SKTexture.imageNamed.water, size: CGSize.sizeNode.waterNode)
+            let water2 = WaterEntity(entityManager: entityManager, cena: self, positionNode: CGPoint.initialPositionNode.water2, texture: SKTexture.imageNamed.water2, size: CGSize.sizeNode.waterNode2)
             let entityWood    = WoodEntity(entityManager: entityManager, scene: self)
             
             let choise = ChoicesEntity(entityManager: entityManager, scene: self)
@@ -66,9 +71,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             entityManager.add(background)
             entityManager.add(background2)
+            entityManager.add(background3)
             
             entityManager.add(floor)
             entityManager.add(floor2)
+            entityManager.add(floor3)
             
             entityManager.add(player)
             entityManager.add(entityWood)
@@ -77,6 +84,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             entityManager.add(platform2)
             
             entityManager.add(entidadeWater)
+            entityManager.add(water2)
             entityManager.add(choise)
             
             entityManager.add(entityFrutinha)

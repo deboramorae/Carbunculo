@@ -20,13 +20,13 @@ class FloorEntity: GKEntity {
         floor.texture = texture
         floor.size = size
         
-        self.addComponentsToEntitie(cena: cena, node: floor)
+        self.addComponentsToEntitie(cena: cena, node: floor, size: size)
     }
     
-    func addComponentsToEntitie(cena: GameScene, node: FloorNode) {
+    func addComponentsToEntitie(cena: GameScene, node: FloorNode, size: CGSize) {
         addComponent(GKSKNodeComponent(node: node))
         addComponent(FloorComponent(scene: cena))
-        addComponent(FloorPhysicsBodyComponent(node: node, scene: cena))
+        addComponent(FloorPhysicsBodyComponent(node: node, scene: cena, size: size))
         //addComponent(PhysicsBodyComponent(node: node, dimensions: PhysicsBodyDimensions(sizeSpritePixels: CGSize(width: cena.frame.width, height: 50), verticalShiftSpritePixels: CGFloat(0), horizontalShiftSpritePixels: CGFloat(0))))
     }
     
