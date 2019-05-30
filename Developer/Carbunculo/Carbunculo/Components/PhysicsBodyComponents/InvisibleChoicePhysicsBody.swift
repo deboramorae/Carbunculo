@@ -18,9 +18,9 @@ class InvisibleChoicePhysicsBodyComponent : GKComponent{
         node.physicsBody?.affectedByGravity   = false
         node.physicsBody?.isDynamic           = false
         
-//        node.physicsBody?.categoryBitMask    |= 1
-//        node.physicsBody?.collisionBitMask    = 1
-//        node.physicsBody?.contactTestBitMask  = 1
+        node.physicsBody?.categoryBitMask    |= 100
+        node.physicsBody?.collisionBitMask    = 0
+        node.physicsBody?.contactTestBitMask  = 0
         
     }
     

@@ -250,6 +250,15 @@
 			path = ChoiceEntities;
 			sourceTree = "<group>";
 		};
+		8405E3CD22A04F8700DB50A6 /* Choice */ = {
+			isa = PBXGroup;
+			children = (
+				8405E3C9229F7A8A00DB50A6 /* InvisibleChoiceComponent.swift */,
+				EA2CE9022298772D00084E25 /* ChoicesNodeComponent.swift */,
+			);
+			path = Choice;
+			sourceTree = "<group>";
+		};
 		8412472E229F058500052953 /* ChoiseNodes */ = {
 			isa = PBXGroup;
 			children = (
@@ -360,6 +369,7 @@
 		84B05820229445C000B7E9A0 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				8405E3CD22A04F8700DB50A6 /* Choice */,
 				666BA978229C8240000B27C8 /* MaracujaComponents */,
 				EAC385AC229733D500C577E4 /* ObstaclesComponents */,
 				EAC385AB229733AF00C577E4 /* PhysicsBodyComponents */,
@@ -373,12 +383,10 @@
 				66C63BCB2295BDE300CCEE3A /* PauseComponent.swift */,
 				66C63BD722970F1900CCEE3A /* SceneMachineComponent.swift */,
 				66C63BD9229731EA00CCEE3A /* PlayerStateMachineComponent.swift */,
-				EA2CE9022298772D00084E25 /* ChoicesNodeComponent.swift */,
 				666BA96F229C5CC2000B27C8 /* PlayerNodeComponent.swift */,
 				EAB872CE229C83DB00A7FE9E /* AnimalNodeComponent.swift */,
 				EA8846C3229E0DA3003BF8F7 /* BalaoExclamacaoNodeComponent.swift */,
 				666BA97B229E1C33000B27C8 /* ObstacleComeBackComponent.swift */,
-				8405E3C9229F7A8A00DB50A6 /* InvisibleChoiceComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
