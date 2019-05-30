@@ -12,20 +12,19 @@ import CoreGraphics
 extension CGSize {
     public struct sizeNode {
         
+        public static let platformNode : CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 252, height: 44))
+        public static let platform2    : CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 758, height: 47))
+        
+        
         public static let backgroundNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 1480, height: 375))
         
         public static let playerNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 55, height: 125))
         public static let floorNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 955, height: 43))
         public static let woodNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 136, height: 43))
         
-        public static let platformNode : CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 252, height: 44))
-
-        
          public static let waterNode   : CGSize  = CGSize.sizeProportinalWithFrame(size: CGSize(width: 405, height: 23))
         
         public static let quicksandNode : CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 882, height: 28))
-        
-        public static let animalNode  : CGSize  = CGSize.sizeProportinalWithFrame(size: CGSize(width: 63, height: 63))
         
         public static let stonesNode : CGSize  = CGSize.sizeProportinalWithFrame(size: CGSize(width: 105, height: 61))
         
@@ -41,6 +40,8 @@ extension CGSize {
         public static let invisibleChoiceNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 30, height: (SKViewSizeRect.height)))
         
         public static let frutinhaNode : CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 40, height: 40))
+        
+        public static let animalNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 183, height: 65))
         
     }
     

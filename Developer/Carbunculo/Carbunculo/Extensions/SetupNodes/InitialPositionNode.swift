@@ -39,12 +39,9 @@ extension CGPoint {
 
         public static let windNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 500, y: 10))
 
-        
-
-        public static let animalNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 600, y: -10))
+        public static let animalNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1800, y: -300/2))
 
         
-
         public static let balaoNode     : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 500, y: -10))
         
         public static let choiseHUDNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 0, y: 0))
