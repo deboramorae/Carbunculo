@@ -54,6 +54,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             let platform2 = PlatformEntity(entityManager: entityManager, scene: self, texture: SKTexture.imageNamed.platform2, position: CGPoint.initialPositionNode.platform2, size: CGSize.sizeNode.platform2)
             
+            let platform3 = PlatformEntity(entityManager: entityManager, scene: self, texture: SKTexture.imageNamed.platform3, position: CGPoint.initialPositionNode.platform3, size: CGSize.sizeNode.platform3)
+            
             let floor2 = FloorEntity(entityManager: entityManager, cena: self, positionNode: CGPoint.initialPositionNode.floorNode2, texture: SKTexture.imageNamed.floor2, size: CGSize.sizeNode.floorNode)
             
             let floor3 = FloorEntity(entityManager: entityManager, cena: self, positionNode: CGPoint.initialPositionNode.floorNode3, texture: SKTexture.imageNamed.floor3, size: CGSize.sizeNode.floor3)
@@ -83,6 +85,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             entityManager.add(entityPlatform)
             entityManager.add(platform2)
+            entityManager.add(platform3)
             
             entityManager.add(entidadeWater)
             entityManager.add(water2)
