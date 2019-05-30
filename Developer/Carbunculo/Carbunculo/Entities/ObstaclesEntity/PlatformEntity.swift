@@ -11,25 +11,17 @@ import GameplayKit
 
 class PlatformEntity: GKEntity{
     
-    init(entityManager: EntityManager, scene: GameScene, texture : SKTexture, position: CGPoint) {
-        
+    init(entityManager: EntityManager, scene: GameScene, texture : SKTexture, position: CGPoint, size: CGSize) {
         super.init()
         
-        setUpTextuteAndPosition(texture: texture, position: position)
-        addComponentsToEntitie(scene: scene)
-    }
-    
-    func setUpTextuteAndPosition(texture: SKTexture, position: CGPoint){
         let node = PlatformNode()
+        
         node.texture  = texture
         node.position = position
-    }
-    
-    func addComponentsToEntitie(scene: GameScene){
+        node.size     = size
         
-        let node = PlatformNode()
         addComponent(PlatformNodeComponent(node: node, scene: scene))
-        addComponent(PlatformPhysicsBodyComponent(node: node))
+        addComponent(PlatformPhysicsBodyComponent(node: node, size: size))
         
     }
     
