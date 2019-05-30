@@ -17,11 +17,15 @@ class ChoicesHUDNode : SKSpriteNode{
         self.position = CGPoint.initialPositionNode.choiseHUDNode
         self.zPosition = 100
         
-        let choiseButton1 = ChoiceButtonNode()
+        let choiseButton1 = ChoiceButtonNode(backgroundNamed: "botaoPause") {
+            print("Botão 1 pressionado")
+        }
         choiseButton1.position = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 0, y: -30))
         self.addChild(choiseButton1)
         
-        let choiseButton2 = ChoiceButtonNode()
+        let choiseButton2 = ChoiceButtonNode(backgroundNamed: "botaoPause") {
+            print("Botão 2 pressionado")
+        }
         choiseButton2.position = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 0, y: -95))
         self.addChild(choiseButton2)
     }
