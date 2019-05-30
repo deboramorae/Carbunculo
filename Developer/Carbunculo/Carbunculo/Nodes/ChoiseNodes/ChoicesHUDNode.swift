@@ -33,12 +33,12 @@ class ChoicesHUDNode : SKSpriteNode {
         choiseButton2.position = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 0, y: -95))
         self.addChild(choiseButton2)
         
+        self.isHidden = true
     }
     
     private func addPoints(points: Int) {
         choicesControl.ponctuation += points
     }
-    
 
     private func removeChoicesHUD() {
         self.removeFromParent()
