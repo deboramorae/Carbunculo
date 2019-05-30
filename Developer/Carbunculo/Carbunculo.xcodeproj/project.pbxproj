@@ -35,7 +35,6 @@
 		66C63BD822970F1900CCEE3A /* SceneMachineComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C63BD722970F1900CCEE3A /* SceneMachineComponent.swift */; };
 		66C63BDA229731EA00CCEE3A /* PlayerStateMachineComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C63BD9229731EA00CCEE3A /* PlayerStateMachineComponent.swift */; };
 		8405E3C5229F762900DB50A6 /* InvisibleChoiceNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405E3C4229F762900DB50A6 /* InvisibleChoiceNode.swift */; };
-		8405E3C7229F79C900DB50A6 /* InvisibleChoiceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405E3C6229F79C900DB50A6 /* InvisibleChoiceEntity.swift */; };
 		8405E3CA229F7A8A00DB50A6 /* InvisibleChoiceComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405E3C9229F7A8A00DB50A6 /* InvisibleChoiceComponent.swift */; };
 		8405E3CC229F7AF400DB50A6 /* InvisibleChoicePhysicsBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405E3CB229F7AF400DB50A6 /* InvisibleChoicePhysicsBody.swift */; };
 		8410A2F222946FD600F73DC0 /* IdleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8410A2F122946FD600F73DC0 /* IdleComponent.swift */; };
@@ -127,7 +126,6 @@
 		66C63BD722970F1900CCEE3A /* SceneMachineComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneMachineComponent.swift; sourceTree = "<group>"; };
 		66C63BD9229731EA00CCEE3A /* PlayerStateMachineComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStateMachineComponent.swift; sourceTree = "<group>"; };
 		8405E3C4229F762900DB50A6 /* InvisibleChoiceNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvisibleChoiceNode.swift; sourceTree = "<group>"; };
-		8405E3C6229F79C900DB50A6 /* InvisibleChoiceEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvisibleChoiceEntity.swift; sourceTree = "<group>"; };
 		8405E3C9229F7A8A00DB50A6 /* InvisibleChoiceComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvisibleChoiceComponent.swift; sourceTree = "<group>"; };
 		8405E3CB229F7AF400DB50A6 /* InvisibleChoicePhysicsBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvisibleChoicePhysicsBody.swift; sourceTree = "<group>"; };
 		8410A2F122946FD600F73DC0 /* IdleComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdleComponent.swift; sourceTree = "<group>"; };
@@ -248,7 +246,6 @@
 			isa = PBXGroup;
 			children = (
 				EA2CE9062298788A00084E25 /* ChoicesEntity.swift */,
-				8405E3C6229F79C900DB50A6 /* InvisibleChoiceEntity.swift */,
 			);
 			path = ChoiceEntities;
 			sourceTree = "<group>";
@@ -591,7 +588,6 @@
 				EA262F25229F138D00C46986 /* StonesPhysicsBodyComponent.swift in Sources */,
 				EA918EFE2294EBCB00684B4F /* ControlMovimentComponent.swift in Sources */,
 				EA58B2312295E7690099C146 /* WoodNodeComponent.swift in Sources */,
-				8405E3C7229F79C900DB50A6 /* InvisibleChoiceEntity.swift in Sources */,
 				84B058292294673B00B7E9A0 /* CGSize+ops.swift in Sources */,
 				EA58B21B2295BB800099C146 /* SKPhysicsBody+maskDefs.swift in Sources */,
 				EA58B2332295E7A80099C146 /* PlatformNodeComponent.swift in Sources */,
