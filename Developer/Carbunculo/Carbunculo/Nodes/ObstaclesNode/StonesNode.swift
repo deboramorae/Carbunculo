@@ -12,7 +12,7 @@ import GameplayKit
 class StonesNode: SKSpriteNode{
     
     init(){
-        super.init(texture: SKTexture(imageNamed: "pedrinhas1"), color: .gray, size: CGSize.sizeNode.stonesNode)
+        super.init(texture: SKTexture.imageNamed.stones, color: .gray, size: CGSize.sizeNode.stonesNode)
         self.name = "stone"
     }
     

@@ -1,0 +1,34 @@
+//
+//  TextureNode.swift
+//  Carbunculo
+//
+//  Created by Débora Moraes on 29/05/19.
+//  Copyright © 2019 CarbunculoTeam. All rights reserved.
+//
+
+import Foundation
+import SpriteKit
+
+extension SKTexture{
+    public struct imageNamed {
+        
+        public static let background1: SKTexture = SKTexture(imageNamed: "background_1")
+        public static let background2: SKTexture = SKTexture(imageNamed: "background_2")
+        
+        public static let floor      : SKTexture = SKTexture(imageNamed: "chao_1")
+        public static let floor2     : SKTexture = SKTexture(imageNamed: "chao_2")
+        
+        
+        public static let wood       : SKTexture = SKTexture(imageNamed: "tronco_1")
+        public static let player     : SKTexture = SKTexture(imageNamed: "akin-1")
+        public static let stones     : SKTexture = SKTexture(imageNamed: "pedrinhas1")
+        public static let water      : SKTexture = SKTexture(imageNamed: "rio_1")
+        public static let platform   : SKTexture = SKTexture(imageNamed: "plataforma_1")
+        public static let quicksand  : SKTexture = SKTexture(imageNamed: "areia_movedica")
+        
+        public static let animal     : SKTexture = SKTexture(imageNamed: "MacacoAreia")
+        
+        
+    }
+}
+

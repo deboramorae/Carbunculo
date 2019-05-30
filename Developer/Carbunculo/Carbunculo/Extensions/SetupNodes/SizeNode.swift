@@ -13,9 +13,11 @@ extension CGSize {
     public struct sizeNode {
         
         public static let backgroundNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 1480, height: 375))
+        
         public static let playerNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 55, height: 125))
         public static let floorNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 955, height: 43))
         public static let woodNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 136, height: 43))
+        
         public static let platformNode : CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 252, height: 44))
 
         
@@ -32,9 +34,11 @@ extension CGSize {
         public static let windNode    : CGSize  = CGSize.sizeProportinalWithFrame(size: CGSize(width: 200, height: 50))
        
         public static let balaoNode    :  CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 100, height: 100))
-        public static let choiseNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 530, height: 300))
+        public static let choiseHUDNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 530, height: 300))
         
         public static let choiseButtonNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 350, height: 50))
+        
+        public static let invisibleChoiceNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 30, height: (SKViewSizeRect.height)))
         
     }
     

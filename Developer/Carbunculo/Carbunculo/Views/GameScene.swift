@@ -39,21 +39,36 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         do {
             let entidadeCena  = EntidadeCena(cena: self)
-            let background = BackgroundEntity(entityManager: entityManager)
-            let floor = FloorEntity(entityManager: entityManager, cena: self)
+            
+            let background = BackgroundEntity(entityManager: entityManager, texture: SKTexture.imageNamed.background1, position : CGPoint.initialPositionNode.backgroundNode)
+            
+            let background2 = BackgroundEntity(entityManager: entityManager, texture: SKTexture.imageNamed.background2, position: CGPoint.initialPositionNode.background2)
+            
+            
+            let floor = FloorEntity(entityManager: entityManager, cena: self, positionNode: CGPoint.initialPositionNode.floorNode, texture : SKTexture.imageNamed.floor)
+            
+            let floor2 = FloorEntity(entityManager: entityManager, cena: self, positionNode: CGPoint.initialPositionNode.floorNode2, texture: SKTexture.imageNamed.floor2)
+            
             let player        = Player(entityManager: entityManager)
             let entidadeWater = WaterEntity(entityManager: entityManager, cena: self)
             let entityWood    = WoodEntity(entityManager: entityManager, scene: self)
             let entityPlatform = PlatformEntity(entityManager: entityManager, scene: self)
+//            let invisibleNode = InvisibleChoiceEntity(entityManager: entityManager, scene: self)
 //            let choise = ChoicesEntity(entityManager: entityManager, scene: self)
             
             entityManager.add(entidadeCena)
+            
             entityManager.add(background)
+            entityManager.add(background2)
+            
             entityManager.add(floor)
+            entityManager.add(floor2)
+            
             entityManager.add(player)
             entityManager.add(entityWood)
             entityManager.add(entityPlatform)
             entityManager.add(entidadeWater)
+//            entityManager.add(invisibleNode)
 //            entityManager.add(choise)
             
             //entities.append(entidadeWater)
