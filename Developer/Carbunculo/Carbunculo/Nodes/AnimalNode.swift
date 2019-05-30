@@ -12,9 +12,10 @@ import GameplayKit
 class AnimalNode : SKSpriteNode {
     
     init(){
-        super.init(texture: nil, color: .purple, size: CGSize.sizeNode.animalNode)
+        super.init(texture: SKTexture.imageNamed.animal, color: .purple, size: CGSize.sizeNode.animalNode)
         self.name = "animal"
         self.position = CGPoint.initialPositionNode.animalNode
+        self.zPosition = 3
     }
     
     required init?(coder aDecoder: NSCoder) {
