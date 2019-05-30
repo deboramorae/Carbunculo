@@ -12,7 +12,8 @@ import GameplayKit
 class InvisibleChoicePhysicsBodyComponent : GKComponent{
     init(node : SKNode){
         super.init()
-
+        
+        node.name = "invisibleNode"
         node.physicsBody = SKPhysicsBody(rectangleOf: CGSize.sizeNode.invisibleChoiceNode)
         
         node.physicsBody?.affectedByGravity   = false
