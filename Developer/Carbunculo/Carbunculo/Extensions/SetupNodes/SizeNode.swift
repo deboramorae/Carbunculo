@@ -14,8 +14,6 @@ extension CGSize {
         
         public static let platformNode : CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 252, height: 44))
         public static let platform2    : CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 758, height: 47))
-        
-        
         public static let backgroundNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 1480, height: 375))
         
         public static let playerNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 55, height: 125))
