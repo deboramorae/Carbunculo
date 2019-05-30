@@ -12,9 +12,13 @@ import GameplayKit
 
 class BackgroundEntity: GKEntity {
     
-    init(entityManager: EntityManager) {
+    init(entityManager: EntityManager, texture: SKTexture, position : CGPoint) {
         super.init()
         let backgroundNode = BackgroundNode()
+        
+        backgroundNode.texture = texture
+        backgroundNode.position = position
+        
         addComponent(GKSKNodeComponent(node: backgroundNode))    }
     
     required init?(coder aDecoder: NSCoder) {

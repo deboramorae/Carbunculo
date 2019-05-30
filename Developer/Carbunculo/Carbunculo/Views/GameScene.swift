@@ -39,7 +39,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         do {
             let entidadeCena  = EntidadeCena(cena: self)
-            let background = BackgroundEntity(entityManager: entityManager)
+            
+            let background = BackgroundEntity(entityManager: entityManager, texture: SKTexture.imageNamed.background1, position : CGPoint.initialPositionNode.backgroundNode)
+            
+            let background2 = BackgroundEntity(entityManager: entityManager, texture: SKTexture.imageNamed.background2, position: CGPoint.initialPositionNode.background2)
+            
             
             let floor = FloorEntity(entityManager: entityManager, cena: self, positionNode: CGPoint.initialPositionNode.floorNode, texture : SKTexture.imageNamed.floor)
             
@@ -52,13 +56,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 //            let choise = ChoicesEntity(entityManager: entityManager, scene: self)
             
             entityManager.add(entidadeCena)
+            
             entityManager.add(background)
+            entityManager.add(background2)
+            
             entityManager.add(floor)
+            entityManager.add(floor2)
+            
             entityManager.add(player)
             entityManager.add(entityWood)
             entityManager.add(entityPlatform)
             entityManager.add(entidadeWater)
-            entityManager.add(floor2)
+            
 //            entityManager.add(choise)
             
             //entities.append(entidadeWater)
