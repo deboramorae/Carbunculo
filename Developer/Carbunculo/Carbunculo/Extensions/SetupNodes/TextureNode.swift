@@ -22,6 +22,7 @@ extension SKTexture{
         
         public static let platform   : SKTexture = SKTexture(imageNamed: "plataforma_1")
         public static let platform2  : SKTexture = SKTexture(imageNamed: "plataforma_2")
+        public static let platform3  : SKTexture = SKTexture(imageNamed: "plataforma_3")
         
         public static let wood       : SKTexture = SKTexture(imageNamed: "tronco_1")
         public static let player     : SKTexture = SKTexture(imageNamed: "akin-1")
