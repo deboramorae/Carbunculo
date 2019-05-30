@@ -139,6 +139,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
      func didBegin(_ contact: SKPhysicsContact) {
+        //print(contact.bodyA.node?.name)
+        //print(contact.bodyB.node?.name)
         var conjunto  = Set<String>()
         for nome in ["floor","wood","platform","invisibleNode"]{
                  conjunto.insert(nome)
@@ -168,7 +170,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     
                     let father = invisibleNode.parent
                     father?.isHidden = false
-                    //funcaoParaConcelar
                 }
                 
             }
@@ -176,6 +177,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         if(contact.bodyA.node?.name == "water" || contact.bodyB.node?.name == "water" ){
             entityManager.restartScene()
+        }
+        if(contact.bodyA.node?.name == "frutinha" || contact.bodyB.node?.name == "frutinha" ){
+            print("Pegou a frutinha.")
         }
     }
     
