@@ -9,7 +9,7 @@
 import Foundation
 
 
-class ChoiseControl {
+public class ChoicesControl {
     
     var ponctuation: Int
     
@@ -18,3 +18,5 @@ class ChoiseControl {
     }
     
 }
+
+public var choicesControl = ChoicesControl()

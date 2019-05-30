@@ -17,10 +17,13 @@ class ChoicesEntity: GKEntity{
     
     
     func addComponentsToEntities(scene : GameScene){
-        let node = ChoicesHUDNode()
+        let nodeHUD = ChoicesHUDNode()
+        let invisibleNode = InvisibleChoiceNode()
         
-        addComponent(ChoicesNodeComponent(node: node, scene: scene))
-//        addComponent(ChoicesPhysicsBodyComponent(node: node))
+        
+        addComponent(ChoicesNodeComponent(node: nodeHUD, scene: scene))
+        addComponent(InvisibleChoiceComponent(node: invisibleNode, father: nodeHUD))
+        addComponent(InvisibleChoicePhysicsBodyComponent(node: invisibleNode))
     }
     
     required init?(coder aDecoder: NSCoder) {

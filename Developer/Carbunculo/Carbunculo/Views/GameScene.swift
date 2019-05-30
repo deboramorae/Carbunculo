@@ -53,9 +53,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let entidadeWater = WaterEntity(entityManager: entityManager, cena: self)
             let entityWood    = WoodEntity(entityManager: entityManager, scene: self)
             let entityPlatform = PlatformEntity(entityManager: entityManager, scene: self)
-//            let invisibleNode = InvisibleChoiceEntity(entityManager: entityManager, scene: self)
-//            let choise = ChoicesEntity(entityManager: entityManager, scene: self)
-            
+            let choise = ChoicesEntity(entityManager: entityManager, scene: self)
+            let entityQuicksand = QuicksandEntity(entityManager: entityManager, scene: self)
+            let entityFrutinha = MaracujaEntity(entityManager: entityManager, scene: self)
+
             entityManager.add(entidadeCena)
             
             entityManager.add(background)
@@ -68,11 +69,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             entityManager.add(entityWood)
             entityManager.add(entityPlatform)
             entityManager.add(entidadeWater)
-//            entityManager.add(invisibleNode)
-//            entityManager.add(choise)
+            entityManager.add(choise)
             
-            //entities.append(entidadeWater)
-            
+            entityManager.add(entityFrutinha)
+            entityManager.add(entityQuicksand)
+
         }
     }
     
@@ -139,9 +140,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
      func didBegin(_ contact: SKPhysicsContact) {
         var conjunto  = Set<String>()
-        for nome in ["floor","wood","platform"]{
+        for nome in ["floor","wood","platform","invisibleNode"]{
                  conjunto.insert(nome)
         }
+        
         var nodePlayer: SKNode!
         if(contact.bodyA.node!.name == "player" || contact.bodyB.node!.name == "player"){
             if(conjunto.contains(contact.bodyA.node!.name!)  || conjunto.contains(contact.bodyB.node!.name!)){
@@ -150,10 +152,25 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 }else{
                     nodePlayer = contact.bodyB.node!
                 }
-                print(nodePlayer.physicsBody!.velocity.dy)
+
                 if(nodePlayer.physicsBody!.velocity.dy==0){
                     entityManager.playerLanding()
                 }
+                
+                if(contact.bodyA.node!.name == "invisibleNode" || contact.bodyB.node!.name == "invisibleNode"){
+                    var invisibleNode: InvisibleChoiceNode!
+                    
+                    if(contact.bodyA.node! == nodePlayer){
+                        invisibleNode = (contact.bodyB.node! as! InvisibleChoiceNode)
+                    }else{
+                        invisibleNode = (contact.bodyA.node! as! InvisibleChoiceNode)
+                    }
+                    
+                    let father = invisibleNode.parent
+                    father?.isHidden = false
+                    //funcaoParaConcelar
+                }
+                
             }
 
         }

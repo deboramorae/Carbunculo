@@ -42,6 +42,23 @@ class EntityManager {
         
     }
     
+    func remove(_ entity: GKEntity) {
+        for component in entity.components {
+            if let componentWithNodes = component as? ComponentsWithNodes {
+                for node in componentWithNodes.nodesToAddToScene {
+                    node.removeFromParent()
+                }
+                
+                for node in componentWithNodes.nodesToAssociateWithComponent {
+                    componentsByNode.removeValue(forKey: node)
+                }
+            }
+        }
+        
+        entities.remove(entity)
+    }
+
+    
     func jump(){
         for entitie in entities{
             if let component = entitie.component(ofType: JumpingComponent.self)  {
