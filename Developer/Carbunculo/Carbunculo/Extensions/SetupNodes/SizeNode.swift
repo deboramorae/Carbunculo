@@ -13,6 +13,7 @@ extension CGSize {
     public struct sizeNode {
         
         public static let backgroundNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 1480, height: 375))
+        
         public static let playerNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 55, height: 125))
         public static let floorNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 955, height: 43))
         public static let woodNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 136, height: 43))
