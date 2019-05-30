@@ -15,6 +15,7 @@ extension SKTexture{
         public static let background1: SKTexture = SKTexture(imageNamed: "background_1")
         public static let background2: SKTexture = SKTexture(imageNamed: "background_2")
         public static let background3: SKTexture = SKTexture(imageNamed: "background_3")
+        public static let background4: SKTexture = SKTexture(imageNamed: "background_4")
         
         public static let floor      : SKTexture = SKTexture(imageNamed: "chao_1")
         public static let floor2     : SKTexture = SKTexture(imageNamed: "chao_2")
@@ -29,7 +30,6 @@ extension SKTexture{
         public static let stones     : SKTexture = SKTexture(imageNamed: "pedrinhas1")
         public static let water      : SKTexture = SKTexture(imageNamed: "rio_1")
         public static let water2     : SKTexture = SKTexture(imageNamed: "rio_2")
-//        public static let platform   : SKTexture = SKTexture(imageNamed: "plataforma_1")
         
         public static let quicksand  : SKTexture = SKTexture(imageNamed: "areia_movedica")
         
