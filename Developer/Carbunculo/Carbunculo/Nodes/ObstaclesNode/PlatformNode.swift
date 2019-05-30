@@ -13,8 +13,10 @@ class PlatformNode : SKSpriteNode{
     
     init(){
         super.init(texture: SKTexture(imageNamed: "plataforma_1"), color: .brown, size: CGSize.sizeNode.platformNode)
+        
         self.name = "Platform"
-        self.position = CGPoint.initialPositionNode.platformNode
+//        self.position = CGPoint.initialPositionNode.platformNode
+//        self.zPosition = 10
     }
     
     required init?(coder aDecoder: NSCoder) {

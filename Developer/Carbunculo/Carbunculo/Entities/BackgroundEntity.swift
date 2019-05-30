@@ -14,6 +14,7 @@ class BackgroundEntity: GKEntity {
     
     init(entityManager: EntityManager, texture: SKTexture, position : CGPoint) {
         super.init()
+        
         let backgroundNode = BackgroundNode()
         
         backgroundNode.texture = texture

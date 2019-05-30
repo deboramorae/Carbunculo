@@ -11,10 +11,10 @@ import GameplayKit
 
 class PlatformPhysicsBodyComponent: GKComponent{
     
-    init(node:SKNode){
+    init(node:SKNode, size: CGSize){
         super.init()
         
-        let physicBody = CGSize.sizeProportinalWithFrame(size: CGSize(width: CGSize.sizeNode.platformNode.width - 25, height: CGSize.sizeNode.platformNode.height - 14))
+        let physicBody = CGSize.sizeProportinalWithFrame(size: CGSize(width: size.width - 25, height: size.height - 14))
         
         //tamanho a definir
         node.name = "platform"
