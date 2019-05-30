@@ -45,6 +45,8 @@ extension CGPoint {
         public static let floorNode3  : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 2731, y: -334/2))
         
         public static let frutinhaNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 550, y: 0))
+        
+        public static let invisibleChoiceNode : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1500, y: 0))
 //
 //        public static let woodNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 50, y: -(SKViewSizeRect.height/2) + (CGSize.sizeNode.woodNode.height)))
 

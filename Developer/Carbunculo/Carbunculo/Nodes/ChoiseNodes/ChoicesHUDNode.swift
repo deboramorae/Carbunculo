@@ -22,7 +22,7 @@ class ChoicesHUDNode : SKSpriteNode {
             self.removeChoicesHUD()
             self.addPoints(points: 2)
         }
-        choiseButton1.position = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 0, y: -30))
+        choiseButton1.position = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1500, y: -30))
         self.addChild(choiseButton1)
         
         let choiseButton2 = ChoiceButtonNode(backgroundNamed: "botaoPause") {
@@ -30,7 +30,7 @@ class ChoicesHUDNode : SKSpriteNode {
             self.removeChoicesHUD()
             self.addPoints(points: 1)
         }
-        choiseButton2.position = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 0, y: -95))
+        choiseButton2.position = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1550, y: -95))
         self.addChild(choiseButton2)
         
         self.isHidden = true
