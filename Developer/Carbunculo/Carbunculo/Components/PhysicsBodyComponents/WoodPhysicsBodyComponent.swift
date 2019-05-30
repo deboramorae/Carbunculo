@@ -13,6 +13,7 @@ class WoodPhysicsBodyComponent:GKComponent{
 
     init(node:SKNode){
         super.init()
+        
         let physicsBody = CGSize.sizeProportinalWithFrame(size: CGSize(width: CGSize.sizeNode.woodNode.width - 10, height: CGSize.sizeNode.woodNode.height - 10))
         
         node.physicsBody  = SKPhysicsBody(rectangleOf: physicsBody)

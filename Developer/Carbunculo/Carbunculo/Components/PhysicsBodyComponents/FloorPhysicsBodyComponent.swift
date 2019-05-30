@@ -14,7 +14,7 @@ class FloorPhysicsBodyComponent : GKComponent {
     init(node : SKNode, scene : SKScene) {
         super.init()
         
-        let sizePhysicsBody = CGSize.sizeProportinalWithFrame(size: CGSize(width: CGSize.sizeNode.floorNode.width, height: 24))
+        let sizePhysicsBody = CGSize.sizeProportinalWithFrame(size: CGSize(width: CGSize.sizeNode.floorNode.width - 55, height: 24))
         
         node.name                           = "floor"
         node.physicsBody                    = SKPhysicsBody(rectangleOf: sizePhysicsBody )
