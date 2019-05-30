@@ -11,7 +11,7 @@ import GameplayKit
 
 class WaterNode : SKSpriteNode{
     init(){
-        super.init(texture: SKTexture(imageNamed: "rio_1"), color: .blue, size: CGSize.sizeNode.waterNode)
+        super.init(texture: SKTexture.imageNamed.water, color: .blue, size: CGSize.sizeNode.waterNode)
         
         self.name = "water"
         self.position = CGPoint.initialPositionNode.waterNode
