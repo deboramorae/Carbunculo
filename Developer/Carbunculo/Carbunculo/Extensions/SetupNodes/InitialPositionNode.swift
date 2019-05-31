@@ -53,7 +53,7 @@ extension CGPoint {
         
         public static let frutinhaNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 550, y: 0))
         
-        public static let invisibleChoiceNode : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1500, y: 0))
+        public static let invisibleChoiceNode : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1450, y: 0))
         
         public static let windNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1385, y: 10))
 

@@ -24,7 +24,9 @@ class ChoiceButtonNode: SKNode {
         
         self.name = "ChoiceButtonNode"
         let texture = SKTexture.init(imageNamed: backgroundNamed)
+        
         self.backgroundNode = SKSpriteNode.init(texture:texture , size: CGSize.sizeNode.choiseButtonNode)
+        
         self.isUserInteractionEnabled = true
         self.addChild(self.backgroundNode)
         self.backgroundNode.zPosition = 3
