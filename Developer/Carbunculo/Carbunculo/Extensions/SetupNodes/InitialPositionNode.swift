@@ -62,6 +62,7 @@ extension CGPoint {
         
         public static let choiseHUDNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 0, y: 0))
         
+        public static let stoneNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 2725, y: (-272/2)))
     }
     
     public static func positionProportionalWithFrame( position: CGPoint ) -> CGPoint {

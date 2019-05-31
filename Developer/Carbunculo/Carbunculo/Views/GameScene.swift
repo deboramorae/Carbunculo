@@ -79,6 +79,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let entityFrutinha = MaracujaEntity(entityManager: entityManager, scene: self)
             let entityAnimal   = AnimalEntity(entityManager: entityManager, scene: self)
             
+            let stone = StoneEntity(entityManager: entityManager, scene: self)
+            
             entityManager.add(entidadeCena)
             
             entityManager.add(background)
@@ -108,6 +110,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             entityManager.add(entityFrutinha)
             entityManager.add(entityQuicksand)
             entityManager.add(entityAnimal)
+            
+            entityManager.add(stone)
         }
     }
     
