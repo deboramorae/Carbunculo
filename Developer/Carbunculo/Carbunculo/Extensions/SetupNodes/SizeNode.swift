@@ -11,6 +11,7 @@ import CoreGraphics
 
 extension CGSize {
     public struct sizeNode {
+        
         public static let platformNode : CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 252, height: 44))
         public static let platform2    : CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 454, height: 51))
         
@@ -53,6 +54,12 @@ extension CGSize {
         public static let frutinhaNode : CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 40, height: 40))
         
         public static let animalNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 183, height: 65))
+        
+        //size physics body tronco
+        
+        public static let wood2PhysicsBody :  CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 61, height: 60))
+        
+        
         
     }
     

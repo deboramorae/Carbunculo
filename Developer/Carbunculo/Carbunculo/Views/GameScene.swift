@@ -74,6 +74,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
             let player        = Player(entityManager: entityManager)
             let entidadeWater = WaterEntity(entityManager: entityManager, cena: self, positionNode: CGPoint.initialPositionNode.waterNode, texture: SKTexture.imageNamed.water, size: CGSize.sizeNode.waterNode)
+            
             let water2 = WaterEntity(entityManager: entityManager, cena: self, positionNode: CGPoint.initialPositionNode.water2, texture: SKTexture.imageNamed.water2, size: CGSize.sizeNode.waterNode2)
             
             let entityWood    = WoodEntity(entityManager: entityManager, scene: self, positionNode: CGPoint.initialPositionNode.woodNode, texture: SKTexture.imageNamed.wood, size : CGSize.sizeNode.woodNode )
@@ -83,6 +84,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let entityWood3   = WoodEntity(entityManager: entityManager, scene: self, positionNode: CGPoint.initialPositionNode.woodNode3, texture: SKTexture.imageNamed.wood3, size : CGSize.sizeNode.woodNode3 )
             
             let choise = ChoicesEntity(entityManager: entityManager, scene: self)
+            
             let entityQuicksand = QuicksandEntity(entityManager: entityManager, scene: self)
             let entityFrutinha = MaracujaEntity(entityManager: entityManager, scene: self)
             let entityAnimal   = AnimalEntity(entityManager: entityManager, scene: self)
