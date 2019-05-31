@@ -40,6 +40,10 @@ extension SKTexture{
         public static let animal     : SKTexture = SKTexture(imageNamed: "MacacoAreia")
         public static let frutinha   : SKTexture = SKTexture(imageNamed: "frutinha")
         
+        public static let windNode   : SKTexture = SKTexture(imageNamed: "vento1")
+        public static let balaoNode   : SKTexture = SKTexture(imageNamed: "balao")
+    
+        
         
     }
 }

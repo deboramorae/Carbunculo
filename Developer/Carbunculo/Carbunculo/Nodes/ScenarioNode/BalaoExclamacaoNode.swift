@@ -12,7 +12,7 @@ import GameplayKit
 class BalaoExclamacaoNode : SKSpriteNode{
     
     init(){
-        super.init(texture: nil, color: .blue, size: CGSize.sizeNode.balaoNode)
+        super.init(texture: SKTexture.imageNamed.balaoNode, color: .blue, size: CGSize.sizeNode.balaoNode)
         self.name = "balaoExclamacao"
         self.position = CGPoint.initialPositionNode.balaoNode
     }
