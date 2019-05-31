@@ -20,12 +20,16 @@ extension SKTexture{
         public static let floor      : SKTexture = SKTexture(imageNamed: "chao_1")
         public static let floor2     : SKTexture = SKTexture(imageNamed: "chao_2")
         public static let floor3     : SKTexture = SKTexture(imageNamed: "chao_3")
+        public static let floor4     : SKTexture = SKTexture(imageNamed: "chao_4")
         
         public static let platform   : SKTexture = SKTexture(imageNamed: "plataforma_1")
         public static let platform2  : SKTexture = SKTexture(imageNamed: "plataforma_2")
         public static let platform3  : SKTexture = SKTexture(imageNamed: "plataforma_3")
         
         public static let wood       : SKTexture = SKTexture(imageNamed: "tronco_1")
+        public static let wood2      : SKTexture = SKTexture(imageNamed: "tronco_2")
+        public static let wood3      : SKTexture = SKTexture(imageNamed: "tronco_3")
+        
         public static let player     : SKTexture = SKTexture(imageNamed: "akin-1")
         public static let stones     : SKTexture = SKTexture(imageNamed: "pedrinhas1")
         public static let water      : SKTexture = SKTexture(imageNamed: "rio_1")
