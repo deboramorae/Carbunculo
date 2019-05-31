@@ -209,6 +209,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 }else{
                     nodePlayer = contact.bodyB.node!
                 }
+                //For test
                 //TESTAR, SE FUNFAR BELEZA
                 //FUNCIONOU, MAS TEM QUE SER MELHORADA
                 if(nodePlayer.physicsBody!.velocity.dy<50 && nodePlayer.physicsBody!.velocity.dy > -50){
