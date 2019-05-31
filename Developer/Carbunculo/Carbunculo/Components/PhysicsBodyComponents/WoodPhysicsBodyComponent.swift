@@ -17,7 +17,6 @@ class WoodPhysicsBodyComponent:GKComponent{
         let physicsBody = CGSize.sizeProportinalWithFrame(size: CGSize(width: size.width - 10, height: size.height - 10))
         
         node.physicsBody  = SKPhysicsBody(rectangleOf: physicsBody)
-        
         node.physicsBody?.affectedByGravity = false
         node.physicsBody?.isDynamic         = false
         node.physicsBody?.categoryBitMask    = 3

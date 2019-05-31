@@ -23,7 +23,7 @@ class ChoicesHUDNode : SKSpriteNode {
             self.addPoints(points: 2)
         }
 //        choiseButton1.position = CGPoint.positionProportionalWithFrame(position: CGPoint(x: self.position.x + 20, y: self.position.y - 30))
-        choiseButton1.position = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1500, y: -30))
+        choiseButton1.position = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1600, y: -30))
         self.addChild(choiseButton1)
         
         let choiseButton2 = ChoiceButtonNode(backgroundNamed: "escolha2") {
@@ -31,7 +31,7 @@ class ChoicesHUDNode : SKSpriteNode {
             self.removeChoicesHUD()
             self.addPoints(points: 1)
         }
-        choiseButton2.position = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1500, y: -95))
+        choiseButton2.position = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1600, y: -95))
         
         self.addChild(choiseButton2)
         
