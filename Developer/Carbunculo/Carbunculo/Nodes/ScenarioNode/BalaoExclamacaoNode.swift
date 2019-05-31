@@ -14,7 +14,8 @@ class BalaoExclamacaoNode : SKSpriteNode{
     init(){
         super.init(texture: SKTexture.imageNamed.balaoNode, color: .blue, size: CGSize.sizeNode.balaoNode)
         self.name = "balaoExclamacao"
-        self.position = CGPoint.initialPositionNode.balaoNode
+        self.position  = CGPoint.initialPositionNode.balaoNode
+        self.zPosition = 3
     }
     
     required init?(coder aDecoder: NSCoder) {
