@@ -128,8 +128,9 @@ class EntityManager {
         }
     }
     func updateCameraPosition(){
-        var camera     : SKCameraNode!
-        var playernode : SKNode!
+        var camera        : SKCameraNode!
+        var playernode    : SKNode!
+        var ultimaPosicao : CGPoint
         for entity in entities{
             if let componenteCamera = entity.component(ofType: CameraComponent.self){
                 camera = componenteCamera.camera
@@ -138,7 +139,19 @@ class EntityManager {
         for entity in entities{
             if let nodeCamera = entity.component(ofType: PlayerNodeComponent.self){
                 playernode = nodeCamera.node
-                camera.position.x = playernode.position.x+100
+               // camera.position.x = playernode.position.x+100
+            }
+        }
+        
+        for entity in entities.reversed(){
+            if let ultimoBackground = entity as? BackgroundEntity{
+                
+                ultimaPosicao = (ultimoBackground.component(ofType: GKSKNodeComponent.self)?.node.position)!
+                
+                if playernode.position.x<(ultimaPosicao.x+300){
+                    camera.position.x = playernode.position.x+100
+                }
+                break
             }
         }
     }
