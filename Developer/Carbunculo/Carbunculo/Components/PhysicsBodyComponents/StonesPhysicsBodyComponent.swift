@@ -18,8 +18,10 @@ class StonesPhysicsBodyComponent : GKComponent{
         
         node.physicsBody?.affectedByGravity = false
         node.physicsBody?.isDynamic         = false
-        node.physicsBody?.categoryBitMask   = 1000
-        
+        node.physicsBody?.categoryBitMask   |= SKPhysicsBody.CategoryBitMask.scenario
+        node.physicsBody?.friction           = 0.0
+        node.physicsBody?.restitution        = 0.0
+
         
     }
     
