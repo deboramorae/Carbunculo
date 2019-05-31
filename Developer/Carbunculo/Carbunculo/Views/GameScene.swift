@@ -196,8 +196,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
      func didBegin(_ contact: SKPhysicsContact) {
-        //print(contact.bodyA.node?.name)
-        //print(contact.bodyB.node?.name)
         var conjunto  = Set<String>()
         for nome in ["floor","wood","platform","invisibleNode"]{
                  conjunto.insert(nome)
@@ -211,8 +209,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 }else{
                     nodePlayer = contact.bodyB.node!
                 }
-
-                if(nodePlayer.physicsBody!.velocity.dy==0){
+                //TESTAR, SE FUNFAR BELEZA
+                //FUNCIONOU, MAS TEM QUE SER MELHORADA
+                if(nodePlayer.physicsBody!.velocity.dy<50 && nodePlayer.physicsBody!.velocity.dy > -50){
                     entityManager.playerLanding()
                 }
                 
