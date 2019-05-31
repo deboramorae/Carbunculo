@@ -225,6 +225,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     
                     let father = invisibleNode.parent
                     father?.isHidden = false
+                    EntityManager.ischoosing = true
                 }
                 
             }

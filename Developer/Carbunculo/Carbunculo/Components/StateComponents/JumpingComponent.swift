@@ -18,14 +18,17 @@ class JumpingComponent:GKComponent{
     }
     
     func jump(){
-        if let component = entity!.component(ofType: PlayerStateMachineComponent.self) {
-            if component.maquina.enter(StateJumping.self){
-                player.physicsBody?.affectedByGravity = true
-                player.physicsBody?.isDynamic = true
-                
-                player.physicsBody?.applyImpulse(proportionalForceFrame(force: CGVector(dx: 0, dy: CGSize.sizeNode.playerNode.height * 1.3)))
+        if !EntityManager.ischoosing{
+            if let component = entity!.component(ofType: PlayerStateMachineComponent.self) {
+                if component.maquina.enter(StateJumping.self){
+                    player.physicsBody?.affectedByGravity = true
+                    player.physicsBody?.isDynamic = true
+                    
+                    player.physicsBody?.applyImpulse(proportionalForceFrame(force: CGVector(dx: 0, dy: CGSize.sizeNode.playerNode.height * 1.3)))
+                }
             }
         }
+        
     }
     
     private func proportionalForceFrame( force: CGVector ) -> CGVector {

@@ -21,6 +21,7 @@ class ChoicesHUDNode : SKSpriteNode {
             print("Botão 1 pressionado")
             self.removeChoicesHUD()
             self.addPoints(points: 2)
+            EntityManager.ischoosing = false
         }
 //        choiseButton1.position = CGPoint.positionProportionalWithFrame(position: CGPoint(x: self.position.x + 20, y: self.position.y - 30))
         choiseButton1.position = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1500, y: -30))
@@ -30,6 +31,7 @@ class ChoicesHUDNode : SKSpriteNode {
             print("Botão 2 pressionado")
             self.removeChoicesHUD()
             self.addPoints(points: 1)
+            EntityManager.ischoosing = false
         }
         choiseButton2.position = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1500, y: -95))
         
