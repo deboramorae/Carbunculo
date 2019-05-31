@@ -17,20 +17,24 @@ class ChoicesHUDNode : SKSpriteNode {
         self.position = CGPoint.initialPositionNode.choiseHUDNode
         self.zPosition = 100
         
-        let choiseButton1 = ChoiceButtonNode(backgroundNamed: "botaoPause") {
+        let choiseButton1 = ChoiceButtonNode(backgroundNamed: "escolha1") {
             print("Botão 1 pressionado")
             self.removeChoicesHUD()
             self.addPoints(points: 2)
+            EntityManager.ischoosing = false
         }
-        choiseButton1.position = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1500, y: -30))
+//        choiseButton1.position = CGPoint.positionProportionalWithFrame(position: CGPoint(x: self.position.x + 20, y: self.position.y - 30))
+        choiseButton1.position = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1600, y: -30))
         self.addChild(choiseButton1)
         
-        let choiseButton2 = ChoiceButtonNode(backgroundNamed: "botaoPause") {
+        let choiseButton2 = ChoiceButtonNode(backgroundNamed: "escolha2") {
             print("Botão 2 pressionado")
             self.removeChoicesHUD()
             self.addPoints(points: 1)
+            EntityManager.ischoosing = false
         }
-        choiseButton2.position = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1550, y: -95))
+        choiseButton2.position = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1600, y: -95))
+        
         self.addChild(choiseButton2)
         
         self.isHidden = true

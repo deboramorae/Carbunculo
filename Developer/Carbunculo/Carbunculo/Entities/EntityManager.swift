@@ -15,7 +15,8 @@ class EntityManager {
     private(set) var componentsByNode = [SKNode: GKComponent]()
     private(set) var entities = Set<GKEntity>()
     let scene: SKScene
-    
+    var entitie: GKEntity?
+    static var  ischoosing = false
     
     init(scene: SKScene) {
         self.scene = scene
@@ -38,6 +39,9 @@ class EntityManager {
                 }
                 
             }
+        }
+        if entity is BackgroundEntity{
+            entitie = entity
         }
         
     }
@@ -62,7 +66,7 @@ class EntityManager {
     func jump(){
         for entitie in entities{
             if let component = entitie.component(ofType: JumpingComponent.self)  {
-                component.jump()
+                    component.jump()
             }
         }
     }
@@ -70,7 +74,7 @@ class EntityManager {
     func idle(){
         for entities in entities {
             if let component = entities.component(ofType: IdleComponent.self) {
-                component.idle()
+                    component.idle()
             }
         }
     }
@@ -78,7 +82,7 @@ class EntityManager {
     func run(){
         for entities in entities {
             if let component = entities.component(ofType: RunComponent.self) {
-                component.run()
+                    component.run()
             }
         }
     }
@@ -128,8 +132,8 @@ class EntityManager {
         }
     }
     func updateCameraPosition(){
-        var camera     : SKCameraNode!
-        var playernode : SKNode!
+        var camera        : SKCameraNode!
+        var playernode    : SKNode!
         for entity in entities{
             if let componenteCamera = entity.component(ofType: CameraComponent.self){
                 camera = componenteCamera.camera
@@ -138,9 +142,17 @@ class EntityManager {
         for entity in entities{
             if let nodeCamera = entity.component(ofType: PlayerNodeComponent.self){
                 playernode = nodeCamera.node
+               camera.position.x = playernode.position.x+100
+            }
+        }
+        
+        
+        if entitie != nil{
+            if((playernode.position.x+100)<(entitie?.component(ofType: GKSKNodeComponent.self)?.node.position.x)!){
                 camera.position.x = playernode.position.x+100
             }
         }
+        
     }
     func restartScene(){
         if let view = scene.view {

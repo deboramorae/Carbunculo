@@ -43,4 +43,15 @@ struct Animations{
             }
         }
     }
+    struct Animal{
+        static var blink:SKAction{
+            get{
+                let sumir            = SKAction.fadeOut(withDuration: 1)
+                let aparecer         = SKAction.fadeIn(withDuration: 1)
+                let grupo            = SKAction.sequence([sumir,aparecer])
+                let repeticaoForever = SKAction.repeatForever(grupo)
+                return repeticaoForever
+            }
+        }
+    }
 }
