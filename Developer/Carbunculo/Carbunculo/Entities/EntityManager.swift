@@ -139,7 +139,7 @@ class EntityManager {
         for entity in entities{
             if let nodeCamera = entity.component(ofType: PlayerNodeComponent.self){
                 playernode = nodeCamera.node
-               // camera.position.x = playernode.position.x+100
+               camera.position.x = playernode.position.x+100
             }
         }
         
@@ -149,7 +149,7 @@ class EntityManager {
                 ultimaPosicao = (ultimoBackground.component(ofType: GKSKNodeComponent.self)?.node.position)!
                 
                 if playernode.position.x<(ultimaPosicao.x+300){
-                    camera.position.x = playernode.position.x+100
+                  //  camera.position.x = playernode.position.x+100
                 }
                 break
             }
