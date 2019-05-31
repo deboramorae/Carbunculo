@@ -45,6 +45,10 @@ extension CGPoint {
         
         public static let platform3: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 3494, y: -80))
         
+        public static let platform7: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 5615, y: -33))
+        
+        public static let platform8: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 5905, y: -80))
+        
         public static let floorNode2  : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1120, y: -334/2))
         
         public static let floorNode3  : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 2731, y: -334/2))
