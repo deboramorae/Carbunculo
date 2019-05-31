@@ -13,7 +13,6 @@ class StonesPhysicsBodyComponent : GKComponent{
     init(node: SKNode){
         
         super.init()
-        
         node.physicsBody = SKPhysicsBody(rectangleOf: CGSize.sizeNode.stonesNode)
         
         node.physicsBody?.affectedByGravity = false
