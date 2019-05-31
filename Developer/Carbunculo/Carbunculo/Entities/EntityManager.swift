@@ -15,7 +15,7 @@ class EntityManager {
     private(set) var componentsByNode = [SKNode: GKComponent]()
     private(set) var entities = Set<GKEntity>()
     let scene: SKScene
-    
+    var entitie: GKEntity?
     
     init(scene: SKScene) {
         self.scene = scene
@@ -38,6 +38,9 @@ class EntityManager {
                 }
                 
             }
+        }
+        if entity is BackgroundEntity{
+            entitie = entity
         }
         
     }
@@ -130,7 +133,6 @@ class EntityManager {
     func updateCameraPosition(){
         var camera        : SKCameraNode!
         var playernode    : SKNode!
-        var ultimaPosicao : CGPoint
         for entity in entities{
             if let componenteCamera = entity.component(ofType: CameraComponent.self){
                 camera = componenteCamera.camera
@@ -143,17 +145,13 @@ class EntityManager {
             }
         }
         
-        for entity in entities.reversed(){
-            if let ultimoBackground = entity as? BackgroundEntity{
-                
-                ultimaPosicao = (ultimoBackground.component(ofType: GKSKNodeComponent.self)?.node.position)!
-                
-                if playernode.position.x<(ultimaPosicao.x+300){
-                  //  camera.position.x = playernode.position.x+100
-                }
-                break
+        
+        if entitie != nil{
+            if((playernode.position.x+100)<(entitie?.component(ofType: GKSKNodeComponent.self)?.node.position.x)!){
+                camera.position.x = playernode.position.x+100
             }
         }
+        
     }
     func restartScene(){
         if let view = scene.view {
