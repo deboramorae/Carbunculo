@@ -20,6 +20,7 @@ class BalaoEntity : GKEntity{
         let balao = BalaoExclamacaoNode()
         
         addComponent(BalaoExclamacaoNodeComponent(node: balao, scene: scene))
+        balao.run(Animations.Animal.blink)
     }
     
     required init?(coder aDecoder: NSCoder) {
