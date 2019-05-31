@@ -12,7 +12,10 @@ import GameplayKit
 class WaterPhysicsBodyComponent:GKComponent{
     init(node:SKNode, size: CGSize){
         super.init()
-        node.physicsBody                    = SKPhysicsBody(rectangleOf: size)
+        
+         let physicsBody = CGSize.sizeProportinalWithFrame(size: CGSize(width: size.width, height: size.height - 20))
+        
+        node.physicsBody                    = SKPhysicsBody(rectangleOf: physicsBody)
         node.physicsBody?.affectedByGravity = false
         node.physicsBody?.isDynamic         = false
         node.physicsBody?.categoryBitMask    = 4

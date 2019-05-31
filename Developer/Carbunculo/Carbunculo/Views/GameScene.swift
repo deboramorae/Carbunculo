@@ -61,11 +61,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let floor2 = FloorEntity(entityManager: entityManager, cena: self, positionNode: CGPoint.initialPositionNode.floorNode2, texture: SKTexture.imageNamed.floor2, size: CGSize.sizeNode.floorNode)
             
             let floor3 = FloorEntity(entityManager: entityManager, cena: self, positionNode: CGPoint.initialPositionNode.floorNode3, texture: SKTexture.imageNamed.floor3, size: CGSize.sizeNode.floor3)
+            
+            let floor4 = FloorEntity(entityManager: entityManager, cena: self, positionNode: CGPoint.initialPositionNode.floorNode4, texture: SKTexture.imageNamed.floor4, size: CGSize.sizeNode.floor4)
 
             let player        = Player(entityManager: entityManager)
             let entidadeWater = WaterEntity(entityManager: entityManager, cena: self, positionNode: CGPoint.initialPositionNode.waterNode, texture: SKTexture.imageNamed.water, size: CGSize.sizeNode.waterNode)
             let water2 = WaterEntity(entityManager: entityManager, cena: self, positionNode: CGPoint.initialPositionNode.water2, texture: SKTexture.imageNamed.water2, size: CGSize.sizeNode.waterNode2)
-            let entityWood    = WoodEntity(entityManager: entityManager, scene: self)
+            
+            let entityWood    = WoodEntity(entityManager: entityManager, scene: self, positionNode: CGPoint.initialPositionNode.woodNode, texture: SKTexture.imageNamed.wood, size : CGSize.sizeNode.woodNode )
+            
+            let entityWood2   = WoodEntity(entityManager: entityManager, scene: self, positionNode: CGPoint.initialPositionNode.woodNode2, texture: SKTexture.imageNamed.wood2, size : CGSize.sizeNode.woodNode2 )
+            
+            let entityWood3   = WoodEntity(entityManager: entityManager, scene: self, positionNode: CGPoint.initialPositionNode.woodNode3, texture: SKTexture.imageNamed.wood3, size : CGSize.sizeNode.woodNode3 )
             
             let choise = ChoicesEntity(entityManager: entityManager, scene: self)
             let entityQuicksand = QuicksandEntity(entityManager: entityManager, scene: self)
@@ -82,9 +89,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             entityManager.add(floor)
             entityManager.add(floor2)
             entityManager.add(floor3)
+            entityManager.add(floor4)
             
             entityManager.add(player)
+            
             entityManager.add(entityWood)
+            entityManager.add(entityWood2)
+            entityManager.add(entityWood3)
             
             entityManager.add(entityPlatform)
             entityManager.add(platform2)

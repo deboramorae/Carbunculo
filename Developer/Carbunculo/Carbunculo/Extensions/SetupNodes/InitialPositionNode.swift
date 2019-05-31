@@ -29,6 +29,9 @@ extension CGPoint {
 
         public static let woodNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 50, y: (-301.47/2.22) ))
         
+        public static let woodNode2 : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1160, y: (-301.47/2.22) ))
+        public static let woodNode3 : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 4220, y: (-301.47/2.22) ))
+        
         public static let waterNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 533, y: -352/2))
         public static let water2: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 3450, y: -352/2))
         
@@ -44,12 +47,12 @@ extension CGPoint {
         
         public static let floorNode3  : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 2731, y: -334/2))
         
+        public static let floorNode4  : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 4190, y: -334/2))
+        
         public static let frutinhaNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 550, y: 0))
         
         public static let invisibleChoiceNode : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1500, y: 0))
-//
-//        public static let woodNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 50, y: -(SKViewSizeRect.height/2) + (CGSize.sizeNode.woodNode.height)))
-
+        
         public static let windNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 500, y: 10))
 
         public static let animalNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1800, y: -300/2))
