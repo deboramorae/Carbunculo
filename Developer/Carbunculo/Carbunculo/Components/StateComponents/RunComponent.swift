@@ -20,18 +20,21 @@ class RunComponent: GKComponent {
     }
     
     func run() {
-        if let component = entity!.component(ofType: PlayerStateMachineComponent.self) {
-            
-            if(component.maquina.currentState.self is StateJumping || component.maquina.currentState.self is StateFalling){
-                player.physicsBody?.velocity.dx = 0
-               // player.physicsBody?.applyForce(proportionalForceFrame(force: CGVector(dx: 1000, dy: 0)))
-                player.physicsBody?.velocity.dx = 100
-            }
-            else{
-                if component.maquina.enter(StateRunning.self){
+        
+        if !EntityManager.ischoosing{
+            if let component = entity!.component(ofType: PlayerStateMachineComponent.self) {
+                
+                if(component.maquina.currentState.self is StateJumping || component.maquina.currentState.self is StateFalling){
                     player.physicsBody?.velocity.dx = 0
                     // player.physicsBody?.applyForce(proportionalForceFrame(force: CGVector(dx: 1000, dy: 0)))
                     player.physicsBody?.velocity.dx = 100
+                }
+                else{
+                    if component.maquina.enter(StateRunning.self){
+                        player.physicsBody?.velocity.dx = 0
+                        // player.physicsBody?.applyForce(proportionalForceFrame(force: CGVector(dx: 1000, dy: 0)))
+                        player.physicsBody?.velocity.dx = 100
+                    }
                 }
             }
         }

@@ -20,10 +20,12 @@ class IdleComponent: GKComponent {
     }
     
     func idle() {
-        if let component = entity!.component(ofType: PlayerStateMachineComponent.self) {
-            if component.maquina.enter(StateIdle.self){
-                player.physicsBody?.isDynamic = false
-                player.physicsBody?.isDynamic = true
+        if !EntityManager.ischoosing{
+            if let component = entity!.component(ofType: PlayerStateMachineComponent.self) {
+                if component.maquina.enter(StateIdle.self){
+                    player.physicsBody?.isDynamic = false
+                    player.physicsBody?.isDynamic = true
+                }
             }
         }
 

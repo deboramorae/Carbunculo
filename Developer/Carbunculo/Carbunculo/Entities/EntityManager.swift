@@ -16,6 +16,7 @@ class EntityManager {
     private(set) var entities = Set<GKEntity>()
     let scene: SKScene
     var entitie: GKEntity?
+    static var  ischoosing = false
     
     init(scene: SKScene) {
         self.scene = scene
@@ -65,7 +66,7 @@ class EntityManager {
     func jump(){
         for entitie in entities{
             if let component = entitie.component(ofType: JumpingComponent.self)  {
-                component.jump()
+                    component.jump()
             }
         }
     }
@@ -73,7 +74,7 @@ class EntityManager {
     func idle(){
         for entities in entities {
             if let component = entities.component(ofType: IdleComponent.self) {
-                component.idle()
+                    component.idle()
             }
         }
     }
@@ -81,7 +82,7 @@ class EntityManager {
     func run(){
         for entities in entities {
             if let component = entities.component(ofType: RunComponent.self) {
-                component.run()
+                    component.run()
             }
         }
     }
