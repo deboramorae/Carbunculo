@@ -15,5 +15,6 @@ class StateIdle:GKState{
         return (stateClass is StateRunning.Type) || (stateClass is StateJumping.Type)
     }
     override func didEnter(from previousState: GKState?) {
+        print("Entrou Idle")
     }
 }

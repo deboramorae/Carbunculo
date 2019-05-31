@@ -194,8 +194,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
      func didBegin(_ contact: SKPhysicsContact) {
-        //print(contact.bodyA.node?.name)
-        //print(contact.bodyB.node?.name)
         var conjunto  = Set<String>()
         for nome in ["floor","wood","platform","invisibleNode"]{
                  conjunto.insert(nome)
