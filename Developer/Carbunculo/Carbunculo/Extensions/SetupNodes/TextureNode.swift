@@ -22,6 +22,7 @@ extension SKTexture{
         public static let floor2     : SKTexture = SKTexture(imageNamed: "chao_2")
         public static let floor3     : SKTexture = SKTexture(imageNamed: "chao_3")
         public static let floor4     : SKTexture = SKTexture(imageNamed: "chao_4")
+        public static let floor5     : SKTexture = SKTexture(imageNamed: "chao_5")
         
         public static let platform   : SKTexture = SKTexture(imageNamed: "plataforma_1")
         public static let platform2  : SKTexture = SKTexture(imageNamed: "plataforma_2")
@@ -43,6 +44,11 @@ extension SKTexture{
         
         public static let windNode   : SKTexture = SKTexture(imageNamed: "vento1")
         public static let balaoNode   : SKTexture = SKTexture(imageNamed: "balao")
+        
+        public static let escolha1   : SKTexture = SKTexture(imageNamed: "escolha1")
+        public static let escolha2   : SKTexture = SKTexture(imageNamed: "escolha2")
+        
+        
     
         
         
