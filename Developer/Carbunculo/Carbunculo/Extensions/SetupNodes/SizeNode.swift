@@ -41,7 +41,7 @@ extension CGSize {
         
         //pegar o tamanho real desses depois depois
         
-        public static let windNode    : CGSize  = CGSize.sizeProportinalWithFrame(size: CGSize(width: 200, height: 50))
+        public static let windNode    : CGSize  = CGSize.sizeProportinalWithFrame(size: CGSize(width: 285, height: 156))
        
         public static let balaoNode    :  CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 47, height: 48))
         public static let choiseHUDNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 530, height: 300))

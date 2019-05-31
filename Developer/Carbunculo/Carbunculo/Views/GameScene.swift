@@ -83,6 +83,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             let stone = StoneEntity(entityManager: entityManager, scene: self)
             let balao = BalaoEntity(entityManager: entityManager, scene: self)
+            let windNode = WindEntity(entityManager: entityManager, scene: self)
             
             
             entityManager.add(entidadeCena)
@@ -118,6 +119,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             entityManager.add(entityAnimal)
             
             entityManager.add(stone)
+            entityManager.add(windNode)
         }
     }
     
