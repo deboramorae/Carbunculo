@@ -44,6 +44,11 @@ extension SKTexture{
         
         public static let windNode   : SKTexture = SKTexture(imageNamed: "vento1")
         public static let balaoNode   : SKTexture = SKTexture(imageNamed: "balao")
+        
+        public static let escolha1   : SKTexture = SKTexture(imageNamed: "escolha1")
+        public static let escolha2   : SKTexture = SKTexture(imageNamed: "escolha2")
+        
+        
     
         
         
