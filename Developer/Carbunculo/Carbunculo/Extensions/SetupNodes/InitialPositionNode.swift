@@ -61,7 +61,7 @@ extension CGPoint {
         
         public static let invisibleChoiceNode : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1560, y: 0))
         
-        public static let windNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1385, y: 10))
+        public static let windNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1390, y: 10))
 
         public static let animalNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1750, y: -300/2))
 

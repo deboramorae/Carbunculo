@@ -12,7 +12,8 @@ import GameplayKit
 class ChoicesHUDNode : SKSpriteNode {
     
     init() {
-        super.init(texture: nil, color: .orange, size: CGSize.sizeNode.choiseHUDNode)
+        super.init(texture: SKTexture.imageNamed.escolha1, color: .orange, size: CGSize.sizeNode.choiseHUDNode)
+        
         self.name = "Choices HUD"
         self.position = CGPoint.initialPositionNode.choiseHUDNode
         self.zPosition = 100
