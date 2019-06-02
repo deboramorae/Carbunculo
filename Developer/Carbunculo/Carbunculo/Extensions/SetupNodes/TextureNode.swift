@@ -34,8 +34,10 @@ extension SKTexture{
         
         public static let player     : SKTexture = SKTexture(imageNamed: "akin-1")
         public static let stones     : SKTexture = SKTexture(imageNamed: "pedrinhas1")
+        
         public static let water      : SKTexture = SKTexture(imageNamed: "rio_1")
         public static let water2     : SKTexture = SKTexture(imageNamed: "rio_2")
+        public static let water3    : SKTexture = SKTexture(imageNamed: "rio_3")
         
         public static let quicksand  : SKTexture = SKTexture(imageNamed: "areia_movedica")
         

@@ -29,13 +29,17 @@ extension CGPoint {
         
         public static let playerNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: (-SKViewSizeRect.width / 2), y: 220))
 
-        public static let woodNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 50, y: (-301.47/2.22) ))
+        public static let woodNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 50, y: (-301.47/2.22)))
         
-        public static let woodNode2 : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1160, y: (-301.47/2.22) ))
-        public static let woodNode3 : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 4220, y: (-301.47/2.22) ))
+        public static let woodNode2 : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1160, y: (-120)))
+        public static let woodNode3 : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 4220, y:(-301.47/2.22 )))
         
-        public static let waterNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 533, y: -352/2))
+        public static let waterNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 533, y: (-352/2)))
+        
         public static let water2: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 3415, y: -352/2))
+        
+        public static let water3: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 5265, y: -352/2))
+        
         
         public static let quicksandNode : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1804, y: -352/2))
         
@@ -68,7 +72,7 @@ extension CGPoint {
         public static let animalNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1750, y: -300/2))
 
         
-        public static let balaoNode     : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1859, y: -100))
+        public static let balaoNode : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1859, y: -100))
         
         
         
