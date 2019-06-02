@@ -45,9 +45,10 @@ extension CGSize {
         public static let windNode    : CGSize  = CGSize.sizeProportinalWithFrame(size: CGSize(width: 285, height: 156))
        
         public static let balaoNode    :  CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 47, height: 48))
-        public static let choiseHUDNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 530, height: 300))
         
-        public static let choiseButtonNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 350, height: 50))
+        public static let choiseHUDNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 406, height: 208))
+        
+        public static let choiseButtonNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 319, height: 36))
         
         public static let invisibleChoiceNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 30, height: (SKViewSizeRect.height)))
         
