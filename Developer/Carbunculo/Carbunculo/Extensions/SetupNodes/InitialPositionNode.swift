@@ -35,7 +35,7 @@ extension CGPoint {
         public static let woodNode3 : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 4220, y: (-301.47/2.22) ))
         
         public static let waterNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 533, y: -352/2))
-        public static let water2: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 3350, y: -352/2))
+        public static let water2: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 3415, y: -352/2))
         
         public static let quicksandNode : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1804, y: -352/2))
         
@@ -43,7 +43,7 @@ extension CGPoint {
         
         public static let platform2: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1804, y: -90))
         
-        public static let platform3: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 3494, y: -90))
+        public static let platform3: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 3398, y: -90))
         
         public static let platform7: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 5615, y: -33))
         
@@ -53,7 +53,7 @@ extension CGPoint {
         
         public static let floorNode3  : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 2523, y: -334/2))
         
-        public static let floorNode4  : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 4190, y: -334/2))
+        public static let floorNode4  : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 4150, y: -334/2))
         
         public static let floorNode5  : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 6400, y: -334/2))
         
