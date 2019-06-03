@@ -49,9 +49,17 @@ extension CGPoint {
         
         public static let platform3: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 3398, y: -90))
         
-        public static let platform7: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 5615, y: -33))
+        public static let platform4: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 4680, y: -95))
         
-        public static let platform8: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 5905, y: -80))
+        public static let platform5: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 4995, y: -40))
+        
+        public static let platform6: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 5272, y: -95))
+        
+        public static let platform7: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 5547, y: -40))
+        
+        public static let platform8: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 5810, y: -95))
+        
+        
         
         public static let floorNode2  : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1120, y: -334/2))
         
@@ -59,7 +67,7 @@ extension CGPoint {
         
         public static let floorNode4  : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 4150, y: -334/2))
         
-        public static let floorNode5  : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 6400, y: -334/2))
+        public static let floorNode5  : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 6350, y: -334/2))
         
         public static let frutinhaNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 550, y: 0))
         

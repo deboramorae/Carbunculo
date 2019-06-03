@@ -60,9 +60,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             let platform3 = PlatformEntity(entityManager: entityManager, scene: self, texture: SKTexture.imageNamed.platform3, position: CGPoint.initialPositionNode.platform3, size: CGSize.sizeNode.platform3)
             
-            let platform7 = PlatformEntity(entityManager: entityManager, scene: self, texture: SKTexture.imageNamed.platform, position: CGPoint.initialPositionNode.platform7, size: CGSize.sizeNode.platformNode)
+            let platform4 = PlatformEntity(entityManager: entityManager, scene: self, texture: SKTexture.imageNamed.platform4, position: CGPoint.initialPositionNode.platform4, size: CGSize.sizeNode.platform4)
             
-            let platform8 = PlatformEntity(entityManager: entityManager, scene: self, texture: SKTexture.imageNamed.platform, position: CGPoint.initialPositionNode.platform8, size: CGSize.sizeNode.platformNode)
+            let platform5 = PlatformEntity(entityManager: entityManager, scene: self, texture: SKTexture.imageNamed.platform4, position: CGPoint.initialPositionNode.platform5, size: CGSize.sizeNode.platform4)
+            
+            let platform6 = PlatformEntity(entityManager: entityManager, scene: self, texture: SKTexture.imageNamed.platform4, position: CGPoint.initialPositionNode.platform6, size: CGSize.sizeNode.platform4)
+            
+            let platform7 = PlatformEntity(entityManager: entityManager, scene: self, texture: SKTexture.imageNamed.platform4, position: CGPoint.initialPositionNode.platform7, size: CGSize.sizeNode.platformNode)
+            
+            let platform8 = PlatformEntity(entityManager: entityManager, scene: self, texture: SKTexture.imageNamed.platform4, position: CGPoint.initialPositionNode.platform8, size: CGSize.sizeNode.platformNode)
             
             let floor2 = FloorEntity(entityManager: entityManager, cena: self, positionNode: CGPoint.initialPositionNode.floorNode2, texture: SKTexture.imageNamed.floor2, size: CGSize.sizeNode.floorNode)
             
@@ -120,6 +126,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             entityManager.add(entityPlatform)
             entityManager.add(platform2)
             entityManager.add(platform3)
+            entityManager.add(platform4)
+            entityManager.add(platform5)
+            entityManager.add(platform6)
             entityManager.add(platform7)
             entityManager.add(platform8)
             
