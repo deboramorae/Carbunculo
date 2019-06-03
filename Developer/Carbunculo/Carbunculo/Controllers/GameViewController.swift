@@ -18,14 +18,45 @@ class GameViewController: UIViewController {
     
     var cena: GameScene!
     
-    @IBAction func pausar(_ sender: Any) {
-        
-       //restartScene()
+    @IBOutlet weak var pauseButton: UIButton!
+    @IBOutlet weak var hudPause: UIImageView!
+    @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var restartButton: UIButton!
+    
+    
+    @IBAction func restart(_ sender: Any) {
+        self.hiddenHud()
+        cena.entityManager.restartScene()
+    }
+    
+    @IBAction func play(_ sender: Any) {
+        self.hiddenHud()
         cena.entityManager.alternatePause()
     }
+    
+    @IBAction func pausar(_ sender: Any) {
+        self.showHud()
+        cena.entityManager.alternatePause()
+    }
+    
+    private func hiddenHud() {
+        pauseButton.isHidden = false
+        hudPause.isHidden = true
+        playButton.isHidden = true
+        restartButton.isHidden = true
+    }
+    
+    private func showHud() {
+        pauseButton.isHidden = true
+        hudPause.isHidden = false
+        playButton.isHidden = false
+        restartButton.isHidden = false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.hiddenHud()
         // Load 'GameScene.sks' as a GKScene. This provides gameplay related content
         // including entities and graphs.
         if let scene = GKScene(fileNamed: "GameScene") {
