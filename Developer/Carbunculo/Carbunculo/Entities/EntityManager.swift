@@ -133,14 +133,39 @@ class EntityManager {
             }
         }
     }
+    
+    func updatePositionPlayerInFirstChoice_Save() {
+
+        for entity in entities{
+            if let player = entity.component(ofType: PlayerNodeComponent.self)?.node{
+                player.position = CGPoint.initialPositionNode.playerFirstChoice_Save
+            }
+        }
+        
+    }
+    
+    func updatePositionPlayerInFirstChoice_NoSave() {
+        
+        for entity in entities{
+            if let player = entity.component(ofType: PlayerNodeComponent.self)?.node{
+                player.position = CGPoint.initialPositionNode.playerFirstChoice_NoSave
+            }
+        }
+        
+    }
+
+    
     func updateCameraPosition(){
+        
         var camera        : SKCameraNode!
         var playernode    : SKNode!
+        
         for entity in entities{
             if let componenteCamera = entity.component(ofType: CameraComponent.self){
                 camera = componenteCamera.camera
             }
         }
+        
         for entity in entities{
             if let nodeCamera = entity.component(ofType: PlayerNodeComponent.self){
                 playernode = nodeCamera.node
@@ -156,6 +181,7 @@ class EntityManager {
         }
         
     }
+    
     func restartScene(){
         if let view = scene.view {
             // Load the SKScene from 'GameScene.sks'
@@ -172,4 +198,5 @@ class EntityManager {
             view.showsNodeCount = true
         }
     }
+    
 }

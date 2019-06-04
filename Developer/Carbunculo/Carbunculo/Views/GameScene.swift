@@ -64,9 +64,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             let platform6 = PlatformEntity(entityManager: entityManager, scene: self, texture: SKTexture.imageNamed.platform4, position: CGPoint.initialPositionNode.platform6, size: CGSize.sizeNode.platform4)
             
-            let platform7 = PlatformEntity(entityManager: entityManager, scene: self, texture: SKTexture.imageNamed.platform4, position: CGPoint.initialPositionNode.platform7, size: CGSize.sizeNode.platformNode)
+            let platform7 = PlatformEntity(entityManager: entityManager, scene: self, texture: SKTexture.imageNamed.platform4, position: CGPoint.initialPositionNode.platform7, size: CGSize.sizeNode.platform4)
             
-            let platform8 = PlatformEntity(entityManager: entityManager, scene: self, texture: SKTexture.imageNamed.platform4, position: CGPoint.initialPositionNode.platform8, size: CGSize.sizeNode.platformNode)
+            let platform8 = PlatformEntity(entityManager: entityManager, scene: self, texture: SKTexture.imageNamed.platform4, position: CGPoint.initialPositionNode.platform8, size: CGSize.sizeNode.platform4)
+            
+            let platform9 = PlatformEntity(entityManager: entityManager, scene: self, texture: SKTexture.imageNamed.platform4, position: CGPoint.initialPositionNode.platform9, size: CGSize.sizeNode.platform4)
             
             let floor2 = FloorEntity(entityManager: entityManager, cena: self, positionNode: CGPoint.initialPositionNode.floorNode2, texture: SKTexture.imageNamed.floor2, size: CGSize.sizeNode.floorNode)
             
@@ -92,8 +94,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let choise = ChoicesEntity(entityManager: entityManager, scene: self)
             
             let entityQuicksand = QuicksandEntity(entityManager: entityManager, scene: self)
-            let entityFrutinha = MaracujaEntity(entityManager: entityManager, scene: self)
-            let entityAnimal   = AnimalEntity(entityManager: entityManager, scene: self)
+
+            let frutinha01 = MaracujaEntity(entityManager: entityManager, scene: self, position: CGPoint.initialPositionNode.frutinhaNode)
+            
+            let frutinha02 = MaracujaEntity(entityManager: entityManager, scene: self, position: CGPoint.initialPositionNode.frutinha02)
+            
+            
+            let entityAnimal   = AnimalEntity(entityManager: entityManager, scene: self, texture: SKTexture.imageNamed.animal, position: CGPoint.initialPositionNode.animalNode, size: CGSize.sizeNode.animalNode)
+            
+            let entityAnimal2   = AnimalEntity(entityManager: entityManager, scene: self, texture: SKTexture.imageNamed.animal2, position: CGPoint.initialPositionNode.animalNode2, size: CGSize.sizeNode.animalNode2)
             
             let stone = StoneEntity(entityManager: entityManager, scene: self)
             let balao = BalaoEntity(entityManager: entityManager, scene: self)
@@ -131,6 +140,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             entityManager.add(platform6)
             entityManager.add(platform7)
             entityManager.add(platform8)
+            entityManager.add(platform9)
             
             entityManager.add(entidadeWater)
             entityManager.add(water2)
@@ -138,9 +148,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             entityManager.add(choise)
             
-            entityManager.add(entityFrutinha)
+            entityManager.add(frutinha01)
+            entityManager.add(frutinha02)
+            
             entityManager.add(entityQuicksand)
+            
             entityManager.add(entityAnimal)
+            entityManager.add(entityAnimal2)
             
             entityManager.add(stone)
             
@@ -242,6 +256,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     
                     let father = invisibleNode.parent
                     father?.isHidden = false
+//                    GameViewController.changeDarkView(value: false)
                     EntityManager.ischoosing = true
                 }
                 

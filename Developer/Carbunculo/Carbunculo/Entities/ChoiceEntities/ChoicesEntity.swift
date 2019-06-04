@@ -12,15 +12,15 @@ import GameplayKit
 class ChoicesEntity: GKEntity{
     init(entityManager: EntityManager , scene: GameScene){
         super.init()
-        addComponentsToEntities(scene: scene)
+        
+        let nodeHUD = ChoicesHUDNode(cena: scene)
+        let invisibleNode = InvisibleChoiceNode()
+        
+        addComponentsToEntities(scene: scene, nodeHUD: nodeHUD, invisibleNode: invisibleNode)
     }
     
     
-    func addComponentsToEntities(scene : GameScene){
-        let nodeHUD = ChoicesHUDNode()
-        let invisibleNode = InvisibleChoiceNode()
-        
-        
+    func addComponentsToEntities(scene : GameScene, nodeHUD: ChoicesHUDNode, invisibleNode: InvisibleChoiceNode){
         addComponent(ChoicesNodeComponent(node: nodeHUD, scene: scene))
         addComponent(InvisibleChoiceComponent(node: invisibleNode, father: nodeHUD))
         addComponent(InvisibleChoicePhysicsBodyComponent(node: invisibleNode))
