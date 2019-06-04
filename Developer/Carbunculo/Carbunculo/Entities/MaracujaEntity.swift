@@ -9,19 +9,20 @@
 import Foundation
 import GameplayKit
 
+
 class MaracujaEntity:GKEntity{
     
-    init(entityManager : EntityManager, scene: GameScene) {
+    init(entityManager : EntityManager, scene: GameScene, position: CGPoint) {
         super.init()
-        addComponentsToEntity(scene: scene)
+        let frutinha = FrutinhaNode()
+        frutinha.position = position
+
+        addComponentsToEntity(scene: scene, node: frutinha)
     }
     
-    func addComponentsToEntity(scene: GameScene){
-        
-        let frutinha = FrutinhaNode()
-        
-        addComponent(MaracujaPhysicsBodyComponent(node: frutinha))
-        addComponent(MaracujaNodeComponent(node: frutinha, scene: scene))
+    func addComponentsToEntity(scene: GameScene, node: FrutinhaNode){
+        addComponent(MaracujaPhysicsBodyComponent(node: node))
+        addComponent(MaracujaNodeComponent(node: node, scene: scene))
     }
     
     required init?(coder aDecoder: NSCoder) {
