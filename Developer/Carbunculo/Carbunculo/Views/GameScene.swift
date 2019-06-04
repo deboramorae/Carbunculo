@@ -246,7 +246,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     
                     let father = invisibleNode.parent
                     father?.isHidden = false
-                    GameViewController.changeDarkView(value: false)
+//                    GameViewController.changeDarkView(value: false)
                     EntityManager.ischoosing = true
                 }
                 

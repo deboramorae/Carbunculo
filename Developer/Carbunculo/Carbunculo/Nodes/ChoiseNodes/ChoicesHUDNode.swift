@@ -23,7 +23,7 @@ class ChoicesHUDNode : SKSpriteNode {
             self.removeChoicesHUD()
             self.addPoints(points: 2)
             EntityManager.ischoosing = false
-            GameViewController.changeDarkView(value: true)
+//            GameViewController.changeDarkView(value: true)
         }
         
         choiseButton1.position = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 0, y: 0))
@@ -34,7 +34,7 @@ class ChoicesHUDNode : SKSpriteNode {
             self.removeChoicesHUD()
             self.addPoints(points: 1)
             EntityManager.ischoosing = false
-            GameViewController.changeDarkView(value: true)
+//            GameViewController.changeDarkView(value: true)
         }
         choiseButton2.position = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 0, y: -55))
         
