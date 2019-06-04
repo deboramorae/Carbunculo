@@ -11,16 +11,15 @@ import GameplayKit
 
 class WindEntity : GKEntity{
     
-    init(entityManager : EntityManager, scene : GameScene){
+    init(entityManager : EntityManager, scene : GameScene, position: CGPoint){
         super.init()
-        addComponentsToEntities(scene: scene)
+        let wind = WindNode()
+        
+        wind.position = position
+        addComponent(WindNodeComponent(node: wind, scene: scene))
         
     }
     
-    func addComponentsToEntities(scene : GameScene){
-        let wind = WindNode()
-        addComponent(WindNodeComponent(node: wind, scene: scene))
-    }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

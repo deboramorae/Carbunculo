@@ -51,13 +51,13 @@ extension CGPoint {
         
         public static let platform4: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 4680, y: -95))
         
-        public static let platform5: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 4995, y: -40))
+        public static let platform5: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 4985, y: -40))
         
         public static let platform6: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 5272, y: -95))
         
         public static let platform7: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 5547, y: -40))
         
-        public static let platform8: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 5810, y: -95))
+        public static let platform8: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 5820, y: -95))
         
         
         
@@ -76,13 +76,13 @@ extension CGPoint {
         public static let choiseHUDNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1560, y: 0))
         
         public static let windNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1390, y: 10))
+        
+        public static let windNode2: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 6435, y: 10))
 
         public static let animalNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1750, y: -300/2))
 
         
         public static let balaoNode : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1859, y: -100))
-        
-        
         
         public static let stoneNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 2725, y: (-272/2)))
     }
