@@ -11,6 +11,7 @@ import SpriteKit
 import GameplayKit
 
 var SKViewSizeRect: CGRect!
+var UIDarkView: UIView!
 
 
 class GameViewController: UIViewController {
@@ -22,7 +23,13 @@ class GameViewController: UIViewController {
     @IBOutlet weak var hudPause: UIImageView!
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var restartButton: UIButton!
+    @IBOutlet weak var darkView: UIView!
     
+    
+    
+    public static func changeDarkView(value: Bool) {
+        UIDarkView.isHidden = value
+    }
     
     @IBAction func restart(_ sender: Any) {
         self.hiddenHud()
@@ -40,6 +47,7 @@ class GameViewController: UIViewController {
     }
     
     private func hiddenHud() {
+        darkView.isHidden = true
         pauseButton.isHidden = false
         hudPause.isHidden = true
         playButton.isHidden = true
@@ -47,6 +55,7 @@ class GameViewController: UIViewController {
     }
     
     private func showHud() {
+        darkView.isHidden = false
         pauseButton.isHidden = true
         hudPause.isHidden = false
         playButton.isHidden = false
@@ -66,6 +75,7 @@ class GameViewController: UIViewController {
             if let sceneNode = scene.rootNode as! GameScene? {
                 cena = sceneNode
                 SKViewSizeRect = view.bounds
+                UIDarkView = darkView
                 // Copy gameplay related content over to the scene
                 sceneNode.entities = scene.entities
                 sceneNode.graphs = scene.graphs
