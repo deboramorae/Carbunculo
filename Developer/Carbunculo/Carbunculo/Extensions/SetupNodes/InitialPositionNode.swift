@@ -87,6 +87,12 @@ extension CGPoint {
         
         
         public static let stoneNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 2725, y: (-272/2)))
+        
+        public static let playerFirstChoice_Save: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 2100, y: 0))
+
+        public static let playerFirstChoice_NoSave: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1800, y: 0))
+        
+        
     }
     
     public static func positionProportionalWithFrame( position: CGPoint ) -> CGPoint {
