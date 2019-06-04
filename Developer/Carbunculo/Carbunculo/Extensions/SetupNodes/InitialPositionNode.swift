@@ -59,6 +59,8 @@ extension CGPoint {
         
         public static let platform8: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 5820, y: -95))
         
+        public static let platform9: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 6509, y: 0))
+        
         
         
         public static let floorNode2  : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1120, y: -334/2))
@@ -79,9 +81,11 @@ extension CGPoint {
         
         public static let windNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1390, y: 10))
         
-        public static let windNode2: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 6435, y: 10))
+        public static let windNode2: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 6235, y: 0))
 
         public static let animalNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1750, y: -300/2))
+        
+        public static let animalNode2 : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 6509, y: -100))
 
         
         public static let balaoNode : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1859, y: -100))
