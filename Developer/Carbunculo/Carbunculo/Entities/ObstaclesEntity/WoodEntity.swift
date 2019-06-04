@@ -10,7 +10,7 @@ import Foundation
 import GameplayKit
 
 class WoodEntity:GKEntity{
-    init(entityManager: EntityManager, scene: GameScene, positionNode : CGPoint, texture: SKTexture, size: CGSize) {
+    init(entityManager: EntityManager, scene: GameScene, positionNode : CGPoint, texture: SKTexture, size: CGSize, sizePhysicsBody: CGSize) {
         super.init()
         
         let node = WoodNode()
@@ -18,7 +18,7 @@ class WoodEntity:GKEntity{
         node.size     = size
         node.position = positionNode
         
-        addComponentsToEntitie(scene: scene, node: node, size: size)
+        addComponentsToEntitie(scene: scene, node: node, size: sizePhysicsBody)
     }
     
     func addComponentsToEntitie(scene: GameScene, node: SKNode,size: CGSize){
