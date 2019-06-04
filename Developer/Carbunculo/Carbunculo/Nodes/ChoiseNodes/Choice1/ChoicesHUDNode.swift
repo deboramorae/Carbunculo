@@ -11,14 +11,14 @@ import GameplayKit
 
 class ChoicesHUDNode : SKSpriteNode {
     
-    init() {
-        super.init(texture: SKTexture.imageNamed.decisao1, color: .clear, size: CGSize.sizeNode.choiseHUDNode)
+    init(textureDecisao: SKTexture, textureButton1: SKTexture, textureButton2: SKTexture) {
+        super.init(texture: textureDecisao, color: .clear, size: CGSize.sizeNode.choiseHUDNode)
         
         self.name = "Choices HUD"
         self.position = CGPoint.initialPositionNode.choiseHUDNode
         self.zPosition = 100
         
-        let choiseButton1 = ChoiceButtonNode(backgroundNamed: "escolha1") {
+        let choiseButton1 = ChoiceButtonNode(backgroundNamed: textureButton1) {
             print("Botão 1 pressionado")
             self.removeChoicesHUD()
             self.addPoints(points: 2)
@@ -28,7 +28,7 @@ class ChoicesHUDNode : SKSpriteNode {
         choiseButton1.position = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 0, y: 0))
         self.addChild(choiseButton1)
         
-        let choiseButton2 = ChoiceButtonNode(backgroundNamed: "escolha2") {
+        let choiseButton2 = ChoiceButtonNode(backgroundNamed: textureButton2) {
             print("Botão 2 pressionado")
             self.removeChoicesHUD()
             self.addPoints(points: 1)

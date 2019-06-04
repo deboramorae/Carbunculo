@@ -53,7 +53,12 @@ extension SKTexture{
         public static let escolha1   : SKTexture = SKTexture(imageNamed: "escolha1")
         public static let escolha2   : SKTexture = SKTexture(imageNamed: "escolha2")
         
+        public static let escolha3   : SKTexture = SKTexture(imageNamed: "escolha3")
+        public static let escolha4   : SKTexture = SKTexture(imageNamed: "escolha4")
+        
         public static let decisao1   : SKTexture = SKTexture(imageNamed: "decisao1")
+        public static let decisao2   : SKTexture = SKTexture(imageNamed: "decisao2")
+        
         
         
     

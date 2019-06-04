@@ -10,16 +10,18 @@ import Foundation
 import GameplayKit
 
 class ChoicesEntity: GKEntity{
-    init(entityManager: EntityManager , scene: GameScene){
+    
+    init(entityManager: EntityManager , scene: GameScene, textureDecisao: SKTexture, textureButton1: SKTexture, textureButton2: SKTexture, position: CGPoint){
         super.init()
-        addComponentsToEntities(scene: scene)
+        addComponentsToEntities(scene: scene,textureDecisao: textureDecisao, textureButton1: textureButton1, textureButton2: textureButton2, position: position)
     }
     
     
-    func addComponentsToEntities(scene : GameScene){
-        let nodeHUD = ChoicesHUDNode()
-        let invisibleNode = InvisibleChoiceNode()
+    func addComponentsToEntities(scene : GameScene,textureDecisao: SKTexture, textureButton1: SKTexture, textureButton2: SKTexture, position: CGPoint){
         
+        let invisibleNode = InvisibleChoiceNode()
+        let nodeHUD = ChoicesHUDNode(textureDecisao: textureDecisao, textureButton1: textureButton1, textureButton2: textureButton2)
+        nodeHUD.position = position
         
         addComponent(ChoicesNodeComponent(node: nodeHUD, scene: scene))
         addComponent(InvisibleChoiceComponent(node: invisibleNode, father: nodeHUD))

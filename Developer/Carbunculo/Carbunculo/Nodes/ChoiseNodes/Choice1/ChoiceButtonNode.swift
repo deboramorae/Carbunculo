@@ -15,17 +15,16 @@ class ChoiceButtonNode: SKNode {
     var backgroundNode: SKSpriteNode
     var action: () -> Void
     
-    init(backgroundNamed: String, action: @escaping  () -> Void = {}) {
+    init(backgroundNamed: SKTexture, action: @escaping  () -> Void = {}) {
 
-        self.backgroundNode = SKSpriteNode(imageNamed: backgroundNamed)
+        self.backgroundNode = SKSpriteNode(texture: backgroundNamed)
         self.action = action
         
         super.init()
         
         self.name = "ChoiceButtonNode"
-        let texture = SKTexture.init(imageNamed: backgroundNamed)
         
-        self.backgroundNode = SKSpriteNode.init(texture:texture , size: CGSize.sizeNode.choiseButtonNode)
+        self.backgroundNode = SKSpriteNode.init(texture: backgroundNamed , size: CGSize.sizeNode.choiseButtonNode)
         
         self.isUserInteractionEnabled = true
         self.addChild(self.backgroundNode)

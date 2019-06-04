@@ -273,9 +273,7 @@
 		8412472E229F058500052953 /* ChoiseNodes */ = {
 			isa = PBXGroup;
 			children = (
-				EA2CE900229876AE00084E25 /* ChoicesHUDNode.swift */,
-				8412472F229F05A000052953 /* ChoiceButtonNode.swift */,
-				8405E3C4229F762900DB50A6 /* InvisibleChoiceNode.swift */,
+				EAD942C122A6FEF600BF7A54 /* Choice1 */,
 			);
 			path = ChoiseNodes;
 			sourceTree = "<group>";
@@ -510,6 +508,16 @@
 				EA262F22229F111A00C46986 /* StonesNodeComponent.swift */,
 			);
 			path = ObstaclesComponents;
+			sourceTree = "<group>";
+		};
+		EAD942C122A6FEF600BF7A54 /* Choice1 */ = {
+			isa = PBXGroup;
+			children = (
+				EA2CE900229876AE00084E25 /* ChoicesHUDNode.swift */,
+				8412472F229F05A000052953 /* ChoiceButtonNode.swift */,
+				8405E3C4229F762900DB50A6 /* InvisibleChoiceNode.swift */,
+			);
+			path = Choice1;
 			sourceTree = "<group>";
 		};
 		EAE05C922294884600B78846 /* RemoteControl */ = {
