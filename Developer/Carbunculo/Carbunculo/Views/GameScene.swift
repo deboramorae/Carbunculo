@@ -94,13 +94,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let choise = ChoicesEntity(entityManager: entityManager, scene: self)
             
             let entityQuicksand = QuicksandEntity(entityManager: entityManager, scene: self)
-            let entityFrutinha = MaracujaEntity(entityManager: entityManager, scene: self)
-            
+
             let frutinha01 = MaracujaEntity(entityManager: entityManager, scene: self, position: CGPoint.initialPositionNode.frutinhaNode)
             
             let frutinha02 = MaracujaEntity(entityManager: entityManager, scene: self, position: CGPoint.initialPositionNode.frutinha02)
             
-            let entityAnimal   = AnimalEntity(entityManager: entityManager, scene: self)
             
             let entityAnimal   = AnimalEntity(entityManager: entityManager, scene: self, texture: SKTexture.imageNamed.animal, position: CGPoint.initialPositionNode.animalNode, size: CGSize.sizeNode.animalNode)
             
