@@ -26,7 +26,8 @@ class GameViewController: UIViewController {
     
     @IBAction func restart(_ sender: Any) {
         self.hiddenHud()
-        cena.entityManager.restartScene()
+        //cena.entityManager.restartScene()
+        restartScene()
     }
     
     @IBAction func play(_ sender: Any) {
@@ -53,18 +54,17 @@ class GameViewController: UIViewController {
         restartButton.isHidden = false
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.hiddenHud()
         // Load 'GameScene.sks' as a GKScene. This provides gameplay related content
         // including entities and graphs.
         if let scene = GKScene(fileNamed: "GameScene") {
             
-            
             // Get the SKScene from the loaded GKScene
             if let sceneNode = scene.rootNode as! GameScene? {
-                cena = sceneNode
+                
                 SKViewSizeRect = view.bounds
                 // Copy gameplay related content over to the scene
                 sceneNode.entities = scene.entities
@@ -76,9 +76,8 @@ class GameViewController: UIViewController {
                 
                 // Present the scene
                 if let view = self.view as! SKView? {
+                    self.cena = sceneNode
                     view.presentScene(sceneNode)
-                    
-                    
                     view.ignoresSiblingOrder = true
                     view.showsFPS = Debug.showFPS ?? false
                     view.showsNodeCount = Debug.showNodeCount ?? false
@@ -88,6 +87,23 @@ class GameViewController: UIViewController {
         }
     }
     
+    func restartScene(){
+        if let view = self.view as! SKView?{
+            // Load the SKScene from 'GameScene.sks'
+            if let scene = SKScene(fileNamed: "GameScene") {
+                // Set the scale mode to scale to fit the window
+                scene.scaleMode = .resizeFill
+                scene.name = "Nova Cena"
+                // Present the scene
+                self.cena = (scene as! GameScene)
+                view.presentScene(scene, transition: SKTransition.fade(withDuration: 1))
+            }
+            view.ignoresSiblingOrder = true
+            
+            view.showsFPS = true
+            view.showsNodeCount = true
+        }
+    }
     
     override var shouldAutorotate: Bool {
         return true
@@ -100,7 +116,9 @@ class GameViewController: UIViewController {
             return .all
         }
     }
-
+    public func setScene(cena:GameScene){
+    
+    }
     override var prefersStatusBarHidden: Bool {
         return true
     }

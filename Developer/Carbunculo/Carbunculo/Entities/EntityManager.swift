@@ -112,6 +112,8 @@ class EntityManager {
             }
         }
     }
+
+    
     func update(deltaTime sec: TimeInterval) {
         for entity in entities{
             if let componenteCorpoFisico = entity.component(ofType: PhysicsBodyComponent.self),let componenteMaquina = entity.component(ofType: PlayerStateMachineComponent.self){
@@ -160,11 +162,10 @@ class EntityManager {
             if let scene = SKScene(fileNamed: "GameScene") {
                 // Set the scale mode to scale to fit the window
                 scene.scaleMode = .resizeFill
-                
+                scene.name = "Nova Cena"
                 // Present the scene
                 view.presentScene(scene, transition: SKTransition.fade(withDuration: 1))
             }
-            
             view.ignoresSiblingOrder = true
             
             view.showsFPS = true

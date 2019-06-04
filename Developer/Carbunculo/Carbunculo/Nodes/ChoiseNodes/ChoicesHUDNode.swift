@@ -19,7 +19,6 @@ class ChoicesHUDNode : SKSpriteNode {
         self.zPosition = 100
         
         let choiseButton1 = ChoiceButtonNode(backgroundNamed: "escolha1") {
-            print("Botão 1 pressionado")
             self.removeChoicesHUD()
             self.addPoints(points: 2)
             EntityManager.ischoosing = false
@@ -29,7 +28,6 @@ class ChoicesHUDNode : SKSpriteNode {
         self.addChild(choiseButton1)
         
         let choiseButton2 = ChoiceButtonNode(backgroundNamed: "escolha2") {
-            print("Botão 2 pressionado")
             self.removeChoicesHUD()
             self.addPoints(points: 1)
             EntityManager.ischoosing = false
