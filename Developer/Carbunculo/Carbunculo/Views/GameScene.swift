@@ -249,12 +249,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
         }
         if(contact.bodyA.node?.name == "water" || contact.bodyB.node?.name == "water" ){
-            entityManager.restartScene()
+            (self.view!.window!.rootViewController as! GameViewController).restartScene()
         }
         if(contact.bodyA.node?.name == "frutinha" || contact.bodyB.node?.name == "frutinha" ){
-            print("Pegou a frutinha.")
         }
     }
-    
 }
 
