@@ -14,6 +14,7 @@ class WindNode: SKSpriteNode{
         super.init(texture: SKTexture.imageNamed.windNode, color: .white, size: CGSize.sizeNode.windNode)
         self.name = "Wind"
         self.position = CGPoint.initialPositionNode.windNode
+        self.zPosition = 2
         
     }
     

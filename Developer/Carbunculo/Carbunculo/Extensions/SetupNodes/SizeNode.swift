@@ -58,6 +58,7 @@ extension CGSize {
         public static let frutinhaNode : CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 40, height: 40))
         
         public static let animalNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 183, height: 65))
+        public static let animalNode2: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 176, height: 91))
         
         //size physics body tronco
         

@@ -11,15 +11,21 @@ import GameplayKit
 
 class AnimalEntity: GKEntity{
     
-    init(entityManager : EntityManager, scene: GameScene){
+    init(entityManager : EntityManager, scene: GameScene, texture : SKTexture, position: CGPoint, size: CGSize){
         super.init()
-        addComponentsToEntity(scene: scene)
-    }
-    
-    func addComponentsToEntity(scene: GameScene){
+        
         let animal = AnimalNode()
         
-        addComponent(AnimalNodeComponent(node: animal, scene: scene))
+        animal.texture = texture
+        animal.position = position
+        animal.size = size
+        
+        addComponentsToEntity(node: animal, scene: scene)
+    }
+    
+    func addComponentsToEntity(node: SKNode, scene: GameScene){
+        
+        addComponent(AnimalNodeComponent(node: node, scene: scene))
     }
     
     required init?(coder aDecoder: NSCoder) {
