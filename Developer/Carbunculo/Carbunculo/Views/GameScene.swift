@@ -110,7 +110,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let entityAnimal2   = AnimalEntity(entityManager: entityManager, scene: self, texture: SKTexture.imageNamed.animal2, position: CGPoint.initialPositionNode.animalNode2, size: CGSize.sizeNode.animalNode2)
             
             let stone = StoneEntity(entityManager: entityManager, scene: self)
-            let balao = BalaoEntity(entityManager: entityManager, scene: self)
+            
+            let balao = BalaoEntity(entityManager: entityManager, scene: self, position: CGPoint.initialPositionNode.balaoNode)
+            
+            let balao2 = BalaoEntity(entityManager: entityManager, scene: self, position: CGPoint.initialPositionNode.balaoNode2)
             
             let windNode = WindEntity(entityManager: entityManager, scene: self, position: CGPoint.initialPositionNode.windNode)
              let windNode2 = WindEntity(entityManager: entityManager, scene: self, position : CGPoint.initialPositionNode.windNode2)
@@ -131,7 +134,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             entityManager.add(floor5)
             
             entityManager.add(player)
+            
             entityManager.add(balao)
+            entityManager.add(balao2)
             
             entityManager.add(entityWood)
             entityManager.add(entityWood2)
