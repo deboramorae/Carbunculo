@@ -101,7 +101,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             let frutinha02 = MaracujaEntity(entityManager: entityManager, scene: self, position: CGPoint.initialPositionNode.frutinha02)
             
+            let frutinha03 = MaracujaEntity(entityManager: entityManager, scene: self, position: CGPoint.initialPositionNode.frutinha03)
             
+            let frutinha04 = MaracujaEntity(entityManager: entityManager, scene: self, position: CGPoint.initialPositionNode.frutinha04)
+        
             let entityAnimal   = AnimalEntity(entityManager: entityManager, scene: self, texture: SKTexture.imageNamed.animal, position: CGPoint.initialPositionNode.animalNode, size: CGSize.sizeNode.animalNode)
             
             let entityAnimal2   = AnimalEntity(entityManager: entityManager, scene: self, texture: SKTexture.imageNamed.animal2, position: CGPoint.initialPositionNode.animalNode2, size: CGSize.sizeNode.animalNode2)
@@ -153,6 +156,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             entityManager.add(frutinha01)
             entityManager.add(frutinha02)
+            entityManager.add(frutinha03)
+            entityManager.add(frutinha04)
             
             entityManager.add(entityQuicksand)
             
