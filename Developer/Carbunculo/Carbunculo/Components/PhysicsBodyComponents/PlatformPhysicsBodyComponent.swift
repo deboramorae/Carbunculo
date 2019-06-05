@@ -18,7 +18,8 @@ class PlatformPhysicsBodyComponent: GKComponent{
         
         //tamanho a definir
         node.name = "platform"
-        node.physicsBody                    = SKPhysicsBody(rectangleOf: physicBody)
+//        node.physicsBody                    = SKPhysicsBody(rectangleOf: physicBody)
+        node.physicsBody                    = SKPhysicsBody(rectangleOf: physicBody, center: CGPoint(x: 0, y: -1))
         node.physicsBody?.affectedByGravity = false
         node.physicsBody?.isDynamic         = false
         node.physicsBody?.categoryBitMask  |= SKPhysicsBody.CategoryBitMask.scenario
