@@ -30,7 +30,7 @@ struct PhysicsBodyDimensions {
 }
 
 extension PhysicsBodyDimensions {
-    static let player = PhysicsBodyDimensions(sizeSpritePixels: CGSize.sizeNode.playerNode, verticalShiftSpritePixels: CGFloat(0), horizontalShiftSpritePixels: CGFloat(0))    
+    static let player = PhysicsBodyDimensions(sizeSpritePixels: CGSize(width: CGSize.sizeNode.playerNode.width - 20, height: CGSize.sizeNode.playerNode.height - 15), verticalShiftSpritePixels: CGFloat(0), horizontalShiftSpritePixels: CGFloat(0))    
 }
 
 class PhysicsBodyComponent: GKComponent {
@@ -44,7 +44,8 @@ class PhysicsBodyComponent: GKComponent {
         super.init()
         
         node.anchorPoint = dimensions.anchorPoint(for: node)
-        node.physicsBody = SKPhysicsBody(rectangleOf: sizeScreenPixels, center: CGPoint(x: 0, y: sizeScreenPixels.height / 2))
+        node.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: sizeScreenPixels.width - 15, height: sizeScreenPixels.height) , center: CGPoint(x: 0, y: (sizeScreenPixels.height / 2) + 4.5))
+//        node.position = CGPoint(x: CGPoint.initialPositionNode.playerNode.x + 50, y: CGPoint.initialPositionNode.playerNode.y)
         
         node.physicsBody?.isDynamic          = true
         node.physicsBody?.affectedByGravity  = true
