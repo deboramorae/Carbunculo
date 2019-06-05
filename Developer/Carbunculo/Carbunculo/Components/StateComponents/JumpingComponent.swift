@@ -24,7 +24,7 @@ class JumpingComponent:GKComponent{
                     player.physicsBody?.affectedByGravity = true
                     player.physicsBody?.isDynamic = true
                     
-                    player.physicsBody?.applyImpulse(proportionalForceFrame(force: CGVector(dx: 0, dy: CGSize.sizeNode.playerNode.height * 1.3)))
+                    player.physicsBody?.applyImpulse(proportionalForceFrame(force: CGVector(dx: 0, dy: CGSize.sizeNode.playerNode.height * 1.1)))
                     player.removeAllActions()
                     player.run(Animations.Player.jump)
                 }
