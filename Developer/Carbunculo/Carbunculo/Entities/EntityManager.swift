@@ -149,9 +149,10 @@ class EntityManager {
                 }else if numberChoice == 2 {
                     
                 }
+                
             }
         }
-        
+        saveProgress()
     }
     
     func updatePositionPlayerInChoice_NoSave(numberChoice: Int) {
@@ -165,9 +166,19 @@ class EntityManager {
                 }
             }
         }
-        
+        saveProgress()
     }
 
+    
+    func saveProgress(){
+        if(PlayerDAO.getSaves().count == 0){
+            PlayerDAO.addPlayer(player: PlayerPersistence(pontos:choicesControl.ponctuation, checkpoint: choicesControl.decisaoatual, qtdemacas: choicesControl.qtdemacas))
+        }else{
+            PlayerDAO.updateData(player: PlayerPersistence(pontos:choicesControl.ponctuation, checkpoint: choicesControl.decisaoatual, qtdemacas: choicesControl.qtdemacas))
+        }
+
+        choicesControl.decisaoatual+=1
+    }
     
     func updateCameraPosition(){
         

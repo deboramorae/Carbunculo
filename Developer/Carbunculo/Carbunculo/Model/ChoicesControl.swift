@@ -11,10 +11,13 @@ import Foundation
 
 public class ChoicesControl {
     
-    var ponctuation: Int
-    
+    var ponctuation : Int
+    var decisaoatual: Int
+    var qtdemacas   : Int
     init(){
-        self.ponctuation = 0
+        self.ponctuation  = 0
+        self.decisaoatual = 0
+        self.qtdemacas    = 0
     }
     
 }
