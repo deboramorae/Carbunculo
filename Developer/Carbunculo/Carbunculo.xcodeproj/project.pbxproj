@@ -76,6 +76,9 @@
 		EA2CE9052298779500084E25 /* ChoicesPhysicsBodyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2CE9042298779500084E25 /* ChoicesPhysicsBodyComponent.swift */; };
 		EA2CE9072298788A00084E25 /* ChoicesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2CE9062298788A00084E25 /* ChoicesEntity.swift */; };
 		EA41380122A04B6900959903 /* FruitinhaNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA41380022A04B6900959903 /* FruitinhaNode.swift */; };
+		EA4BC04922A76C7600870650 /* MinionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4BC04822A76C7600870650 /* MinionNode.swift */; };
+		EA4BC04C22A76F5300870650 /* MinionNodeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4BC04B22A76F5300870650 /* MinionNodeComponent.swift */; };
+		EA4BC04F22A76FB300870650 /* MinionPhysicsBodyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4BC04E22A76FB300870650 /* MinionPhysicsBodyComponent.swift */; };
 		EA58B21B2295BB800099C146 /* SKPhysicsBody+maskDefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA58B21A2295BB800099C146 /* SKPhysicsBody+maskDefs.swift */; };
 		EA58B2212295C8860099C146 /* PlatformNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA58B2202295C8860099C146 /* PlatformNode.swift */; };
 		EA58B22F2295E73D0099C146 /* WoodNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA58B22E2295E73D0099C146 /* WoodNode.swift */; };
@@ -174,6 +177,9 @@
 		EA2CE9042298779500084E25 /* ChoicesPhysicsBodyComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicesPhysicsBodyComponent.swift; sourceTree = "<group>"; };
 		EA2CE9062298788A00084E25 /* ChoicesEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicesEntity.swift; sourceTree = "<group>"; };
 		EA41380022A04B6900959903 /* FruitinhaNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitinhaNode.swift; sourceTree = "<group>"; };
+		EA4BC04822A76C7600870650 /* MinionNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinionNode.swift; sourceTree = "<group>"; };
+		EA4BC04B22A76F5300870650 /* MinionNodeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinionNodeComponent.swift; sourceTree = "<group>"; };
+		EA4BC04E22A76FB300870650 /* MinionPhysicsBodyComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinionPhysicsBodyComponent.swift; sourceTree = "<group>"; };
 		EA58B21A2295BB800099C146 /* SKPhysicsBody+maskDefs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKPhysicsBody+maskDefs.swift"; sourceTree = "<group>"; };
 		EA58B2202295C8860099C146 /* PlatformNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformNode.swift; sourceTree = "<group>"; };
 		EA58B22E2295E73D0099C146 /* WoodNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoodNode.swift; sourceTree = "<group>"; };
@@ -338,6 +344,7 @@
 				846A9330229C5DB400A31D1F /* BackgroundNode.swift */,
 				EAB872CC229C827E00A7FE9E /* AnimalNode.swift */,
 				EA41380022A04B6900959903 /* FruitinhaNode.swift */,
+				EA4BC04822A76C7600870650 /* MinionNode.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -380,6 +387,7 @@
 		84B05820229445C000B7E9A0 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				EA4BC04A22A76F2D00870650 /* MagicFlorest */,
 				8405E3CD22A04F8700DB50A6 /* Choice */,
 				666BA978229C8240000B27C8 /* MaracujaComponents */,
 				EAC385AC229733D500C577E4 /* ObstaclesComponents */,
@@ -447,6 +455,23 @@
 				84D371442294309700922D4B /* Info.plist */,
 			);
 			path = Carbunculo;
+			sourceTree = "<group>";
+		};
+		EA4BC04A22A76F2D00870650 /* MagicFlorest */ = {
+			isa = PBXGroup;
+			children = (
+				EA4BC04D22A76F8C00870650 /* MinionComponents */,
+			);
+			path = MagicFlorest;
+			sourceTree = "<group>";
+		};
+		EA4BC04D22A76F8C00870650 /* MinionComponents */ = {
+			isa = PBXGroup;
+			children = (
+				EA4BC04B22A76F5300870650 /* MinionNodeComponent.swift */,
+				EA4BC04E22A76FB300870650 /* MinionPhysicsBodyComponent.swift */,
+			);
+			path = MinionComponents;
 			sourceTree = "<group>";
 		};
 		EA58B24122962A520099C146 /* ObstaclesEntity */ = {
@@ -622,6 +647,7 @@
 				EA918EFE2294EBCB00684B4F /* ControlMovimentComponent.swift in Sources */,
 				EA58B2312295E7690099C146 /* WoodNodeComponent.swift in Sources */,
 				84B058292294673B00B7E9A0 /* CGSize+ops.swift in Sources */,
+				EA4BC04C22A76F5300870650 /* MinionNodeComponent.swift in Sources */,
 				EA58B21B2295BB800099C146 /* SKPhysicsBody+maskDefs.swift in Sources */,
 				EA58B2332295E7A80099C146 /* PlatformNodeComponent.swift in Sources */,
 				EA8846A9229C864D003BF8F7 /* AnimalEntity.swift in Sources */,
@@ -635,6 +661,7 @@
 				66C63BCA22949B4600CCEE3A /* CameraComponent.swift in Sources */,
 				84B0581F2294414300B7E9A0 /* EntityManager.swift in Sources */,
 				66C63BD02295E7A100CCEE3A /* WaterEntity.swift in Sources */,
+				EA4BC04922A76C7600870650 /* MinionNode.swift in Sources */,
 				8405E3CF22A080DE00DB50A6 /* StoneEntity.swift in Sources */,
 				EAB872CB229C7DE200A7FE9E /* WindEntity.swift in Sources */,
 				666BA97C229E1C33000B27C8 /* ObstacleComeBackComponent.swift in Sources */,
@@ -659,6 +686,7 @@
 				66C63BBA22946A0A00CCEE3A /* StateUnconscious.swift in Sources */,
 				EAB872CD229C827E00A7FE9E /* AnimalNode.swift in Sources */,
 				666BA975229C7DF0000B27C8 /* AnimationsTextures.swift in Sources */,
+				EA4BC04F22A76FB300870650 /* MinionPhysicsBodyComponent.swift in Sources */,
 				EA2CE9052298779500084E25 /* ChoicesPhysicsBodyComponent.swift in Sources */,
 				EAB872C9229C7D5300A7FE9E /* WindNodeComponent.swift in Sources */,
 				EA5FE590229743040027D77F /* FloorPhysicsBodyComponent.swift in Sources */,
