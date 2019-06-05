@@ -10,10 +10,10 @@ import Foundation
 import SpriteKit
 
 struct Animations{
-    struct Jump{
+    struct Player{
         static var run:SKAction{
             get{
-                return SKAction.animate(with: Textures.playerRun, timePerFrame: 5)
+                return SKAction.repeatForever(SKAction.animate(with: Textures.playerRun, timePerFrame: 0.04))
             }
         }
         static var fall:SKAction{
@@ -23,12 +23,12 @@ struct Animations{
         }
         static var jump:SKAction{
             get{
-                return SKAction.animate(with: Textures.playerJump, timePerFrame: 5)
+                return SKAction.animate(with: Textures.playerJump, timePerFrame: 0.05)
             }
         }
         static var idle:SKAction{
             get{
-                return SKAction.animate(with: Textures.playerIdle, timePerFrame: 5)
+                return SKAction.repeatForever(SKAction.animate(with: Textures.playerIdle, timePerFrame: 0.1))
             }
         }
     }

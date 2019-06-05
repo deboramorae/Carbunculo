@@ -129,7 +129,13 @@ class EntityManager {
     func playerLanding(){
         for entity in entities{
             if let componenteMaquina = entity.component(ofType: PlayerStateMachineComponent.self){
-                componenteMaquina.maquina.enter(StateIdle.self)
+                if componenteMaquina.maquina.enter(StateIdle.self){
+                    if let componentNode = entity.component(ofType: PlayerNodeComponent.self){
+                        componentNode.node.removeAllActions()
+                        componentNode.node.physicsBody?.velocity.dx = 0.0
+                        componentNode.node.run(Animations.Player.idle)
+                    }
+                }
             }
         }
     }

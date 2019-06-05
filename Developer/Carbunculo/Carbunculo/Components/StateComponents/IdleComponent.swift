@@ -23,8 +23,11 @@ class IdleComponent: GKComponent {
         if !EntityManager.ischoosing{
             if let component = entity!.component(ofType: PlayerStateMachineComponent.self) {
                 if component.maquina.enter(StateIdle.self){
-                    player.physicsBody?.isDynamic = false
-                    player.physicsBody?.isDynamic = true
+                    player.removeAllActions()
+                    player.run(Animations.Player.idle)
+                    player.physicsBody?.velocity.dx = 0.0
+                    player.physicsBody?.isDynamic  = false
+                    player.physicsBody?.isDynamic  = true
                 }
             }
         }
