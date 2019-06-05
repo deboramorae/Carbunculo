@@ -16,9 +16,8 @@ class PlatformPhysicsBodyComponent: GKComponent{
         
         let physicBody = CGSize.sizeProportinalWithFrame(size: CGSize(width: size.width - 25, height: size.height - 14))
         
-        //tamanho a definir
+
         node.name = "platform"
-//        node.physicsBody                    = SKPhysicsBody(rectangleOf: physicBody)
         node.physicsBody                    = SKPhysicsBody(rectangleOf: physicBody, center: CGPoint(x: 0, y: -1))
         node.physicsBody?.affectedByGravity = false
         node.physicsBody?.isDynamic         = false
