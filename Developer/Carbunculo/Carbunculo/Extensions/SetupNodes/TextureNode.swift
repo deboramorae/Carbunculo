@@ -33,7 +33,7 @@ extension SKTexture{
         public static let wood2      : SKTexture = SKTexture(imageNamed: "tronco_2")
         public static let wood3      : SKTexture = SKTexture(imageNamed: "tronco_3")
         
-        public static let player     : SKTexture = SKTexture(imageNamed: "akin-1")
+        public static let player     : SKTexture = SKTexture(imageNamed: "akin_idle_00")
         public static let stones     : SKTexture = SKTexture(imageNamed: "pedrinhas1")
         
         public static let water      : SKTexture = SKTexture(imageNamed: "rio_1")
