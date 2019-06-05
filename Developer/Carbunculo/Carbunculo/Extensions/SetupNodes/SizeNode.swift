@@ -60,6 +60,8 @@ extension CGSize {
         public static let animalNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 183, height: 65))
         public static let animalNode2: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 176, height: 91))
         
+        public static let minionNode : CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 48, height: 68))
+        
         //size physics body tronco
         
         public static let wood2PhysicsBody :  CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 61, height: 60))
