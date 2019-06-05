@@ -275,6 +275,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             (self.view!.window!.rootViewController as! GameViewController).restartScene()
         }
         if(contact.bodyA.node?.name == "frutinha" || contact.bodyB.node?.name == "frutinha" ){
+            
+            if contact.bodyA.node?.name != "player" {
+                
+                entityManager.remove(contact.bodyA.node?.entity as! MaracujaEntity)
+                
+            }else{
+                entityManager.remove(contact.bodyB.node?.entity as! MaracujaEntity)
+            }
         }
     }
 }
