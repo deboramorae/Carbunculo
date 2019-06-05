@@ -31,7 +31,7 @@ extension CGSize {
         
         public static let backgroundNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 1480, height: 375))
         
-        public static let playerNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 55, height: 125))
+        public static let playerNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 80, height: 134))
         
         
          public static let waterNode   : CGSize  = CGSize.sizeProportinalWithFrame(size: CGSize(width: 405, height: 23))

@@ -27,7 +27,6 @@ class FloorEntity: GKEntity {
         addComponent(GKSKNodeComponent(node: node))
         addComponent(FloorComponent(scene: cena))
         addComponent(FloorPhysicsBodyComponent(node: node, scene: cena, size: size))
-        //addComponent(PhysicsBodyComponent(node: node, dimensions: PhysicsBodyDimensions(sizeSpritePixels: CGSize(width: cena.frame.width, height: 50), verticalShiftSpritePixels: CGFloat(0), horizontalShiftSpritePixels: CGFloat(0))))
     }
     
     required init?(coder aDecoder: NSCoder) {
