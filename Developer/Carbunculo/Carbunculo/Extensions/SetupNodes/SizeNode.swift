@@ -31,7 +31,7 @@ extension CGSize {
         
         public static let backgroundNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 1480, height: 375))
         
-        public static let playerNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 55, height: 125))
+        public static let playerNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 80, height: 134))
         
         
          public static let waterNode   : CGSize  = CGSize.sizeProportinalWithFrame(size: CGSize(width: 405, height: 23))
@@ -58,10 +58,13 @@ extension CGSize {
         public static let frutinhaNode : CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 40, height: 40))
         
         public static let animalNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 183, height: 65))
+        public static let animalNode2: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 176, height: 91))
+        
+        public static let minionNode : CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 48, height: 68))
         
         //size physics body tronco
         
-        public static let wood2PhysicsBody :  CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 61, height: 60))
+        public static let wood2PhysicsBody :  CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 90, height: 52))
         
         
         

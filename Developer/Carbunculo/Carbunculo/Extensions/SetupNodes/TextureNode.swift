@@ -33,7 +33,7 @@ extension SKTexture{
         public static let wood2      : SKTexture = SKTexture(imageNamed: "tronco_2")
         public static let wood3      : SKTexture = SKTexture(imageNamed: "tronco_3")
         
-        public static let player     : SKTexture = SKTexture(imageNamed: "akin-1")
+        public static let player     : SKTexture = SKTexture(imageNamed: "akin_idle_00")
         public static let stones     : SKTexture = SKTexture(imageNamed: "pedrinhas1")
         
         public static let water      : SKTexture = SKTexture(imageNamed: "rio_1")
@@ -43,6 +43,8 @@ extension SKTexture{
         public static let quicksand  : SKTexture = SKTexture(imageNamed: "areia_movedica")
         
         public static let animal     : SKTexture = SKTexture(imageNamed: "MacacoAreia")
+        public static let animal2    : SKTexture = SKTexture(imageNamed: "ArmadilhaTucano")
+        
         public static let frutinha   : SKTexture = SKTexture(imageNamed: "frutinha")
         
         public static let windNode   : SKTexture = SKTexture(imageNamed: "vento1")
@@ -51,7 +53,14 @@ extension SKTexture{
         public static let escolha1   : SKTexture = SKTexture(imageNamed: "escolha1")
         public static let escolha2   : SKTexture = SKTexture(imageNamed: "escolha2")
         
+        public static let escolha3   : SKTexture = SKTexture(imageNamed: "escolha3")
+        public static let escolha4   : SKTexture = SKTexture(imageNamed: "escolha4")
+        
         public static let decisao1   : SKTexture = SKTexture(imageNamed: "decisao1")
+        public static let decisao2   : SKTexture = SKTexture(imageNamed: "decisao2")
+        
+        public static let minion     : SKTexture = SKTexture(imageNamed: "minion")
+        
         
         
     

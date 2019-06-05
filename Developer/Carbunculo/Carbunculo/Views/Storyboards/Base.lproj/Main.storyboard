@@ -18,6 +18,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BGA-x3-fgL">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="contagemFruta" translatesAutoresizingMaskIntoConstraints="NO" id="C8N-J6-zM6">
+                                <rect key="frame" x="16" y="16" width="92" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="C8N-J6-zM6" secondAttribute="height" multiplier="90:44" id="Wpz-L6-cTc"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4X-kW-iZP">
                                 <rect key="frame" x="559" y="16" width="92" height="60"/>
                                 <constraints>
@@ -57,19 +67,29 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="BGA-x3-fgL" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" id="0NZ-4p-oMq"/>
                             <constraint firstItem="Yqo-Rk-1Y2" firstAttribute="leading" secondItem="R9N-kv-Xhi" secondAttribute="trailing" constant="-146" id="0yo-9a-cEw"/>
+                            <constraint firstItem="BGA-x3-fgL" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" id="2WI-OQ-sr3"/>
                             <constraint firstItem="R9N-kv-Xhi" firstAttribute="centerY" secondItem="3se-qz-xqx" secondAttribute="centerY" id="5Mz-45-l1A"/>
                             <constraint firstItem="Yqo-Rk-1Y2" firstAttribute="top" secondItem="R9N-kv-Xhi" secondAttribute="bottom" constant="-103.5" id="8EV-d5-q6e"/>
                             <constraint firstItem="R9N-kv-Xhi" firstAttribute="centerX" secondItem="3se-qz-xqx" secondAttribute="centerX" id="H5m-KW-8qE"/>
                             <constraint firstItem="CkF-Ms-B0A" firstAttribute="top" secondItem="R9N-kv-Xhi" secondAttribute="bottom" constant="-106.5" id="Kab-RX-I6B"/>
+                            <constraint firstItem="C8N-J6-zM6" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" constant="16" id="KxX-QT-efw"/>
                             <constraint firstItem="4qk-I5-YsI" firstAttribute="trailing" secondItem="Q4X-kW-iZP" secondAttribute="trailing" constant="16" id="QhO-rC-5oh"/>
+                            <constraint firstItem="C8N-J6-zM6" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="16" id="UIE-0P-zz6"/>
+                            <constraint firstItem="C8N-J6-zM6" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="16" id="aWS-8z-9Te"/>
                             <constraint firstItem="R9N-kv-Xhi" firstAttribute="leading" secondItem="CkF-Ms-B0A" secondAttribute="trailing" constant="-139" id="dmh-x0-YQB"/>
                             <constraint firstItem="Q4X-kW-iZP" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" constant="16" id="ez5-xR-nM9"/>
+                            <constraint firstItem="C8N-J6-zM6" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" constant="16" id="u89-8q-Zml"/>
+                            <constraint firstItem="BGA-x3-fgL" firstAttribute="trailing" secondItem="4qk-I5-YsI" secondAttribute="trailing" id="w3Y-j1-q1U"/>
+                            <constraint firstItem="BGA-x3-fgL" firstAttribute="bottom" secondItem="4qk-I5-YsI" secondAttribute="bottom" id="ygi-Bo-2g3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
                     </view>
                     <connections>
+                        <outlet property="darkView" destination="BGA-x3-fgL" id="SRe-Do-aaU"/>
                         <outlet property="hudPause" destination="R9N-kv-Xhi" id="YoH-tU-hef"/>
+                        <outlet property="imageHUD" destination="C8N-J6-zM6" id="S7q-aY-giC"/>
                         <outlet property="pauseButton" destination="Q4X-kW-iZP" id="jqN-ns-063"/>
                         <outlet property="playButton" destination="CkF-Ms-B0A" id="JXg-6N-Tsk"/>
                         <outlet property="restartButton" destination="Yqo-Rk-1Y2" id="7Pq-Qz-seQ"/>
@@ -77,10 +97,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="29.23538230884558" y="48.799999999999997"/>
         </scene>
     </scenes>
     <resources>
         <image name="botaoPause" width="92" height="45"/>
+        <image name="contagemFruta" width="92" height="45"/>
         <image name="hud-paused" width="369" height="173"/>
         <image name="play-symbol" width="43" height="60"/>
         <image name="recovery-arrow" width="53" height="54"/>

@@ -11,6 +11,7 @@ import SpriteKit
 import GameplayKit
 
 var SKViewSizeRect: CGRect!
+var UIDarkView: UIView!
 
 
 class GameViewController: UIViewController {
@@ -22,11 +23,19 @@ class GameViewController: UIViewController {
     @IBOutlet weak var hudPause: UIImageView!
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var restartButton: UIButton!
+    @IBOutlet weak var darkView: UIView!
+    @IBOutlet weak var imageHUD: UIImageView!
     
+    
+    
+    public static func changeDarkView(value: Bool) {
+        UIDarkView.isHidden = value
+    }
     
     @IBAction func restart(_ sender: Any) {
         self.hiddenHud()
-        cena.entityManager.restartScene()
+        //cena.entityManager.restartScene()
+        restartScene()
     }
     
     @IBAction func play(_ sender: Any) {
@@ -40,32 +49,36 @@ class GameViewController: UIViewController {
     }
     
     private func hiddenHud() {
+        darkView.isHidden = true
         pauseButton.isHidden = false
         hudPause.isHidden = true
         playButton.isHidden = true
         restartButton.isHidden = true
+       imageHUD.isHidden = false
     }
     
     private func showHud() {
+        darkView.isHidden = false
         pauseButton.isHidden = true
         hudPause.isHidden = false
         playButton.isHidden = false
         restartButton.isHidden = false
+        imageHUD.isHidden = true
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.hiddenHud()
         // Load 'GameScene.sks' as a GKScene. This provides gameplay related content
         // including entities and graphs.
         if let scene = GKScene(fileNamed: "GameScene") {
             
-            
             // Get the SKScene from the loaded GKScene
             if let sceneNode = scene.rootNode as! GameScene? {
-                cena = sceneNode
+                
                 SKViewSizeRect = view.bounds
+                UIDarkView = darkView
                 // Copy gameplay related content over to the scene
                 sceneNode.entities = scene.entities
                 sceneNode.graphs = scene.graphs
@@ -76,9 +89,8 @@ class GameViewController: UIViewController {
                 
                 // Present the scene
                 if let view = self.view as! SKView? {
+                    self.cena = sceneNode
                     view.presentScene(sceneNode)
-                    
-                    
                     view.ignoresSiblingOrder = true
                     view.showsFPS = Debug.showFPS ?? false
                     view.showsNodeCount = Debug.showNodeCount ?? false
@@ -88,6 +100,23 @@ class GameViewController: UIViewController {
         }
     }
     
+    func restartScene(){
+        if let view = self.view as! SKView?{
+            // Load the SKScene from 'GameScene.sks'
+            if let scene = SKScene(fileNamed: "GameScene") {
+                // Set the scale mode to scale to fit the window
+                scene.scaleMode = .resizeFill
+                scene.name = "Nova Cena"
+                // Present the scene
+                self.cena = (scene as! GameScene)
+                view.presentScene(scene, transition: SKTransition.fade(withDuration: 1))
+            }
+            view.ignoresSiblingOrder = true
+            
+            view.showsFPS = true
+            view.showsNodeCount = true
+        }
+    }
     
     override var shouldAutorotate: Bool {
         return true
@@ -100,7 +129,9 @@ class GameViewController: UIViewController {
             return .all
         }
     }
-
+    public func setScene(cena:GameScene){
+    
+    }
     override var prefersStatusBarHidden: Bool {
         return true
     }

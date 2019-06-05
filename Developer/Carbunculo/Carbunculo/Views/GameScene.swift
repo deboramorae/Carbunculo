@@ -27,6 +27,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func sceneDidLoad() {
         self.lastUpdateTime = 0
         physicsWorld.contactDelegate = self
+        
+        
+        print(PlayerDAO.getSaves().count)
     }
     
     
@@ -64,9 +67,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             let platform6 = PlatformEntity(entityManager: entityManager, scene: self, texture: SKTexture.imageNamed.platform4, position: CGPoint.initialPositionNode.platform6, size: CGSize.sizeNode.platform4)
             
-            let platform7 = PlatformEntity(entityManager: entityManager, scene: self, texture: SKTexture.imageNamed.platform4, position: CGPoint.initialPositionNode.platform7, size: CGSize.sizeNode.platformNode)
+            let platform7 = PlatformEntity(entityManager: entityManager, scene: self, texture: SKTexture.imageNamed.platform4, position: CGPoint.initialPositionNode.platform7, size: CGSize.sizeNode.platform4)
             
-            let platform8 = PlatformEntity(entityManager: entityManager, scene: self, texture: SKTexture.imageNamed.platform4, position: CGPoint.initialPositionNode.platform8, size: CGSize.sizeNode.platformNode)
+            let platform8 = PlatformEntity(entityManager: entityManager, scene: self, texture: SKTexture.imageNamed.platform4, position: CGPoint.initialPositionNode.platform8, size: CGSize.sizeNode.platform4)
+            
+            let platform9 = PlatformEntity(entityManager: entityManager, scene: self, texture: SKTexture.imageNamed.platform4, position: CGPoint.initialPositionNode.platform9, size: CGSize.sizeNode.platform4)
             
             let floor2 = FloorEntity(entityManager: entityManager, cena: self, positionNode: CGPoint.initialPositionNode.floorNode2, texture: SKTexture.imageNamed.floor2, size: CGSize.sizeNode.floorNode)
             
@@ -89,14 +94,29 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             let entityWood3   = WoodEntity(entityManager: entityManager, scene: self, positionNode: CGPoint.initialPositionNode.woodNode3, texture: SKTexture.imageNamed.wood3, size : CGSize.sizeNode.woodNode3, sizePhysicsBody: CGSize.sizeNode.woodNode3 )
             
-            let choise = ChoicesEntity(entityManager: entityManager, scene: self)
+            let choise = ChoicesEntity(entityManager: entityManager, scene: self,textureDecisao: SKTexture.imageNamed.decisao1, textureButton1: SKTexture.imageNamed.escolha1, textureButton2: SKTexture.imageNamed.escolha2, position: CGPoint.initialPositionNode.choiseHUDNode, numberChoice: 1)
+            
+            let choise2 = ChoicesEntity(entityManager: entityManager, scene: self,textureDecisao: SKTexture.imageNamed.decisao2, textureButton1: SKTexture.imageNamed.escolha3, textureButton2: SKTexture.imageNamed.escolha4, position: CGPoint.initialPositionNode.choiseHUDNode2, numberChoice: 2)
             
             let entityQuicksand = QuicksandEntity(entityManager: entityManager, scene: self)
-            let entityFrutinha = MaracujaEntity(entityManager: entityManager, scene: self)
-            let entityAnimal   = AnimalEntity(entityManager: entityManager, scene: self)
+
+            let frutinha01 = MaracujaEntity(entityManager: entityManager, scene: self, position: CGPoint.initialPositionNode.frutinhaNode)
+            
+            let frutinha02 = MaracujaEntity(entityManager: entityManager, scene: self, position: CGPoint.initialPositionNode.frutinha02)
+            
+            let frutinha03 = MaracujaEntity(entityManager: entityManager, scene: self, position: CGPoint.initialPositionNode.frutinha03)
+            
+            let frutinha04 = MaracujaEntity(entityManager: entityManager, scene: self, position: CGPoint.initialPositionNode.frutinha04)
+        
+            let entityAnimal   = AnimalEntity(entityManager: entityManager, scene: self, texture: SKTexture.imageNamed.animal, position: CGPoint.initialPositionNode.animalNode, size: CGSize.sizeNode.animalNode)
+            
+            let entityAnimal2   = AnimalEntity(entityManager: entityManager, scene: self, texture: SKTexture.imageNamed.animal2, position: CGPoint.initialPositionNode.animalNode2, size: CGSize.sizeNode.animalNode2)
             
             let stone = StoneEntity(entityManager: entityManager, scene: self)
-            let balao = BalaoEntity(entityManager: entityManager, scene: self)
+            
+            let balao = BalaoEntity(entityManager: entityManager, scene: self, position: CGPoint.initialPositionNode.balaoNode)
+            
+            let balao2 = BalaoEntity(entityManager: entityManager, scene: self, position: CGPoint.initialPositionNode.balaoNode2)
             
             let windNode = WindEntity(entityManager: entityManager, scene: self, position: CGPoint.initialPositionNode.windNode)
              let windNode2 = WindEntity(entityManager: entityManager, scene: self, position : CGPoint.initialPositionNode.windNode2)
@@ -117,7 +137,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             entityManager.add(floor5)
             
             entityManager.add(player)
+            
             entityManager.add(balao)
+            entityManager.add(balao2)
             
             entityManager.add(entityWood)
             entityManager.add(entityWood2)
@@ -131,16 +153,24 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             entityManager.add(platform6)
             entityManager.add(platform7)
             entityManager.add(platform8)
+            entityManager.add(platform9)
             
             entityManager.add(entidadeWater)
             entityManager.add(water2)
             entityManager.add(water3)
             
             entityManager.add(choise)
+            entityManager.add(choise2)
             
-            entityManager.add(entityFrutinha)
+            entityManager.add(frutinha01)
+            entityManager.add(frutinha02)
+            entityManager.add(frutinha03)
+            entityManager.add(frutinha04)
+            
             entityManager.add(entityQuicksand)
+            
             entityManager.add(entityAnimal)
+            entityManager.add(entityAnimal2)
             
             entityManager.add(stone)
             
@@ -242,6 +272,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     
                     let father = invisibleNode.parent
                     father?.isHidden = false
+//                    GameViewController.changeDarkView(value: false)
                     EntityManager.ischoosing = true
                 }
                 
@@ -249,12 +280,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
         }
         if(contact.bodyA.node?.name == "water" || contact.bodyB.node?.name == "water" ){
-            entityManager.restartScene()
+            (self.view!.window!.rootViewController as! GameViewController).restartScene()
         }
         if(contact.bodyA.node?.name == "frutinha" || contact.bodyB.node?.name == "frutinha" ){
-            print("Pegou a frutinha.")
+            
+            if contact.bodyA.node?.name != "player" {
+                
+                entityManager.remove(contact.bodyA.node?.entity as! MaracujaEntity)
+                
+            }else{
+                entityManager.remove(contact.bodyB.node?.entity as! MaracujaEntity)
+            }
         }
     }
-    
 }
 

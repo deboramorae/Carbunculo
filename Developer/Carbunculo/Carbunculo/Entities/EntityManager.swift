@@ -112,6 +112,8 @@ class EntityManager {
             }
         }
     }
+
+    
     func update(deltaTime sec: TimeInterval) {
         for entity in entities{
             if let componenteCorpoFisico = entity.component(ofType: PhysicsBodyComponent.self),let componenteMaquina = entity.component(ofType: PlayerStateMachineComponent.self){
@@ -127,18 +129,68 @@ class EntityManager {
     func playerLanding(){
         for entity in entities{
             if let componenteMaquina = entity.component(ofType: PlayerStateMachineComponent.self){
-                componenteMaquina.maquina.enter(StateIdle.self)
+                if componenteMaquina.maquina.enter(StateIdle.self){
+                    if let componentNode = entity.component(ofType: PlayerNodeComponent.self){
+                        componentNode.node.removeAllActions()
+                        componentNode.node.physicsBody?.velocity.dx = 0.0
+                        componentNode.node.run(Animations.Player.idle)
+                    }
+                }
             }
         }
     }
+    
+    func updatePositionPlayerInChoice_Save(numberChoice: Int) {
+
+        for entity in entities{
+            if let player = entity.component(ofType: PlayerNodeComponent.self)?.node{
+                if numberChoice == 1 {
+                    player.position = CGPoint.initialPositionNode.playerFirstChoice_Save
+                }else if numberChoice == 2 {
+                    
+                }
+                
+            }
+        }
+        saveProgress()
+    }
+    
+    func updatePositionPlayerInChoice_NoSave(numberChoice: Int) {
+        
+        for entity in entities{
+            if let player = entity.component(ofType: PlayerNodeComponent.self)?.node{
+                if numberChoice == 1 {
+                    player.position = CGPoint.initialPositionNode.playerFirstChoice_NoSave
+                }else if numberChoice == 2 {
+                    
+                }
+            }
+        }
+        saveProgress()
+    }
+
+    
+    func saveProgress(){
+        if(PlayerDAO.getSaves().count == 0){
+            PlayerDAO.addPlayer(player: PlayerPersistence(pontos:choicesControl.ponctuation, checkpoint: choicesControl.decisaoatual, qtdemacas: choicesControl.qtdemacas))
+        }else{
+            PlayerDAO.updateData(player: PlayerPersistence(pontos:choicesControl.ponctuation, checkpoint: choicesControl.decisaoatual, qtdemacas: choicesControl.qtdemacas))
+        }
+
+        choicesControl.decisaoatual+=1
+    }
+    
     func updateCameraPosition(){
+        
         var camera        : SKCameraNode!
         var playernode    : SKNode!
+        
         for entity in entities{
             if let componenteCamera = entity.component(ofType: CameraComponent.self){
                 camera = componenteCamera.camera
             }
         }
+        
         for entity in entities{
             if let nodeCamera = entity.component(ofType: PlayerNodeComponent.self){
                 playernode = nodeCamera.node
@@ -154,21 +206,22 @@ class EntityManager {
         }
         
     }
+    
     func restartScene(){
         if let view = scene.view {
             // Load the SKScene from 'GameScene.sks'
             if let scene = SKScene(fileNamed: "GameScene") {
                 // Set the scale mode to scale to fit the window
                 scene.scaleMode = .resizeFill
-                
+                scene.name = "Nova Cena"
                 // Present the scene
                 view.presentScene(scene, transition: SKTransition.fade(withDuration: 1))
             }
-            
             view.ignoresSiblingOrder = true
             
             view.showsFPS = true
             view.showsNodeCount = true
         }
     }
+    
 }

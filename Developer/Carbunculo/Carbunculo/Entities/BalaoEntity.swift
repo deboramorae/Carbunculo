@@ -10,14 +10,15 @@ import Foundation
 import GameplayKit
 
 class BalaoEntity : GKEntity{
-    init(entityManager : EntityManager, scene: GameScene) {
+    init(entityManager : EntityManager, scene: GameScene, position: CGPoint) {
         super.init()
-        addComponentsToEntity(scene: scene)
+        addComponentsToEntity(scene: scene, position: position)
     }
     
-    func addComponentsToEntity(scene: GameScene){
+    func addComponentsToEntity(scene: GameScene,position: CGPoint){
         
         let balao = BalaoExclamacaoNode()
+        balao.position = position
         
         addComponent(BalaoExclamacaoNodeComponent(node: balao, scene: scene))
         balao.run(Animations.Animal.blink)
