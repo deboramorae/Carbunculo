@@ -242,7 +242,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
      func didBegin(_ contact: SKPhysicsContact) {
         var conjunto  = Set<String>()
-        for nome in ["floor","wood","platform","invisibleNode"]{
+        for nome in ["floor","wood","platform","invisibleNode","pedra"]{
                  conjunto.insert(nome)
         }
         

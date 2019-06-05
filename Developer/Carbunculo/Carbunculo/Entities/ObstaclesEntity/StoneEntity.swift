@@ -19,7 +19,8 @@ class StoneEntity: GKEntity {
     }
     
     func addComponentsToEntities(scene : GameScene){
-        let stone = StonesNode()
+        let stone  = StonesNode()
+        stone.name = "pedra"
         addComponent(StonesNodeComponent(node: stone, scene: scene))
         addComponent(StonesPhysicsBodyComponent(node: stone))
     }
