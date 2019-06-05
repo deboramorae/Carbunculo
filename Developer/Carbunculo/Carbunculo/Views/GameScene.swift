@@ -27,6 +27,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func sceneDidLoad() {
         self.lastUpdateTime = 0
         physicsWorld.contactDelegate = self
+        
+        PlayerDAO.deleteAllSaves()
+        
+        print(PlayerDAO.getSaves().count)
     }
     
     
