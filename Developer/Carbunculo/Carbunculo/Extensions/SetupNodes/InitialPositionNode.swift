@@ -93,10 +93,12 @@ extension CGPoint {
 
         public static let animalNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1750, y: -300/2))
         
-        public static let animalNode2 : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 6509, y: -100))
+        public static let animalNode2 : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 6500, y: -100))
 
         
         public static let balaoNode : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1859, y: -100))
+        
+        public static let balaoNode2 : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 6620, y: -70))
         
         public static let stoneNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 2725, y: (-272/2)))
         
