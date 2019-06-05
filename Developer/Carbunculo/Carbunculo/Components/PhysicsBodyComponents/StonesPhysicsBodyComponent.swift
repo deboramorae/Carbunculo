@@ -13,7 +13,8 @@ class StonesPhysicsBodyComponent : GKComponent{
     init(node: SKNode){
         
         super.init()
-        node.physicsBody = SKPhysicsBody(rectangleOf: CGSize.sizeNode.stonesNode)
+//        node.physicsBody = SKPhysicsBody(rectangleOf: CGSize.sizeNode.stonesNode)
+        node.physicsBody = SKPhysicsBody(circleOfRadius: CGSize.sizeNode.stonesNode.height/2, center: CGPoint(x: -1, y: 0))
         
         node.physicsBody?.affectedByGravity = false
         node.physicsBody?.isDynamic         = false
