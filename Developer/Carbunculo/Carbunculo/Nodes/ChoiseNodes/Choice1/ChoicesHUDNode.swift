@@ -11,7 +11,7 @@ import GameplayKit
 
 class ChoicesHUDNode : SKSpriteNode {
     
-    init(textureDecisao: SKTexture, textureButton1: SKTexture, textureButton2: SKTexture) {
+    init(textureDecisao: SKTexture, textureButton1: SKTexture, textureButton2: SKTexture, cena: GameScene, numberChoice: Int) {
         super.init(texture: textureDecisao, color: .clear, size: CGSize.sizeNode.choiseHUDNode)
         
         self.name = "Choices HUD"
@@ -23,6 +23,7 @@ class ChoicesHUDNode : SKSpriteNode {
             self.removeChoicesHUD()
             self.addPoints(points: 2)
             EntityManager.ischoosing = false
+            cena.entityManager.updatePositionPlayerInChoice_Save(numberChoice: numberChoice)
         }
         
         choiseButton1.position = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 0, y: 0))
@@ -33,6 +34,7 @@ class ChoicesHUDNode : SKSpriteNode {
             self.removeChoicesHUD()
             self.addPoints(points: 1)
             EntityManager.ischoosing = false
+            cena.entityManager.updatePositionPlayerInChoice_NoSave(numberChoice: numberChoice)
         }
         choiseButton2.position = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 0, y: -55))
         

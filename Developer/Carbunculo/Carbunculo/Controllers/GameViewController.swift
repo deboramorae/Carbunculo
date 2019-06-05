@@ -24,6 +24,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var restartButton: UIButton!
     @IBOutlet weak var darkView: UIView!
+    @IBOutlet weak var imageHUD: UIImageView!
     
     
     
@@ -53,6 +54,7 @@ class GameViewController: UIViewController {
         hudPause.isHidden = true
         playButton.isHidden = true
         restartButton.isHidden = true
+       imageHUD.isHidden = false
     }
     
     private func showHud() {
@@ -61,6 +63,7 @@ class GameViewController: UIViewController {
         hudPause.isHidden = false
         playButton.isHidden = false
         restartButton.isHidden = false
+        imageHUD.isHidden = true
     }
     
     

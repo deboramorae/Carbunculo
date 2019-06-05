@@ -91,9 +91,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             let entityWood3   = WoodEntity(entityManager: entityManager, scene: self, positionNode: CGPoint.initialPositionNode.woodNode3, texture: SKTexture.imageNamed.wood3, size : CGSize.sizeNode.woodNode3, sizePhysicsBody: CGSize.sizeNode.woodNode3 )
             
-            let choise = ChoicesEntity(entityManager: entityManager, scene: self,textureDecisao: SKTexture.imageNamed.decisao1, textureButton1: SKTexture.imageNamed.escolha1, textureButton2: SKTexture.imageNamed.escolha2, position: CGPoint.initialPositionNode.choiseHUDNode)
+            let choise = ChoicesEntity(entityManager: entityManager, scene: self,textureDecisao: SKTexture.imageNamed.decisao1, textureButton1: SKTexture.imageNamed.escolha1, textureButton2: SKTexture.imageNamed.escolha2, position: CGPoint.initialPositionNode.choiseHUDNode, numberChoice: 1)
             
-            let choise2 = ChoicesEntity(entityManager: entityManager, scene: self,textureDecisao: SKTexture.imageNamed.decisao2, textureButton1: SKTexture.imageNamed.escolha3, textureButton2: SKTexture.imageNamed.escolha4, position: CGPoint.initialPositionNode.choiseHUDNode2)
+            let choise2 = ChoicesEntity(entityManager: entityManager, scene: self,textureDecisao: SKTexture.imageNamed.decisao2, textureButton1: SKTexture.imageNamed.escolha3, textureButton2: SKTexture.imageNamed.escolha4, position: CGPoint.initialPositionNode.choiseHUDNode2, numberChoice: 2)
             
             let entityQuicksand = QuicksandEntity(entityManager: entityManager, scene: self)
 
@@ -101,7 +101,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             let frutinha02 = MaracujaEntity(entityManager: entityManager, scene: self, position: CGPoint.initialPositionNode.frutinha02)
             
+            let frutinha03 = MaracujaEntity(entityManager: entityManager, scene: self, position: CGPoint.initialPositionNode.frutinha03)
             
+            let frutinha04 = MaracujaEntity(entityManager: entityManager, scene: self, position: CGPoint.initialPositionNode.frutinha04)
+        
             let entityAnimal   = AnimalEntity(entityManager: entityManager, scene: self, texture: SKTexture.imageNamed.animal, position: CGPoint.initialPositionNode.animalNode, size: CGSize.sizeNode.animalNode)
             
             let entityAnimal2   = AnimalEntity(entityManager: entityManager, scene: self, texture: SKTexture.imageNamed.animal2, position: CGPoint.initialPositionNode.animalNode2, size: CGSize.sizeNode.animalNode2)
@@ -153,6 +156,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             entityManager.add(frutinha01)
             entityManager.add(frutinha02)
+            entityManager.add(frutinha03)
+            entityManager.add(frutinha04)
             
             entityManager.add(entityQuicksand)
             

@@ -140,21 +140,29 @@ class EntityManager {
         }
     }
     
-    func updatePositionPlayerInFirstChoice_Save() {
+    func updatePositionPlayerInChoice_Save(numberChoice: Int) {
 
         for entity in entities{
             if let player = entity.component(ofType: PlayerNodeComponent.self)?.node{
-                player.position = CGPoint.initialPositionNode.playerFirstChoice_Save
+                if numberChoice == 1 {
+                    player.position = CGPoint.initialPositionNode.playerFirstChoice_Save
+                }else if numberChoice == 2 {
+                    
+                }
             }
         }
         
     }
     
-    func updatePositionPlayerInFirstChoice_NoSave() {
+    func updatePositionPlayerInChoice_NoSave(numberChoice: Int) {
         
         for entity in entities{
             if let player = entity.component(ofType: PlayerNodeComponent.self)?.node{
-                player.position = CGPoint.initialPositionNode.playerFirstChoice_NoSave
+                if numberChoice == 1 {
+                    player.position = CGPoint.initialPositionNode.playerFirstChoice_NoSave
+                }else if numberChoice == 2 {
+                    
+                }
             }
         }
         
