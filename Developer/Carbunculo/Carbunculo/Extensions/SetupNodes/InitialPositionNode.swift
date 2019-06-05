@@ -104,6 +104,8 @@ extension CGPoint {
 
         public static let playerFirstChoice_NoSave: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1800, y: 0))
         
+        public static let minionNode : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1800, y: 0)
+        
         
     }
     
