@@ -71,6 +71,10 @@
 		EA03F5AE22A9963800581C44 /* CoracaoNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA03F5AD22A9963800581C44 /* CoracaoNode.swift */; };
 		EA03F5B022A9972100581C44 /* CoracaoNodeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA03F5AF22A9972100581C44 /* CoracaoNodeComponent.swift */; };
 		EA03F5B222A9976A00581C44 /* CoracaoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA03F5B122A9976A00581C44 /* CoracaoEntity.swift */; };
+		EA03F5B422A9B26300581C44 /* CarbunculoNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA03F5B322A9B26300581C44 /* CarbunculoNode.swift */; };
+		EA03F5B722A9B59000581C44 /* CarbunculoNodeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA03F5B622A9B59000581C44 /* CarbunculoNodeComponent.swift */; };
+		EA03F5B922A9B60C00581C44 /* CarbunculoPhysicsBodyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA03F5B822A9B60C00581C44 /* CarbunculoPhysicsBodyComponent.swift */; };
+		EA03F5BB22A9B69400581C44 /* CarbunculoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA03F5BA22A9B69400581C44 /* CarbunculoEntity.swift */; };
 		EA09493622A19AFD002B105B /* BalaoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA09493522A19AFD002B105B /* BalaoEntity.swift */; };
 		EA1C5A93229F571F00FC65CB /* TextureNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1C5A92229F571F00FC65CB /* TextureNode.swift */; };
 		EA262F21229F0FA500C46986 /* StonesNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA262F20229F0FA500C46986 /* StonesNode.swift */; };
@@ -178,6 +182,10 @@
 		EA03F5AD22A9963800581C44 /* CoracaoNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoracaoNode.swift; sourceTree = "<group>"; };
 		EA03F5AF22A9972100581C44 /* CoracaoNodeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoracaoNodeComponent.swift; sourceTree = "<group>"; };
 		EA03F5B122A9976A00581C44 /* CoracaoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoracaoEntity.swift; sourceTree = "<group>"; };
+		EA03F5B322A9B26300581C44 /* CarbunculoNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbunculoNode.swift; sourceTree = "<group>"; };
+		EA03F5B622A9B59000581C44 /* CarbunculoNodeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbunculoNodeComponent.swift; sourceTree = "<group>"; };
+		EA03F5B822A9B60C00581C44 /* CarbunculoPhysicsBodyComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbunculoPhysicsBodyComponent.swift; sourceTree = "<group>"; };
+		EA03F5BA22A9B69400581C44 /* CarbunculoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbunculoEntity.swift; sourceTree = "<group>"; };
 		EA09493522A19AFD002B105B /* BalaoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalaoEntity.swift; sourceTree = "<group>"; };
 		EA1C5A92229F571F00FC65CB /* TextureNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureNode.swift; sourceTree = "<group>"; };
 		EA262F20229F0FA500C46986 /* StonesNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StonesNode.swift; sourceTree = "<group>"; };
@@ -483,9 +491,19 @@
 			path = Carbunculo;
 			sourceTree = "<group>";
 		};
+		EA03F5B522A9B55100581C44 /* CarbunculoComponents */ = {
+			isa = PBXGroup;
+			children = (
+				EA03F5B622A9B59000581C44 /* CarbunculoNodeComponent.swift */,
+				EA03F5B822A9B60C00581C44 /* CarbunculoPhysicsBodyComponent.swift */,
+			);
+			path = CarbunculoComponents;
+			sourceTree = "<group>";
+		};
 		EA4BC04A22A76F2D00870650 /* MagicFlorest */ = {
 			isa = PBXGroup;
 			children = (
+				EA03F5B522A9B55100581C44 /* CarbunculoComponents */,
 				EA4BC04D22A76F8C00870650 /* MinionComponents */,
 			);
 			path = MagicFlorest;
@@ -537,6 +555,7 @@
 			isa = PBXGroup;
 			children = (
 				EA4BC04822A76C7600870650 /* MinionNode.swift */,
+				EA03F5B322A9B26300581C44 /* CarbunculoNode.swift */,
 			);
 			path = MagicFlorest;
 			sourceTree = "<group>";
@@ -545,6 +564,7 @@
 			isa = PBXGroup;
 			children = (
 				EAA0ED7E22A83BE800480213 /* MinionEntity.swift */,
+				EA03F5BA22A9B69400581C44 /* CarbunculoEntity.swift */,
 			);
 			path = MagicFlorestEntity;
 			sourceTree = "<group>";
@@ -675,6 +695,7 @@
 				EA1C5A93229F571F00FC65CB /* TextureNode.swift in Sources */,
 				66C63BD62295EDE100CCEE3A /* WaterPhysicsBodyComponent.swift in Sources */,
 				EA03F5B222A9976A00581C44 /* CoracaoEntity.swift in Sources */,
+				EA03F5BB22A9B69400581C44 /* CarbunculoEntity.swift in Sources */,
 				EAE05C942294885A00B78846 /* RemoteControl.swift in Sources */,
 				EA262F23229F111A00C46986 /* StonesNodeComponent.swift in Sources */,
 				EA09493622A19AFD002B105B /* BalaoEntity.swift in Sources */,
@@ -708,6 +729,7 @@
 				EA4BC04922A76C7600870650 /* MinionNode.swift in Sources */,
 				EAA0ED7F22A83BE800480213 /* MinionEntity.swift in Sources */,
 				EA03F5B022A9972100581C44 /* CoracaoNodeComponent.swift in Sources */,
+				EA03F5B722A9B59000581C44 /* CarbunculoNodeComponent.swift in Sources */,
 				8405E3CF22A080DE00DB50A6 /* StoneEntity.swift in Sources */,
 				EAB872CB229C7DE200A7FE9E /* WindEntity.swift in Sources */,
 				666BA97C229E1C33000B27C8 /* ObstacleComeBackComponent.swift in Sources */,
@@ -735,6 +757,7 @@
 				666BA975229C7DF0000B27C8 /* AnimationsTextures.swift in Sources */,
 				EA4BC04F22A76FB300870650 /* MinionPhysicsBodyComponent.swift in Sources */,
 				EA2CE9052298779500084E25 /* ChoicesPhysicsBodyComponent.swift in Sources */,
+				EA03F5B422A9B26300581C44 /* CarbunculoNode.swift in Sources */,
 				EAB872C9229C7D5300A7FE9E /* WindNodeComponent.swift in Sources */,
 				EA5FE590229743040027D77F /* FloorPhysicsBodyComponent.swift in Sources */,
 				84AC279B2297408500D3A6C2 /* InitialPositionNode.swift in Sources */,
@@ -759,6 +782,7 @@
 				EA58B23E229629080099C146 /* PlatformEntity.swift in Sources */,
 				8410A2F422947C7A00F73DC0 /* RunComponent.swift in Sources */,
 				666BA977229C8185000B27C8 /* MaracujaEntity.swift in Sources */,
+				EA03F5B922A9B60C00581C44 /* CarbunculoPhysicsBodyComponent.swift in Sources */,
 				6698200122A83FF200A61689 /* PlayerDAO.swift in Sources */,
 				84124730229F05A000052953 /* ChoiceButtonNode.swift in Sources */,
 				EA8846C4229E0DA3003BF8F7 /* BalaoExclamacaoNodeComponent.swift in Sources */,
