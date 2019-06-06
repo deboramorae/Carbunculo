@@ -148,12 +148,24 @@ class EntityManager {
                     player.position = CGPoint.initialPositionNode.playerFirstChoice_Save
                 }else if numberChoice == 2 {
                     
+                        let actionAndar = SKAction.run {
+                            self.run()
+                            player.position.x += 10
+                        }
+                        actionAndar.duration = 4
+                        self.addTucano()
+                        let actionSave = SKAction.sequence([actionAndar])
+                        player.run(actionSave)
+                    
+                        self.removeTucano()
+                    
                 }
                 
             }
         }
         saveProgress()
     }
+    
     
     func updatePositionPlayerInChoice_NoSave(numberChoice: Int) {
         
@@ -168,7 +180,21 @@ class EntityManager {
         }
         saveProgress()
     }
-
+    func addTucano(){
+        let animal = AnimalEntity(entityManager: self, scene: self.scene as! GameScene, texture: SKTexture.imageNamed.animalSave, position: CGPoint.initialPositionNode.animalNode2, size: CGSize.sizeNode.animalSave, name: "tucanoFeliz")
+        self.add(animal)
+    }
+    
+    func removeTucano(){
+        for entity in entities{
+            if let animal = entity.component(ofType: AnimalNodeComponent.self)?.node{
+                if animal.name == "tucano" {
+                    self.remove(animal.entity as! AnimalEntity)
+                }
+            }
+        }
+        
+    }
     
     func saveProgress(){
         if(PlayerDAO.getSaves().count == 0){
