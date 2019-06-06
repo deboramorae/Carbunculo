@@ -70,6 +70,9 @@ extension CGSize {
         
         public static let coracaoNode :  CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 20, height: 22))
         
+        public static let carbunculoNode :  CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 126, height: 156))
+        
+        
         
         
         
