@@ -114,9 +114,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             let stone = StoneEntity(entityManager: entityManager, scene: self)
             
-            let balao = BalaoEntity(entityManager: entityManager, scene: self, position: CGPoint.initialPositionNode.balaoNode)
+            let balao = BalaoEntity(entityManager: entityManager, scene: self, position: CGPoint.initialPositionNode.balaoNode, name: "balaoMacaco")
             
-            let balao2 = BalaoEntity(entityManager: entityManager, scene: self, position: CGPoint.initialPositionNode.balaoNode2)
+            let balao2 = BalaoEntity(entityManager: entityManager, scene: self, position: CGPoint.initialPositionNode.balaoNode2, name: "balaoTucano")
             
             let windNode = WindEntity(entityManager: entityManager, scene: self, position: CGPoint.initialPositionNode.windNode)
              let windNode2 = WindEntity(entityManager: entityManager, scene: self, position : CGPoint.initialPositionNode.windNode2)

@@ -189,7 +189,15 @@ class EntityManager {
         for entity in entities{
             if let animal = entity.component(ofType: AnimalNodeComponent.self)?.node{
                 if animal.name == "tucano" {
-                    self.remove(animal.entity as! AnimalEntity)
+                    animal.run(SKAction.fadeOut(withDuration: 0.5))
+                    //self.remove(animal.entity as! AnimalEntity)
+                }
+            }
+        }
+        for entity in entities{
+            if let balao = entity.component(ofType: BalaoExclamacaoNodeComponent.self)?.node{
+                if balao.name == "balaoTucano" {
+                    self.remove(balao.entity as! BalaoEntity)
                 }
             }
         }
