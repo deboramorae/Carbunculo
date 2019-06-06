@@ -11,7 +11,7 @@ import GameplayKit
 
 class AnimalEntity: GKEntity{
     
-    init(entityManager : EntityManager, scene: GameScene, texture : SKTexture, position: CGPoint, size: CGSize){
+    init(entityManager : EntityManager, scene: GameScene, texture : SKTexture, position: CGPoint, size: CGSize, name: String){
         super.init()
         
         let animal = AnimalNode()
@@ -19,6 +19,7 @@ class AnimalEntity: GKEntity{
         animal.texture = texture
         animal.position = position
         animal.size = size
+        animal.name = name
         
         addComponentsToEntity(node: animal, scene: scene)
     }
