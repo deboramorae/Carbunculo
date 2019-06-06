@@ -65,6 +65,7 @@ extension CGSize {
         //size physics body tronco
         
         public static let wood2PhysicsBody :  CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 61, height: 60))
+        public static let animalSave :  CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 54, height: 87))
         
         
         
