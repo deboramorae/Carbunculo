@@ -23,6 +23,7 @@ extension CGSize {
         public static let floor3: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 1085, height: 61))
          public static let floor4: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 755, height: 48))
         public static let floor5: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 741, height: 51))
+        public static let floor6: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 259, height: 48))
         
         public static let woodNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 136, height: 43))
         public static let woodNode2 : CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 114, height: 73))

@@ -74,6 +74,8 @@ extension CGPoint {
         
         public static let floorNode5  : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 6350, y: -334/2))
         
+        public static let floorNode6  : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 6800, y: -336/2))
+        
         public static let frutinhaNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 550, y: 0))
         
         public static let frutinha02: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1800, y: 0))
@@ -116,7 +118,6 @@ extension CGPoint {
         public static let animalSave : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 6500, y: -252/2))
         
         public static let coracaoNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 6510, y: -70))
-        
         
         
         
