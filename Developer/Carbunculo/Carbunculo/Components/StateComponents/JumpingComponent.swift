@@ -27,6 +27,9 @@ class JumpingComponent:GKComponent{
                     player.physicsBody?.applyImpulse(proportionalForceFrame(force: CGVector(dx: 0, dy: CGSize.sizeNode.playerNode.height * 1.1)))
                     player.removeAllActions()
                     player.run(Animations.Player.jump)
+                    
+                    playerJumpSong.prepareMusic()
+                    playerJumpSong.playSong()
                 }
             }
         }
