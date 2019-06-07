@@ -127,6 +127,8 @@
 		EAB872CB229C7DE200A7FE9E /* WindEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB872CA229C7DE200A7FE9E /* WindEntity.swift */; };
 		EAB872CD229C827E00A7FE9E /* AnimalNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB872CC229C827E00A7FE9E /* AnimalNode.swift */; };
 		EAB872CF229C83DB00A7FE9E /* AnimalNodeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB872CE229C83DB00A7FE9E /* AnimalNodeComponent.swift */; };
+		EADA597022AAF0830051999F /* FloorInvisibleNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADA596F22AAF0830051999F /* FloorInvisibleNode.swift */; };
+		EADA597322AAF1640051999F /* FloorInvisivleNodeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADA597222AAF1640051999F /* FloorInvisivleNodeComponent.swift */; };
 		EAE05C942294885A00B78846 /* RemoteControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE05C932294885A00B78846 /* RemoteControl.swift */; };
 /* End PBXBuildFile section */
 
@@ -253,6 +255,8 @@
 		EAB872CA229C7DE200A7FE9E /* WindEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindEntity.swift; sourceTree = "<group>"; };
 		EAB872CC229C827E00A7FE9E /* AnimalNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalNode.swift; sourceTree = "<group>"; };
 		EAB872CE229C83DB00A7FE9E /* AnimalNodeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalNodeComponent.swift; sourceTree = "<group>"; };
+		EADA596F22AAF0830051999F /* FloorInvisibleNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorInvisibleNode.swift; sourceTree = "<group>"; };
+		EADA597222AAF1640051999F /* FloorInvisivleNodeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorInvisivleNodeComponent.swift; sourceTree = "<group>"; };
 		EAE05C932294885A00B78846 /* RemoteControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -570,6 +574,7 @@
 			children = (
 				EA03F5BF22AA0EB900581C44 /* FloorMysticNodeComponent.swift */,
 				EA03F5C122AA0F6400581C44 /* FloorMysticPhysicsBodyComponent.swift */,
+				EADA597222AAF1640051999F /* FloorInvisivleNodeComponent.swift */,
 			);
 			path = FloorMysticComponents;
 			sourceTree = "<group>";
@@ -629,9 +634,9 @@
 		EAA0ED7C22A83BA900480213 /* MagicFlorest */ = {
 			isa = PBXGroup;
 			children = (
+				EADA597122AAF0940051999F /* Floor */,
 				EA4BC04822A76C7600870650 /* MinionNode.swift */,
 				EA03F5B322A9B26300581C44 /* CarbunculoNode.swift */,
-				EA03F5BC22AA0BF700581C44 /* FloorMysticNode.swift */,
 			);
 			path = MagicFlorest;
 			sourceTree = "<group>";
@@ -682,6 +687,15 @@
 				8405E3C4229F762900DB50A6 /* InvisibleChoiceNode.swift */,
 			);
 			path = Choice1;
+			sourceTree = "<group>";
+		};
+		EADA597122AAF0940051999F /* Floor */ = {
+			isa = PBXGroup;
+			children = (
+				EA03F5BC22AA0BF700581C44 /* FloorMysticNode.swift */,
+				EADA596F22AAF0830051999F /* FloorInvisibleNode.swift */,
+			);
+			path = Floor;
 			sourceTree = "<group>";
 		};
 		EAE05C922294884600B78846 /* RemoteControl */ = {
@@ -809,6 +823,7 @@
 				EA58B22F2295E73D0099C146 /* WoodNode.swift in Sources */,
 				66C63BB8229469B000CCEE3A /* StateLanding.swift in Sources */,
 				EA2CE9072298788A00084E25 /* ChoicesEntity.swift in Sources */,
+				EADA597322AAF1640051999F /* FloorInvisivleNodeComponent.swift in Sources */,
 				8405E3C5229F762900DB50A6 /* InvisibleChoiceNode.swift in Sources */,
 				66C63BB02294681000CCEE3A /* StateIdle.swift in Sources */,
 				66C63BCA22949B4600CCEE3A /* CameraComponent.swift in Sources */,
@@ -854,6 +869,7 @@
 				EA58B240229629A00099C146 /* PlatformPhysicsBodyComponent.swift in Sources */,
 				66C63BC422948CEB00CCEE3A /* StatePaused.swift in Sources */,
 				66C63BC222948C1000CCEE3A /* MachineScene.swift in Sources */,
+				EADA597022AAF0830051999F /* FloorInvisibleNode.swift in Sources */,
 				84AC276C2295BB0D00D3A6C2 /* FloorNode.swift in Sources */,
 				8410A2F222946FD600F73DC0 /* IdleComponent.swift in Sources */,
 				846A9331229C5DB400A31D1F /* BackgroundNode.swift in Sources */,
@@ -1027,7 +1043,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9F5KAYAF75;
+				DEVELOPMENT_TEAM = 6HDRUANT3K;
 				INFOPLIST_FILE = Carbunculo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1045,7 +1061,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9F5KAYAF75;
+				DEVELOPMENT_TEAM = 6HDRUANT3K;
 				INFOPLIST_FILE = Carbunculo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
