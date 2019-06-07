@@ -27,6 +27,8 @@ extension CGPoint {
         
         public static let background6 : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: -SKViewSizeRect.width/2 + (1480 * 5), y: 0))
         
+        public static let background7 : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: -SKViewSizeRect.width/2 + (1480 * 6), y: 0))
+        
         
         public static let floorNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: -90, y: -334/2 ))
         
@@ -72,7 +74,10 @@ extension CGPoint {
         
         public static let floorNode4  : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 4150, y: -334/2))
         
-        public static let floorNode5  : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 6350, y: -334/2))
+        public static let floorNode5  : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 6440, y: -334/2))
+        
+        public static let floorMystic  : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 7580, y: -254/2))
+        
         
         public static let frutinhaNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 550, y: 0))
         
@@ -117,6 +122,7 @@ extension CGPoint {
         
         public static let coracaoNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 6510, y: -70))
         
+        public static let carbunculoNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 6510, y: -70))
         
         
         

@@ -31,11 +31,23 @@ class RunComponent: GKComponent {
                 }
                 else{
                     if component.maquina.enter(StateRunning.self){
+
+                        if playerWalkSong.songIsPlaying() {
+                            playerWalkSong.stopSong()
+                            isPlayerWalk = false
+                        }
+
+                        playerWalkSong.prepareMusic()
+                        playerWalkSong.enterInLooping()
+                        playerWalkSong.playSong()
+                        isPlayerWalk = true
+                        
                         player.removeAllActions()
                         player.run(Animations.Player.run)
                         player.physicsBody?.velocity.dx = 0
                         // player.physicsBody?.applyForce(proportionalForceFrame(force: CGVector(dx: 1000, dy: 0)))
                         player.physicsBody?.velocity.dx = 100
+                        
                     }
                 }
             }

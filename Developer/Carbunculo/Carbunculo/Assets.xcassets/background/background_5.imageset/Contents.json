@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "parte5.png",
+      "filename" : "fundo novo matinho.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "parte5@2x.png",
+      "filename" : "fundo novo matinho@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "parte5@3x.png",
+      "filename" : "fundo novo matinho@3x.png",
       "scale" : "3x"
     }
   ],

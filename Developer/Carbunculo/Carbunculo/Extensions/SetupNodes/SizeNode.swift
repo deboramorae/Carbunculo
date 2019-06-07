@@ -22,7 +22,9 @@ extension CGSize {
         public static let floor2 : CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 1005, height: 54))
         public static let floor3: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 1085, height: 61))
          public static let floor4: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 755, height: 48))
-        public static let floor5: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 741, height: 51))
+        public static let floor5: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 1080, height: 51))
+        public static let floorMystic: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 1265, height: 68))
+        
         
         public static let woodNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 136, height: 43))
         public static let woodNode2 : CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 114, height: 73))
@@ -68,6 +70,9 @@ extension CGSize {
         public static let animalSave :  CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 57, height: 57))
         
         public static let coracaoNode :  CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 20, height: 22))
+        
+        public static let carbunculoNode :  CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 126, height: 156))
+        
         
         
         
