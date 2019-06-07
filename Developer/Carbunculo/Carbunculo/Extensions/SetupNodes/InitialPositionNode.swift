@@ -72,9 +72,10 @@ extension CGPoint {
         
         public static let floorNode4  : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 4150, y: -334/2))
         
-        public static let floorNode5  : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 6350, y: -334/2))
+        public static let floorNode5  : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 6400, y: -334/2))
         
-        public static let floorNode6  : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 6800, y: -336/2))
+        public static let floorMystic  : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 7450, y: -334/2))
+        
         
         public static let frutinhaNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 550, y: 0))
         
