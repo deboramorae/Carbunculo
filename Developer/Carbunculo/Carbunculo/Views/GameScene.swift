@@ -300,6 +300,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }else{
                 entityManager.remove(contact.bodyB.node?.entity as! MaracujaEntity)
             }
+            
+            maracujaSong.prepareMusic()
+            maracujaSong.playSong()
         }
     }
 }
