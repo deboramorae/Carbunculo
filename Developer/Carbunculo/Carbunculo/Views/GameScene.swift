@@ -27,15 +27,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func sceneDidLoad() {
         self.lastUpdateTime = 0
         physicsWorld.contactDelegate = self
-        
-        
+        //ATENCAO, SE QUISER APAGAR O SEU SAVE DESCOMENTE A LINHA ABAIXO
+        //PlayerDAO.deleteAllSaves()
         print(PlayerDAO.getSaves().count)
+        
     }
     
     
     override func didMove(to view: SKView) {
         super.didMove(to: view)
-        
         addSwipesGestures()
         
         entityManager = EntityManager(scene: self)
@@ -54,6 +54,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let background5 = BackgroundEntity(entityManager: entityManager, texture: SKTexture.imageNamed.background5, position: CGPoint.initialPositionNode.background5)
             
             let background6 = BackgroundEntity(entityManager: entityManager, texture: SKTexture.imageNamed.background6, position: CGPoint.initialPositionNode.background6)
+            
+            let background7 = BackgroundEntity(entityManager: entityManager, texture: SKTexture.imageNamed.background7, position: CGPoint.initialPositionNode.background7)
             
             let floor = FloorEntity(entityManager: entityManager, cena: self, positionNode: CGPoint.initialPositionNode.floorNode, texture : SKTexture.imageNamed.floor, size: CGSize.sizeNode.floorNode)
             
@@ -83,7 +85,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             let floor5 = FloorEntity(entityManager: entityManager, cena: self, positionNode: CGPoint.initialPositionNode.floorNode5, texture: SKTexture.imageNamed.floor5, size: CGSize.sizeNode.floor5)
             
-            let floor6 = FloorEntity(entityManager: entityManager, cena: self, positionNode: CGPoint.initialPositionNode.floorNode6, texture: SKTexture.imageNamed.floor6, size: CGSize.sizeNode.floor6)
+            let floor6 = FloorMysticEntity(entityManager: entityManager, scene: self)
 
             let player        = Player(entityManager: entityManager)
             let entidadeWater = WaterEntity(entityManager: entityManager, cena: self, positionNode: CGPoint.initialPositionNode.waterNode, texture: SKTexture.imageNamed.water, size: CGSize.sizeNode.waterNode)
@@ -134,6 +136,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             entityManager.add(background4)
             entityManager.add(background5)
             entityManager.add(background6)
+            entityManager.add(background7)
             
             entityManager.add(floor)
             entityManager.add(floor2)
@@ -267,7 +270,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 //TESTAR, SE FUNFAR BELEZA
                 //FUNCIONOU, MAS TEM QUE SER MELHORADA
                 if(nodePlayer.physicsBody!.velocity.dy<50 && nodePlayer.physicsBody!.velocity.dy > -50){
-                    entityManager.playerLanding()
+                    //entityManager.playerLanding()
+                    entityManager.run()
                 }
                 
                 if(contact.bodyA.node!.name == "invisibleNode" || contact.bodyB.node!.name == "invisibleNode"){

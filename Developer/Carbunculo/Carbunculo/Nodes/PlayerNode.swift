@@ -19,7 +19,31 @@ class PlayerNode: SKSpriteNode {
     }
 
     private func initialPosition(){
-        self.position = CGPoint.initialPositionNode.playerNode
+        
+        if(PlayerDAO.getSaves().count==0){
+            self.position = CGPoint.initialPositionNode.playerNode
+        }else{
+            let save = PlayerDAO.getSaves()[0]
+            switch(save.checkpoint){
+                
+            case 0:
+                    if(save.escolhaUm==2){
+                        self.position = CGPoint.initialPositionNode.playerFirstChoice_Save
+                    }else{
+                        self.position = CGPoint.initialPositionNode.playerFirstChoice_NoSave
+                    }
+                    break
+                case 1:
+                    if(save.escolhaUm==2){
+                        self.position = CGPoint.initialPositionNode.playerFirstChoice_Save
+                    }else{
+                        self.position = CGPoint.initialPositionNode.playerFirstChoice_NoSave
+                    }
+                    break
+                default:
+                print("Implemente o Default, com certeza deve ter dado erro né?")
+            }
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
