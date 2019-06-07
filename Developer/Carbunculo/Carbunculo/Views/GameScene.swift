@@ -27,6 +27,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func sceneDidLoad() {
         self.lastUpdateTime = 0
         physicsWorld.contactDelegate = self
+        //ATENCAO, SE QUISER APAGAR O SEU SAVE DESCOMENTE A LINHA ABAIXO
+        //PlayerDAO.deleteAllSaves()
         print(PlayerDAO.getSaves().count)
         
     }
@@ -268,7 +270,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 //TESTAR, SE FUNFAR BELEZA
                 //FUNCIONOU, MAS TEM QUE SER MELHORADA
                 if(nodePlayer.physicsBody!.velocity.dy<50 && nodePlayer.physicsBody!.velocity.dy > -50){
-                    entityManager.playerLanding()
+                    //entityManager.playerLanding()
+                    entityManager.run()
                 }
                 
                 if(contact.bodyA.node!.name == "invisibleNode" || contact.bodyB.node!.name == "invisibleNode"){
