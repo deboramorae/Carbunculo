@@ -172,9 +172,9 @@ class EntityManager {
     
     func saveProgress(){
         if(PlayerDAO.getSaves().count == 0){
-            PlayerDAO.addPlayer(player: PlayerPersistence(pontos:choicesControl.ponctuation, checkpoint: choicesControl.decisaoatual, qtdemacas: choicesControl.qtdemacas))
+            PlayerDAO.addPlayer(player: PlayerPersistence(pontos:choicesControl.ponctuation, checkpoint: choicesControl.decisaoatual, qtdemacas: choicesControl.qtdemacas, escolhaUm: choicesControl.escolhaum, escolhaDois: choicesControl.escolhadois))
         }else{
-            PlayerDAO.updateData(player: PlayerPersistence(pontos:choicesControl.ponctuation, checkpoint: choicesControl.decisaoatual, qtdemacas: choicesControl.qtdemacas))
+            PlayerDAO.updateData(player: PlayerPersistence(pontos:choicesControl.ponctuation, checkpoint: choicesControl.decisaoatual, qtdemacas: choicesControl.qtdemacas, escolhaUm: choicesControl.escolhaum, escolhaDois: choicesControl.escolhadois))
         }
 
         choicesControl.decisaoatual+=1

@@ -27,15 +27,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func sceneDidLoad() {
         self.lastUpdateTime = 0
         physicsWorld.contactDelegate = self
-        
-        
         print(PlayerDAO.getSaves().count)
+        
     }
     
     
     override func didMove(to view: SKView) {
         super.didMove(to: view)
-        
         addSwipesGestures()
         
         entityManager = EntityManager(scene: self)
