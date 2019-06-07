@@ -254,7 +254,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
      func didBegin(_ contact: SKPhysicsContact) {
         var conjunto  = Set<String>()
-        for nome in ["floor","wood","platform","invisibleNode"]{
+        for nome in ["floor","wood","platform","invisibleNode", "floorMystic"]{
                  conjunto.insert(nome)
         }
         
@@ -291,6 +291,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
 
         }
+        if (contact.bodyA.node!.name == "floorMystic" || contact.bodyB.node!.name == "floorMystic"){
+            
+            if contact.bodyA.node?.name == "player"{
+                contact.bodyA.node?.physicsBody?.affectedByGravity = false
+            }else{
+                contact.bodyB.node?.physicsBody?.affectedByGravity = false
+                
+            }
+        }
+        
         if(contact.bodyA.node?.name == "water" || contact.bodyB.node?.name == "water" ){
             (self.view!.window!.rootViewController as! GameViewController).restartScene()
         }
