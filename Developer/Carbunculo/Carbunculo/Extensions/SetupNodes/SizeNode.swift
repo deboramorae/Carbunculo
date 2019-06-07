@@ -22,7 +22,7 @@ extension CGSize {
         public static let floor2 : CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 1005, height: 54))
         public static let floor3: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 1085, height: 61))
          public static let floor4: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 755, height: 48))
-        public static let floor5: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 1000, height: 51))
+        public static let floor5: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 1080, height: 51))
         public static let floorMystic: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 1265, height: 68))
         
         

@@ -14,7 +14,7 @@ class FloorMysticNode: SKSpriteNode{
         
         super.init(texture: SKTexture.imageNamed.floorMystic, color: .green, size: CGSize.sizeNode.floorMystic)
         self.name = "Floor"
-        //self.position = CGPoint.initialPositionNode.floorNode
+        self.position = CGPoint.initialPositionNode.floorMystic
         self.anchorPoint = CGPoint.anchorPointNode.floorNode
         self.zPosition = 1
     }
