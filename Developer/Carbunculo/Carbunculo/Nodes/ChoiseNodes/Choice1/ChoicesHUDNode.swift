@@ -21,7 +21,7 @@ class ChoicesHUDNode : SKSpriteNode {
         let choiseButton1 = ChoiceButtonNode(backgroundNamed: textureButton1) {
             print("Botão 1 pressionado")
             self.removeChoicesHUD()
-            self.addPoints(points: 2)
+            self.addPoints(points: 1)
             EntityManager.ischoosing = false
             cena.entityManager.updatePositionPlayerInChoice_Save(numberChoice: numberChoice)
             self.atualizar(opcaoEscolhida: 1, numeroDoMomentoAtual: numberChoice)
@@ -33,7 +33,7 @@ class ChoicesHUDNode : SKSpriteNode {
         let choiseButton2 = ChoiceButtonNode(backgroundNamed: textureButton2) {
             print("Botão 2 pressionado")
             self.removeChoicesHUD()
-            self.addPoints(points: 1)
+            self.addPoints(points: 2)
             EntityManager.ischoosing = false
             cena.entityManager.updatePositionPlayerInChoice_NoSave(numberChoice: numberChoice)
             self.atualizar(opcaoEscolhida: 2, numeroDoMomentoAtual: numberChoice)

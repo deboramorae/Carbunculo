@@ -25,6 +25,9 @@ extension CGPoint {
         
         public static let background5 : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: -SKViewSizeRect.width/2 + (1480 * 4), y: 0))
         
+        public static let background6 : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: -SKViewSizeRect.width/2 + (1480 * 5), y: 0))
+        
+        
         public static let floorNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: -90, y: -334/2 ))
         
         public static let playerNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: (-SKViewSizeRect.width / 2), y: 220))
@@ -59,7 +62,7 @@ extension CGPoint {
         
         public static let platform8: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 5820, y: -95))
         
-        public static let platform9: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 6509, y: 0))
+        public static let platform9: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 6509, y: 20))
         
         
         
@@ -106,7 +109,15 @@ extension CGPoint {
 
         public static let playerFirstChoice_NoSave: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1800, y: 0))
         
+        public static let playerSeconfChoice_Save : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 6500, y: 220))
+        
         public static let minionNode : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1800, y: 0))
+        
+        public static let animalSave : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 6500, y: -252/2))
+        
+        public static let coracaoNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 6510, y: -70))
+        
+        
         
         
     }
