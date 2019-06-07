@@ -16,5 +16,11 @@ class StateIdle:GKState{
     }
     override func didEnter(from previousState: GKState?) {
         print("Entrou Idle")
+
+        if playerWalkSong.songIsPlaying() {
+            playerWalkSong.stopSong()
+            isPlayerWalk = false
+        }
+
     }
 }

@@ -12,6 +12,7 @@ import Foundation
 let backgroundSong_Phase01 = AVMusicPlayer(name: "background-test")
 let playerJumpSong = AVMusicPlayer(name: "jump")
 let playerWalkSong = AVMusicPlayer(name: "walk")
+var isPlayerWalk = false
 let pauseSong = AVMusicPlayer(name: "pause")
 let unpauseSong = AVMusicPlayer(name: "unpause")
 let restartSong = AVMusicPlayer(name: "restart")

@@ -43,6 +43,11 @@ class GameViewController: UIViewController {
     @IBAction func play(_ sender: Any) {
         unpauseSong.prepareMusic()
         unpauseSong.playSong()
+        
+        if isPlayerWalk {
+            playerWalkSong.playSong()
+        }
+        
         backgroundSong_Phase01.playSong()
         self.hiddenHud()
         cena.entityManager.alternatePause()
@@ -52,6 +57,11 @@ class GameViewController: UIViewController {
         if backgroundSong_Phase01.songIsPlaying() {
             backgroundSong_Phase01.pauseSong()
         }
+        
+        if playerWalkSong.songIsPlaying() {
+            playerWalkSong.pauseSong()
+        }
+
         pauseSong.prepareMusic()
         pauseSong.playSong()
         self.showHud()
@@ -76,7 +86,7 @@ class GameViewController: UIViewController {
         imageHUD.isHidden = true
     }
     
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hiddenHud()
