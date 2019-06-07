@@ -8,4 +8,14 @@
 
 import Foundation
 
-let background_Phase01 = AVMusicPlayer(name: "background-test")
+
+let backgroundSong_Phase01 = AVMusicPlayer(name: "background-test")
+let playerJumpSong = AVMusicPlayer(name: "jump")
+let playerWalkSong = AVMusicPlayer(name: "walk")
+let pauseSong = AVMusicPlayer(name: "pause")
+let unpauseSong = AVMusicPlayer(name: "unpause")
+let restartSong = AVMusicPlayer(name: "restart")
+let carbunculoProxSong01 = AVMusicPlayer(name: "carbunculo-01")
+let carbunculoProxSong02 = AVMusicPlayer(name: "carbunculo-02")
+let carbunculoProxSong03 = AVMusicPlayer(name: "carbunculo-03")
+

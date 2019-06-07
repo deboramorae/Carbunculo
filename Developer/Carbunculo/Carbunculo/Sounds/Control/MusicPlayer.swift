@@ -42,6 +42,10 @@ class AVMusicPlayer {
         self.player.stop()
     }
     
+    func pauseSong(){
+        self.player.pause()
+    }
+    
     func songIsPlaying() -> Bool {
         return self.player.isPlaying
     }

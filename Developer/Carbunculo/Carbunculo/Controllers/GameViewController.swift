@@ -33,17 +33,27 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func restart(_ sender: Any) {
+        restartSong.prepareMusic()
+        restartSong.playSong()
         self.hiddenHud()
         //cena.entityManager.restartScene()
         restartScene()
     }
     
     @IBAction func play(_ sender: Any) {
+        unpauseSong.prepareMusic()
+        unpauseSong.playSong()
+        backgroundSong_Phase01.playSong()
         self.hiddenHud()
         cena.entityManager.alternatePause()
     }
     
     @IBAction func pausar(_ sender: Any) {
+        if backgroundSong_Phase01.songIsPlaying() {
+            backgroundSong_Phase01.pauseSong()
+        }
+        pauseSong.prepareMusic()
+        pauseSong.playSong()
         self.showHud()
         cena.entityManager.alternatePause()
     }
