@@ -24,6 +24,7 @@ class ChoicesHUDNode : SKSpriteNode {
             self.addPoints(points: 2)
             EntityManager.ischoosing = false
             cena.entityManager.updatePositionPlayerInChoice_Save(numberChoice: numberChoice)
+            self.atualizar(opcaoEscolhida: 1, numeroDoMomentoAtual: numberChoice)
         }
         
         choiseButton1.position = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 0, y: 0))
@@ -35,12 +36,26 @@ class ChoicesHUDNode : SKSpriteNode {
             self.addPoints(points: 1)
             EntityManager.ischoosing = false
             cena.entityManager.updatePositionPlayerInChoice_NoSave(numberChoice: numberChoice)
+            self.atualizar(opcaoEscolhida: 2, numeroDoMomentoAtual: numberChoice)
         }
         choiseButton2.position = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 0, y: -55))
         
         self.addChild(choiseButton2)
         
         self.isHidden = true
+    }
+    
+    private func atualizar(opcaoEscolhida:Int,numeroDoMomentoAtual:Int){
+        choicesControl.decisaoatual = numeroDoMomentoAtual
+        switch(numeroDoMomentoAtual){
+            case 1:
+                choicesControl.escolhaum   = opcaoEscolhida
+                break;
+            default:
+                choicesControl.escolhadois = opcaoEscolhida
+                break;
+        }
+        choicesControl.mostrarInformacoes()
     }
     
     private func addPoints(points: Int) {
