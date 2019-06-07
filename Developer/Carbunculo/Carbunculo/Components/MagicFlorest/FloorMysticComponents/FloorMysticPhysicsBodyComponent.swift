@@ -17,8 +17,8 @@ class FloorMysticPhysicsBodyComponent : GKComponent{
           let physicsBody = CGSize.sizeProportinalWithFrame(size: CGSize(width: CGSize.sizeNode.floorMystic.width, height: CGSize.sizeNode.floorMystic.height - 60))
         
         node.physicsBody = SKPhysicsBody(rectangleOf: physicsBody)
-        node.physicsBody?.node?.zRotation = 0.1
-        node.name                           = "floor"
+        node.physicsBody?.node?.zRotation = 0.0349
+        node.name                           = "floorMystic"
         node.physicsBody?.affectedByGravity = false
         node.physicsBody?.isDynamic         = false
         node.physicsBody?.categoryBitMask   |= SKPhysicsBody.CategoryBitMask.scenario
