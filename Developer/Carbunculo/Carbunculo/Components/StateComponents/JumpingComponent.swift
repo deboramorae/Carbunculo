@@ -21,12 +21,21 @@ class JumpingComponent:GKComponent{
         if !EntityManager.ischoosing{
             if let component = entity!.component(ofType: PlayerStateMachineComponent.self) {
                 if component.maquina.enter(StateJumping.self){
+                    
+                    if playerWalkSong.songIsPlaying() {
+                        playerWalkSong.stopSong()
+                        isPlayerWalk = false
+                    }
+
                     player.physicsBody?.affectedByGravity = true
                     player.physicsBody?.isDynamic = true
                     
                     player.physicsBody?.applyImpulse(proportionalForceFrame(force: CGVector(dx: 0, dy: CGSize.sizeNode.playerNode.height * 1.1)))
                     player.removeAllActions()
                     player.run(Animations.Player.jump)
+                    
+                    playerJumpSong.prepareMusic()
+                    playerJumpSong.playSong()
                 }
             }
         }

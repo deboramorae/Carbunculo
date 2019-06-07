@@ -49,6 +49,14 @@
 		84281D9B22AA92F6006F0825 /* background-test.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84281D9A22AA92F6006F0825 /* background-test.mp3 */; };
 		846A9331229C5DB400A31D1F /* BackgroundNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A9330229C5DB400A31D1F /* BackgroundNode.swift */; };
 		846A9333229C5FBC00A31D1F /* BackgroundEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A9332229C5FBC00A31D1F /* BackgroundEntity.swift */; };
+		846EBD7522AA9C1700F7DD75 /* carbunculo-01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 846EBD6D22AA9C1600F7DD75 /* carbunculo-01.mp3 */; };
+		846EBD7622AA9C1700F7DD75 /* pause.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 846EBD6E22AA9C1600F7DD75 /* pause.mp3 */; };
+		846EBD7722AA9C1700F7DD75 /* jump.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 846EBD6F22AA9C1700F7DD75 /* jump.mp3 */; };
+		846EBD7822AA9C1700F7DD75 /* carbunculo-02.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 846EBD7022AA9C1700F7DD75 /* carbunculo-02.mp3 */; };
+		846EBD7922AA9C1700F7DD75 /* unpause.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 846EBD7122AA9C1700F7DD75 /* unpause.mp3 */; };
+		846EBD7A22AA9C1700F7DD75 /* walk.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 846EBD7222AA9C1700F7DD75 /* walk.mp3 */; };
+		846EBD7B22AA9C1700F7DD75 /* restart.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 846EBD7322AA9C1700F7DD75 /* restart.mp3 */; };
+		846EBD7C22AA9C1700F7DD75 /* carbunculo-03.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 846EBD7422AA9C1700F7DD75 /* carbunculo-03.mp3 */; };
 		84AC276C2295BB0D00D3A6C2 /* FloorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC276B2295BB0D00D3A6C2 /* FloorNode.swift */; };
 		84AC27702295C23F00D3A6C2 /* FloorComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC276F2295C23F00D3A6C2 /* FloorComponent.swift */; };
 		84AC27732296F43F00D3A6C2 /* FloorEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC27722296F43F00D3A6C2 /* FloorEntity.swift */; };
@@ -161,6 +169,14 @@
 		84281D9A22AA92F6006F0825 /* background-test.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "background-test.mp3"; sourceTree = "<group>"; };
 		846A9330229C5DB400A31D1F /* BackgroundNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundNode.swift; sourceTree = "<group>"; };
 		846A9332229C5FBC00A31D1F /* BackgroundEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundEntity.swift; sourceTree = "<group>"; };
+		846EBD6D22AA9C1600F7DD75 /* carbunculo-01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "carbunculo-01.mp3"; path = "../../../../../Sound/Efects/final/carbunculo-01.mp3"; sourceTree = "<group>"; };
+		846EBD6E22AA9C1600F7DD75 /* pause.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = pause.mp3; path = ../../../../../Sound/Efects/final/pause.mp3; sourceTree = "<group>"; };
+		846EBD6F22AA9C1700F7DD75 /* jump.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = jump.mp3; path = ../../../../../Sound/Efects/final/jump.mp3; sourceTree = "<group>"; };
+		846EBD7022AA9C1700F7DD75 /* carbunculo-02.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "carbunculo-02.mp3"; path = "../../../../../Sound/Efects/final/carbunculo-02.mp3"; sourceTree = "<group>"; };
+		846EBD7122AA9C1700F7DD75 /* unpause.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = unpause.mp3; path = ../../../../../Sound/Efects/final/unpause.mp3; sourceTree = "<group>"; };
+		846EBD7222AA9C1700F7DD75 /* walk.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = walk.mp3; path = ../../../../../Sound/Efects/final/walk.mp3; sourceTree = "<group>"; };
+		846EBD7322AA9C1700F7DD75 /* restart.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = restart.mp3; path = ../../../../../Sound/Efects/final/restart.mp3; sourceTree = "<group>"; };
+		846EBD7422AA9C1700F7DD75 /* carbunculo-03.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "carbunculo-03.mp3"; path = "../../../../../Sound/Efects/final/carbunculo-03.mp3"; sourceTree = "<group>"; };
 		84AC276B2295BB0D00D3A6C2 /* FloorNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorNode.swift; sourceTree = "<group>"; };
 		84AC276F2295C23F00D3A6C2 /* FloorComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorComponent.swift; sourceTree = "<group>"; };
 		84AC27722296F43F00D3A6C2 /* FloorEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorEntity.swift; sourceTree = "<group>"; };
@@ -348,6 +364,14 @@
 			isa = PBXGroup;
 			children = (
 				84281D9A22AA92F6006F0825 /* background-test.mp3 */,
+				846EBD6D22AA9C1600F7DD75 /* carbunculo-01.mp3 */,
+				846EBD7022AA9C1700F7DD75 /* carbunculo-02.mp3 */,
+				846EBD7422AA9C1700F7DD75 /* carbunculo-03.mp3 */,
+				846EBD6F22AA9C1700F7DD75 /* jump.mp3 */,
+				846EBD6E22AA9C1600F7DD75 /* pause.mp3 */,
+				846EBD7322AA9C1700F7DD75 /* restart.mp3 */,
+				846EBD7122AA9C1700F7DD75 /* unpause.mp3 */,
+				846EBD7222AA9C1700F7DD75 /* walk.mp3 */,
 			);
 			path = mp3;
 			sourceTree = "<group>";
@@ -706,10 +730,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				846EBD7B22AA9C1700F7DD75 /* restart.mp3 in Resources */,
 				84D3713E2294309700922D4B /* Main.storyboard in Resources */,
 				84D371352294309700922D4B /* GameScene.sks in Resources */,
+				846EBD7C22AA9C1700F7DD75 /* carbunculo-03.mp3 in Resources */,
+				846EBD7922AA9C1700F7DD75 /* unpause.mp3 in Resources */,
+				846EBD7722AA9C1700F7DD75 /* jump.mp3 in Resources */,
 				84281D9B22AA92F6006F0825 /* background-test.mp3 in Resources */,
+				846EBD7A22AA9C1700F7DD75 /* walk.mp3 in Resources */,
 				84D371402294309700922D4B /* Assets.xcassets in Resources */,
+				846EBD7522AA9C1700F7DD75 /* carbunculo-01.mp3 in Resources */,
+				846EBD7822AA9C1700F7DD75 /* carbunculo-02.mp3 in Resources */,
+				846EBD7622AA9C1700F7DD75 /* pause.mp3 in Resources */,
 				84D371432294309700922D4B /* LaunchScreen.storyboard in Resources */,
 				84D371372294309700922D4B /* Actions.sks in Resources */,
 			);

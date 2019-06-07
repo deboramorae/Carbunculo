@@ -15,6 +15,7 @@ class AVMusicPlayer {
     
     init(name: String) {
         self.name = name
+        self.prepareMusic()
     }
     
     func prepareMusic(){
@@ -38,8 +39,16 @@ class AVMusicPlayer {
         self.player.play()
     }
     
+    func enterInLooping(){
+        self.player.numberOfLoops = -1
+    }
+    
     func stopSong(){
         self.player.stop()
+    }
+    
+    func pauseSong(){
+        self.player.pause()
     }
     
     func songIsPlaying() -> Bool {
