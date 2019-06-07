@@ -182,6 +182,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             entityManager.add(windNode)
             entityManager.add(windNode2)
+            
+            background_Phase01.prepareMusic()
+            background_Phase01.playSong()
         }
     }
     
