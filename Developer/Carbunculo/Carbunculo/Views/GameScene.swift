@@ -55,6 +55,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             let background6 = BackgroundEntity(entityManager: entityManager, texture: SKTexture.imageNamed.background6, position: CGPoint.initialPositionNode.background6)
             
+            let background7 = BackgroundEntity(entityManager: entityManager, texture: SKTexture.imageNamed.background7, position: CGPoint.initialPositionNode.background7)
+            
             let floor = FloorEntity(entityManager: entityManager, cena: self, positionNode: CGPoint.initialPositionNode.floorNode, texture : SKTexture.imageNamed.floor, size: CGSize.sizeNode.floorNode)
             
             let entityPlatform = PlatformEntity(entityManager: entityManager, scene: self, texture: SKTexture.imageNamed.platform, position: CGPoint.initialPositionNode.platformNode, size: CGSize.sizeNode.platformNode)
@@ -83,7 +85,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             let floor5 = FloorEntity(entityManager: entityManager, cena: self, positionNode: CGPoint.initialPositionNode.floorNode5, texture: SKTexture.imageNamed.floor5, size: CGSize.sizeNode.floor5)
             
-            let floor6 = FloorEntity(entityManager: entityManager, cena: self, positionNode: CGPoint.initialPositionNode.floorNode6, texture: SKTexture.imageNamed.floor6, size: CGSize.sizeNode.floor6)
+            let floor6 = FloorMysticEntity(entityManager: entityManager, scene: self)
 
             let player        = Player(entityManager: entityManager)
             let entidadeWater = WaterEntity(entityManager: entityManager, cena: self, positionNode: CGPoint.initialPositionNode.waterNode, texture: SKTexture.imageNamed.water, size: CGSize.sizeNode.waterNode)
@@ -134,6 +136,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             entityManager.add(background4)
             entityManager.add(background5)
             entityManager.add(background6)
+            entityManager.add(background7)
             
             entityManager.add(floor)
             entityManager.add(floor2)
