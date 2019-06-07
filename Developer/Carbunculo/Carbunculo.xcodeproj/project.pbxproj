@@ -44,8 +44,19 @@
 		8410A2F422947C7A00F73DC0 /* RunComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8410A2F322947C7A00F73DC0 /* RunComponent.swift */; };
 		84124730229F05A000052953 /* ChoiceButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412472F229F05A000052953 /* ChoiceButtonNode.swift */; };
 		84124734229F12E800052953 /* ChoicesControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84124733229F12E800052953 /* ChoicesControl.swift */; };
+		84281D9722AA9225006F0825 /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84281D9622AA9225006F0825 /* MusicPlayer.swift */; };
+		84281D9922AA9277006F0825 /* MusicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84281D9822AA9277006F0825 /* MusicController.swift */; };
+		84281D9B22AA92F6006F0825 /* background-test.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84281D9A22AA92F6006F0825 /* background-test.mp3 */; };
 		846A9331229C5DB400A31D1F /* BackgroundNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A9330229C5DB400A31D1F /* BackgroundNode.swift */; };
 		846A9333229C5FBC00A31D1F /* BackgroundEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A9332229C5FBC00A31D1F /* BackgroundEntity.swift */; };
+		846EBD7522AA9C1700F7DD75 /* carbunculo-01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 846EBD6D22AA9C1600F7DD75 /* carbunculo-01.mp3 */; };
+		846EBD7622AA9C1700F7DD75 /* pause.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 846EBD6E22AA9C1600F7DD75 /* pause.mp3 */; };
+		846EBD7722AA9C1700F7DD75 /* jump.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 846EBD6F22AA9C1700F7DD75 /* jump.mp3 */; };
+		846EBD7822AA9C1700F7DD75 /* carbunculo-02.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 846EBD7022AA9C1700F7DD75 /* carbunculo-02.mp3 */; };
+		846EBD7922AA9C1700F7DD75 /* unpause.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 846EBD7122AA9C1700F7DD75 /* unpause.mp3 */; };
+		846EBD7A22AA9C1700F7DD75 /* walk.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 846EBD7222AA9C1700F7DD75 /* walk.mp3 */; };
+		846EBD7B22AA9C1700F7DD75 /* restart.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 846EBD7322AA9C1700F7DD75 /* restart.mp3 */; };
+		846EBD7C22AA9C1700F7DD75 /* carbunculo-03.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 846EBD7422AA9C1700F7DD75 /* carbunculo-03.mp3 */; };
 		84AC276C2295BB0D00D3A6C2 /* FloorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC276B2295BB0D00D3A6C2 /* FloorNode.swift */; };
 		84AC27702295C23F00D3A6C2 /* FloorComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC276F2295C23F00D3A6C2 /* FloorComponent.swift */; };
 		84AC27732296F43F00D3A6C2 /* FloorEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC27722296F43F00D3A6C2 /* FloorEntity.swift */; };
@@ -75,6 +86,10 @@
 		EA03F5B722A9B59000581C44 /* CarbunculoNodeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA03F5B622A9B59000581C44 /* CarbunculoNodeComponent.swift */; };
 		EA03F5B922A9B60C00581C44 /* CarbunculoPhysicsBodyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA03F5B822A9B60C00581C44 /* CarbunculoPhysicsBodyComponent.swift */; };
 		EA03F5BB22A9B69400581C44 /* CarbunculoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA03F5BA22A9B69400581C44 /* CarbunculoEntity.swift */; };
+		EA03F5BD22AA0BF700581C44 /* FloorMysticNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA03F5BC22AA0BF700581C44 /* FloorMysticNode.swift */; };
+		EA03F5C022AA0EB900581C44 /* FloorMysticNodeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA03F5BF22AA0EB900581C44 /* FloorMysticNodeComponent.swift */; };
+		EA03F5C222AA0F6400581C44 /* FloorMysticPhysicsBodyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA03F5C122AA0F6400581C44 /* FloorMysticPhysicsBodyComponent.swift */; };
+		EA03F5C422AA10B000581C44 /* FloorMysticEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA03F5C322AA10B000581C44 /* FloorMysticEntity.swift */; };
 		EA09493622A19AFD002B105B /* BalaoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA09493522A19AFD002B105B /* BalaoEntity.swift */; };
 		EA1C5A93229F571F00FC65CB /* TextureNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1C5A92229F571F00FC65CB /* TextureNode.swift */; };
 		EA262F21229F0FA500C46986 /* StonesNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA262F20229F0FA500C46986 /* StonesNode.swift */; };
@@ -153,8 +168,19 @@
 		8410A2F322947C7A00F73DC0 /* RunComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunComponent.swift; sourceTree = "<group>"; };
 		8412472F229F05A000052953 /* ChoiceButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceButtonNode.swift; sourceTree = "<group>"; };
 		84124733229F12E800052953 /* ChoicesControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicesControl.swift; sourceTree = "<group>"; };
+		84281D9622AA9225006F0825 /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
+		84281D9822AA9277006F0825 /* MusicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicController.swift; sourceTree = "<group>"; };
+		84281D9A22AA92F6006F0825 /* background-test.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "background-test.mp3"; sourceTree = "<group>"; };
 		846A9330229C5DB400A31D1F /* BackgroundNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundNode.swift; sourceTree = "<group>"; };
 		846A9332229C5FBC00A31D1F /* BackgroundEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundEntity.swift; sourceTree = "<group>"; };
+		846EBD6D22AA9C1600F7DD75 /* carbunculo-01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "carbunculo-01.mp3"; path = "../../../../../Sound/Efects/final/carbunculo-01.mp3"; sourceTree = "<group>"; };
+		846EBD6E22AA9C1600F7DD75 /* pause.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = pause.mp3; path = ../../../../../Sound/Efects/final/pause.mp3; sourceTree = "<group>"; };
+		846EBD6F22AA9C1700F7DD75 /* jump.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = jump.mp3; path = ../../../../../Sound/Efects/final/jump.mp3; sourceTree = "<group>"; };
+		846EBD7022AA9C1700F7DD75 /* carbunculo-02.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "carbunculo-02.mp3"; path = "../../../../../Sound/Efects/final/carbunculo-02.mp3"; sourceTree = "<group>"; };
+		846EBD7122AA9C1700F7DD75 /* unpause.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = unpause.mp3; path = ../../../../../Sound/Efects/final/unpause.mp3; sourceTree = "<group>"; };
+		846EBD7222AA9C1700F7DD75 /* walk.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = walk.mp3; path = ../../../../../Sound/Efects/final/walk.mp3; sourceTree = "<group>"; };
+		846EBD7322AA9C1700F7DD75 /* restart.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = restart.mp3; path = ../../../../../Sound/Efects/final/restart.mp3; sourceTree = "<group>"; };
+		846EBD7422AA9C1700F7DD75 /* carbunculo-03.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "carbunculo-03.mp3"; path = "../../../../../Sound/Efects/final/carbunculo-03.mp3"; sourceTree = "<group>"; };
 		84AC276B2295BB0D00D3A6C2 /* FloorNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorNode.swift; sourceTree = "<group>"; };
 		84AC276F2295C23F00D3A6C2 /* FloorComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorComponent.swift; sourceTree = "<group>"; };
 		84AC27722296F43F00D3A6C2 /* FloorEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorEntity.swift; sourceTree = "<group>"; };
@@ -186,6 +212,10 @@
 		EA03F5B622A9B59000581C44 /* CarbunculoNodeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbunculoNodeComponent.swift; sourceTree = "<group>"; };
 		EA03F5B822A9B60C00581C44 /* CarbunculoPhysicsBodyComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbunculoPhysicsBodyComponent.swift; sourceTree = "<group>"; };
 		EA03F5BA22A9B69400581C44 /* CarbunculoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbunculoEntity.swift; sourceTree = "<group>"; };
+		EA03F5BC22AA0BF700581C44 /* FloorMysticNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorMysticNode.swift; sourceTree = "<group>"; };
+		EA03F5BF22AA0EB900581C44 /* FloorMysticNodeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorMysticNodeComponent.swift; sourceTree = "<group>"; };
+		EA03F5C122AA0F6400581C44 /* FloorMysticPhysicsBodyComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorMysticPhysicsBodyComponent.swift; sourceTree = "<group>"; };
+		EA03F5C322AA10B000581C44 /* FloorMysticEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorMysticEntity.swift; sourceTree = "<group>"; };
 		EA09493522A19AFD002B105B /* BalaoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalaoEntity.swift; sourceTree = "<group>"; };
 		EA1C5A92229F571F00FC65CB /* TextureNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureNode.swift; sourceTree = "<group>"; };
 		EA262F20229F0FA500C46986 /* StonesNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StonesNode.swift; sourceTree = "<group>"; };
@@ -318,6 +348,40 @@
 				84124733229F12E800052953 /* ChoicesControl.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		84281D9322AA91E3006F0825 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				84281D9422AA91F9006F0825 /* Control */,
+				84281D9522AA9201006F0825 /* mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		84281D9422AA91F9006F0825 /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				84281D9622AA9225006F0825 /* MusicPlayer.swift */,
+				84281D9822AA9277006F0825 /* MusicController.swift */,
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
+		84281D9522AA9201006F0825 /* mp3 */ = {
+			isa = PBXGroup;
+			children = (
+				84281D9A22AA92F6006F0825 /* background-test.mp3 */,
+				846EBD6D22AA9C1600F7DD75 /* carbunculo-01.mp3 */,
+				846EBD7022AA9C1700F7DD75 /* carbunculo-02.mp3 */,
+				846EBD7422AA9C1700F7DD75 /* carbunculo-03.mp3 */,
+				846EBD6F22AA9C1700F7DD75 /* jump.mp3 */,
+				846EBD6E22AA9C1600F7DD75 /* pause.mp3 */,
+				846EBD7322AA9C1700F7DD75 /* restart.mp3 */,
+				846EBD7122AA9C1700F7DD75 /* unpause.mp3 */,
+				846EBD7222AA9C1700F7DD75 /* walk.mp3 */,
+			);
+			path = mp3;
 			sourceTree = "<group>";
 		};
 		84AC27712295D49600D3A6C2 /* StateComponents */ = {
@@ -472,6 +536,7 @@
 		84D371312294309700922D4B /* Carbunculo */ = {
 			isa = PBXGroup;
 			children = (
+				84281D9322AA91E3006F0825 /* Sounds */,
 				66981FFF22A83FE000A61689 /* DAO */,
 				84124732229F12BD00052953 /* Model */,
 				666BA971229C7C78000B27C8 /* Animation */,
@@ -500,9 +565,19 @@
 			path = CarbunculoComponents;
 			sourceTree = "<group>";
 		};
+		EA03F5BE22AA0E9F00581C44 /* FloorMysticComponents */ = {
+			isa = PBXGroup;
+			children = (
+				EA03F5BF22AA0EB900581C44 /* FloorMysticNodeComponent.swift */,
+				EA03F5C122AA0F6400581C44 /* FloorMysticPhysicsBodyComponent.swift */,
+			);
+			path = FloorMysticComponents;
+			sourceTree = "<group>";
+		};
 		EA4BC04A22A76F2D00870650 /* MagicFlorest */ = {
 			isa = PBXGroup;
 			children = (
+				EA03F5BE22AA0E9F00581C44 /* FloorMysticComponents */,
 				EA03F5B522A9B55100581C44 /* CarbunculoComponents */,
 				EA4BC04D22A76F8C00870650 /* MinionComponents */,
 			);
@@ -556,6 +631,7 @@
 			children = (
 				EA4BC04822A76C7600870650 /* MinionNode.swift */,
 				EA03F5B322A9B26300581C44 /* CarbunculoNode.swift */,
+				EA03F5BC22AA0BF700581C44 /* FloorMysticNode.swift */,
 			);
 			path = MagicFlorest;
 			sourceTree = "<group>";
@@ -565,6 +641,7 @@
 			children = (
 				EAA0ED7E22A83BE800480213 /* MinionEntity.swift */,
 				EA03F5BA22A9B69400581C44 /* CarbunculoEntity.swift */,
+				EA03F5C322AA10B000581C44 /* FloorMysticEntity.swift */,
 			);
 			path = MagicFlorestEntity;
 			sourceTree = "<group>";
@@ -673,9 +750,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				846EBD7B22AA9C1700F7DD75 /* restart.mp3 in Resources */,
 				84D3713E2294309700922D4B /* Main.storyboard in Resources */,
 				84D371352294309700922D4B /* GameScene.sks in Resources */,
+				846EBD7C22AA9C1700F7DD75 /* carbunculo-03.mp3 in Resources */,
+				846EBD7922AA9C1700F7DD75 /* unpause.mp3 in Resources */,
+				846EBD7722AA9C1700F7DD75 /* jump.mp3 in Resources */,
+				84281D9B22AA92F6006F0825 /* background-test.mp3 in Resources */,
+				846EBD7A22AA9C1700F7DD75 /* walk.mp3 in Resources */,
 				84D371402294309700922D4B /* Assets.xcassets in Resources */,
+				846EBD7522AA9C1700F7DD75 /* carbunculo-01.mp3 in Resources */,
+				846EBD7822AA9C1700F7DD75 /* carbunculo-02.mp3 in Resources */,
+				846EBD7622AA9C1700F7DD75 /* pause.mp3 in Resources */,
 				84D371432294309700922D4B /* LaunchScreen.storyboard in Resources */,
 				84D371372294309700922D4B /* Actions.sks in Resources */,
 			);
@@ -691,9 +777,11 @@
 				84D371392294309700922D4B /* GameScene.swift in Sources */,
 				666BA97A229C82C5000B27C8 /* MaracujaPhysicsBodyComponent.swift in Sources */,
 				EAA7CCF822A05374005DD0F7 /* QuicksandEntity.swift in Sources */,
+				EA03F5C022AA0EB900581C44 /* FloorMysticNodeComponent.swift in Sources */,
 				EA58B2212295C8860099C146 /* PlatformNode.swift in Sources */,
 				EA1C5A93229F571F00FC65CB /* TextureNode.swift in Sources */,
 				66C63BD62295EDE100CCEE3A /* WaterPhysicsBodyComponent.swift in Sources */,
+				EA03F5C222AA0F6400581C44 /* FloorMysticPhysicsBodyComponent.swift in Sources */,
 				EA03F5B222A9976A00581C44 /* CoracaoEntity.swift in Sources */,
 				EA03F5BB22A9B69400581C44 /* CarbunculoEntity.swift in Sources */,
 				EAE05C942294885A00B78846 /* RemoteControl.swift in Sources */,
@@ -725,6 +813,7 @@
 				66C63BB02294681000CCEE3A /* StateIdle.swift in Sources */,
 				66C63BCA22949B4600CCEE3A /* CameraComponent.swift in Sources */,
 				84B0581F2294414300B7E9A0 /* EntityManager.swift in Sources */,
+				EA03F5BD22AA0BF700581C44 /* FloorMysticNode.swift in Sources */,
 				66C63BD02295E7A100CCEE3A /* WaterEntity.swift in Sources */,
 				EA4BC04922A76C7600870650 /* MinionNode.swift in Sources */,
 				EAA0ED7F22A83BE800480213 /* MinionEntity.swift in Sources */,
@@ -761,6 +850,7 @@
 				EAB872C9229C7D5300A7FE9E /* WindNodeComponent.swift in Sources */,
 				EA5FE590229743040027D77F /* FloorPhysicsBodyComponent.swift in Sources */,
 				84AC279B2297408500D3A6C2 /* InitialPositionNode.swift in Sources */,
+				EA03F5C422AA10B000581C44 /* FloorMysticEntity.swift in Sources */,
 				EA58B240229629A00099C146 /* PlatformPhysicsBodyComponent.swift in Sources */,
 				66C63BC422948CEB00CCEE3A /* StatePaused.swift in Sources */,
 				66C63BC222948C1000CCEE3A /* MachineScene.swift in Sources */,
@@ -770,6 +860,7 @@
 				84B0581D22943F2A00B7E9A0 /* Player.swift in Sources */,
 				66C63BD22295EB6A00CCEE3A /* WaterNodeComponent.swift in Sources */,
 				EA58B23C229626EF0099C146 /* WoodEntity.swift in Sources */,
+				84281D9922AA9277006F0825 /* MusicController.swift in Sources */,
 				84B058172294377800B7E9A0 /* PlayerNode.swift in Sources */,
 				66C63BAD2294656700CCEE3A /* MachinePlayer.swift in Sources */,
 				8405E3CA229F7A8A00DB50A6 /* InvisibleChoiceComponent.swift in Sources */,
@@ -780,6 +871,7 @@
 				66C63BBC22946F2100CCEE3A /* JumpingComponent.swift in Sources */,
 				EAB872C3229C79C800A7FE9E /* WindNode.swift in Sources */,
 				EA58B23E229629080099C146 /* PlatformEntity.swift in Sources */,
+				84281D9722AA9225006F0825 /* MusicPlayer.swift in Sources */,
 				8410A2F422947C7A00F73DC0 /* RunComponent.swift in Sources */,
 				666BA977229C8185000B27C8 /* MaracujaEntity.swift in Sources */,
 				EA03F5B922A9B60C00581C44 /* CarbunculoPhysicsBodyComponent.swift in Sources */,
@@ -935,7 +1027,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6HDRUANT3K;
+				DEVELOPMENT_TEAM = 9F5KAYAF75;
 				INFOPLIST_FILE = Carbunculo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -953,7 +1045,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6HDRUANT3K;
+				DEVELOPMENT_TEAM = 9F5KAYAF75;
 				INFOPLIST_FILE = Carbunculo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
