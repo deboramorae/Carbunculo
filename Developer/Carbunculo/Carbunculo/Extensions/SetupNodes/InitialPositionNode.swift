@@ -74,11 +74,15 @@ extension CGPoint {
         
         public static let floorNode4  : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 4150, y: -334/2))
         
-        public static let floorNode5  : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 6440, y: -334/2))
+        public static let floorNode5  : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 6463, y: -334/2))
         
-        public static let floorMystic  : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 7600, y: -270/2))
+        public static let floorMystic  : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 7630, y: -268/2))
         
-        public static let floorMysticInvisible  : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 7600, y: -270/2))
+        public static let floorMysticInvisible  : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 7630, y: -270/2))
+        
+        public static let floorMystic2  : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 8906, y: -187/2))
+        
+        public static let floorMysticInvisible2  : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 8906, y: -189/2))
         
         
         public static let frutinhaNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 550, y: 0))

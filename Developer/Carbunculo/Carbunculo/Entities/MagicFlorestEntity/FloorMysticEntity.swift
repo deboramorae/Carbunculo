@@ -11,17 +11,22 @@ import GameplayKit
 
 class FloorMysticEntity: GKEntity{
     
-    init(entityManager: EntityManager, scene: GameScene){
+    init(entityManager: EntityManager, scene: GameScene, positionInvisibleNode: CGPoint, textureFloor: SKTexture, positionFloor: CGPoint){
         super.init()
         
-        addComponentsToEntity(scene: scene)
+        addComponentsToEntity(scene: scene, positionInvisibleNode: positionInvisibleNode, textureFloor: textureFloor, positionFloor: positionFloor)
         
     }
     
-    func addComponentsToEntity(scene: GameScene){
-        let floor = FloorMysticNode(scene: scene)
+    func addComponentsToEntity(scene: GameScene, positionInvisibleNode: CGPoint, textureFloor: SKTexture, positionFloor: CGPoint){
         
+        let floor = FloorMysticNode(scene: scene)
         let floorInvisible = FloorInvisibleNode(scene: scene)
+        
+        floor.texture = textureFloor
+        floor.position = positionFloor
+        
+        floorInvisible.position = positionInvisibleNode
         
         addComponent(FloorMysticNodeComponent(node: floor, scene: scene))
         addComponent(FloorMysticPhysicsBodyComponent(node: floorInvisible))

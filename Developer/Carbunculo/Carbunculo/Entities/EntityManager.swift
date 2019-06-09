@@ -180,6 +180,7 @@ class EntityManager {
         }
         saveProgress()
     }
+    
     func addTucano(){
         let animal = AnimalEntity(entityManager: self, scene: self.scene as! GameScene, texture: SKTexture.imageNamed.animalSave, position: CGPoint.initialPositionNode.animalSave, size: CGSize.sizeNode.animalSave, name: "tucanoFeliz")
         
