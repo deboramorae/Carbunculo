@@ -123,6 +123,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             let stone = StoneEntity(entityManager: entityManager, scene: self)
             
+            let minion = MinionEntity(entityManager: entityManager, scene: self)
+            
             let balao = BalaoEntity(entityManager: entityManager, scene: self, position: CGPoint.initialPositionNode.balaoNode, name: "balaoMacaco")
             
             let balao2 = BalaoEntity(entityManager: entityManager, scene: self, position: CGPoint.initialPositionNode.balaoNode2, name: "balaoTucano")
@@ -186,6 +188,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             entityManager.add(entityAnimal2)
             
             entityManager.add(stone)
+            entityManager.add(minion)
             
             entityManager.add(windNode)
             entityManager.add(windNode2)
