@@ -120,7 +120,7 @@ extension CGPoint {
 
         public static let playerFirstChoice_NoSave: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1800, y: 0))
         
-        public static let playerSeconfChoice_Save : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 6500, y: 220))
+        public static let playerSecondChoice_NoSave : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 6495, y: 20))
         
         public static let minionNode : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1800, y: 0))
         

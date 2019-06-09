@@ -174,7 +174,8 @@ class EntityManager {
                 if numberChoice == 1 {
                     player.position = CGPoint.initialPositionNode.playerFirstChoice_NoSave
                 }else if numberChoice == 2 {
-                    
+                    self.jump()
+                    player.position = CGPoint.initialPositionNode.playerSecondChoice_NoSave
                 }
             }
         }
