@@ -85,7 +85,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             let floor5 = FloorEntity(entityManager: entityManager, cena: self, positionNode: CGPoint.initialPositionNode.floorNode5, texture: SKTexture.imageNamed.floor5, size: CGSize.sizeNode.floor5)
             
-            let floor6 = FloorMysticEntity(entityManager: entityManager, scene: self)
+            let floor6 = FloorMysticEntity(entityManager: entityManager, scene: self, positionInvisibleNode: CGPoint.initialPositionNode.floorMysticInvisible, textureFloor: SKTexture.imageNamed.floorMystic, positionFloor: CGPoint.initialPositionNode.floorMystic)
+            
+            let floor7 = FloorMysticEntity(entityManager: entityManager, scene: self, positionInvisibleNode: CGPoint.initialPositionNode.floorMysticInvisible2, textureFloor: SKTexture.imageNamed.floorMystic2, positionFloor: CGPoint.initialPositionNode.floorMystic2)
+            
 
             let player        = Player(entityManager: entityManager)
             let entidadeWater = WaterEntity(entityManager: entityManager, cena: self, positionNode: CGPoint.initialPositionNode.waterNode, texture: SKTexture.imageNamed.water, size: CGSize.sizeNode.waterNode)
@@ -100,9 +103,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             let entityWood3   = WoodEntity(entityManager: entityManager, scene: self, positionNode: CGPoint.initialPositionNode.woodNode3, texture: SKTexture.imageNamed.wood3, size : CGSize.sizeNode.woodNode3, sizePhysicsBody: CGSize.sizeNode.woodNode3 )
             
-            let choise = ChoicesEntity(entityManager: entityManager, scene: self,textureDecisao: SKTexture.imageNamed.decisao1, textureButton1: SKTexture.imageNamed.escolha1, textureButton2: SKTexture.imageNamed.escolha2, position: CGPoint.initialPositionNode.choiseHUDNode, numberChoice: 1)
+            let choise = ChoicesEntity(entityManager: entityManager, scene: self,textureDecisao: SKTexture.imageNamed.decisao1, textureButton1: SKTexture.imageNamed.escolha2, textureButton2: SKTexture.imageNamed.escolha1, position: CGPoint.initialPositionNode.choiseHUDNode, numberChoice: 1)
             
-            let choise2 = ChoicesEntity(entityManager: entityManager, scene: self,textureDecisao: SKTexture.imageNamed.decisao2, textureButton1: SKTexture.imageNamed.escolha3, textureButton2: SKTexture.imageNamed.escolha4, position: CGPoint.initialPositionNode.choiseHUDNode2, numberChoice: 2)
+            let choise2 = ChoicesEntity(entityManager: entityManager, scene: self,textureDecisao: SKTexture.imageNamed.decisao2, textureButton1: SKTexture.imageNamed.escolha4, textureButton2: SKTexture.imageNamed.escolha3, position: CGPoint.initialPositionNode.choiseHUDNode2, numberChoice: 2)
             
             let entityQuicksand = QuicksandEntity(entityManager: entityManager, scene: self)
 
@@ -144,6 +147,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             entityManager.add(floor4)
             entityManager.add(floor5)
             entityManager.add(floor6)
+            entityManager.add(floor7)
             
             entityManager.add(player)
             
