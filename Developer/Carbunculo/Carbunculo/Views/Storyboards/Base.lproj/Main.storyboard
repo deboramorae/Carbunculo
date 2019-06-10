@@ -87,6 +87,7 @@
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
                     </view>
                     <connections>
+                        <outlet property="contMaracuja" destination="C8N-J6-zM6" id="93V-Wq-ZO9"/>
                         <outlet property="darkView" destination="BGA-x3-fgL" id="SRe-Do-aaU"/>
                         <outlet property="hudPause" destination="R9N-kv-Xhi" id="YoH-tU-hef"/>
                         <outlet property="imageHUD" destination="C8N-J6-zM6" id="S7q-aY-giC"/>
