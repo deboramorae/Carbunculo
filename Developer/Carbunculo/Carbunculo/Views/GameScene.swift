@@ -103,9 +103,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             let entityWood3   = WoodEntity(entityManager: entityManager, scene: self, positionNode: CGPoint.initialPositionNode.woodNode3, texture: SKTexture.imageNamed.wood3, size : CGSize.sizeNode.woodNode3, sizePhysicsBody: CGSize.sizeNode.woodNode3 )
             
-            let choise = ChoicesEntity(entityManager: entityManager, scene: self,textureDecisao: SKTexture.imageNamed.decisao1, textureButton1: SKTexture.imageNamed.escolha2, textureButton2: SKTexture.imageNamed.escolha1, position: CGPoint.initialPositionNode.choiseHUDNode, numberChoice: 1)
+            let choice = ChoicesEntity(entityManager: entityManager, scene: self,textureDecisao: SKTexture.imageNamed.decisao1, textureButton1: SKTexture.imageNamed.escolha2, textureButton2: SKTexture.imageNamed.escolha1, position: CGPoint.initialPositionNode.choiseHUDNode, numberChoice: 1)
             
-            let choise2 = ChoicesEntity(entityManager: entityManager, scene: self,textureDecisao: SKTexture.imageNamed.decisao2, textureButton1: SKTexture.imageNamed.escolha4, textureButton2: SKTexture.imageNamed.escolha3, position: CGPoint.initialPositionNode.choiseHUDNode2, numberChoice: 2)
+            let choice2 = ChoicesEntity(entityManager: entityManager, scene: self,textureDecisao: SKTexture.imageNamed.decisao2, textureButton1: SKTexture.imageNamed.escolha4, textureButton2: SKTexture.imageNamed.escolha3, position: CGPoint.initialPositionNode.choiseHUDNode2, numberChoice: 2)
+            
+            let choice3 = ChoicesEntity(entityManager: entityManager, scene: self, textureDecisao: SKTexture.imageNamed.decisao2, textureButton1: SKTexture.imageNamed.escolha3, textureButton2: SKTexture.imageNamed.escolha4, position: CGPoint.initialPositionNode.choiseHUDNode3, numberChoice: 3)
             
             let entityQuicksand = QuicksandEntity(entityManager: entityManager, scene: self)
 
@@ -176,8 +178,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             entityManager.add(water2)
             entityManager.add(water3)
             
-            entityManager.add(choise)
-            entityManager.add(choise2)
+            entityManager.add(choice)
+            entityManager.add(choice2)
+            entityManager.add(choice3)
             
             entityManager.add(frutinha01)
             entityManager.add(frutinha02)

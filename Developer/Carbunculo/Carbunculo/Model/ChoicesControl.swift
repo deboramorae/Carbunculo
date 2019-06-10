@@ -16,19 +16,22 @@ public class ChoicesControl {
     var qtdemacas   : Int
     var escolhaum   : Int
     var escolhadois : Int
+    var escolhatres : Int
     init(){
         self.ponctuation  = 0
         self.decisaoatual = 0
         self.qtdemacas    = 0
         self.escolhaum    = 0
-        self.escolhadois  = 0 
+        self.escolhadois  = 0
+        self.escolhatres  = 0
     }
     
     public func mostrarInformacoes(){
         print("Decisao Atual: \(self.decisaoatual)")
         print("EscolhaUm Atual: \(self.escolhaum)")
         print("EscolhaDois Atual: \(self.escolhadois)")
-    }
+        print("EscolhaTres Atual: \(self.escolhatres)")
+        }
 }
 
 public var choicesControl = ChoicesControl()
