@@ -57,7 +57,7 @@ struct Animations{
     struct minion{
         static var idle:SKAction{
             get{
-                let idle          = SKAction.animate(with: Textures.minionidle, timePerFrame: 0.1)
+                let idle          = SKAction.animate(with: Textures.minionidle, timePerFrame: 0.51)
                 let repeatforever = SKAction.repeatForever(idle)
                 return repeatforever
             }
@@ -66,7 +66,7 @@ struct Animations{
     struct carbunculo{
         static var idle:SKAction{
             get{
-                let idle          = SKAction.animate(with: Textures.carbunculoidle, timePerFrame: 0.1)
+                let idle          = SKAction.animate(with: Textures.carbunculoidle, timePerFrame: 0.5)
                 let repeatforever = SKAction.repeatForever(idle)
                 return repeatforever
             }
