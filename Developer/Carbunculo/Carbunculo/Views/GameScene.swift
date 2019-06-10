@@ -32,14 +32,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         print(PlayerDAO.getSaves().count)
         
         
-        let video = SKVideoNode(fileNamed: "BeginningCutscene.mp4")
-        
-        video.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
-        video.size = CGSize(width: self.frame.size.width, height: self.frame.size.height)
-        video.zPosition = 100
-        self.addChild(video)
-        video.play()
-
+//        let video = SKVideoNode(fileNamed: "BeginningCutscene.mp4")
+//        
+//        self.addChild(video)
+//        video.play()
+//
     }
     
     
@@ -51,6 +48,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         do {
             let entidadeCena  = EntidadeCena(cena: self)
+            
+            let cutscene01 = CutsceneEntity(entityManager: entityManager, scene: self, nameFile: "BeginningCutscene.mp4")
             
             let background = BackgroundEntity(entityManager: entityManager, texture: SKTexture.imageNamed.background1, position : CGPoint.initialPositionNode.backgroundNode)
             
@@ -143,6 +142,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             
             entityManager.add(entidadeCena)
+            
+            entityManager.add(cutscene01)
             
             entityManager.add(background)
             entityManager.add(background2)
