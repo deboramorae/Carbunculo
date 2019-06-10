@@ -10,6 +10,18 @@ import Foundation
 import SpriteKit
 
 struct Textures{
+    static var minionidle:[SKTexture]{
+        get{
+            var lista:[SKTexture] = []
+            return lista
+        }
+    }
+    static var carbunculoidle:[SKTexture]{
+        get{
+            var lista:[SKTexture] = []
+            return lista
+        }
+    }
     static var playerJump:[SKTexture]{
         get{
             var lista:[SKTexture] = []

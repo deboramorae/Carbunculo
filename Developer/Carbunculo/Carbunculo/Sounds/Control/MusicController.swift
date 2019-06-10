@@ -19,4 +19,4 @@ let restartSong = AVMusicPlayer(name: "restart")
 let carbunculoProxSong01 = AVMusicPlayer(name: "carbunculo-01")
 let carbunculoProxSong02 = AVMusicPlayer(name: "carbunculo-02")
 let carbunculoProxSong03 = AVMusicPlayer(name: "carbunculo-03")
-
+let maracujaSong = AVMusicPlayer(name: "maracuja")
