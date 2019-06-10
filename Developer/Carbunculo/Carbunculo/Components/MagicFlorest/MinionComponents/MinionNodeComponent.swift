@@ -15,6 +15,9 @@ class MinionNodeComponent : GKSKNodeComponent{
         
         super.init(node: node)
         scene.addChild(node)
+        
+        
+        //node.run(Animations.minion.idle)
     }
     
     required init?(coder aDecoder: NSCoder) {

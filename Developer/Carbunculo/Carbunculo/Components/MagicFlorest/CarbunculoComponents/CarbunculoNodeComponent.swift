@@ -14,6 +14,8 @@ class CarbunculoNodeComponent : GKSKNodeComponent{
         
         super.init(node: node)
         scene.addChild(node)
+        
+//        node.run(Animations.carbunculo)
     }
     
     required init?(coder aDecoder: NSCoder) {
