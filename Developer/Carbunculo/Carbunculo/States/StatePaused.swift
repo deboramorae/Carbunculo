@@ -10,6 +10,7 @@ import Foundation
 import GameplayKit
 
 class StatePaused:GKState{
+    
     override func isValidNextState(_ stateClass: AnyClass) -> Bool {
         return (stateClass is StateUnpaused.Type)
     }

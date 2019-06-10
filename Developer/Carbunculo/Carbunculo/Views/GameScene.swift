@@ -27,15 +27,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func sceneDidLoad() {
         self.lastUpdateTime = 0
         physicsWorld.contactDelegate = self
-        
-        
+        //ATENCAO, SE QUISER APAGAR O SEU SAVE DESCOMENTE A LINHA ABAIXO
+        //PlayerDAO.deleteAllSaves()
         print(PlayerDAO.getSaves().count)
+        
     }
     
     
     override func didMove(to view: SKView) {
         super.didMove(to: view)
-        
         addSwipesGestures()
         
         entityManager = EntityManager(scene: self)
@@ -254,7 +254,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
      func didBegin(_ contact: SKPhysicsContact) {
         var conjunto  = Set<String>()
-        for nome in ["floor","wood","platform","invisibleNode"]{
+        for nome in ["floor","wood","platform","invisibleNode", "floorMystic"]{
                  conjunto.insert(nome)
         }
         
@@ -270,7 +270,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 //TESTAR, SE FUNFAR BELEZA
                 //FUNCIONOU, MAS TEM QUE SER MELHORADA
                 if(nodePlayer.physicsBody!.velocity.dy<50 && nodePlayer.physicsBody!.velocity.dy > -50){
-                    entityManager.playerLanding()
+                    //entityManager.playerLanding()
+                    entityManager.run()
                 }
                 
                 if(contact.bodyA.node!.name == "invisibleNode" || contact.bodyB.node!.name == "invisibleNode"){
@@ -291,6 +292,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
 
         }
+        if (contact.bodyA.node!.name == "floorMystic" || contact.bodyB.node!.name == "floorMystic"){
+            
+            if contact.bodyA.node?.name == "player"{
+                contact.bodyA.node?.physicsBody?.affectedByGravity = false
+            }else{
+                contact.bodyB.node?.physicsBody?.affectedByGravity = false
+                
+            }
+        }
+        
         if(contact.bodyA.node?.name == "water" || contact.bodyB.node?.name == "water" ){
             (self.view!.window!.rootViewController as! GameViewController).restartScene()
         }
