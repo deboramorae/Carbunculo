@@ -101,8 +101,12 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         gameViewController = self
-        self.loadCutsceneView()
-
+        
+        if Debug.ignoreCutscene ?? false {
+            self.loadGameSceneView()
+        }else{
+            self.loadCutsceneView()
+        }
     }
     
     func loadGameSceneView() {
