@@ -20,7 +20,9 @@ class ChoicesEntity: GKEntity{
     func addComponentsToEntities(scene : GameScene,textureDecisao: SKTexture, textureButton1: SKTexture, textureButton2: SKTexture, position: CGPoint, numberChoice: Int){
         
         let invisibleNode = InvisibleChoiceNode()
+        
         let nodeHUD = ChoicesHUDNode(textureDecisao: textureDecisao, textureButton1: textureButton1, textureButton2: textureButton2, cena: scene, numberChoice: numberChoice)
+        
         nodeHUD.position = position
         
         addComponent(ChoicesNodeComponent(node: nodeHUD, scene: scene))

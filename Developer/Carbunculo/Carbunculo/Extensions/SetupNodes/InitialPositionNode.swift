@@ -87,7 +87,7 @@ extension CGPoint {
         
         public static let frutinhaNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 550, y: 0))
         
-        public static let frutinha02: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1800, y: 50))
+        public static let frutinha02: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1800, y: 60))
         
         public static let frutinha03: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 3400, y: 0))
         
@@ -96,7 +96,7 @@ extension CGPoint {
         public static let invisibleChoiceNode : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 0, y: 0))
         
         
-        public static let choiseHUDNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1560, y: 0))
+        public static let choiseHUDNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 1563, y: 20))
         
         public static let choiseHUDNode2: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 6300, y: 0))
         
@@ -132,8 +132,9 @@ extension CGPoint {
         
         public static let coracaoNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 6510, y: -70))
         
-        public static let carbunculoNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 9000, y: -10))
-         public static let coracaoMacacoNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 2330, y: -70))
+        public static let carbunculoNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 9500, y: -10))
+        
+         public static let coracaoMacacoNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 2330, y: -60))
         
         
         
