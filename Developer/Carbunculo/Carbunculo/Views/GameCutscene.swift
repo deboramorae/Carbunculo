@@ -20,7 +20,7 @@ class GameCutscene: SKScene {
         entityManager = EntityManager(scene: self)
 
         do {
-            let cutscene01 = CutsceneEntity(entityManager: entityManager, scene: self, nameFile: "BeginningCutscene.mp4")
+            let cutscene01 = CutsceneEntity(entityManager: entityManager, scene: self, nameFile: "BeginningCutscene")
         
             entityManager.add(cutscene01)
         }

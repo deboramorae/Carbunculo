@@ -8,11 +8,13 @@
 
 import Foundation
 import SpriteKit
+import AVKit
 
 
 class CutsceneNode: SKVideoNode {
-    init(nameFile: String) {
-        super.init(fileNamed: nameFile)
+    
+    init(player: AVPlayer) {
+        super.init(avPlayer: player)
     }
     
     required init?(coder aDecoder: NSCoder) {

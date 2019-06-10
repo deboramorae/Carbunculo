@@ -12,7 +12,7 @@ import GameplayKit
 
 var SKViewSizeRect: CGRect!
 var UIDarkView: UIView!
-
+var gameViewController: GameViewController!
 
 class GameViewController: UIViewController {
     
@@ -74,7 +74,7 @@ class GameViewController: UIViewController {
         hudPause.isHidden = true
         playButton.isHidden = true
         restartButton.isHidden = true
-       imageHUD.isHidden = false
+        imageHUD.isHidden = false
     }
     
     private func showHud() {
@@ -89,13 +89,14 @@ class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.hiddenHud()
+        gameViewController = self
         self.loadCutsceneView()
-        // Load 'GameScene.sks' as a GKScene. This provides gameplay related content
-        // including entities and graphs.
+
     }
     
-    func loadGameScene() {
+    func loadGameSceneView() {
+        self.hiddenHud()
+
         if let scene = GKScene(fileNamed: "GameScene") {
             
             // Get the SKScene from the loaded GKScene
@@ -126,6 +127,8 @@ class GameViewController: UIViewController {
     
     
     func loadCutsceneView() {
+        self.hiddenHud()
+
         if let scene = GKScene(fileNamed: "GameCutscene") {
             
             // Get the SKScene from the loaded GKScene
