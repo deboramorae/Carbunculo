@@ -10,15 +10,16 @@ import Foundation
 import GameplayKit
 
 class CoracaoEntity : GKEntity{
-    init(entityManager : EntityManager, scene: GameScene) {
+    init(entityManager : EntityManager, scene: GameScene, position: CGPoint) {
         super.init()
         
-        addComponentsToEntity(scene: scene)
+        addComponentsToEntity(scene: scene, position: position)
     }
     
-    func addComponentsToEntity(scene: GameScene){
+    func addComponentsToEntity(scene: GameScene, position: CGPoint){
         let coracao = CoracaoNode()
         
+        coracao.position = position
         coracao.run(Animations.Animal.blink)
         
         addComponent(BalaoExclamacaoNodeComponent(node: coracao, scene: scene))
