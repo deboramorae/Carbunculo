@@ -133,6 +133,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
              let windNode2 = WindEntity(entityManager: entityManager, scene: self, position : CGPoint.initialPositionNode.windNode2)
             
             
+            entityManager.add(CarbunculoEntity(entityManager: entityManager, scene: self))
+            
             entityManager.add(entidadeCena)
             
             entityManager.add(background)

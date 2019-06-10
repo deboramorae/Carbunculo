@@ -14,7 +14,8 @@ class CarbunculoNodeComponent : GKSKNodeComponent{
         
         super.init(node: node)
         scene.addChild(node)
-        
+        node.position = CGPoint.initialPositionNode.carbunculoNode
+        node.zPosition = 3
         node.run(Animations.carbunculo.idle)
     }
     

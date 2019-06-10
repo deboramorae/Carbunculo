@@ -242,9 +242,10 @@ class EntityManager {
         if entitie != nil{
             if((playernode.position.x+100)<(entitie?.component(ofType: GKSKNodeComponent.self)?.node.position.x)!){
                 camera.position.x = playernode.position.x+100
+                
             }
         }
-        
+        print(playernode.position)
     }
     
     func restartScene(){
