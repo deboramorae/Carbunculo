@@ -146,6 +146,7 @@ class EntityManager {
             if let player = entity.component(ofType: PlayerNodeComponent.self)?.node{
                 if numberChoice == 1 {
                     player.position = CGPoint.initialPositionNode.playerFirstChoice_Save
+                    self.addMacaco()
                 }else if numberChoice == 2 {
                     
                         let actionAndar = SKAction.run {
@@ -180,10 +181,20 @@ class EntityManager {
         }
     }
     
+    func addMacaco(){
+        let animal = AnimalEntity(entityManager: self, scene: self.scene as! GameScene, texture: SKTexture.imageNamed.macacoSave, position: CGPoint.initialPositionNode.macacoSave, size: CGSize.sizeNode.macacoSave, name: "macacoFeliz")
+        
+        let coracao = CoracaoEntity(entityManager: self, scene: self.scene as! GameScene, position: CGPoint.initialPositionNode.coracaoMacacoNode)
+        
+        self.add(coracao)
+        self.add(animal)
+        
+    }
+    
     func addTucano(){
         let animal = AnimalEntity(entityManager: self, scene: self.scene as! GameScene, texture: SKTexture.imageNamed.animalSave, position: CGPoint.initialPositionNode.animalSave, size: CGSize.sizeNode.animalSave, name: "tucanoFeliz")
         
-        let coracao = CoracaoEntity(entityManager: self, scene: self.scene as! GameScene)
+        let coracao = CoracaoEntity(entityManager: self, scene: self.scene as! GameScene, position: CGPoint.initialPositionNode.coracaoNode)
         
         self.add(coracao)
         self.add(animal)

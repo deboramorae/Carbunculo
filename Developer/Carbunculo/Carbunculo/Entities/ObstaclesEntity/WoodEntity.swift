@@ -25,6 +25,7 @@ class WoodEntity:GKEntity{
         
         node.physicsBody?.friction = 10
         node.name                  = "wood"
+        
         addComponent(WoodNodeComponent(node: node, scene: scene))
         addComponent(WoodPhysicsBodyComponent(node: node, size: size ))
         addComponent(ObstacleComeBackComponent())

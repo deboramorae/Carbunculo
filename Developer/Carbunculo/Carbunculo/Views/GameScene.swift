@@ -138,8 +138,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let balao2 = BalaoEntity(entityManager: entityManager, scene: self, position: CGPoint.initialPositionNode.balaoNode2, name: "balaoTucano")
             
             let windNode = WindEntity(entityManager: entityManager, scene: self, position: CGPoint.initialPositionNode.windNode)
-             let windNode2 = WindEntity(entityManager: entityManager, scene: self, position : CGPoint.initialPositionNode.windNode2)
+            let windNode2 = WindEntity(entityManager: entityManager, scene: self, position : CGPoint.initialPositionNode.windNode2)
             
+            let invisibleCutsceneNode = InvisibleCutsceneEntity(entityManager: entityManager)
             
             entityManager.add(CarbunculoEntity(entityManager: entityManager, scene: self))
             
@@ -203,6 +204,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             entityManager.add(windNode)
             entityManager.add(windNode2)
+            
+            entityManager.add(invisibleCutsceneNode)
             
             backgroundSong_Phase01.prepareMusic()
             backgroundSong_Phase01.playSong()
@@ -272,7 +275,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
      func didBegin(_ contact: SKPhysicsContact) {
         var conjunto  = Set<String>()
-        for nome in ["floor","wood","platform","invisibleNode", "floorMystic"]{
+        for nome in ["floor","wood","platform","invisibleNode", "floorMystic", "invisibleCutsceneNode"]{
                  conjunto.insert(nome)
         }
         
@@ -306,6 +309,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 //                    GameViewController.changeDarkView(value: false)
                     EntityManager.ischoosing = true
                 }
+                
+                if(contact.bodyA.node!.name == "invisibleCutsceneNode" || contact.bodyB.node!.name == "invisibleCutsceneNode"){
+                    gameViewController.loadCutsceneView()
+                }
+
                 
             }
 
