@@ -49,8 +49,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         do {
             let entidadeCena  = EntidadeCena(cena: self)
             
-            let cutscene01 = CutsceneEntity(entityManager: entityManager, scene: self, nameFile: "BeginningCutscene.mp4")
-            
             let background = BackgroundEntity(entityManager: entityManager, texture: SKTexture.imageNamed.background1, position : CGPoint.initialPositionNode.backgroundNode)
             
             let background2 = BackgroundEntity(entityManager: entityManager, texture: SKTexture.imageNamed.background2, position: CGPoint.initialPositionNode.background2)
@@ -142,8 +140,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             
             entityManager.add(entidadeCena)
-            
-            entityManager.add(cutscene01)
             
             entityManager.add(background)
             entityManager.add(background2)

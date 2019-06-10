@@ -11,7 +11,7 @@ import GameplayKit
 
 
 class CutsceneEntity: GKEntity {
-    init(entityManager: EntityManager, scene: GameScene, nameFile: String) {
+    init(entityManager: EntityManager, scene: GameCutscene, nameFile: String) {
         super.init()
         
         let cutsceneNode = CutsceneNode(nameFile: nameFile)
@@ -19,7 +19,7 @@ class CutsceneEntity: GKEntity {
         cutsceneNode.position = CGPoint(x: 0, y: 0)
         cutsceneNode.size = CGSize(width: scene.frame.size.width, height: scene.frame.size.height)
         cutsceneNode.zPosition = 100
-
+        cutsceneNode.play()
 
         addComponent(CutsceneNodeComponent(node: cutsceneNode, scene: scene))
     }

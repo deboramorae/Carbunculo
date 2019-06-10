@@ -61,6 +61,8 @@
 		84AB8E8322AEBA8D00BA8A7B /* CutsceneNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB8E8222AEBA8D00BA8A7B /* CutsceneNode.swift */; };
 		84AB8E8622AEBD9A00BA8A7B /* CutsceneEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB8E8522AEBD9A00BA8A7B /* CutsceneEntity.swift */; };
 		84AB8E8822AEBEF600BA8A7B /* CutsceneNodeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB8E8722AEBEF600BA8A7B /* CutsceneNodeComponent.swift */; };
+		84AB8E8A22AEC41200BA8A7B /* GameCutscene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB8E8922AEC41200BA8A7B /* GameCutscene.swift */; };
+		84AB8E8C22AEC42C00BA8A7B /* GameCutscene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 84AB8E8B22AEC42C00BA8A7B /* GameCutscene.sks */; };
 		84AC276C2295BB0D00D3A6C2 /* FloorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC276B2295BB0D00D3A6C2 /* FloorNode.swift */; };
 		84AC27702295C23F00D3A6C2 /* FloorComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC276F2295C23F00D3A6C2 /* FloorComponent.swift */; };
 		84AC27732296F43F00D3A6C2 /* FloorEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC27722296F43F00D3A6C2 /* FloorEntity.swift */; };
@@ -192,6 +194,8 @@
 		84AB8E8222AEBA8D00BA8A7B /* CutsceneNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CutsceneNode.swift; sourceTree = "<group>"; };
 		84AB8E8522AEBD9A00BA8A7B /* CutsceneEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CutsceneEntity.swift; sourceTree = "<group>"; };
 		84AB8E8722AEBEF600BA8A7B /* CutsceneNodeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CutsceneNodeComponent.swift; sourceTree = "<group>"; };
+		84AB8E8922AEC41200BA8A7B /* GameCutscene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCutscene.swift; sourceTree = "<group>"; };
+		84AB8E8B22AEC42C00BA8A7B /* GameCutscene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameCutscene.sks; sourceTree = "<group>"; };
 		84AC276B2295BB0D00D3A6C2 /* FloorNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorNode.swift; sourceTree = "<group>"; };
 		84AC276F2295C23F00D3A6C2 /* FloorComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorComponent.swift; sourceTree = "<group>"; };
 		84AC27722296F43F00D3A6C2 /* FloorEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorEntity.swift; sourceTree = "<group>"; };
@@ -423,6 +427,7 @@
 		84B058112294348700B7E9A0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				84AB8E8922AEC41200BA8A7B /* GameCutscene.swift */,
 				84D371382294309700922D4B /* GameScene.swift */,
 				84B0581922943AD900B7E9A0 /* Sks */,
 				84B0581822943ACE00B7E9A0 /* Storyboards */,
@@ -470,6 +475,7 @@
 		84B0581922943AD900B7E9A0 /* Sks */ = {
 			isa = PBXGroup;
 			children = (
+				84AB8E8B22AEC42C00BA8A7B /* GameCutscene.sks */,
 				84D371342294309700922D4B /* GameScene.sks */,
 				84D371362294309700922D4B /* Actions.sks */,
 			);
@@ -796,6 +802,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				849A22C122AAFC0000826116 /* maracuja.mp3 in Resources */,
+				84AB8E8C22AEC42C00BA8A7B /* GameCutscene.sks in Resources */,
 				846EBD7B22AA9C1700F7DD75 /* restart.mp3 in Resources */,
 				84D3713E2294309700922D4B /* Main.storyboard in Resources */,
 				84D371352294309700922D4B /* GameScene.sks in Resources */,
@@ -917,6 +924,7 @@
 				8405E3CA229F7A8A00DB50A6 /* InvisibleChoiceComponent.swift in Sources */,
 				84AB8E8622AEBD9A00BA8A7B /* CutsceneEntity.swift in Sources */,
 				EA8846AD229CC615003BF8F7 /* QuicksandNodeComponent.swift in Sources */,
+				84AB8E8A22AEC41200BA8A7B /* GameCutscene.swift in Sources */,
 				EAA7CCF622A04D22005DD0F7 /* MaracujaNodeComponent.swift in Sources */,
 				84B058222294460500B7E9A0 /* ComponentsWithNodes.swift in Sources */,
 				666BA973229C7C8D000B27C8 /* AnimationsStructs.swift in Sources */,

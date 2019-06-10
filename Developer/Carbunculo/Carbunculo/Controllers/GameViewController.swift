@@ -90,8 +90,12 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hiddenHud()
+        self.loadCutsceneView()
         // Load 'GameScene.sks' as a GKScene. This provides gameplay related content
         // including entities and graphs.
+    }
+    
+    func loadGameScene() {
         if let scene = GKScene(fileNamed: "GameScene") {
             
             // Get the SKScene from the loaded GKScene
@@ -118,6 +122,37 @@ class GameViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    
+    func loadCutsceneView() {
+        if let scene = GKScene(fileNamed: "GameCutscene") {
+            
+            // Get the SKScene from the loaded GKScene
+            if let sceneNode = scene.rootNode as! GameCutscene? {
+                
+                SKViewSizeRect = view.bounds
+                UIDarkView = darkView
+                // Copy gameplay related content over to the scene
+                sceneNode.entities = scene.entities
+                sceneNode.graphs = scene.graphs
+                
+                // Set the scale mode to scale to fit the window
+                sceneNode.scaleMode = .resizeFill
+                //Se preciso altera pra resizeFill
+                
+                // Present the scene
+                if let view = self.view as! SKView? {
+                    //                    self.cena = sceneNode
+                    view.presentScene(sceneNode)
+                    view.ignoresSiblingOrder = true
+                    view.showsFPS = Debug.showFPS ?? false
+                    view.showsNodeCount = Debug.showNodeCount ?? false
+                    view.showsPhysics = Debug.showPhysics ?? false
+                }
+            }
+        }
+
     }
     
     func restartScene(){

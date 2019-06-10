@@ -11,7 +11,7 @@ import GameplayKit
 
 
 class CutsceneNodeComponent: GKComponent {
-    init(node: SKVideoNode, scene: GameScene) {
+    init(node: SKVideoNode, scene: GameCutscene) {
         super.init()
         scene.addChild(node)
     }
