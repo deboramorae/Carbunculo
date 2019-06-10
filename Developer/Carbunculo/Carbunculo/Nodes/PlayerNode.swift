@@ -19,25 +19,27 @@ class PlayerNode: SKSpriteNode {
     }
 
     private func initialPosition(){
-        
+        //codigoparadefinirposicaobaseadonosave
         if(PlayerDAO.getSaves().count==0){
             self.position = CGPoint.initialPositionNode.playerNode
         }else{
             let save = PlayerDAO.getSaves()[0]
+            print("Numero do checkpoint \(save.checkpoint)")
             switch(save.checkpoint){
                 
-            case 0:
-                    if(save.escolhaUm==2){
+            case 1:
+                    if(save.escolhaUm==1){
                         self.position = CGPoint.initialPositionNode.playerFirstChoice_Save
                     }else{
                         self.position = CGPoint.initialPositionNode.playerFirstChoice_NoSave
                     }
                     break
-                case 1:
-                    if(save.escolhaUm==2){
-                        self.position = CGPoint.initialPositionNode.playerFirstChoice_Save
-                    }else{
-                        self.position = CGPoint.initialPositionNode.playerFirstChoice_NoSave
+            case 2:
+                
+                //JEFF AQUI, CORRIGE DUAS COISAS: 1  a POSICAO que esta voltando para a primeira escolha
+                //DOIS, Criar um else que aponte para caso ele nao escolha salvar o piupiu
+                    if(save.escolhaUm==1){
+                        self.position = CGPoint.initialPositionNode.playerSecondChoice_NoSave
                     }
                     break
                 default:
