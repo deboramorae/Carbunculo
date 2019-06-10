@@ -11,10 +11,10 @@ import GameplayKit
 
 class CarbunculoNode: SKSpriteNode{
     init(){
-        super.init(texture: SKTexture.imageNamed.carbunculo, color: .clear, size: CGSize.sizeNode.carbunculoNode)
+        super.init(texture: SKTexture.imageNamed.carbunculo, color: UIColor.red, size: CGSize.sizeNode.carbunculoNode)
         
         self.name = "carbunculo"
-        self.position = CGPoint.initialPositionNode.carbunculoNode
+       // self.position = CGPoint.initialPositionNode.carbunculoNode
         
     }
     
