@@ -174,12 +174,14 @@ class EntityManager {
                 if numberChoice == 1 {
                     player.position = CGPoint.initialPositionNode.playerFirstChoice_NoSave
                 }else if numberChoice == 2 {
-                    
+                    self.jump()
+                    player.position = CGPoint.initialPositionNode.playerSecondChoice_NoSave
                 }
             }
         }
         saveProgress()
     }
+    
     func addTucano(){
         let animal = AnimalEntity(entityManager: self, scene: self.scene as! GameScene, texture: SKTexture.imageNamed.animalSave, position: CGPoint.initialPositionNode.animalSave, size: CGSize.sizeNode.animalSave, name: "tucanoFeliz")
         
