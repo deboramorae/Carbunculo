@@ -25,6 +25,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var restartButton: UIButton!
     @IBOutlet weak var darkView: UIView!
     @IBOutlet weak var imageHUD: UIImageView!
+    @IBOutlet weak var contMaracuja: UIImageView!
     
     
     
@@ -68,6 +69,16 @@ class GameViewController: UIViewController {
         cena.entityManager.alternatePause()
     }
     
+    private func hiddenPauseAndContMaracuja() {
+        pauseButton.isHidden = true
+        contMaracuja.isHidden = true
+    }
+    
+    private func showPauseAndContMaracuja() {
+        pauseButton.isHidden = false
+        contMaracuja.isHidden = false
+    }
+    
     private func hiddenHud() {
         darkView.isHidden = true
         pauseButton.isHidden = false
@@ -95,13 +106,10 @@ class GameViewController: UIViewController {
     }
     
     func loadGameSceneView() {
-        self.hiddenHud()
-
         if let scene = GKScene(fileNamed: "GameScene") {
             
             // Get the SKScene from the loaded GKScene
             if let sceneNode = scene.rootNode as! GameScene? {
-                
                 SKViewSizeRect = view.bounds
                 UIDarkView = darkView
                 // Copy gameplay related content over to the scene
@@ -115,7 +123,12 @@ class GameViewController: UIViewController {
                 // Present the scene
                 if let view = self.view as! SKView? {
                     self.cena = sceneNode
-                    view.presentScene(sceneNode)
+                    view.presentScene(sceneNode, transition: SKTransition.fade(withDuration: 1))
+
+                    self.hiddenHud()
+                    self.showPauseAndContMaracuja()
+
+                    
                     view.ignoresSiblingOrder = true
                     view.showsFPS = Debug.showFPS ?? false
                     view.showsNodeCount = Debug.showNodeCount ?? false
@@ -128,7 +141,7 @@ class GameViewController: UIViewController {
     
     func loadCutsceneView() {
         self.hiddenHud()
-
+        self.hiddenPauseAndContMaracuja()
         if let scene = GKScene(fileNamed: "GameCutscene") {
             
             // Get the SKScene from the loaded GKScene
