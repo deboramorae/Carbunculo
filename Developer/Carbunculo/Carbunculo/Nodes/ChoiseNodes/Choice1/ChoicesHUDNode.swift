@@ -51,8 +51,10 @@ class ChoicesHUDNode : SKSpriteNode {
             case 1:
                 choicesControl.escolhaum   = opcaoEscolhida
                 break;
-            default:
+            case 2:
                 choicesControl.escolhadois = opcaoEscolhida
+            default:
+                choicesControl.escolhatres = opcaoEscolhida
                 break;
         }
         choicesControl.mostrarInformacoes()
