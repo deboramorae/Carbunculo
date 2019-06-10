@@ -77,6 +77,10 @@
 		84B05826229460E400B7E9A0 /* PhysicsBodyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B05825229460E400B7E9A0 /* PhysicsBodyComponent.swift */; };
 		84B058292294673B00B7E9A0 /* CGSize+ops.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B058282294673B00B7E9A0 /* CGSize+ops.swift */; };
 		84B89DE322AEA1F900DF7BE2 /* BeginningCutscene.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 84B89DE222AEA1F900DF7BE2 /* BeginningCutscene.mp4 */; };
+		84C424CF22AEF90200E7D837 /* CutsceneInvisibleNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C424CE22AEF90200E7D837 /* CutsceneInvisibleNode.swift */; };
+		84C424D422AEFAED00E7D837 /* InvisibleCutsceneComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C424D322AEFAED00E7D837 /* InvisibleCutsceneComponent.swift */; };
+		84C424D622AEFBC000E7D837 /* InvisibleCutscenePhysicsBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C424D522AEFBC000E7D837 /* InvisibleCutscenePhysicsBody.swift */; };
+		84C424D922AEFC3B00E7D837 /* InvisibleCutsceneEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C424D822AEFC3B00E7D837 /* InvisibleCutsceneEntity.swift */; };
 		84D371332294309700922D4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D371322294309700922D4B /* AppDelegate.swift */; };
 		84D371352294309700922D4B /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 84D371342294309700922D4B /* GameScene.sks */; };
 		84D371372294309700922D4B /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 84D371362294309700922D4B /* Actions.sks */; };
@@ -210,6 +214,10 @@
 		84B05825229460E400B7E9A0 /* PhysicsBodyComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsBodyComponent.swift; sourceTree = "<group>"; };
 		84B058282294673B00B7E9A0 /* CGSize+ops.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+ops.swift"; sourceTree = "<group>"; };
 		84B89DE222AEA1F900DF7BE2 /* BeginningCutscene.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = BeginningCutscene.mp4; sourceTree = "<group>"; };
+		84C424CE22AEF90200E7D837 /* CutsceneInvisibleNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CutsceneInvisibleNode.swift; sourceTree = "<group>"; };
+		84C424D322AEFAED00E7D837 /* InvisibleCutsceneComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvisibleCutsceneComponent.swift; sourceTree = "<group>"; };
+		84C424D522AEFBC000E7D837 /* InvisibleCutscenePhysicsBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvisibleCutscenePhysicsBody.swift; sourceTree = "<group>"; };
+		84C424D822AEFC3B00E7D837 /* InvisibleCutsceneEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvisibleCutsceneEntity.swift; sourceTree = "<group>"; };
 		84D3712F2294309700922D4B /* Carbunculo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carbunculo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D371322294309700922D4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84D371342294309700922D4B /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -447,6 +455,7 @@
 		84B058152294374D00B7E9A0 /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
+				84C424D122AEF91D00E7D837 /* Cutscene */,
 				EAA0ED7C22A83BA900480213 /* MagicFlorest */,
 				8412472E229F058500052953 /* ChoiseNodes */,
 				EA8846C0229E08CF003BF8F7 /* ScenarioNode */,
@@ -458,7 +467,6 @@
 				EAB872CC229C827E00A7FE9E /* AnimalNode.swift */,
 				EA41380022A04B6900959903 /* FruitinhaNode.swift */,
 				EA03F5AD22A9963800581C44 /* CoracaoNode.swift */,
-				84AB8E8222AEBA8D00BA8A7B /* CutsceneNode.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -485,6 +493,7 @@
 		84B0581B22943F1100B7E9A0 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				84C424D722AEFC1300E7D837 /* Cutscene */,
 				EAA0ED7D22A83BBE00480213 /* MagicFlorestEntity */,
 				8405E3C8229F79CD00DB50A6 /* ChoiceEntities */,
 				EA58B24122962A520099C146 /* ObstaclesEntity */,
@@ -497,7 +506,6 @@
 				666BA976229C8185000B27C8 /* MaracujaEntity.swift */,
 				EA09493522A19AFD002B105B /* BalaoEntity.swift */,
 				EA03F5B122A9976A00581C44 /* CoracaoEntity.swift */,
-				84AB8E8522AEBD9A00BA8A7B /* CutsceneEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -505,6 +513,7 @@
 		84B05820229445C000B7E9A0 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				84C424D222AEFAB800E7D837 /* Cutscene */,
 				EA4BC04A22A76F2D00870650 /* MagicFlorest */,
 				8405E3CD22A04F8700DB50A6 /* Choice */,
 				666BA978229C8240000B27C8 /* MaracujaComponents */,
@@ -525,7 +534,6 @@
 				EA8846C3229E0DA3003BF8F7 /* BalaoExclamacaoNodeComponent.swift */,
 				666BA97B229E1C33000B27C8 /* ObstacleComeBackComponent.swift */,
 				EA03F5AF22A9972100581C44 /* CoracaoNodeComponent.swift */,
-				84AB8E8722AEBEF600BA8A7B /* CutsceneNodeComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -554,6 +562,33 @@
 				84B89DE222AEA1F900DF7BE2 /* BeginningCutscene.mp4 */,
 			);
 			path = mp4;
+			sourceTree = "<group>";
+		};
+		84C424D122AEF91D00E7D837 /* Cutscene */ = {
+			isa = PBXGroup;
+			children = (
+				84AB8E8222AEBA8D00BA8A7B /* CutsceneNode.swift */,
+				84C424CE22AEF90200E7D837 /* CutsceneInvisibleNode.swift */,
+			);
+			path = Cutscene;
+			sourceTree = "<group>";
+		};
+		84C424D222AEFAB800E7D837 /* Cutscene */ = {
+			isa = PBXGroup;
+			children = (
+				84AB8E8722AEBEF600BA8A7B /* CutsceneNodeComponent.swift */,
+				84C424D322AEFAED00E7D837 /* InvisibleCutsceneComponent.swift */,
+			);
+			path = Cutscene;
+			sourceTree = "<group>";
+		};
+		84C424D722AEFC1300E7D837 /* Cutscene */ = {
+			isa = PBXGroup;
+			children = (
+				84AB8E8522AEBD9A00BA8A7B /* CutsceneEntity.swift */,
+				84C424D822AEFC3B00E7D837 /* InvisibleCutsceneEntity.swift */,
+			);
+			path = Cutscene;
 			sourceTree = "<group>";
 		};
 		84D371262294309700922D4B = {
@@ -699,6 +734,7 @@
 				EA2CE9042298779500084E25 /* ChoicesPhysicsBodyComponent.swift */,
 				EA262F24229F138D00C46986 /* StonesPhysicsBodyComponent.swift */,
 				8405E3CB229F7AF400DB50A6 /* InvisibleChoicePhysicsBody.swift */,
+				84C424D522AEFBC000E7D837 /* InvisibleCutscenePhysicsBody.swift */,
 			);
 			path = PhysicsBodyComponents;
 			sourceTree = "<group>";
@@ -829,10 +865,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				84D371392294309700922D4B /* GameScene.swift in Sources */,
+				84C424D422AEFAED00E7D837 /* InvisibleCutsceneComponent.swift in Sources */,
 				666BA97A229C82C5000B27C8 /* MaracujaPhysicsBodyComponent.swift in Sources */,
 				EAA7CCF822A05374005DD0F7 /* QuicksandEntity.swift in Sources */,
 				EA03F5C022AA0EB900581C44 /* FloorMysticNodeComponent.swift in Sources */,
 				EA58B2212295C8860099C146 /* PlatformNode.swift in Sources */,
+				84C424CF22AEF90200E7D837 /* CutsceneInvisibleNode.swift in Sources */,
 				EA1C5A93229F571F00FC65CB /* TextureNode.swift in Sources */,
 				66C63BD62295EDE100CCEE3A /* WaterPhysicsBodyComponent.swift in Sources */,
 				EA03F5C222AA0F6400581C44 /* FloorMysticPhysicsBodyComponent.swift in Sources */,
@@ -899,6 +937,7 @@
 				66C63BD42295ECE100CCEE3A /* WaterNode.swift in Sources */,
 				66C63BB62294698300CCEE3A /* StateFalling.swift in Sources */,
 				66C63BBA22946A0A00CCEE3A /* StateUnconscious.swift in Sources */,
+				84C424D622AEFBC000E7D837 /* InvisibleCutscenePhysicsBody.swift in Sources */,
 				EAB872CD229C827E00A7FE9E /* AnimalNode.swift in Sources */,
 				666BA975229C7DF0000B27C8 /* AnimationsTextures.swift in Sources */,
 				EA4BC04F22A76FB300870650 /* MinionPhysicsBodyComponent.swift in Sources */,
@@ -916,6 +955,7 @@
 				8410A2F222946FD600F73DC0 /* IdleComponent.swift in Sources */,
 				846A9331229C5DB400A31D1F /* BackgroundNode.swift in Sources */,
 				84B0581D22943F2A00B7E9A0 /* Player.swift in Sources */,
+				84C424D922AEFC3B00E7D837 /* InvisibleCutsceneEntity.swift in Sources */,
 				66C63BD22295EB6A00CCEE3A /* WaterNodeComponent.swift in Sources */,
 				EA58B23C229626EF0099C146 /* WoodEntity.swift in Sources */,
 				84281D9922AA9277006F0825 /* MusicController.swift in Sources */,
