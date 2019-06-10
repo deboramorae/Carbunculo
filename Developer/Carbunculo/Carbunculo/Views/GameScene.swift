@@ -28,9 +28,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.lastUpdateTime = 0
         physicsWorld.contactDelegate = self
         //ATENCAO, SE QUISER APAGAR O SEU SAVE DESCOMENTE A LINHA ABAIXO
-        //PlayerDAO.deleteAllSaves()
+//        PlayerDAO.deleteAllSaves()
         print(PlayerDAO.getSaves().count)
         
+        
+//        let video = SKVideoNode(fileNamed: "BeginningCutscene.mp4")
+//        
+//        self.addChild(video)
+//        video.play()
+//
     }
     
     
