@@ -221,12 +221,12 @@ class EntityManager {
     
     func saveProgress(){
         print("Antes \(choicesControl.decisaoatual)")
-        choicesControl.decisaoatual+=1
+        choicesControl.decisaoatual = 1
         print("Depois \(choicesControl.decisaoatual)")
         if(PlayerDAO.getSaves().count == 0){
-            PlayerDAO.addPlayer(player: PlayerPersistence(pontos:choicesControl.ponctuation, checkpoint: choicesControl.decisaoatual, qtdemacas: choicesControl.qtdemacas, escolhaUm: choicesControl.escolhaum, escolhaDois: choicesControl.escolhadois))
+            PlayerDAO.addPlayer(player: PlayerPersistence(pontos:choicesControl.ponctuation, checkpoint: choicesControl.decisaoatual, qtdemacas: choicesControl.qtdemacas, escolhaUm: choicesControl.escolhaum, escolhaDois: choicesControl.escolhadois,escolhatres: choicesControl.escolhatres))
         }else{
-            PlayerDAO.updateData(player: PlayerPersistence(pontos:choicesControl.ponctuation, checkpoint: choicesControl.decisaoatual, qtdemacas: choicesControl.qtdemacas, escolhaUm: choicesControl.escolhaum, escolhaDois: choicesControl.escolhadois))
+            PlayerDAO.updateData(player: PlayerPersistence(pontos:choicesControl.ponctuation, checkpoint: choicesControl.decisaoatual, qtdemacas: choicesControl.qtdemacas, escolhaUm: choicesControl.escolhaum, escolhaDois: choicesControl.escolhadois,escolhatres: choicesControl.escolhatres))
         }
     }
     func saveProgress2(){
@@ -234,12 +234,22 @@ class EntityManager {
         choicesControl.decisaoatual = 2
         print("Depois \(choicesControl.decisaoatual)")
         if(PlayerDAO.getSaves().count == 0){
-            PlayerDAO.addPlayer(player: PlayerPersistence(pontos:choicesControl.ponctuation, checkpoint: choicesControl.decisaoatual, qtdemacas: choicesControl.qtdemacas, escolhaUm: choicesControl.escolhaum, escolhaDois: choicesControl.escolhadois))
+            PlayerDAO.addPlayer(player: PlayerPersistence(pontos:choicesControl.ponctuation, checkpoint: choicesControl.decisaoatual, qtdemacas: choicesControl.qtdemacas, escolhaUm: choicesControl.escolhaum, escolhaDois: choicesControl.escolhadois, escolhatres: choicesControl.escolhatres))
         }else{
-            PlayerDAO.updateData(player: PlayerPersistence(pontos:choicesControl.ponctuation, checkpoint: choicesControl.decisaoatual, qtdemacas: choicesControl.qtdemacas, escolhaUm: choicesControl.escolhaum, escolhaDois: choicesControl.escolhadois))
+            PlayerDAO.updateData(player: PlayerPersistence(pontos:choicesControl.ponctuation, checkpoint: choicesControl.decisaoatual, qtdemacas: choicesControl.qtdemacas, escolhaUm: choicesControl.escolhaum, escolhaDois: choicesControl.escolhadois, escolhatres: choicesControl.escolhatres))
         }
     }
     
+    func saveProgress3(){
+        print("Antes \(choicesControl.decisaoatual)")
+        choicesControl.decisaoatual = 3
+        print("Depois \(choicesControl.decisaoatual)")
+        if(PlayerDAO.getSaves().count == 0){
+            PlayerDAO.addPlayer(player: PlayerPersistence(pontos:choicesControl.ponctuation, checkpoint: choicesControl.decisaoatual, qtdemacas: choicesControl.qtdemacas, escolhaUm: choicesControl.escolhaum, escolhaDois: choicesControl.escolhadois, escolhatres: choicesControl.escolhatres))
+        }else{
+            PlayerDAO.updateData(player: PlayerPersistence(pontos:choicesControl.ponctuation, checkpoint: choicesControl.decisaoatual, qtdemacas: choicesControl.qtdemacas, escolhaUm: choicesControl.escolhaum, escolhaDois: choicesControl.escolhadois, escolhatres: choicesControl.escolhatres))
+        }
+    }
     func updateCameraPosition(){
         
         var camera        : SKCameraNode!
@@ -265,6 +275,7 @@ class EntityManager {
                 
             }
         }
+       // print(playernode.position)
     }
     
     func restartScene(){

@@ -3,11 +3,12 @@
     <entity name="PlayerSave" representedClassName="PlayerSave" syncable="YES" codeGenerationType="class">
         <attribute name="checkpoint" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="escolhadois" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="escolhatres" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="escolhaum" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="pontos" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="qtdemacas" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <elements>
-        <element name="PlayerSave" positionX="-54" positionY="-9" width="128" height="120"/>
+        <element name="PlayerSave" positionX="-54" positionY="-9" width="128" height="135"/>
     </elements>
 </model>
