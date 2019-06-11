@@ -26,6 +26,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var darkView: UIView!
     @IBOutlet weak var imageHUD: UIImageView!
     @IBOutlet weak var contMaracuja: UIImageView!
+    @IBOutlet weak var labelContMaracuja: UILabel!
     
     
     
@@ -72,11 +73,13 @@ class GameViewController: UIViewController {
     private func hiddenPauseAndContMaracuja() {
         pauseButton.isHidden = true
         contMaracuja.isHidden = true
+        labelContMaracuja.isHidden = true
     }
     
     private func showPauseAndContMaracuja() {
         pauseButton.isHidden = false
         contMaracuja.isHidden = false
+        labelContMaracuja.isHidden = false
     }
     
     private func hiddenHud() {
@@ -97,6 +100,17 @@ class GameViewController: UIViewController {
         imageHUD.isHidden = true
     }
     
+    private func rescueQuantityMaracujas() {
+        var text = ""
+        
+        if choicesControl.qtdemacas <= 9 {
+            text = "0\(choicesControl.qtdemacas)"
+        }else{
+            text = String(choicesControl.qtdemacas)
+        }
+        
+        self.labelContMaracuja.text = text
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -131,7 +145,7 @@ class GameViewController: UIViewController {
 
                     self.hiddenHud()
                     self.showPauseAndContMaracuja()
-
+                    self.rescueQuantityMaracujas()
                     
                     view.ignoresSiblingOrder = true
                     view.showsFPS = Debug.showFPS ?? false
@@ -204,6 +218,7 @@ class GameViewController: UIViewController {
             return .all
         }
     }
+    
     public func setScene(cena:GameScene){
     
     }

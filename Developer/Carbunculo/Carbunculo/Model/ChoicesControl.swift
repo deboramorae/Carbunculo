@@ -17,6 +17,7 @@ public class ChoicesControl {
     var escolhaum   : Int
     var escolhadois : Int
     var escolhatres : Int
+    
     init(){
         self.ponctuation  = 0
         self.decisaoatual = 0
