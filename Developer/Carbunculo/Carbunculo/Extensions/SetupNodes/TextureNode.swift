@@ -72,6 +72,8 @@ extension SKTexture{
         public static let coracaoNode: SKTexture = SKTexture(imageNamed: "coracao")
         public static let carbunculo : SKTexture = SKTexture(imageNamed: "carbunculo")
         
+        public static let setaNode   : SKTexture = SKTexture(imageNamed: "seta")
+        
         
         
         
