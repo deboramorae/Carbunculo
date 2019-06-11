@@ -28,7 +28,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.lastUpdateTime = 0
         physicsWorld.contactDelegate = self
         //ATENCAO, SE QUISER APAGAR O SEU SAVE DESCOMENTE A LINHA ABAIXO
-//       PlayerDAO.deleteAllSaves()
+      PlayerDAO.deleteAllSaves()
         //print(PlayerDAO.getSaves().count)
         
         
@@ -326,6 +326,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     father?.isHidden = false
 //                    GameViewController.changeDarkView(value: false)
                     EntityManager.ischoosing = true
+                    entityManager.idle()
                 }
                 
                 if(contact.bodyA.node!.name == "invisibleCutsceneNode" || contact.bodyB.node!.name == "invisibleCutsceneNode"){
@@ -361,6 +362,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             maracujaSong.prepareMusic()
             maracujaSong.playSong()
         }
+        
     }
 }
 
