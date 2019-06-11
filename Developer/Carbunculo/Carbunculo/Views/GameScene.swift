@@ -28,7 +28,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.lastUpdateTime = 0
         physicsWorld.contactDelegate = self
         //ATENCAO, SE QUISER APAGAR O SEU SAVE DESCOMENTE A LINHA ABAIXO
-       //PlayerDAO.deleteAllSaves()
+//       PlayerDAO.deleteAllSaves()
         //print(PlayerDAO.getSaves().count)
         
         
@@ -273,7 +273,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         entityManager.update(deltaTime: currentTime)
     }
     
-     func didBegin(_ contact: SKPhysicsContact) {
+    private func addCountMaracuja() {
+        choicesControl.qtdemacas += 1
+        var text = "00"
+        
+        if choicesControl.qtdemacas <= 9 {
+            text = "0\(choicesControl.qtdemacas)"
+        }else{
+            text = String(choicesControl.qtdemacas)
+        }
+        
+        gameViewController.labelContMaracuja.text = text
+    }
+    
+    
+    func didBegin(_ contact: SKPhysicsContact) {
         var conjunto  = Set<String>()
         for nome in ["floor","wood","platform","invisibleNode", "floorMystic", "invisibleCutsceneNode"]{
                  conjunto.insert(nome)
@@ -332,11 +346,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             (self.view!.window!.rootViewController as! GameViewController).restartScene()
         }
         if(contact.bodyA.node?.name == "frutinha" || contact.bodyB.node?.name == "frutinha" ){
+            self.addCountMaracuja()
             
             if contact.bodyA.node?.name != "player" {
-                
                 entityManager.remove(contact.bodyA.node?.entity as! MaracujaEntity)
-                
             }else{
                 entityManager.remove(contact.bodyB.node?.entity as! MaracujaEntity)
             }
