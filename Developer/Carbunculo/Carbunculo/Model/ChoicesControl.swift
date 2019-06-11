@@ -19,12 +19,29 @@ public class ChoicesControl {
     var escolhatres : Int
     
     init(){
-        self.ponctuation  = 0
-        self.decisaoatual = 0
-        self.qtdemacas    = 0
-        self.escolhaum    = 0
-        self.escolhadois  = 0
-        self.escolhatres  = 0
+        
+            self.ponctuation  = 0
+            self.decisaoatual = 0
+            self.qtdemacas    = 0
+            self.escolhaum    = 0
+            self.escolhadois  = 0
+            self.escolhatres  = 0
+        
+        if(PlayerDAO.getSaves().count != 0){
+            self.ponctuation  = PlayerDAO.getSaves()[0].pontos
+            self.decisaoatual = PlayerDAO.getSaves()[0].checkpoint
+            self.qtdemacas    = PlayerDAO.getSaves()[0].qtdemacas
+            self.escolhaum    = PlayerDAO.getSaves()[0].escolhaUm
+            self.escolhadois  = PlayerDAO.getSaves()[0].escolhaDois
+            self.escolhatres  = PlayerDAO.getSaves()[0].escolhatres
+        }else{
+            self.ponctuation  = 0
+            self.decisaoatual = 0
+            self.qtdemacas    = 0
+            self.escolhaum    = 0
+            self.escolhadois  = 0
+            self.escolhatres  = 0
+        }
     }
     
     public func mostrarInformacoes(){
