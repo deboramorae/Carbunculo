@@ -12,7 +12,7 @@ import GameplayKit
 
 var SKViewSizeRect: CGRect!
 var UIDarkView: UIView!
-
+var gameViewController: GameViewController!
 
 class GameViewController: UIViewController {
     
@@ -25,6 +25,8 @@ class GameViewController: UIViewController {
     @IBOutlet weak var restartButton: UIButton!
     @IBOutlet weak var darkView: UIView!
     @IBOutlet weak var imageHUD: UIImageView!
+    @IBOutlet weak var contMaracuja: UIImageView!
+    @IBOutlet weak var labelContMaracuja: UILabel!
     
     
     
@@ -68,13 +70,25 @@ class GameViewController: UIViewController {
         cena.entityManager.alternatePause()
     }
     
+    private func hiddenPauseAndContMaracuja() {
+        pauseButton.isHidden = true
+        contMaracuja.isHidden = true
+        labelContMaracuja.isHidden = true
+    }
+    
+    private func showPauseAndContMaracuja() {
+        pauseButton.isHidden = false
+        contMaracuja.isHidden = false
+        labelContMaracuja.isHidden = false
+    }
+    
     private func hiddenHud() {
         darkView.isHidden = true
         pauseButton.isHidden = false
         hudPause.isHidden = true
         playButton.isHidden = true
         restartButton.isHidden = true
-       imageHUD.isHidden = false
+        imageHUD.isHidden = false
     }
     
     private func showHud() {
@@ -86,17 +100,34 @@ class GameViewController: UIViewController {
         imageHUD.isHidden = true
     }
     
+    private func rescueQuantityMaracujas() {
+        var text = ""
+        
+        if choicesControl.qtdemacas <= 9 {
+            text = "0\(choicesControl.qtdemacas)"
+        }else{
+            text = String(choicesControl.qtdemacas)
+        }
+        
+        self.labelContMaracuja.text = text
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.hiddenHud()
-        // Load 'GameScene.sks' as a GKScene. This provides gameplay related content
-        // including entities and graphs.
+        gameViewController = self
+        
+        if Debug.ignoreCutscene ?? false {
+            self.loadGameSceneView()
+        }else{
+            self.loadCutsceneView()
+        }
+    }
+    
+    func loadGameSceneView() {
         if let scene = GKScene(fileNamed: "GameScene") {
             
             // Get the SKScene from the loaded GKScene
             if let sceneNode = scene.rootNode as! GameScene? {
-                
                 SKViewSizeRect = view.bounds
                 UIDarkView = darkView
                 // Copy gameplay related content over to the scene
@@ -110,6 +141,43 @@ class GameViewController: UIViewController {
                 // Present the scene
                 if let view = self.view as! SKView? {
                     self.cena = sceneNode
+                    view.presentScene(sceneNode, transition: SKTransition.fade(withDuration: 1))
+
+                    self.hiddenHud()
+                    self.showPauseAndContMaracuja()
+                    self.rescueQuantityMaracujas()
+                    
+                    view.ignoresSiblingOrder = true
+                    view.showsFPS = Debug.showFPS ?? false
+                    view.showsNodeCount = Debug.showNodeCount ?? false
+                    view.showsPhysics = Debug.showPhysics ?? false
+                }
+            }
+        }
+    }
+    
+    
+    func loadCutsceneView() {
+        self.hiddenHud()
+        self.hiddenPauseAndContMaracuja()
+        if let scene = GKScene(fileNamed: "GameCutscene") {
+            
+            // Get the SKScene from the loaded GKScene
+            if let sceneNode = scene.rootNode as! GameCutscene? {
+                
+                SKViewSizeRect = view.bounds
+                UIDarkView = darkView
+                // Copy gameplay related content over to the scene
+                sceneNode.entities = scene.entities
+                sceneNode.graphs = scene.graphs
+                
+                // Set the scale mode to scale to fit the window
+                sceneNode.scaleMode = .resizeFill
+                //Se preciso altera pra resizeFill
+                
+                // Present the scene
+                if let view = self.view as! SKView? {
+                    //                    self.cena = sceneNode
                     view.presentScene(sceneNode)
                     view.ignoresSiblingOrder = true
                     view.showsFPS = Debug.showFPS ?? false
@@ -118,6 +186,7 @@ class GameViewController: UIViewController {
                 }
             }
         }
+
     }
     
     func restartScene(){
@@ -149,6 +218,7 @@ class GameViewController: UIViewController {
             return .all
         }
     }
+    
     public func setScene(cena:GameScene){
     
     }

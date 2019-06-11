@@ -146,6 +146,7 @@ class EntityManager {
             if let player = entity.component(ofType: PlayerNodeComponent.self)?.node{
                 if numberChoice == 1 {
                     player.position = CGPoint.initialPositionNode.playerFirstChoice_Save
+                    self.addMacaco()
                 }else if numberChoice == 2 {
                     
                         let actionAndar = SKAction.run {
@@ -163,7 +164,6 @@ class EntityManager {
                 
             }
         }
-        saveProgress()
     }
     
     
@@ -179,13 +179,22 @@ class EntityManager {
                 }
             }
         }
-        saveProgress()
+    }
+    
+    func addMacaco(){
+        let animal = AnimalEntity(entityManager: self, scene: self.scene as! GameScene, texture: SKTexture.imageNamed.macacoSave, position: CGPoint.initialPositionNode.macacoSave, size: CGSize.sizeNode.macacoSave, name: "macacoFeliz")
+        
+        let coracao = CoracaoEntity(entityManager: self, scene: self.scene as! GameScene, position: CGPoint.initialPositionNode.coracaoMacacoNode)
+        
+        self.add(coracao)
+        self.add(animal)
+        
     }
     
     func addTucano(){
         let animal = AnimalEntity(entityManager: self, scene: self.scene as! GameScene, texture: SKTexture.imageNamed.animalSave, position: CGPoint.initialPositionNode.animalSave, size: CGSize.sizeNode.animalSave, name: "tucanoFeliz")
         
-        let coracao = CoracaoEntity(entityManager: self, scene: self.scene as! GameScene)
+        let coracao = CoracaoEntity(entityManager: self, scene: self.scene as! GameScene, position: CGPoint.initialPositionNode.coracaoNode)
         
         self.add(coracao)
         self.add(animal)
@@ -211,13 +220,24 @@ class EntityManager {
     }
     
     func saveProgress(){
+        print("Antes \(choicesControl.decisaoatual)")
+        choicesControl.decisaoatual+=1
+        print("Depois \(choicesControl.decisaoatual)")
         if(PlayerDAO.getSaves().count == 0){
             PlayerDAO.addPlayer(player: PlayerPersistence(pontos:choicesControl.ponctuation, checkpoint: choicesControl.decisaoatual, qtdemacas: choicesControl.qtdemacas, escolhaUm: choicesControl.escolhaum, escolhaDois: choicesControl.escolhadois))
         }else{
             PlayerDAO.updateData(player: PlayerPersistence(pontos:choicesControl.ponctuation, checkpoint: choicesControl.decisaoatual, qtdemacas: choicesControl.qtdemacas, escolhaUm: choicesControl.escolhaum, escolhaDois: choicesControl.escolhadois))
         }
-
-        choicesControl.decisaoatual+=1
+    }
+    func saveProgress2(){
+        print("Antes \(choicesControl.decisaoatual)")
+        choicesControl.decisaoatual = 2
+        print("Depois \(choicesControl.decisaoatual)")
+        if(PlayerDAO.getSaves().count == 0){
+            PlayerDAO.addPlayer(player: PlayerPersistence(pontos:choicesControl.ponctuation, checkpoint: choicesControl.decisaoatual, qtdemacas: choicesControl.qtdemacas, escolhaUm: choicesControl.escolhaum, escolhaDois: choicesControl.escolhadois))
+        }else{
+            PlayerDAO.updateData(player: PlayerPersistence(pontos:choicesControl.ponctuation, checkpoint: choicesControl.decisaoatual, qtdemacas: choicesControl.qtdemacas, escolhaUm: choicesControl.escolhaum, escolhaDois: choicesControl.escolhadois))
+        }
     }
     
     func updateCameraPosition(){
@@ -242,9 +262,9 @@ class EntityManager {
         if entitie != nil{
             if((playernode.position.x+100)<(entitie?.component(ofType: GKSKNodeComponent.self)?.node.position.x)!){
                 camera.position.x = playernode.position.x+100
+                
             }
         }
-        
     }
     
     func restartScene(){

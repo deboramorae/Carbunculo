@@ -28,9 +28,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.lastUpdateTime = 0
         physicsWorld.contactDelegate = self
         //ATENCAO, SE QUISER APAGAR O SEU SAVE DESCOMENTE A LINHA ABAIXO
-        //PlayerDAO.deleteAllSaves()
-        print(PlayerDAO.getSaves().count)
+//       PlayerDAO.deleteAllSaves()
+        //print(PlayerDAO.getSaves().count)
         
+        
+//        let video = SKVideoNode(fileNamed: "BeginningCutscene.mp4")
+//        
+//        self.addChild(video)
+//        video.play()
+//
     }
     
     
@@ -103,9 +109,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             let entityWood3   = WoodEntity(entityManager: entityManager, scene: self, positionNode: CGPoint.initialPositionNode.woodNode3, texture: SKTexture.imageNamed.wood3, size : CGSize.sizeNode.woodNode3, sizePhysicsBody: CGSize.sizeNode.woodNode3 )
             
-            let choise = ChoicesEntity(entityManager: entityManager, scene: self,textureDecisao: SKTexture.imageNamed.decisao1, textureButton1: SKTexture.imageNamed.escolha2, textureButton2: SKTexture.imageNamed.escolha1, position: CGPoint.initialPositionNode.choiseHUDNode, numberChoice: 1)
+            let choice = ChoicesEntity(entityManager: entityManager, scene: self,textureDecisao: SKTexture.imageNamed.decisao1, textureButton1: SKTexture.imageNamed.escolha2, textureButton2: SKTexture.imageNamed.escolha1, position: CGPoint.initialPositionNode.choiseHUDNode, numberChoice: 1)
             
-            let choise2 = ChoicesEntity(entityManager: entityManager, scene: self,textureDecisao: SKTexture.imageNamed.decisao2, textureButton1: SKTexture.imageNamed.escolha4, textureButton2: SKTexture.imageNamed.escolha3, position: CGPoint.initialPositionNode.choiseHUDNode2, numberChoice: 2)
+            let choice2 = ChoicesEntity(entityManager: entityManager, scene: self,textureDecisao: SKTexture.imageNamed.decisao2, textureButton1: SKTexture.imageNamed.escolha4, textureButton2: SKTexture.imageNamed.escolha3, position: CGPoint.initialPositionNode.choiseHUDNode2, numberChoice: 2)
+            
+            let choice3 = ChoicesEntity(entityManager: entityManager, scene: self, textureDecisao: SKTexture.imageNamed.decisao2, textureButton1: SKTexture.imageNamed.escolha3, textureButton2: SKTexture.imageNamed.escolha4, position: CGPoint.initialPositionNode.choiseHUDNode3, numberChoice: 3)
             
             let entityQuicksand = QuicksandEntity(entityManager: entityManager, scene: self)
 
@@ -130,8 +138,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let balao2 = BalaoEntity(entityManager: entityManager, scene: self, position: CGPoint.initialPositionNode.balaoNode2, name: "balaoTucano")
             
             let windNode = WindEntity(entityManager: entityManager, scene: self, position: CGPoint.initialPositionNode.windNode)
-             let windNode2 = WindEntity(entityManager: entityManager, scene: self, position : CGPoint.initialPositionNode.windNode2)
+            let windNode2 = WindEntity(entityManager: entityManager, scene: self, position : CGPoint.initialPositionNode.windNode2)
             
+            let invisibleCutsceneNode = InvisibleCutsceneEntity(entityManager: entityManager)
+            
+            entityManager.add(CarbunculoEntity(entityManager: entityManager, scene: self))
             
             entityManager.add(entidadeCena)
             
@@ -174,8 +185,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             entityManager.add(water2)
             entityManager.add(water3)
             
-            entityManager.add(choise)
-            entityManager.add(choise2)
+            entityManager.add(choice)
+            entityManager.add(choice2)
+            entityManager.add(choice3)
             
             entityManager.add(frutinha01)
             entityManager.add(frutinha02)
@@ -192,6 +204,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             entityManager.add(windNode)
             entityManager.add(windNode2)
+            
+            entityManager.add(invisibleCutsceneNode)
             
             backgroundSong_Phase01.prepareMusic()
             backgroundSong_Phase01.playSong()
@@ -259,9 +273,23 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         entityManager.update(deltaTime: currentTime)
     }
     
-     func didBegin(_ contact: SKPhysicsContact) {
+    private func addCountMaracuja() {
+        choicesControl.qtdemacas += 1
+        var text = "00"
+        
+        if choicesControl.qtdemacas <= 9 {
+            text = "0\(choicesControl.qtdemacas)"
+        }else{
+            text = String(choicesControl.qtdemacas)
+        }
+        
+        gameViewController.labelContMaracuja.text = text
+    }
+    
+    
+    func didBegin(_ contact: SKPhysicsContact) {
         var conjunto  = Set<String>()
-        for nome in ["floor","wood","platform","invisibleNode", "floorMystic"]{
+        for nome in ["floor","wood","platform","invisibleNode", "floorMystic", "invisibleCutsceneNode"]{
                  conjunto.insert(nome)
         }
         
@@ -296,6 +324,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     EntityManager.ischoosing = true
                 }
                 
+                if(contact.bodyA.node!.name == "invisibleCutsceneNode" || contact.bodyB.node!.name == "invisibleCutsceneNode"){
+                    gameViewController.loadCutsceneView()
+                }
+
+                
             }
 
         }
@@ -313,11 +346,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             (self.view!.window!.rootViewController as! GameViewController).restartScene()
         }
         if(contact.bodyA.node?.name == "frutinha" || contact.bodyB.node?.name == "frutinha" ){
+            self.addCountMaracuja()
             
             if contact.bodyA.node?.name != "player" {
-                
                 entityManager.remove(contact.bodyA.node?.entity as! MaracujaEntity)
-                
             }else{
                 entityManager.remove(contact.bodyB.node?.entity as! MaracujaEntity)
             }

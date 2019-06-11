@@ -13,12 +13,18 @@ struct Textures{
     static var minionidle:[SKTexture]{
         get{
             var lista:[SKTexture] = []
+            for n in 1...12{
+                lista.append(SKTexture(imageNamed: "minion_idle\(n)"))
+            }
             return lista
         }
     }
     static var carbunculoidle:[SKTexture]{
         get{
             var lista:[SKTexture] = []
+            for n in 2...10{
+                lista.append(SKTexture(imageNamed: "carbunculo_idle\(n)"))
+            }
             return lista
         }
     }

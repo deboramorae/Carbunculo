@@ -64,6 +64,12 @@
                                     <action selector="restart:" destination="BV1-FR-VrT" eventType="touchUpInside" id="11G-Fd-hxm"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usV-bf-WZU">
+                                <rect key="frame" x="72" y="24" width="27.5" height="29"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
+                                <color key="textColor" red="0.82094508409500122" green="0.69279295206069946" blue="0.57375597953796387" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -73,6 +79,7 @@
                             <constraint firstItem="R9N-kv-Xhi" firstAttribute="centerY" secondItem="3se-qz-xqx" secondAttribute="centerY" id="5Mz-45-l1A"/>
                             <constraint firstItem="Yqo-Rk-1Y2" firstAttribute="top" secondItem="R9N-kv-Xhi" secondAttribute="bottom" constant="-103.5" id="8EV-d5-q6e"/>
                             <constraint firstItem="R9N-kv-Xhi" firstAttribute="centerX" secondItem="3se-qz-xqx" secondAttribute="centerX" id="H5m-KW-8qE"/>
+                            <constraint firstItem="usV-bf-WZU" firstAttribute="centerY" secondItem="C8N-J6-zM6" secondAttribute="centerY" id="Hiz-nC-N6f"/>
                             <constraint firstItem="CkF-Ms-B0A" firstAttribute="top" secondItem="R9N-kv-Xhi" secondAttribute="bottom" constant="-106.5" id="Kab-RX-I6B"/>
                             <constraint firstItem="C8N-J6-zM6" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" constant="16" id="KxX-QT-efw"/>
                             <constraint firstItem="4qk-I5-YsI" firstAttribute="trailing" secondItem="Q4X-kW-iZP" secondAttribute="trailing" constant="16" id="QhO-rC-5oh"/>
@@ -80,6 +87,8 @@
                             <constraint firstItem="C8N-J6-zM6" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="16" id="aWS-8z-9Te"/>
                             <constraint firstItem="R9N-kv-Xhi" firstAttribute="leading" secondItem="CkF-Ms-B0A" secondAttribute="trailing" constant="-139" id="dmh-x0-YQB"/>
                             <constraint firstItem="Q4X-kW-iZP" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" constant="16" id="ez5-xR-nM9"/>
+                            <constraint firstItem="usV-bf-WZU" firstAttribute="leading" secondItem="C8N-J6-zM6" secondAttribute="trailing" constant="-36" id="iNw-vh-hvZ"/>
+                            <constraint firstItem="usV-bf-WZU" firstAttribute="top" secondItem="C8N-J6-zM6" secondAttribute="bottom" constant="-37" id="tMl-UX-Cmx"/>
                             <constraint firstItem="C8N-J6-zM6" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" constant="16" id="u89-8q-Zml"/>
                             <constraint firstItem="BGA-x3-fgL" firstAttribute="trailing" secondItem="4qk-I5-YsI" secondAttribute="trailing" id="w3Y-j1-q1U"/>
                             <constraint firstItem="BGA-x3-fgL" firstAttribute="bottom" secondItem="4qk-I5-YsI" secondAttribute="bottom" id="ygi-Bo-2g3"/>
@@ -87,9 +96,11 @@
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
                     </view>
                     <connections>
+                        <outlet property="contMaracuja" destination="C8N-J6-zM6" id="93V-Wq-ZO9"/>
                         <outlet property="darkView" destination="BGA-x3-fgL" id="SRe-Do-aaU"/>
                         <outlet property="hudPause" destination="R9N-kv-Xhi" id="YoH-tU-hef"/>
                         <outlet property="imageHUD" destination="C8N-J6-zM6" id="S7q-aY-giC"/>
+                        <outlet property="labelContMaracuja" destination="usV-bf-WZU" id="yku-8f-Bfr"/>
                         <outlet property="pauseButton" destination="Q4X-kW-iZP" id="jqN-ns-063"/>
                         <outlet property="playButton" destination="CkF-Ms-B0A" id="JXg-6N-Tsk"/>
                         <outlet property="restartButton" destination="Yqo-Rk-1Y2" id="7Pq-Qz-seQ"/>
