@@ -40,11 +40,15 @@ class PlayerDAO{
         newPlayer.setValue(player.pontos, forKey: "pontos")
         newPlayer.setValue(player.checkpoint, forKey: "checkpoint")
         newPlayer.setValue(player.qtdemacas, forKey: "qtdemacas")
+        newPlayer.setValue(player.escolhaUm, forKey: "escolhaum")
+        newPlayer.setValue(player.escolhaDois, forKey: "escolhadois")
+        newPlayer.setValue(player.escolhatres, forKey: "escolhatres")
+        
         
         do {
             try getInstanceContext().save()
         } catch {
-            print("Failed saving")
+//            print("Failed saving")
         }
     }
     
@@ -65,12 +69,13 @@ class PlayerDAO{
                 let qtdemacas   = data.value(forKey: "qtdemacas") as! Int
                 let escolhaum   = data.value(forKey: "escolhaum") as! Int
                 let escolhadois = data.value(forKey: "escolhadois") as! Int
-                let p           = PlayerPersistence(pontos: pontos, checkpoint: checkpoint, qtdemacas: qtdemacas, escolhaUm: escolhaum, escolhaDois: escolhadois)
+                let escolhatres = data.value(forKey: "escolhatres") as! Int
+                let p           = PlayerPersistence(pontos: pontos, checkpoint: checkpoint, qtdemacas: qtdemacas, escolhaUm: escolhaum, escolhaDois: escolhadois,escolhatres: escolhatres)
                 lista.append(p)
             }
             
         } catch {
-            print("Failed")
+//            print("Failed")
         }
         return lista
     }
@@ -103,7 +108,7 @@ class PlayerDAO{
                 }
             }
         }catch{
-            print(error)
+//            print(error)
         }
     }
     
@@ -127,7 +132,7 @@ class PlayerDAO{
                 try managedContext.save()
             }
             catch{
-                print(" Erro na hora de salvar.")
+//                print(" Erro na hora de salvar.")
             }
         }
         catch{
@@ -142,4 +147,5 @@ struct PlayerPersistence{
     var qtdemacas   :Int
     var escolhaUm   :Int
     var escolhaDois :Int
+    var escolhatres :Int
 }

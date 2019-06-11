@@ -24,12 +24,14 @@ class PlayerNode: SKSpriteNode {
             self.position = CGPoint.initialPositionNode.playerNode
         }else{
             let save = PlayerDAO.getSaves()[0]
+            print(save.escolhaUm)
             print("Numero do checkpoint \(save.checkpoint)")
             switch(save.checkpoint){
                 
             case 1:
                     if(save.escolhaUm==1){
                         self.position = CGPoint.initialPositionNode.playerFirstChoice_Save
+                        
                     }else{
                         self.position = CGPoint.initialPositionNode.playerFirstChoice_NoSave
                     }
@@ -40,10 +42,12 @@ class PlayerNode: SKSpriteNode {
                 //DOIS, Criar um else que aponte para caso ele nao escolha salvar o piupiu
                     if(save.escolhaUm==1){
                         self.position = CGPoint.initialPositionNode.playerSecondChoice_NoSave
+                    }else{
+                        self.position = CGPoint.initialPositionNode.playerSecondChoice_NoSave
                     }
                     break
-                default:
-                print("Implemente o Default, com certeza deve ter dado erro né?")
+            default:
+                    self.position = CGPoint.initialPositionNode.posicaoInicialTerceiraEscolha                
             }
         }
     }

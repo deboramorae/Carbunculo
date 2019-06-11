@@ -14,6 +14,6 @@ class StateLanding:GKState{
         return (stateClass is StateIdle.Type) 
     }
     override func didEnter(from previousState: GKState?) {
-        print("Entrou Landing")
+//        print("Entrou Landing")
     }
 }
