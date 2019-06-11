@@ -49,6 +49,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         do {
             let entidadeCena  = EntidadeCena(cena: self)
             
+            let mecanicsSwipe = MecanicsSwipeEntity(entityManager: entityManager, scene : self)
+            
             let background = BackgroundEntity(entityManager: entityManager, texture: SKTexture.imageNamed.background1, position : CGPoint.initialPositionNode.backgroundNode)
             
             let background2 = BackgroundEntity(entityManager: entityManager, texture: SKTexture.imageNamed.background2, position: CGPoint.initialPositionNode.background2)
@@ -145,6 +147,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             entityManager.add(CarbunculoEntity(entityManager: entityManager, scene: self))
             
             entityManager.add(entidadeCena)
+            
+            entityManager.add(mecanicsSwipe)
             
             entityManager.add(background)
             entityManager.add(background2)

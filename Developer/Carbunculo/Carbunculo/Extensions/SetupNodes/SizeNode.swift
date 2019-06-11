@@ -76,6 +76,7 @@ extension CGSize {
         
         public static let carbunculoNode :  CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 126, height: 156))
         
+        public static let setaNode : CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 146, height: 57))
         
         
         
