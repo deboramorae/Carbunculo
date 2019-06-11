@@ -78,6 +78,8 @@ extension CGSize {
         
         public static let setaNode : CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 146, height: 57))
         
+        public static let tapNode : CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 146, height: 57))
+        
         
         
         

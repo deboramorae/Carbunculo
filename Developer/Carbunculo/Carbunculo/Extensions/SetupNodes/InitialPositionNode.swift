@@ -140,6 +140,8 @@ extension CGPoint {
         
         public static let setaNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 10, y: 0))
         
+        public static let tapNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 10, y: 0))
+        
         public static let posicaoInicialTerceiraEscolha: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 8666.01, y: -105.46))
         
         
