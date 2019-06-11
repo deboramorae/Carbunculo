@@ -60,4 +60,23 @@ struct Textures{
             return lista
         }
     }
+    static var mecanicSwipe: [SKTexture] {
+        get {
+            var lista : [SKTexture] = []
+            for posicao in 0...3{
+                lista.append(SKTexture(imageNamed: "seta" + String(format: "%02d", posicao)))
+            }
+            return lista
+        }
+    }
+    
+    static var mecanicTap: [SKTexture] {
+        get {
+            var lista : [SKTexture] = []
+            for posicao in 0...3{
+                lista.append(SKTexture(imageNamed: "tap " + String(format: "%02d", posicao)))
+            }
+            return lista
+        }
+    }
 }
