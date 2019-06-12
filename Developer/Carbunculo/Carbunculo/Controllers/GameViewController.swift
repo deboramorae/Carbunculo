@@ -124,6 +124,7 @@ class GameViewController: UIViewController {
         if Debug.ignoreCutscene ?? false {
             self.loadGameSceneView()
         }else{
+            cutsceneName = "cutsceneInicio"
             self.loadCutsceneView()
         }
     }
@@ -173,7 +174,6 @@ class GameViewController: UIViewController {
             
             // Get the SKScene from the loaded GKScene
             if let sceneNode = scene.rootNode as! GameCutscene? {
-                
                 SKViewSizeRect = view.bounds
                 UIDarkView = darkView
                 // Copy gameplay related content over to the scene
