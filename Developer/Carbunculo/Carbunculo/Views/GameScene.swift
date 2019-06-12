@@ -37,6 +37,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 //        self.addChild(video)
 //        video.play()
 //
+        EntityManager.ischoosing = false
     }
     
     
