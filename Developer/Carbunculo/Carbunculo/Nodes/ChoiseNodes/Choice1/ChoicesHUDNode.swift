@@ -58,6 +58,7 @@ class ChoicesHUDNode : SKSpriteNode {
                 manager!.saveProgress2()
             default:
                 choicesControl.escolhatres = opcaoEscolhida
+                manager?.saveProgress3()
                 break;
         }
         choicesControl.mostrarInformacoes()

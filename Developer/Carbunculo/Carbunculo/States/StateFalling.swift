@@ -14,6 +14,6 @@ class StateFalling:GKState{
         return (stateClass is StateLanding.Type) || (stateClass is StateUnconscious.Type) || (stateClass is StateIdle.Type) || (stateClass is StateRunning.Type)
     }
     override func didEnter(from previousState: GKState?) {
-        print("Entrou Falling")
+//        print("Entrou Falling")
     }
 }

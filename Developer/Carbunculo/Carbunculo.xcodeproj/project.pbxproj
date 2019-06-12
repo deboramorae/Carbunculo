@@ -141,6 +141,9 @@
 		EACAC17E22B01CCA00802E64 /* MecanicsSwipeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACAC17D22B01CCA00802E64 /* MecanicsSwipeNode.swift */; };
 		EACAC18022B0228F00802E64 /* MecanicsSwipeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACAC17F22B0228F00802E64 /* MecanicsSwipeEntity.swift */; };
 		EACAC18222B022F400802E64 /* MecanicsSwipeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACAC18122B022F400802E64 /* MecanicsSwipeComponent.swift */; };
+		EACAC18422B04C7F00802E64 /* MecanicsTapNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACAC18322B04C7F00802E64 /* MecanicsTapNode.swift */; };
+		EACAC18822B04E4C00802E64 /* MecanicsTapComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACAC18722B04E4C00802E64 /* MecanicsTapComponent.swift */; };
+		EACAC18B22B04EEA00802E64 /* MecanicsTapEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACAC18A22B04EEA00802E64 /* MecanicsTapEntity.swift */; };
 		EADA597022AAF0830051999F /* FloorInvisibleNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADA596F22AAF0830051999F /* FloorInvisibleNode.swift */; };
 		EADA597322AAF1640051999F /* FloorInvisivleNodeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADA597222AAF1640051999F /* FloorInvisivleNodeComponent.swift */; };
 		EAE05C942294885A00B78846 /* RemoteControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE05C932294885A00B78846 /* RemoteControl.swift */; };
@@ -283,6 +286,9 @@
 		EACAC17D22B01CCA00802E64 /* MecanicsSwipeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MecanicsSwipeNode.swift; sourceTree = "<group>"; };
 		EACAC17F22B0228F00802E64 /* MecanicsSwipeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MecanicsSwipeEntity.swift; sourceTree = "<group>"; };
 		EACAC18122B022F400802E64 /* MecanicsSwipeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MecanicsSwipeComponent.swift; sourceTree = "<group>"; };
+		EACAC18322B04C7F00802E64 /* MecanicsTapNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MecanicsTapNode.swift; sourceTree = "<group>"; };
+		EACAC18722B04E4C00802E64 /* MecanicsTapComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MecanicsTapComponent.swift; sourceTree = "<group>"; };
+		EACAC18A22B04EEA00802E64 /* MecanicsTapEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MecanicsTapEntity.swift; sourceTree = "<group>"; };
 		EADA596F22AAF0830051999F /* FloorInvisibleNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorInvisibleNode.swift; sourceTree = "<group>"; };
 		EADA597222AAF1640051999F /* FloorInvisivleNodeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorInvisivleNodeComponent.swift; sourceTree = "<group>"; };
 		EAE05C932294885A00B78846 /* RemoteControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteControl.swift; sourceTree = "<group>"; };
@@ -461,6 +467,7 @@
 		84B058152294374D00B7E9A0 /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
+				EACAC18522B04CA500802E64 /* MecanicsNode */,
 				84C424D122AEF91D00E7D837 /* Cutscene */,
 				EAA0ED7C22A83BA900480213 /* MagicFlorest */,
 				8412472E229F058500052953 /* ChoiseNodes */,
@@ -473,7 +480,6 @@
 				EAB872CC229C827E00A7FE9E /* AnimalNode.swift */,
 				EA41380022A04B6900959903 /* FruitinhaNode.swift */,
 				EA03F5AD22A9963800581C44 /* CoracaoNode.swift */,
-				EACAC17D22B01CCA00802E64 /* MecanicsSwipeNode.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -500,6 +506,7 @@
 		84B0581B22943F1100B7E9A0 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				EACAC18922B04ECA00802E64 /* MecanicsEntity */,
 				84C424D722AEFC1300E7D837 /* Cutscene */,
 				EAA0ED7D22A83BBE00480213 /* MagicFlorestEntity */,
 				8405E3C8229F79CD00DB50A6 /* ChoiceEntities */,
@@ -513,7 +520,6 @@
 				666BA976229C8185000B27C8 /* MaracujaEntity.swift */,
 				EA09493522A19AFD002B105B /* BalaoEntity.swift */,
 				EA03F5B122A9976A00581C44 /* CoracaoEntity.swift */,
-				EACAC17F22B0228F00802E64 /* MecanicsSwipeEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -521,6 +527,7 @@
 		84B05820229445C000B7E9A0 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				EACAC18622B04E0300802E64 /* MecincsComponent */,
 				84C424D222AEFAB800E7D837 /* Cutscene */,
 				EA4BC04A22A76F2D00870650 /* MagicFlorest */,
 				8405E3CD22A04F8700DB50A6 /* Choice */,
@@ -542,7 +549,6 @@
 				EA8846C3229E0DA3003BF8F7 /* BalaoExclamacaoNodeComponent.swift */,
 				666BA97B229E1C33000B27C8 /* ObstacleComeBackComponent.swift */,
 				EA03F5AF22A9972100581C44 /* CoracaoNodeComponent.swift */,
-				EACAC18122B022F400802E64 /* MecanicsSwipeComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -761,6 +767,33 @@
 			path = ObstaclesComponents;
 			sourceTree = "<group>";
 		};
+		EACAC18522B04CA500802E64 /* MecanicsNode */ = {
+			isa = PBXGroup;
+			children = (
+				EACAC17D22B01CCA00802E64 /* MecanicsSwipeNode.swift */,
+				EACAC18322B04C7F00802E64 /* MecanicsTapNode.swift */,
+			);
+			path = MecanicsNode;
+			sourceTree = "<group>";
+		};
+		EACAC18622B04E0300802E64 /* MecincsComponent */ = {
+			isa = PBXGroup;
+			children = (
+				EACAC18122B022F400802E64 /* MecanicsSwipeComponent.swift */,
+				EACAC18722B04E4C00802E64 /* MecanicsTapComponent.swift */,
+			);
+			path = MecincsComponent;
+			sourceTree = "<group>";
+		};
+		EACAC18922B04ECA00802E64 /* MecanicsEntity */ = {
+			isa = PBXGroup;
+			children = (
+				EACAC18A22B04EEA00802E64 /* MecanicsTapEntity.swift */,
+				EACAC17F22B0228F00802E64 /* MecanicsSwipeEntity.swift */,
+			);
+			path = MecanicsEntity;
+			sourceTree = "<group>";
+		};
 		EAD942C122A6FEF600BF7A54 /* Choice1 */ = {
 			isa = PBXGroup;
 			children = (
@@ -923,6 +956,7 @@
 				EA03F5B022A9972100581C44 /* CoracaoNodeComponent.swift in Sources */,
 				EA03F5B722A9B59000581C44 /* CarbunculoNodeComponent.swift in Sources */,
 				8405E3CF22A080DE00DB50A6 /* StoneEntity.swift in Sources */,
+				EACAC18822B04E4C00802E64 /* MecanicsTapComponent.swift in Sources */,
 				EAB872CB229C7DE200A7FE9E /* WindEntity.swift in Sources */,
 				666BA97C229E1C33000B27C8 /* ObstacleComeBackComponent.swift in Sources */,
 				66C63BD822970F1900CCEE3A /* SceneMachineComponent.swift in Sources */,
@@ -943,6 +977,7 @@
 				66C63BB22294693900CCEE3A /* StateRunning.swift in Sources */,
 				EA8846C2229E0AD5003BF8F7 /* BalaoExclamacaoNode.swift in Sources */,
 				66C63BC622948D1900CCEE3A /* StateUnPaused.swift in Sources */,
+				EACAC18B22B04EEA00802E64 /* MecanicsTapEntity.swift in Sources */,
 				666BA970229C5CC2000B27C8 /* PlayerNodeComponent.swift in Sources */,
 				66C63BD42295ECE100CCEE3A /* WaterNode.swift in Sources */,
 				66C63BB62294698300CCEE3A /* StateFalling.swift in Sources */,
@@ -966,6 +1001,7 @@
 				8410A2F222946FD600F73DC0 /* IdleComponent.swift in Sources */,
 				846A9331229C5DB400A31D1F /* BackgroundNode.swift in Sources */,
 				84B0581D22943F2A00B7E9A0 /* Player.swift in Sources */,
+				EACAC18422B04C7F00802E64 /* MecanicsTapNode.swift in Sources */,
 				84C424D922AEFC3B00E7D837 /* InvisibleCutsceneEntity.swift in Sources */,
 				66C63BD22295EB6A00CCEE3A /* WaterNodeComponent.swift in Sources */,
 				EACAC18022B0228F00802E64 /* MecanicsSwipeEntity.swift in Sources */,
@@ -1139,7 +1175,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9F5KAYAF75;
+				DEVELOPMENT_TEAM = 6HDRUANT3K;
 				INFOPLIST_FILE = Carbunculo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1157,7 +1193,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9F5KAYAF75;
+				DEVELOPMENT_TEAM = 6HDRUANT3K;
 				INFOPLIST_FILE = Carbunculo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
