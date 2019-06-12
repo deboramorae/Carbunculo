@@ -19,6 +19,7 @@ class ChoicesHUDNode : SKSpriteNode {
         self.name = "Choices HUD"
         self.position = CGPoint.initialPositionNode.choiseHUDNode
         self.zPosition = 100
+        
         let choiseButton1 = ChoiceButtonNode(backgroundNamed: textureButton1) {
             print("Botão 1 pressionado")
             self.removeChoicesHUD()
