@@ -31,13 +31,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //ATENCAO, SE QUISER APAGAR O SEU SAVE DESCOMENTE A LINHA ABAIXO
         PlayerDAO.deleteAllSaves()
         //print(PlayerDAO.getSaves().count)
-        
-        
-//        let video = SKVideoNode(fileNamed: "BeginningCutscene.mp4")
-//        
-//        self.addChild(video)
-//        video.play()
-//
+
         EntityManager.ischoosing = false
     }
     
@@ -340,8 +334,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
                 if(contact.bodyA.node!.name == "invisibleCutsceneNode" || contact.bodyB.node!.name == "invisibleCutsceneNode"){
                     print(choicesControl.ponctuation)
-                    if choicesControl.ponctuation <= 3 {
-                        cutsceneName = "cutsceneFinal1"
+                    if choicesControl.ponctuation >= 6 {
+                        cutsceneName = "cutseceneFinal1"
                         gameViewController.loadCutsceneView()
                     } else {
                         cutsceneName = "cutsceneFinal2"
