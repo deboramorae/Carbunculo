@@ -339,7 +339,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
                 
                 if(contact.bodyA.node!.name == "invisibleCutsceneNode" || contact.bodyB.node!.name == "invisibleCutsceneNode"){
-                    gameViewController.loadCutsceneView()
+                    print(choicesControl.ponctuation)
+                    if choicesControl.ponctuation <= 3 {
+                        cutsceneName = "cutsceneFinal1"
+                        gameViewController.loadCutsceneView()
+                    } else {
+                        cutsceneName = "cutsceneFinal2"
+                        gameViewController.loadCutsceneView()
+                    }
                 }
 
                 

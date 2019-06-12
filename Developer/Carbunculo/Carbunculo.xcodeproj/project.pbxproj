@@ -90,6 +90,9 @@
 		84D371402294309700922D4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84D3713F2294309700922D4B /* Assets.xcassets */; };
 		84D371432294309700922D4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D371412294309700922D4B /* LaunchScreen.storyboard */; };
 		84E814FA22B1517C002C14A4 /* background-fase2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84E814F922B1517C002C14A4 /* background-fase2.mp3 */; };
+		84E814FE22B17C94002C14A4 /* cutsceneFinal2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 84E814FB22B17C94002C14A4 /* cutsceneFinal2.mp4 */; };
+		84E814FF22B17C94002C14A4 /* cutsceneInicio.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 84E814FC22B17C94002C14A4 /* cutsceneInicio.mp4 */; };
+		84E8150022B17C94002C14A4 /* cutseceneFinal1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 84E814FD22B17C94002C14A4 /* cutseceneFinal1.mp4 */; };
 		84F5C694229CC69D00CB749B /* AnchorPointNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5C693229CC69D00CB749B /* AnchorPointNode.swift */; };
 		EA03F5AE22A9963800581C44 /* CoracaoNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA03F5AD22A9963800581C44 /* CoracaoNode.swift */; };
 		EA03F5B022A9972100581C44 /* CoracaoNodeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA03F5AF22A9972100581C44 /* CoracaoNodeComponent.swift */; };
@@ -240,6 +243,9 @@
 		84D371422294309700922D4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84D371442294309700922D4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84E814F922B1517C002C14A4 /* background-fase2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "background-fase2.mp3"; path = "../../../../../Sound/Efects/final/background-fase2.mp3"; sourceTree = "<group>"; };
+		84E814FB22B17C94002C14A4 /* cutsceneFinal2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = cutsceneFinal2.mp4; path = ../../../../../Design/cutscenes/cutsceneFinal2.mp4; sourceTree = "<group>"; };
+		84E814FC22B17C94002C14A4 /* cutsceneInicio.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = cutsceneInicio.mp4; path = ../../../../../Design/cutscenes/cutsceneInicio.mp4; sourceTree = "<group>"; };
+		84E814FD22B17C94002C14A4 /* cutseceneFinal1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = cutseceneFinal1.mp4; path = ../../../../../Design/cutscenes/cutseceneFinal1.mp4; sourceTree = "<group>"; };
 		84F5C693229CC69D00CB749B /* AnchorPointNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorPointNode.swift; sourceTree = "<group>"; };
 		EA03F5AD22A9963800581C44 /* CoracaoNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoracaoNode.swift; sourceTree = "<group>"; };
 		EA03F5AF22A9972100581C44 /* CoracaoNodeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoracaoNodeComponent.swift; sourceTree = "<group>"; };
@@ -585,6 +591,9 @@
 		84B89DE122AEA1D600DF7BE2 /* mp4 */ = {
 			isa = PBXGroup;
 			children = (
+				84E814FB22B17C94002C14A4 /* cutsceneFinal2.mp4 */,
+				84E814FC22B17C94002C14A4 /* cutsceneInicio.mp4 */,
+				84E814FD22B17C94002C14A4 /* cutseceneFinal1.mp4 */,
 				84B89DE222AEA1F900DF7BE2 /* BeginningCutscene.mp4 */,
 			);
 			path = mp4;
@@ -894,6 +903,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84E814FE22B17C94002C14A4 /* cutsceneFinal2.mp4 in Resources */,
+				84E8150022B17C94002C14A4 /* cutseceneFinal1.mp4 in Resources */,
 				849A22C122AAFC0000826116 /* maracuja.mp3 in Resources */,
 				84AB8E8C22AEC42C00BA8A7B /* GameCutscene.sks in Resources */,
 				846EBD7B22AA9C1700F7DD75 /* restart.mp3 in Resources */,
@@ -911,6 +922,7 @@
 				846EBD7622AA9C1700F7DD75 /* pause.mp3 in Resources */,
 				84D371432294309700922D4B /* LaunchScreen.storyboard in Resources */,
 				84D371372294309700922D4B /* Actions.sks in Resources */,
+				84E814FF22B17C94002C14A4 /* cutsceneInicio.mp4 in Resources */,
 				84B89DE322AEA1F900DF7BE2 /* BeginningCutscene.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
