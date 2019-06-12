@@ -9,18 +9,20 @@
 import Foundation
 import GameplayKit
 
+var cutsceneName = ""
+
 class GameCutscene: SKScene {
 
     var entities = [GKEntity]()
     var graphs = [String : GKGraph]()
     var entityManager: EntityManager!
 
-    
+
     override func sceneDidLoad() {
         entityManager = EntityManager(scene: self)
 
         do {
-            let cutscene01 = CutsceneEntity(entityManager: entityManager, scene: self, nameFile: "BeginningCutscene")
+            let cutscene01 = CutsceneEntity(entityManager: entityManager, scene: self, nameFile: cutsceneName)
         
             entityManager.add(cutscene01)
         }
