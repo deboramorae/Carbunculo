@@ -126,7 +126,11 @@ class GameViewController: UIViewController {
             self.loadCutsceneView()
         }
     }
-    
+    func changeImageHud(){
+        imageHUD.image = UIImage(named: "maracujaMistico")
+        pauseButton.setImage(UIImage(named: "pauseMistico"), for: .normal)
+        
+    }
     func loadGameSceneView() {
         if let scene = GKScene(fileNamed: "GameScene") {
             

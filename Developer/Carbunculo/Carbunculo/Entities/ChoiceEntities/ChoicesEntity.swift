@@ -21,6 +21,7 @@ class ChoicesEntity: GKEntity{
         
         let invisibleNode  = InvisibleChoiceNode()
         invisibleNode.name =  "NodeDeEscolha"
+        
         let nodeHUD = ChoicesHUDNode(textureDecisao: textureDecisao, textureButton1: textureButton1, textureButton2: textureButton2, cena: scene, numberChoice: numberChoice,manager:manager)
         nodeHUD.position = position
         
