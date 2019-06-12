@@ -56,6 +56,8 @@ extension CGSize {
         
         public static let choiseButtonNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 319, height: 36))
         
+        public static let choiceButtonMistic : CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 319, height: 41))
+        
         public static let invisibleChoiceNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 30, height: (SKViewSizeRect.height)))
         
         public static let frutinhaNode : CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 40, height: 40))
