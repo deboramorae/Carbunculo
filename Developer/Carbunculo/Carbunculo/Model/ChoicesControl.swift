@@ -45,10 +45,10 @@ public class ChoicesControl {
     }
     
     public func mostrarInformacoes(){
-        print("Decisao Atual: \(self.decisaoatual)")
-        print("EscolhaUm Atual: \(self.escolhaum)")
-        print("EscolhaDois Atual: \(self.escolhadois)")
-        print("EscolhaTres Atual: \(self.escolhatres)")
+//        print("Decisao Atual: \(self.decisaoatual)")
+//        print("EscolhaUm Atual: \(self.escolhaum)")
+//        print("EscolhaDois Atual: \(self.escolhadois)")
+//        print("EscolhaTres Atual: \(self.escolhatres)")
         }
 }
 
