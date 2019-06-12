@@ -38,6 +38,7 @@ class GameViewController: UIViewController {
         restartSong.prepareMusic()
         restartSong.playSong()
         self.hiddenHud()
+        PlayerDAO.deleteAllSaves()
         //cena.entityManager.restartScene()
         restartScene()
     }
