@@ -186,6 +186,10 @@ class EntityManager {
         
         let coracao = CoracaoEntity(entityManager: self, scene: self.scene as! GameScene, position: CGPoint.initialPositionNode.coracaoMacacoNode)
         
+        let maracuja = MaracujaEntity(entityManager: self, scene: self.scene as! GameScene, position: CGPoint.initialPositionNode.maracujaMacaco)
+        
+        self.add(maracuja)
+        
         self.add(coracao)
         self.add(animal)
         
@@ -217,6 +221,19 @@ class EntityManager {
             }
         }
         
+    }
+    
+    func removeNodeInvisible(){
+        for entity in entities{
+            if let invisibleMecanics = entity.component(ofType: InvisibleMecanicsNodeComponent.self)?.node{
+                self.remove(invisibleMecanics.entity as! InvisibleMecanicsEntity)
+            }
+        }
+        for entity in entities{
+            if let mecanicTap = entity.component(ofType: MecanicsTapComponent.self)?.node{
+                self.remove(mecanicTap.entity as! MecanicsTapEntity)
+            }
+        }
     }
     
     func saveProgress(){

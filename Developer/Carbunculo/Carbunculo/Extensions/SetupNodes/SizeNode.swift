@@ -24,7 +24,7 @@ extension CGSize {
          public static let floor4: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 755, height: 48))
         public static let floor5: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 1080, height: 51))
         public static let floorMystic: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 1276, height: 62))
-        public static let floorMystic2: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 1276, height: 62))
+        public static let floorMystic2: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 1478, height: 62))
         
         
         public static let woodNode: CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 136, height: 43))
@@ -78,7 +78,9 @@ extension CGSize {
         
         public static let setaNode : CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 146, height: 57))
         
-        public static let tapNode : CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 146, height: 57))
+        public static let tapNode : CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 35, height: 37))
+        
+        public static let sizeInvisibleNode : CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 10, height: SKViewSizeRect.height))
         
         
         
