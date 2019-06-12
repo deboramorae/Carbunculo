@@ -14,7 +14,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     static let spritePixelsToScreenPixels: CGFloat = 1.0
     var entities = [GKEntity]()
     var graphs = [String : GKGraph]()
-    private var swipe : Bool = false
+    
+    private var tap : Bool = false
     
     private var remoteControl: RemoteControl?
     private var lastUpdateTime : TimeInterval = 0
@@ -28,7 +29,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.lastUpdateTime = 0
         physicsWorld.contactDelegate = self
         //ATENCAO, SE QUISER APAGAR O SEU SAVE DESCOMENTE A LINHA ABAIXO
-      PlayerDAO.deleteAllSaves()
+        PlayerDAO.deleteAllSaves()
         //print(PlayerDAO.getSaves().count)
         
         
@@ -262,7 +263,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     @objc func gestureSwipe(_ sender : UIGestureRecognizer){
-        swipe = true
         entityManager.run()
         
     }
@@ -272,8 +272,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     @objc func handleTapVez(sender: UITapGestureRecognizer) {
         if sender.state == UIGestureRecognizer.State.ended {
-           entityManager.jump()
-            entityManager.removeNodeInvisible()
+            if self.tap{
+                entityManager.jump()
+                entityManager.removeNodeInvisible()
+            }
+           
         }
     }
     override func update(_ currentTime: TimeInterval) {
@@ -353,7 +356,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         
         if contact.bodyA.node?.name == "invisibleMecanics" || contact.bodyB.node?.name == "invisibleMecanics"{
-            print("a")
+            
+            self.tap = true
             
             let mecanicsTap = MecanicsTapEntity(entityManager: entityManager, scene: self)
             entityManager.add(mecanicsTap)

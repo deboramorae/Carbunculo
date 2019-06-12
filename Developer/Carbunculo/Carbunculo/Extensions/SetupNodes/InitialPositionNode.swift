@@ -134,7 +134,7 @@ extension CGPoint {
         
         public static let coracaoNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 6510, y: -70))
         
-        public static let carbunculoNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 9500, y: -10))
+        public static let carbunculoNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 9540, y: -10))
         
          public static let coracaoMacacoNode: CGPoint =  CGPoint.positionProportionalWithFrame(position: CGPoint(x: 2330, y: -60))
         
