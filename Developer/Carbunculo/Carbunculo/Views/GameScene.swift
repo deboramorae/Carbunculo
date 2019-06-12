@@ -34,6 +34,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
         EntityManager.ischoosing = false
         permitirPulo()
+        choicesControl = ChoicesControl()
     }
     
     func permitirPulo(){
