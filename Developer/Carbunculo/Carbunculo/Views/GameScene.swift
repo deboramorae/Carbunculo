@@ -38,6 +38,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 //        self.addChild(video)
 //        video.play()
 //
+        EntityManager.ischoosing = false
     }
     
     
@@ -346,7 +347,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
         }
         if (contact.bodyA.node!.name == "floorMystic" || contact.bodyB.node!.name == "floorMystic"){
-            
+            gameViewController.changeImageHud()
             if contact.bodyA.node?.name == "player"{
                 contact.bodyA.node?.physicsBody?.affectedByGravity = false
             }else{
