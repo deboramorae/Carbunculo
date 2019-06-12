@@ -15,7 +15,7 @@ class CutsceneInvisibleNode: SKSpriteNode {
     init() {
         super.init(texture: nil, color: .clear, size: CGSize.sizeNode.invisibleChoiceNode)
         self.name = "InvisibleCutsceneNode"
-        self.position = CGPoint(x: CGPoint.initialPositionNode.carbunculoNode.x - 100, y: CGPoint.initialPositionNode.carbunculoNode.y)
+        self.position = CGPoint(x: CGPoint.initialPositionNode.carbunculoNode.x - 200, y: CGPoint.initialPositionNode.carbunculoNode.y)
     }
     
     required init?(coder aDecoder: NSCoder) {

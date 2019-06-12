@@ -237,9 +237,9 @@ class EntityManager {
     }
     
     func saveProgress(){
-        print("Antes \(choicesControl.decisaoatual)")
+//        print("Antes \(choicesControl.decisaoatual)")
         choicesControl.decisaoatual = 1
-        print("Depois \(choicesControl.decisaoatual)")
+//        print("Depois \(choicesControl.decisaoatual)")
         if(PlayerDAO.getSaves().count == 0){
             PlayerDAO.addPlayer(player: PlayerPersistence(pontos:choicesControl.ponctuation, checkpoint: choicesControl.decisaoatual, qtdemacas: choicesControl.qtdemacas, escolhaUm: choicesControl.escolhaum, escolhaDois: choicesControl.escolhadois,escolhatres: choicesControl.escolhatres))
         }else{
@@ -247,9 +247,9 @@ class EntityManager {
         }
     }
     func saveProgress2(){
-        print("Antes \(choicesControl.decisaoatual)")
+//        print("Antes \(choicesControl.decisaoatual)")
         choicesControl.decisaoatual = 2
-        print("Depois \(choicesControl.decisaoatual)")
+//        print("Depois \(choicesControl.decisaoatual)")
         if(PlayerDAO.getSaves().count == 0){
             PlayerDAO.addPlayer(player: PlayerPersistence(pontos:choicesControl.ponctuation, checkpoint: choicesControl.decisaoatual, qtdemacas: choicesControl.qtdemacas, escolhaUm: choicesControl.escolhaum, escolhaDois: choicesControl.escolhadois, escolhatres: choicesControl.escolhatres))
         }else{
@@ -258,9 +258,9 @@ class EntityManager {
     }
     
     func saveProgress3(){
-        print("Antes \(choicesControl.decisaoatual)")
+//        print("Antes \(choicesControl.decisaoatual)")
         choicesControl.decisaoatual = 3
-        print("Depois \(choicesControl.decisaoatual)")
+//        print("Depois \(choicesControl.decisaoatual)")
         if(PlayerDAO.getSaves().count == 0){
             PlayerDAO.addPlayer(player: PlayerPersistence(pontos:choicesControl.ponctuation, checkpoint: choicesControl.decisaoatual, qtdemacas: choicesControl.qtdemacas, escolhaUm: choicesControl.escolhaum, escolhaDois: choicesControl.escolhadois, escolhatres: choicesControl.escolhatres))
         }else{
@@ -292,7 +292,7 @@ class EntityManager {
                 
             }
         }
-       // print(playernode.position)
+        print(playernode.position)
     }
     
     func restartScene(){

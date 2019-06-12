@@ -24,7 +24,7 @@ class PlayerNode: SKSpriteNode {
             self.position = CGPoint.initialPositionNode.playerNode
         }else{
             let save = PlayerDAO.getSaves()[0]
-            print(save.escolhaUm)
+//            print(save.escolhaUm)
             print("Numero do checkpoint \(save.checkpoint)")
             switch(save.checkpoint){
                 

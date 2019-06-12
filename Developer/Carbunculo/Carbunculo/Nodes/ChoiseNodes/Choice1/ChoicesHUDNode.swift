@@ -21,7 +21,7 @@ class ChoicesHUDNode : SKSpriteNode {
         self.zPosition = 100
         
         let choiseButton1 = ChoiceButtonNode(backgroundNamed: textureButton1) {
-            print("Botão 1 pressionado")
+//            print("Botão 1 pressionado")
             self.removeChoicesHUD()
             
             switch numberChoice {
@@ -42,7 +42,7 @@ class ChoicesHUDNode : SKSpriteNode {
         self.addChild(choiseButton1)
         
         let choiseButton2 = ChoiceButtonNode(backgroundNamed: textureButton2) {
-            print("Botão 2 pressionado")
+//            print("Botão 2 pressionado")
             self.removeChoicesHUD()
             
             switch numberChoice {
