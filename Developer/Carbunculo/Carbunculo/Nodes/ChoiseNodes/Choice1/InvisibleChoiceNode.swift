@@ -15,7 +15,7 @@ class InvisibleChoiceNode: SKSpriteNode {
     init() {
         super.init(texture: nil, color: .clear, size: CGSize.sizeNode.invisibleChoiceNode)
         self.name = "InvisibleChoiceNode"
-        self.position = CGPoint.initialPositionNode.invisibleChoiceNode
+        self.position = CGPoint.initialPositionNode.invisbleTapNode
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -13,7 +13,7 @@ class MecanicsTapNode: SKSpriteNode{
     
     init(){
         super.init(texture: SKTexture.imageNamed.tapNode, color: .clear, size: CGSize.sizeNode.tapNode)
-        self.name = "mecanicsTap"
+        self.name = "invisibleMecanics"
         self.position = CGPoint.initialPositionNode.tapNode
     }
     

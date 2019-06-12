@@ -16,6 +16,7 @@ class MecanicsTapEntity: GKEntity{
         super.init()
         
         let tap = MecanicsTapNode()
+        
         addComponent(MecanicsTapComponent(node: tap, scene: scene))
     }
     

@@ -78,7 +78,9 @@ extension CGSize {
         
         public static let setaNode : CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 146, height: 57))
         
-        public static let tapNode : CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 146, height: 57))
+        public static let tapNode : CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 35, height: 37))
+        
+        public static let sizeInvisibleNode : CGSize = CGSize.sizeProportinalWithFrame(size: CGSize(width: 10, height: SKViewSizeRect.height))
         
         
         
