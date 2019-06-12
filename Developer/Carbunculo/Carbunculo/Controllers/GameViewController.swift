@@ -35,6 +35,7 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func restart(_ sender: Any) {
+        changeFirstImageHUD()
         restartSong.prepareMusic()
         restartSong.playSong()
         self.hiddenHud()
