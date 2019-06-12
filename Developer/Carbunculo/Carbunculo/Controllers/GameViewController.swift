@@ -51,6 +51,7 @@ class GameViewController: UIViewController {
         }
         
         backgroundSong_Phase01.playSong()
+        self.showPauseAndContMaracuja()
         self.hiddenHud()
         cena.entityManager.alternatePause()
     }
@@ -66,6 +67,7 @@ class GameViewController: UIViewController {
 
         pauseSong.prepareMusic()
         pauseSong.playSong()
+        self.hiddenPauseAndContMaracuja()
         self.showHud()
         cena.entityManager.alternatePause()
     }
@@ -178,6 +180,9 @@ class GameViewController: UIViewController {
                 // Present the scene
                 if let view = self.view as! SKView? {
                     //                    self.cena = sceneNode
+                    backgroundSong_Phase01.stopSong()
+                    backgroundSong_Phase02.stopSong()
+
                     view.presentScene(sceneNode)
                     view.ignoresSiblingOrder = true
                     view.showsFPS = Debug.showFPS ?? false
