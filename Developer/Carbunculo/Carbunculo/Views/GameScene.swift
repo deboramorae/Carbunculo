@@ -29,7 +29,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.lastUpdateTime = 0
         physicsWorld.contactDelegate = self
         //ATENCAO, SE QUISER APAGAR O SEU SAVE DESCOMENTE A LINHA ABAIXO
-        //PlayerDAO.deleteAllSaves()
+        PlayerDAO.deleteAllSaves()
         //print(PlayerDAO.getSaves().count)
 
         EntityManager.ischoosing = false
@@ -355,6 +355,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
 
         }
+        
+        if (contact.bodyA.node!.name == "floor" || contact.bodyB.node!.name == "floor"){
+            gameViewController.changeFirstImageHUD()
+        }
+        
         if (contact.bodyA.node!.name == "floorMystic" || contact.bodyB.node!.name == "floorMystic"){
             gameViewController.changeImageHud()
             if contact.bodyA.node?.name == "player"{
