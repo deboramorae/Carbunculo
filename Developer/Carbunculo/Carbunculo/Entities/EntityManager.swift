@@ -186,6 +186,10 @@ class EntityManager {
         
         let coracao = CoracaoEntity(entityManager: self, scene: self.scene as! GameScene, position: CGPoint.initialPositionNode.coracaoMacacoNode)
         
+        let maracuja = MaracujaEntity(entityManager: self, scene: self.scene as! GameScene, position: CGPoint.initialPositionNode.maracujaMacaco)
+        
+        self.add(maracuja)
+        
         self.add(coracao)
         self.add(animal)
         
