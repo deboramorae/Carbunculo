@@ -42,6 +42,7 @@ class GameViewController: UIViewController {
         PlayerDAO.deleteAllSaves()
         //cena.entityManager.restartScene()
         restartScene()
+        rescueQuantityMaracujas()
     }
     
     @IBAction func play(_ sender: Any) {
