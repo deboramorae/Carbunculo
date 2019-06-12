@@ -51,6 +51,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             let mecanicsSwipe = MecanicsSwipeEntity(entityManager: entityManager, scene : self)
             
+            let invisibleMecanics = InvisibleMecanicsEntity(entityManager: entityManager, scene: self)
+            
             let background = BackgroundEntity(entityManager: entityManager, texture: SKTexture.imageNamed.background1, position : CGPoint.initialPositionNode.backgroundNode)
             
             let background2 = BackgroundEntity(entityManager: entityManager, texture: SKTexture.imageNamed.background2, position: CGPoint.initialPositionNode.background2)
@@ -149,6 +151,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             entityManager.add(entidadeCena)
             
             entityManager.add(mecanicsSwipe)
+            entityManager.add(invisibleMecanics)
             
             entityManager.add(background)
             entityManager.add(background2)
@@ -270,6 +273,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     @objc func handleTapVez(sender: UITapGestureRecognizer) {
         if sender.state == UIGestureRecognizer.State.ended {
            entityManager.jump()
+            entityManager.removeNodeInvisible()
         }
     }
     override func update(_ currentTime: TimeInterval) {
@@ -329,6 +333,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     entityManager.idle()
                 }
                 
+                
                 if(contact.bodyA.node!.name == "invisibleCutsceneNode" || contact.bodyB.node!.name == "invisibleCutsceneNode"){
                     gameViewController.loadCutsceneView()
                 }
@@ -342,9 +347,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             if contact.bodyA.node?.name == "player"{
                 contact.bodyA.node?.physicsBody?.affectedByGravity = false
             }else{
-                contact.bodyB.node?.physicsBody?.affectedByGravity = false
-                
+                contact.bodyB.node?.physicsBody?.affectedByGravity = false                
             }
+        }
+        
+        
+        if contact.bodyA.node?.name == "invisibleMecanics" || contact.bodyB.node?.name == "invisibleMecanics"{
+            print("a")
+            
+            let mecanicsTap = MecanicsTapEntity(entityManager: entityManager, scene: self)
+            entityManager.add(mecanicsTap)
+            
+            entityManager.idle()
+            
+            
         }
         
         if(contact.bodyA.node?.name == "water" || contact.bodyB.node?.name == "water" ){

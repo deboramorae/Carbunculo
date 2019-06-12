@@ -138,12 +138,13 @@ extension CGPoint {
         
          public static let coracaoMacacoNode: CGPoint =  CGPoint.positionProportionalWithFrame(position: CGPoint(x: 2330, y: -60))
         
-        public static let setaNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 10, y: 0))
+        public static let setaNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: -SKViewSizeRect.width / 2, y: 0))
         
         public static let tapNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 10, y: 0))
         
         public static let posicaoInicialTerceiraEscolha: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 8666.01, y: -105.46))
         
+        public static let invisbleTapNode : CGPoint =  CGPoint.positionProportionalWithFrame(position: CGPoint(x: -50, y: 0))
         
     }
     

@@ -219,6 +219,19 @@ class EntityManager {
         
     }
     
+    func removeNodeInvisible(){
+        for entity in entities{
+            if let invisibleMecanics = entity.component(ofType: InvisibleMecanicsNodeComponent.self)?.node{
+                self.remove(invisibleMecanics.entity as! InvisibleMecanicsEntity)
+            }
+        }
+        for entity in entities{
+            if let mecanicTap = entity.component(ofType: MecanicsTapComponent.self)?.node{
+                self.remove(mecanicTap.entity as! MecanicsTapEntity)
+            }
+        }
+    }
+    
     func saveProgress(){
         print("Antes \(choicesControl.decisaoatual)")
         choicesControl.decisaoatual = 1
