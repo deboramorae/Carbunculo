@@ -23,7 +23,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var entityManager: EntityManager!
     static let playerJumpHeightFactor: CGFloat = 1.5
     static let playerJumpWidthFactor: CGFloat = 4
-    
+    var alreadySwaped = false
 
     override func sceneDidLoad() {
         self.lastUpdateTime = 0
@@ -39,8 +39,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 //        video.play()
 //
         EntityManager.ischoosing = false
+        permitirPulo()
     }
     
+    func permitirPulo(){
+        if(PlayerDAO.getSaves().count>0){
+           tap = true
+        }
+    }
     
     override func didMove(to view: SKView) {
         super.didMove(to: view)
@@ -264,6 +270,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     @objc func gestureSwipe(_ sender : UIGestureRecognizer){
+        alreadySwaped = true
         entityManager.run()
         
     }
@@ -316,7 +323,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 //For test
                 //TESTAR, SE FUNFAR BELEZA
                 //FUNCIONOU, MAS TEM QUE SER MELHORADA
-                if(nodePlayer.physicsBody!.velocity.dy<50 && nodePlayer.physicsBody!.velocity.dy > -50){
+                if(nodePlayer.physicsBody!.velocity.dy<50 && nodePlayer.physicsBody!.velocity.dy > -50 && alreadySwaped){
                     //entityManager.playerLanding()
                     entityManager.run()
                 }
