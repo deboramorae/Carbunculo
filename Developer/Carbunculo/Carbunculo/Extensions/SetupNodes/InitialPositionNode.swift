@@ -126,7 +126,7 @@ extension CGPoint {
         
         public static let playerSecondChoice_Save : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 6919.0, y: -159.87))
         
-        public static let minionNode : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 8375, y: -160/2))
+        public static let minionNode : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 8375, y: -150/2))
         
         public static let animalSave : CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 6500, y: -252/2))
         
@@ -134,16 +134,17 @@ extension CGPoint {
         
         public static let coracaoNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 6510, y: -70))
         
-        public static let carbunculoNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 9500, y: -10))
+        public static let carbunculoNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 9540, y: -5))
         
          public static let coracaoMacacoNode: CGPoint =  CGPoint.positionProportionalWithFrame(position: CGPoint(x: 2330, y: -60))
         
-        public static let setaNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 10, y: 0))
+        public static let setaNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: -SKViewSizeRect.width / 2, y: 0))
         
         public static let tapNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 10, y: 0))
         
         public static let posicaoInicialTerceiraEscolha: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 8666.01, y: -105.46))
         
+        public static let invisbleTapNode : CGPoint =  CGPoint.positionProportionalWithFrame(position: CGPoint(x: -50, y: 0))
         
     }
     

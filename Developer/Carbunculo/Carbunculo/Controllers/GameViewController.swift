@@ -89,6 +89,7 @@ class GameViewController: UIViewController {
         playButton.isHidden = true
         restartButton.isHidden = true
         imageHUD.isHidden = false
+        labelContMaracuja.isHidden = false
     }
     
     private func showHud() {
@@ -98,6 +99,7 @@ class GameViewController: UIViewController {
         playButton.isHidden = false
         restartButton.isHidden = false
         imageHUD.isHidden = true
+        labelContMaracuja.isHidden = true
     }
     
     private func rescueQuantityMaracujas() {
