@@ -53,3 +53,4 @@ public class ChoicesControl {
 }
 
 public var choicesControl = ChoicesControl()
+public var isPressedButtonChoice: Bool = false
