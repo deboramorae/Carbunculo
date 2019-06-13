@@ -32,7 +32,7 @@ extension CGPoint {
         
         public static let floorNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: -90, y: -334/2 ))
         
-        public static let playerNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: (-SKViewSizeRect.width / 2), y: 220))
+        public static let playerNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: (-SKViewSizeRect.width / 2), y: -200))
 
         public static let woodNode: CGPoint = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 50, y: (-301.47/2.22)))
         
