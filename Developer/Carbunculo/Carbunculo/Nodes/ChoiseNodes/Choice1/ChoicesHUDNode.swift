@@ -21,42 +21,48 @@ class ChoicesHUDNode : SKSpriteNode {
         self.zPosition = 100
         
         let choiseButton1 = ChoiceButtonNode(backgroundNamed: textureButton1) {
-//            print("Botão 1 pressionado")
-            self.removeChoicesHUD()
-            
-            switch numberChoice {
-                case 1:
-                    self.addPoints(points: 2)
-                case 2:
-                    self.addPoints(points: 2)
-                default:
-                    self.addPoints(points: 5)
+            if isPressedButtonChoice == false {
+                isPressedButtonChoice = true
+    //            print("Botão 1 pressionado")
+                self.removeChoicesHUD()
+                
+                switch numberChoice {
+                    case 1:
+                        self.addPoints(points: 2)
+                    case 2:
+                        self.addPoints(points: 2)
+                    default:
+                        self.addPoints(points: 5)
+                }
+                
+                EntityManager.ischoosing = false
+                cena.entityManager.updatePositionPlayerInChoice_Save(numberChoice: numberChoice)
+                self.atualizar(opcaoEscolhida: 1, numeroDoMomentoAtual: numberChoice)
             }
-                    
-            EntityManager.ischoosing = false
-            cena.entityManager.updatePositionPlayerInChoice_Save(numberChoice: numberChoice)
-            self.atualizar(opcaoEscolhida: 1, numeroDoMomentoAtual: numberChoice)
         }
         
         choiseButton1.position = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 0, y: 0))
         self.addChild(choiseButton1)
         
         let choiseButton2 = ChoiceButtonNode(backgroundNamed: textureButton2) {
-//            print("Botão 2 pressionado")
-            self.removeChoicesHUD()
-            
-            switch numberChoice {
-            case 1:
-                self.addPoints(points: 1)
-            case 2:
-                self.addPoints(points: -2)
-            default:
-                self.addPoints(points: 2)
+            if isPressedButtonChoice == false {
+                isPressedButtonChoice = true
+    //            print("Botão 2 pressionado")
+                self.removeChoicesHUD()
+                
+                switch numberChoice {
+                case 1:
+                    self.addPoints(points: 1)
+                case 2:
+                    self.addPoints(points: -2)
+                default:
+                    self.addPoints(points: 2)
+                }
+                
+                EntityManager.ischoosing = false
+                cena.entityManager.updatePositionPlayerInChoice_NoSave(numberChoice: numberChoice)
+                self.atualizar(opcaoEscolhida: 2, numeroDoMomentoAtual: numberChoice)
             }
-            
-            EntityManager.ischoosing = false
-            cena.entityManager.updatePositionPlayerInChoice_NoSave(numberChoice: numberChoice)
-            self.atualizar(opcaoEscolhida: 2, numeroDoMomentoAtual: numberChoice)
         }
         choiseButton2.position = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 0, y: -55))
         

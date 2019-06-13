@@ -361,6 +361,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         if (contact.bodyA.node!.name == "floor" || contact.bodyB.node!.name == "floor"){
             gameViewController.changeFirstImageHUD()
+            isPressedButtonChoice = false
         }
         
         if (contact.bodyA.node!.name == "floorMystic" || contact.bodyB.node!.name == "floorMystic"){

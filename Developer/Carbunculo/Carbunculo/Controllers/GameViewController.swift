@@ -159,6 +159,7 @@ class GameViewController: UIViewController {
     }
     
     func loadGameSceneView() {
+        isPressedButtonChoice = false
         if let scene = GKScene(fileNamed: "GameScene") {
             
             // Get the SKScene from the loaded GKScene
@@ -228,6 +229,7 @@ class GameViewController: UIViewController {
     }
     
     func restartScene(){
+        isPressedButtonChoice = false
         if let view = self.view as! SKView?{
             // Load the SKScene from 'GameScene.sks'
             if let scene = SKScene(fileNamed: "GameScene") {
