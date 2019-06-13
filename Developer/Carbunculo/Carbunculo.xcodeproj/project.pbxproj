@@ -76,11 +76,12 @@
 		84B058242294486700B7E9A0 /* GKSKNodeComponent+ComponentsWithNodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B058232294486700B7E9A0 /* GKSKNodeComponent+ComponentsWithNodes.swift */; };
 		84B05826229460E400B7E9A0 /* PhysicsBodyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B05825229460E400B7E9A0 /* PhysicsBodyComponent.swift */; };
 		84B058292294673B00B7E9A0 /* CGSize+ops.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B058282294673B00B7E9A0 /* CGSize+ops.swift */; };
-		84B89DE322AEA1F900DF7BE2 /* BeginningCutscene.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 84B89DE222AEA1F900DF7BE2 /* BeginningCutscene.mp4 */; };
 		84C424CF22AEF90200E7D837 /* CutsceneInvisibleNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C424CE22AEF90200E7D837 /* CutsceneInvisibleNode.swift */; };
 		84C424D422AEFAED00E7D837 /* InvisibleCutsceneComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C424D322AEFAED00E7D837 /* InvisibleCutsceneComponent.swift */; };
 		84C424D622AEFBC000E7D837 /* InvisibleCutscenePhysicsBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C424D522AEFBC000E7D837 /* InvisibleCutscenePhysicsBody.swift */; };
 		84C424D922AEFC3B00E7D837 /* InvisibleCutsceneEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C424D822AEFC3B00E7D837 /* InvisibleCutsceneEntity.swift */; };
+		84D0C04D22B2BBC70032EF14 /* final1Correto.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 84D0C04C22B2BBC70032EF14 /* final1Correto.mp4 */; };
+		84D0C04F22B2BBDA0032EF14 /* final2Correto.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 84D0C04E22B2BBDA0032EF14 /* final2Correto.mp4 */; };
 		84D371332294309700922D4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D371322294309700922D4B /* AppDelegate.swift */; };
 		84D371352294309700922D4B /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 84D371342294309700922D4B /* GameScene.sks */; };
 		84D371372294309700922D4B /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 84D371362294309700922D4B /* Actions.sks */; };
@@ -90,9 +91,7 @@
 		84D371402294309700922D4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84D3713F2294309700922D4B /* Assets.xcassets */; };
 		84D371432294309700922D4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D371412294309700922D4B /* LaunchScreen.storyboard */; };
 		84E814FA22B1517C002C14A4 /* background-fase2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84E814F922B1517C002C14A4 /* background-fase2.mp3 */; };
-		84E814FE22B17C94002C14A4 /* cutsceneFinal2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 84E814FB22B17C94002C14A4 /* cutsceneFinal2.mp4 */; };
 		84E814FF22B17C94002C14A4 /* cutsceneInicio.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 84E814FC22B17C94002C14A4 /* cutsceneInicio.mp4 */; };
-		84E8150022B17C94002C14A4 /* cutseceneFinal1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 84E814FD22B17C94002C14A4 /* cutseceneFinal1.mp4 */; };
 		84F5C694229CC69D00CB749B /* AnchorPointNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5C693229CC69D00CB749B /* AnchorPointNode.swift */; };
 		EA03F5AE22A9963800581C44 /* CoracaoNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA03F5AD22A9963800581C44 /* CoracaoNode.swift */; };
 		EA03F5B022A9972100581C44 /* CoracaoNodeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA03F5AF22A9972100581C44 /* CoracaoNodeComponent.swift */; };
@@ -227,11 +226,12 @@
 		84B058232294486700B7E9A0 /* GKSKNodeComponent+ComponentsWithNodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GKSKNodeComponent+ComponentsWithNodes.swift"; sourceTree = "<group>"; };
 		84B05825229460E400B7E9A0 /* PhysicsBodyComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsBodyComponent.swift; sourceTree = "<group>"; };
 		84B058282294673B00B7E9A0 /* CGSize+ops.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+ops.swift"; sourceTree = "<group>"; };
-		84B89DE222AEA1F900DF7BE2 /* BeginningCutscene.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = BeginningCutscene.mp4; sourceTree = "<group>"; };
 		84C424CE22AEF90200E7D837 /* CutsceneInvisibleNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CutsceneInvisibleNode.swift; sourceTree = "<group>"; };
 		84C424D322AEFAED00E7D837 /* InvisibleCutsceneComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvisibleCutsceneComponent.swift; sourceTree = "<group>"; };
 		84C424D522AEFBC000E7D837 /* InvisibleCutscenePhysicsBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvisibleCutscenePhysicsBody.swift; sourceTree = "<group>"; };
 		84C424D822AEFC3B00E7D837 /* InvisibleCutsceneEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvisibleCutsceneEntity.swift; sourceTree = "<group>"; };
+		84D0C04C22B2BBC70032EF14 /* final1Correto.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = final1Correto.mp4; path = ../../../../../Design/cutscenes/final1Correto.mp4; sourceTree = "<group>"; };
+		84D0C04E22B2BBDA0032EF14 /* final2Correto.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = final2Correto.mp4; path = ../../../../../Design/cutscenes/final2Correto.mp4; sourceTree = "<group>"; };
 		84D3712F2294309700922D4B /* Carbunculo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carbunculo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D371322294309700922D4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84D371342294309700922D4B /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -243,9 +243,7 @@
 		84D371422294309700922D4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84D371442294309700922D4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84E814F922B1517C002C14A4 /* background-fase2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "background-fase2.mp3"; path = "../../../../../Sound/Efects/final/background-fase2.mp3"; sourceTree = "<group>"; };
-		84E814FB22B17C94002C14A4 /* cutsceneFinal2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = cutsceneFinal2.mp4; path = ../../../../../Design/cutscenes/cutsceneFinal2.mp4; sourceTree = "<group>"; };
 		84E814FC22B17C94002C14A4 /* cutsceneInicio.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = cutsceneInicio.mp4; path = ../../../../../Design/cutscenes/cutsceneInicio.mp4; sourceTree = "<group>"; };
-		84E814FD22B17C94002C14A4 /* cutseceneFinal1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = cutseceneFinal1.mp4; path = ../../../../../Design/cutscenes/cutseceneFinal1.mp4; sourceTree = "<group>"; };
 		84F5C693229CC69D00CB749B /* AnchorPointNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorPointNode.swift; sourceTree = "<group>"; };
 		EA03F5AD22A9963800581C44 /* CoracaoNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoracaoNode.swift; sourceTree = "<group>"; };
 		EA03F5AF22A9972100581C44 /* CoracaoNodeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoracaoNodeComponent.swift; sourceTree = "<group>"; };
@@ -591,10 +589,9 @@
 		84B89DE122AEA1D600DF7BE2 /* mp4 */ = {
 			isa = PBXGroup;
 			children = (
-				84E814FB22B17C94002C14A4 /* cutsceneFinal2.mp4 */,
 				84E814FC22B17C94002C14A4 /* cutsceneInicio.mp4 */,
-				84E814FD22B17C94002C14A4 /* cutseceneFinal1.mp4 */,
-				84B89DE222AEA1F900DF7BE2 /* BeginningCutscene.mp4 */,
+				84D0C04C22B2BBC70032EF14 /* final1Correto.mp4 */,
+				84D0C04E22B2BBDA0032EF14 /* final2Correto.mp4 */,
 			);
 			path = mp4;
 			sourceTree = "<group>";
@@ -903,17 +900,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84E814FE22B17C94002C14A4 /* cutsceneFinal2.mp4 in Resources */,
-				84E8150022B17C94002C14A4 /* cutseceneFinal1.mp4 in Resources */,
 				849A22C122AAFC0000826116 /* maracuja.mp3 in Resources */,
 				84AB8E8C22AEC42C00BA8A7B /* GameCutscene.sks in Resources */,
 				846EBD7B22AA9C1700F7DD75 /* restart.mp3 in Resources */,
+				84D0C04D22B2BBC70032EF14 /* final1Correto.mp4 in Resources */,
 				84D3713E2294309700922D4B /* Main.storyboard in Resources */,
 				84D371352294309700922D4B /* GameScene.sks in Resources */,
 				846EBD7C22AA9C1700F7DD75 /* carbunculo-03.mp3 in Resources */,
 				84E814FA22B1517C002C14A4 /* background-fase2.mp3 in Resources */,
 				846EBD7922AA9C1700F7DD75 /* unpause.mp3 in Resources */,
 				846EBD7722AA9C1700F7DD75 /* jump.mp3 in Resources */,
+				84D0C04F22B2BBDA0032EF14 /* final2Correto.mp4 in Resources */,
 				84281D9B22AA92F6006F0825 /* background-test.mp3 in Resources */,
 				846EBD7A22AA9C1700F7DD75 /* walk.mp3 in Resources */,
 				84D371402294309700922D4B /* Assets.xcassets in Resources */,
@@ -923,7 +920,6 @@
 				84D371432294309700922D4B /* LaunchScreen.storyboard in Resources */,
 				84D371372294309700922D4B /* Actions.sks in Resources */,
 				84E814FF22B17C94002C14A4 /* cutsceneInicio.mp4 in Resources */,
-				84B89DE322AEA1F900DF7BE2 /* BeginningCutscene.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
