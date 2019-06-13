@@ -13,7 +13,7 @@ struct Debug {
     
     static let showFPS: Bool? = true
     static let showNodeCount: Bool? = true
-    static let showPhysics: Bool? = true
+    static let showPhysics: Bool? = false
     static let ignoreCutscene: Bool? = true
     
 }

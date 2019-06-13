@@ -149,11 +149,13 @@ class GameViewController: UIViewController {
     func changeImageHud() {
         imageHUD.image = UIImage(named: "maracujaMistico")
         pauseButton.setImage(UIImage(named: "pauseMistico"), for: .normal)
+        labelContMaracuja.textColor = UIColor(red: 149/255, green: 203/255, blue: 1, alpha: 1)
     }
     
     func changeFirstImageHUD() {
         imageHUD.image = UIImage(named: "contagemFruta")
         pauseButton.setImage(UIImage(named: "botaoPause"), for: .normal)
+        labelContMaracuja.textColor = UIColor(red: 209/255, green: 177/255, blue: 146/255, alpha: 1)
     }
     
     func loadGameSceneView() {
