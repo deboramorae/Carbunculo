@@ -345,6 +345,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
                 if(contact.bodyA.node!.name == "invisibleCutsceneNode" || contact.bodyB.node!.name == "invisibleCutsceneNode"){
 //                    print(choicesControl.ponctuation)
+                    PlayerDAO.deleteAllSaves()
                     if choicesControl.ponctuation >= 6 {
                         cutsceneName = "final1Correto"
                         gameViewController.loadCutsceneView()
@@ -352,6 +353,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                         cutsceneName = "final2Correto"
                         gameViewController.loadCutsceneView()
                     }
+                    
                 }
 
                 
