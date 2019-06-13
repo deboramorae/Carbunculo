@@ -222,7 +222,13 @@ class EntityManager {
         }
         
     }
-    
+    func removeMecanicSwipe(){
+        for entity in entities{
+            if let mecanicSwipe = entity.component(ofType: MecanicsSwipeComponent.self)?.node{
+                self.remove(mecanicSwipe.entity as! MecanicsSwipeEntity)
+            }
+        }
+    }
     func removeNodeInvisible(){
         for entity in entities{
             if let invisibleMecanics = entity.component(ofType: InvisibleMecanicsNodeComponent.self)?.node{

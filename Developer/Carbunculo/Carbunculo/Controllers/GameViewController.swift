@@ -87,6 +87,21 @@ class GameViewController: UIViewController {
         labelContMaracuja.isHidden = false
     }
     
+    private func stopAllSongs() {
+        if backgroundSong_Phase01.songIsPlaying() {
+            backgroundSong_Phase01.stopSong()
+        }
+        
+        if backgroundSong_Phase02.songIsPlaying() {
+            backgroundSong_Phase02.stopSong()
+        }
+        
+        if playerWalkSong.songIsPlaying() {
+            playerWalkSong.stopSong()
+            isPlayerWalk = false
+        }
+    }
+    
     private func hiddenHud() {
         darkView.isHidden = true
         pauseButton.isHidden = false
@@ -134,11 +149,13 @@ class GameViewController: UIViewController {
     func changeImageHud() {
         imageHUD.image = UIImage(named: "maracujaMistico")
         pauseButton.setImage(UIImage(named: "pauseMistico"), for: .normal)
+        labelContMaracuja.textColor = UIColor(red: 149/255, green: 203/255, blue: 1, alpha: 1)
     }
     
     func changeFirstImageHUD() {
         imageHUD.image = UIImage(named: "contagemFruta")
         pauseButton.setImage(UIImage(named: "botaoPause"), for: .normal)
+        labelContMaracuja.textColor = UIColor(red: 209/255, green: 177/255, blue: 146/255, alpha: 1)
     }
     
     func loadGameSceneView() {
@@ -178,6 +195,7 @@ class GameViewController: UIViewController {
     func loadCutsceneView() {
         self.hiddenHud()
         self.hiddenPauseAndContMaracuja()
+        self.stopAllSongs()
         if let scene = GKScene(fileNamed: "GameCutscene") {
             
             // Get the SKScene from the loaded GKScene

@@ -267,6 +267,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     @objc func gestureSwipe(_ sender : UIGestureRecognizer){
         alreadySwaped = true
         entityManager.run()
+        entityManager.removeMecanicSwipe()
         
     }
     func addTapRecognizer() {
@@ -276,6 +277,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     @objc func handleTapVez(sender: UITapGestureRecognizer) {
         if sender.state == UIGestureRecognizer.State.ended {
             if self.tap{
+                EntityManager.ischoosing = false
                 entityManager.jump()
                 entityManager.removeNodeInvisible()
             }
@@ -343,10 +345,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 if(contact.bodyA.node!.name == "invisibleCutsceneNode" || contact.bodyB.node!.name == "invisibleCutsceneNode"){
 //                    print(choicesControl.ponctuation)
                     if choicesControl.ponctuation >= 6 {
-                        cutsceneName = "cutseceneFinal1"
+                        cutsceneName = "final1Correto"
                         gameViewController.loadCutsceneView()
                     } else {
-                        cutsceneName = "cutsceneFinal2"
+                        cutsceneName = "final2Correto"
                         gameViewController.loadCutsceneView()
                     }
                 }
@@ -377,6 +379,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let mecanicsTap = MecanicsTapEntity(entityManager: entityManager, scene: self)
             entityManager.add(mecanicsTap)
             
+            EntityManager.ischoosing = true
             entityManager.idle()
             
             

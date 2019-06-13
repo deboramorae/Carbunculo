@@ -16,6 +16,7 @@ class MecanicsSwipeEntity : GKEntity{
         
         let mecanic = MecanicsSwipeNode()
         
+        mecanic.run(Animations.macanicsSwipe.animationSwipe)
         addComponent(MecanicsSwipeComponent(node: mecanic, scene: scene))
         
     }
