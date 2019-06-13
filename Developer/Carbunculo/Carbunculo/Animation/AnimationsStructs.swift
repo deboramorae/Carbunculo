@@ -76,18 +76,25 @@ struct Animations{
     struct macanicsSwipe {
         static var animationSwipe : SKAction{
             get{
-                let animation = SKAction.animate(with: Textures.mecanicSwipe, timePerFrame: 0.5)
-                let repeatforever = SKAction.repeatForever(animation)
+                let animationVai = SKAction.moveBy(x: 100, y: 0, duration: 1)
+                let animationVolta = SKAction.moveBy(x: -100, y: 0, duration: 1)
+                
+                let animationLoop = SKAction.sequence([animationVai,animationVolta])
+                let repeatforever = SKAction.repeatForever(animationLoop)
+                
                 return repeatforever
             }
         }
     }
     
-    struct macanicsTap {
-        static var animationSwipe : SKAction{
+    struct mecanicsTap {
+        static var animationTap: SKAction{
             get{
-                let animation = SKAction.animate(with: Textures.mecanicTap, timePerFrame: 0.5)
-                let repeatforever = SKAction.repeatForever(animation)
+                let animationVai = SKAction.scale(by: 2, duration: 1)
+                let animationVolta = SKAction.scale(by: 0.5, duration: 1)
+                
+                let animationLoop = SKAction.sequence([animationVai,animationVolta])
+                let repeatforever = SKAction.repeatForever(animationLoop)
                 return repeatforever
             }
         }

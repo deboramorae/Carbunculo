@@ -63,8 +63,8 @@ struct Textures{
     static var mecanicSwipe: [SKTexture] {
         get {
             var lista : [SKTexture] = []
-            for posicao in 0...3{
-                lista.append(SKTexture(imageNamed: "seta" + String(format: "%02d", posicao)))
+            for n in 1...3{
+                lista.append(SKTexture(imageNamed: "swipe\(n)"))
             }
             return lista
         }
@@ -73,8 +73,8 @@ struct Textures{
     static var mecanicTap: [SKTexture] {
         get {
             var lista : [SKTexture] = []
-            for posicao in 0...3{
-                lista.append(SKTexture(imageNamed: "tap " + String(format: "%02d", posicao)))
+            for posicao in 1...3{
+                lista.append(SKTexture(imageNamed: "tap" + String(format: "%02d", posicao)))
             }
             return lista
         }
