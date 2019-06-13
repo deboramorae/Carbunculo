@@ -27,7 +27,7 @@ class IdleComponent: GKComponent {
                     player.run(Animations.Player.idle)
                     player.physicsBody?.velocity.dx = 0.0
                     player.physicsBody?.isDynamic  = false
-                    player.physicsBody?.isDynamic  = true
+                    //player.physicsBody?.isDynamic  = true
                     
                     if playerWalkSong.songIsPlaying() {
                         playerWalkSong.stopSong()
