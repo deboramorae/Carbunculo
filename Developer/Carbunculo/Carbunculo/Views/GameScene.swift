@@ -29,7 +29,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.lastUpdateTime = 0
         physicsWorld.contactDelegate = self
         //ATENCAO, SE QUISER APAGAR O SEU SAVE DESCOMENTE A LINHA ABAIXO
-        PlayerDAO.deleteAllSaves()
+        //PlayerDAO.deleteAllSaves()
         //print(PlayerDAO.getSaves().count)
 
         EntityManager.ischoosing = false
@@ -278,7 +278,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     @objc func handleTapVez(sender: UITapGestureRecognizer) {
         if sender.state == UIGestureRecognizer.State.ended {
             if self.tap{
-                EntityManager.ischoosing = false
+                //EntityManager.ischoosing = false
                 entityManager.jump()
                 entityManager.removeNodeInvisible()
             }
@@ -380,7 +380,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let mecanicsTap = MecanicsTapEntity(entityManager: entityManager, scene: self)
             entityManager.add(mecanicsTap)
             
-            EntityManager.ischoosing = true
+            //EntityManager.ischoosing = true
             entityManager.idle()
             
             
