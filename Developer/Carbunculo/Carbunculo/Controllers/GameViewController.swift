@@ -52,7 +52,7 @@ class GameViewController: UIViewController {
         if isPlayerWalk {
             playerWalkSong.playSong()
         }
-        
+        backgroundSong_Phase01.enterInLooping()
         backgroundSong_Phase01.playSong()
         self.showPauseAndContMaracuja()
         self.hiddenHud()

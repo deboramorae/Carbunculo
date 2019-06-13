@@ -218,6 +218,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             entityManager.add(invisibleCutsceneNode)
             
             backgroundSong_Phase01.prepareMusic()
+            backgroundSong_Phase01.enterInLooping()
             backgroundSong_Phase01.playSong()
         }
     }
