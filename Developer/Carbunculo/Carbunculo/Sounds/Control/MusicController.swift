@@ -9,7 +9,7 @@
 import Foundation
 
 
-let backgroundSong_Phase01 = AVMusicPlayer(name: "background-test")
+let backgroundSong_Phase01 = AVMusicPlayer(name: "background-fase01")
 let backgroundSong_Phase02 = AVMusicPlayer(name: "background-fase2")
 let playerJumpSong = AVMusicPlayer(name: "jump")
 let playerWalkSong = AVMusicPlayer(name: "walk")
