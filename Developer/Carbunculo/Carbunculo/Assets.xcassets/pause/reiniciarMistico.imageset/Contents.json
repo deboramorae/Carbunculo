@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "pausado.png",
+      "filename" : "reiniciarMistico.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "pausado@2x.png",
+      "filename" : "reiniciarMistico@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "pausado@3x.png",
+      "filename" : "reiniciarMistico@3x.png",
       "scale" : "3x"
     }
   ],
