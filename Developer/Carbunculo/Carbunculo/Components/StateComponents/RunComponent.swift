@@ -39,6 +39,8 @@ class RunComponent: GKComponent {
                         playerWalkSong.playSong()
                         isPlayerWalk = true
                         
+                        player.physicsBody?.isDynamic = true
+                        
                         player.removeAllActions()
                         player.run(Animations.Player.run)
                         player.physicsBody?.velocity.dx = 0

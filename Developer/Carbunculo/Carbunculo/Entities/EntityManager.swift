@@ -72,12 +72,14 @@ class EntityManager {
     }
     
     func idle(){
+        
         for entities in entities {
             if let component = entities.component(ofType: IdleComponent.self) {
                     component.idle()
             }
         }
     }
+    
     
     func run(){
         for entities in entities {
