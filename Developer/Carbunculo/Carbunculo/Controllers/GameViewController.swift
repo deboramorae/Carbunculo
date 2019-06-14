@@ -150,11 +150,23 @@ class GameViewController: UIViewController {
         imageHUD.image = UIImage(named: "maracujaMistico")
         pauseButton.setImage(UIImage(named: "pauseMistico"), for: .normal)
         labelContMaracuja.textColor = UIColor(red: 149/255, green: 203/255, blue: 1, alpha: 1)
+        
+        hudPause.image = UIImage(named: "pausadomistico")
+        
+        playButton.setBackgroundImage(UIImage(named: "playMistico"), for: .normal)
+        
+        restartButton.setBackgroundImage(UIImage(named: "reiniciarMistico"), for: .normal)
     }
     
     func changeFirstImageHUD() {
         imageHUD.image = UIImage(named: "contagemFruta")
         pauseButton.setImage(UIImage(named: "botaoPause"), for: .normal)
+        hudPause.image = UIImage(named: "hud-paused")
+        
+        playButton.setBackgroundImage(UIImage(named: "play-symbol"), for: .normal)
+        restartButton.setBackgroundImage(UIImage(named: "recovery-arrow"), for: .normal)
+        
+        
         labelContMaracuja.textColor = UIColor(red: 209/255, green: 177/255, blue: 146/255, alpha: 1)
     }
     

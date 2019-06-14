@@ -12,7 +12,7 @@ import GameplayKit
 class ChoicesHUDNode : SKSpriteNode {
     var manager:EntityManager?
     
-    init(textureDecisao: SKTexture, textureButton1: SKTexture, textureButton2: SKTexture, cena: GameScene, numberChoice: Int,manager:EntityManager) {
+    init(textureDecisao: SKTexture, textureButton1: SKTexture, textureButton2: SKTexture, cena: GameScene, numberChoice: Int,manager:EntityManager, sizeButton1: CGSize) {
         super.init(texture: textureDecisao, color: .clear, size: CGSize.sizeNode.choiseHUDNode)
         
         self.manager = manager
@@ -20,7 +20,8 @@ class ChoicesHUDNode : SKSpriteNode {
         self.position = CGPoint.initialPositionNode.choiseHUDNode
         self.zPosition = 100
         
-        let choiseButton1 = ChoiceButtonNode(backgroundNamed: textureButton1) {
+        
+        let choiseButton1 = ChoiceButtonNode(backgroundNamed: textureButton1, size: sizeButton1) {
             if isPressedButtonChoice == false {
                 isPressedButtonChoice = true
     //            print("Botão 1 pressionado")
@@ -39,12 +40,13 @@ class ChoicesHUDNode : SKSpriteNode {
                 cena.entityManager.updatePositionPlayerInChoice_Save(numberChoice: numberChoice)
                 self.atualizar(opcaoEscolhida: 1, numeroDoMomentoAtual: numberChoice)
             }
+            
         }
         
         choiseButton1.position = CGPoint.positionProportionalWithFrame(position: CGPoint(x: 0, y: 0))
         self.addChild(choiseButton1)
         
-        let choiseButton2 = ChoiceButtonNode(backgroundNamed: textureButton2) {
+        let choiseButton2 = ChoiceButtonNode(backgroundNamed: textureButton2, size: CGSize.sizeNode.choiseButtonNode) {
             if isPressedButtonChoice == false {
                 isPressedButtonChoice = true
     //            print("Botão 2 pressionado")
