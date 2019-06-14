@@ -11,8 +11,8 @@ import Foundation
 
 struct Debug {
     
-    static let showFPS: Bool? = true
-    static let showNodeCount: Bool? = true
+    static let showFPS: Bool? = false
+    static let showNodeCount: Bool? = false
     static let showPhysics: Bool? = false
     static let ignoreCutscene: Bool? = true
     
