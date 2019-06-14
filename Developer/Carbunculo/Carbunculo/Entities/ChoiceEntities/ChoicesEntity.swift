@@ -11,18 +11,19 @@ import GameplayKit
 
 class ChoicesEntity: GKEntity{
     
-    init(entityManager: EntityManager , scene: GameScene, textureDecisao: SKTexture, textureButton1: SKTexture, textureButton2: SKTexture, position: CGPoint, numberChoice: Int){
+    init(entityManager: EntityManager , scene: GameScene, textureDecisao: SKTexture, textureButton1: SKTexture, textureButton2: SKTexture, position: CGPoint, numberChoice: Int, sizeButton1: CGSize){
         super.init()
-        addComponentsToEntities(scene: scene,textureDecisao: textureDecisao, textureButton1: textureButton1, textureButton2: textureButton2, position: position, numberChoice: numberChoice,manager: entityManager)
+        addComponentsToEntities(scene: scene,textureDecisao: textureDecisao, textureButton1: textureButton1, textureButton2: textureButton2, position: position, numberChoice: numberChoice,manager: entityManager, sizeButton1: sizeButton1)
     }
     
     
-    func addComponentsToEntities(scene : GameScene,textureDecisao: SKTexture, textureButton1: SKTexture, textureButton2: SKTexture, position: CGPoint, numberChoice: Int,manager:EntityManager){
+    func addComponentsToEntities(scene : GameScene,textureDecisao: SKTexture, textureButton1: SKTexture, textureButton2: SKTexture, position: CGPoint, numberChoice: Int,manager:EntityManager, sizeButton1: CGSize){
         
         let invisibleNode  = InvisibleChoiceNode()
         invisibleNode.name =  "NodeDeEscolha"
         
-        let nodeHUD = ChoicesHUDNode(textureDecisao: textureDecisao, textureButton1: textureButton1, textureButton2: textureButton2, cena: scene, numberChoice: numberChoice,manager:manager)
+        let nodeHUD = ChoicesHUDNode(textureDecisao: textureDecisao, textureButton1: textureButton1, textureButton2: textureButton2, cena: scene, numberChoice: numberChoice,manager:manager, sizeButton1: sizeButton1)
+        
         nodeHUD.position = position
         
         addComponent(ChoicesNodeComponent(node: nodeHUD, scene: scene))
