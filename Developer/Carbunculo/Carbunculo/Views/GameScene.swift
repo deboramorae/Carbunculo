@@ -17,7 +17,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     private var tap : Bool = false
     
-    private var remoteControl: RemoteControl?
     private var lastUpdateTime : TimeInterval = 0
     
     var entityManager: EntityManager!
