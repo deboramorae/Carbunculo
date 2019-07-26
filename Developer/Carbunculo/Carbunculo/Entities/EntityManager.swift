@@ -243,6 +243,13 @@ class EntityManager {
             }
         }
     }
+    func removeButtonSkip(){
+        for entity in entities{
+            if let buttonSkip = entity.component(ofType: buttonSkipComponent.self)?.node{
+                buttonSkip.removeFromParent()
+            }
+        }
+    }
     
     func saveProgress(){
 //        print("Antes \(choicesControl.decisaoatual)")
