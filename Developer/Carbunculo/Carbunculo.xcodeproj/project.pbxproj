@@ -152,6 +152,8 @@
 		EACAC19322B140D600802E64 /* InvisibleMecanicsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACAC19222B140D600802E64 /* InvisibleMecanicsEntity.swift */; };
 		EADA597022AAF0830051999F /* FloorInvisibleNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADA596F22AAF0830051999F /* FloorInvisibleNode.swift */; };
 		EADA597322AAF1640051999F /* FloorInvisivleNodeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADA597222AAF1640051999F /* FloorInvisivleNodeComponent.swift */; };
+		EAF39EE922EA485900CAF847 /* ButtonSkipNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF39EE822EA485900CAF847 /* ButtonSkipNode.swift */; };
+		EAF39EEB22EA492300CAF847 /* ButtonSkipNodeComponet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF39EEA22EA492300CAF847 /* ButtonSkipNodeComponet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -302,6 +304,8 @@
 		EACAC19222B140D600802E64 /* InvisibleMecanicsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvisibleMecanicsEntity.swift; sourceTree = "<group>"; };
 		EADA596F22AAF0830051999F /* FloorInvisibleNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorInvisibleNode.swift; sourceTree = "<group>"; };
 		EADA597222AAF1640051999F /* FloorInvisivleNodeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorInvisivleNodeComponent.swift; sourceTree = "<group>"; };
+		EAF39EE822EA485900CAF847 /* ButtonSkipNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSkipNode.swift; sourceTree = "<group>"; };
+		EAF39EEA22EA492300CAF847 /* ButtonSkipNodeComponet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSkipNodeComponet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -596,6 +600,7 @@
 			children = (
 				84AB8E8222AEBA8D00BA8A7B /* CutsceneNode.swift */,
 				84C424CE22AEF90200E7D837 /* CutsceneInvisibleNode.swift */,
+				EAF39EE822EA485900CAF847 /* ButtonSkipNode.swift */,
 			);
 			path = Cutscene;
 			sourceTree = "<group>";
@@ -605,6 +610,7 @@
 			children = (
 				84AB8E8722AEBEF600BA8A7B /* CutsceneNodeComponent.swift */,
 				84C424D322AEFAED00E7D837 /* InvisibleCutsceneComponent.swift */,
+				EAF39EEA22EA492300CAF847 /* ButtonSkipNodeComponet.swift */,
 			);
 			path = Cutscene;
 			sourceTree = "<group>";
@@ -992,6 +998,7 @@
 				666BA970229C5CC2000B27C8 /* PlayerNodeComponent.swift in Sources */,
 				66C63BD42295ECE100CCEE3A /* WaterNode.swift in Sources */,
 				66C63BB62294698300CCEE3A /* StateFalling.swift in Sources */,
+				EAF39EEB22EA492300CAF847 /* ButtonSkipNodeComponet.swift in Sources */,
 				66C63BBA22946A0A00CCEE3A /* StateUnconscious.swift in Sources */,
 				EACAC18D22B12C5800802E64 /* InvisibleMecanicNode.swift in Sources */,
 				84C424D622AEFBC000E7D837 /* InvisibleCutscenePhysicsBody.swift in Sources */,
@@ -1003,6 +1010,7 @@
 				EAB872C9229C7D5300A7FE9E /* WindNodeComponent.swift in Sources */,
 				EA5FE590229743040027D77F /* FloorPhysicsBodyComponent.swift in Sources */,
 				84AC279B2297408500D3A6C2 /* InitialPositionNode.swift in Sources */,
+				EAF39EE922EA485900CAF847 /* ButtonSkipNode.swift in Sources */,
 				EA03F5C422AA10B000581C44 /* FloorMysticEntity.swift in Sources */,
 				EA58B240229629A00099C146 /* PlatformPhysicsBodyComponent.swift in Sources */,
 				66C63BC422948CEB00CCEE3A /* StatePaused.swift in Sources */,
